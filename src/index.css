@@ -1,0 +1,20 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: "SofiaPro";
+    src: url("../src/assets/font/SofiaProRegular.ttf") format("truetype");
+    
+  }
+
+
+  *,
+*:before,
+*:after {
+  @apply cursor-pointer;
+}
+
