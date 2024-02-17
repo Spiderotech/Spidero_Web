@@ -14,7 +14,7 @@ const Belowherosection = () => {
               <br />
               <p className="font-sans text-[18px] leading-7 font-medium tracking-normal  mb-3">
                 Elevate your app's market presence with our distinctive approach
-                at Unified Infotech. As a leading app development company, we
+                at Spidero Technology. As a leading app development company, we
                 leverage agile methodologies and cutting-edge technologies,
                 including UX, smart consultation, bots, AIs, and IoT. Our
                 seasoned team of top app developers in NYC combines industry

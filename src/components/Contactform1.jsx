@@ -37,7 +37,7 @@ const Contactform1 = () => {
     onSubmit: async (values) => {
       try {
         const templateParams = {
-          fullName: values.fullName,
+          name: values.fullName,
           email: values.email,
           countryCode: values.countryCode,
           phone: values.phone,
@@ -53,7 +53,7 @@ const Contactform1 = () => {
 
         console.log("Email sent successfully!", response);
         alert("Your message has been sent successfully!");
-        form.reset();
+        formik.reset();
       } catch (error) {
         console.error("Error sending email:", error);
       }

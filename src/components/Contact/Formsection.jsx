@@ -36,7 +36,7 @@ const Formsection = () => {
       try {
        
         const templateParams = {
-          fullName: values.fullName,
+          name: values.fullName,
           email: values.email,
           countryCode: values.countryCode,
           phone: values.phone,

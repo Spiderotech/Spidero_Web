@@ -89,7 +89,7 @@ const Navbarnormal = () => {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <Popover.Group className="hidden lg:flex lg:gap-x-12  ml-[30%] ">
+        <Popover.Group className="hidden lg:flex lg:gap-x-12  ml-[35%] ">
           <Popover className="relative" onMouseEnter={() => setPopoverOpen(true)} onMouseLeave={() => setPopoverOpen(false)}>
             <a href="/expertice">
             <Popover.Button className="flex items-center gap-x-1 text-[18px] text-left font-sans  font-semibold  text-gray-900"

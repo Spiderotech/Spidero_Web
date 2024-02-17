@@ -11,6 +11,8 @@ import Careerspage from './pages/Careerspage';
 import Expertisepage from './pages/Expertisepage';
 import Ourprocess from './pages/Ourprocess';
 import Chatsystem from './components/Chat/Chatsystem';
+import Termspage from './pages/Termspage';
+import Privacypage from './pages/Privacypage';
 
 
 function App() {
@@ -29,6 +31,8 @@ function App() {
      <Route path="/ourprocess" element={<Ourprocess/>} />
      <Route path="/expertice" element={<Expertisepage/>} />
      <Route path="/careers" element={<Careerspage/>} />
+     <Route path="/privacy-policy" element={<Privacypage/>} />
+     <Route path="/terms-conditions" element={<Termspage/>} />
    
 
      </Routes>

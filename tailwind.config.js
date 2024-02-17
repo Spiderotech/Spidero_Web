@@ -19,7 +19,7 @@ export default {
     },
    extend: {
       cursor: {
-        pointer: 'url("./assets/icons8-hand-cursor-48.cur"), pointer',
+        pointer: 'url("./assets/icons8-hand-cursor-48.cur"), pointer !important',
         
       },
     },

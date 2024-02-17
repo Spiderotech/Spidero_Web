@@ -93,7 +93,7 @@ const Footer = () => {
             </span>
             <span>
               <a
-                href="/terms-and-conditions"
+                href="/terms-conditions"
                 className="text-neutral-700 hover:text-black text-sm"
               >
                 Terms and Conditions
