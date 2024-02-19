@@ -30,20 +30,20 @@ const Project = ({ title,image, subTitle, companyName, description }) => {
           <img
             src={image}
             alt="profile"
-            className="w-full h-[550px]  object-contain   "
+            className="w-full h-auto  object-contain   "
           />
         </div>
         <div className="mb-6 md:mb-0 w-full h-auto">
-          <h1 className="text-[40px] font-black font-sans ml-24 mt-0 md:mt-32">
+          <h1 className="text-[32px] sm:text-[26px] md:text-[32px] lg:text-[40px] font-black font-sans lg:ml-24 mt-0 lg:mt-32">
             {title}
           </h1>
           <br />
-          <p className="text-base font-black ml-36">{subTitle}</p>
+          <p className="text-base font-black lg:ml-36">{subTitle}</p>
           <br />
-          <span className="font-sans text-[14px] -tracking-normal ml-12 pt-24">
-            <u className="h-3">{companyName}</u>
+          <span className="font-sans text-[14px] -tracking-normal lg:ml-12 pt-24">
+            <u className="h-3 ">{companyName}</u>
           </span>
-          <p className="text-[28px] font-sans ml-8 pt-8">{description}</p>
+          <p className="text-[28px] font-sans lg:ml-8 pt-8">{description}</p>
           
         </div>
       </div>

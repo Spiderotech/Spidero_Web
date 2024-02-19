@@ -73,8 +73,8 @@ const Formsection = () => {
       <h2 className="text-black pt-8 text-start leading-10 font-sans font-bold text-[30px]">
         Connect with our experts.
       </h2>
-      <div className="flex flex-col md:flex-row w-full h-auto items-center justify-center text-center mb-10">
-        <div className=" w-full md:w-[50%] h-auto bg-white md:ml-5 p-10 ">
+      <div className="flex flex-col lg:flex-row w-full h-auto items-center justify-center text-center mb-10">
+        <div className=" w-full lg:w-[50%] h-auto bg-white lg:ml-5 p-20 ">
           <form onSubmit={formik.handleSubmit}>
             <div className="relative pt-6">
               <label
@@ -238,8 +238,8 @@ const Formsection = () => {
             </button>
           </form>
         </div>
-        <div className="w-full md:w-[50%] h-auto  flex flex-col p-10">
-          <div className="w-full h-56  ">
+        <div className="w-full lg:w-[50%] h-auto j  flex flex-col p-10">
+          <div className="w-full h-56   ">
             <h2 className="text-black text-start leading-10 font-sans font-bold text-[21px] ">
               Get In Touch With Us:
             </h2>
@@ -271,11 +271,9 @@ const Formsection = () => {
           </div>
 
           <div className="w-full h-auto">
-            <div className="w-full md:w-[70%] h-auto flex flex-col justify-center ml-0 md:ml-[5%]  border p-19 pb-5 ">
+            <div className="w-full lg:w-[70%] h-auto flex flex-col justify-center ml-0 lg:ml-[5%]  border p-19 pb-5 ">
               <span className="text-black m text-[16px] sm:text-[18px] md:text-[21px] lg:text-[21px] font-sans text-start font-normal p-5">
-              Spidero Technology functioned as a genuine collaborator and
-                  provided a superior software solution that greatly enhanced
-                  our customer experience.
+              Spidero Technology served as an invaluable collaborator, delivering an exceptional software solution that significantly improved our customer experience
               </span>
               <div className="flex flex-row ml-5  ">
                 <img
@@ -295,11 +293,9 @@ const Formsection = () => {
             </div>
           </div>
           <div className="w-full h-auto mt-5  ">
-            <div className="w-full  md:w-[70%] h-auto flex flex-col justify-center ml-0 md:ml-[5%] border p-19 pb-5 ">
+            <div className="w-full  lg:w-[70%] h-auto flex flex-col justify-center ml-0 lg:ml-[5%] border p-19 pb-5 ">
               <span className="text-black  text-[16px] sm:text-[18px] md:text-[21px] lg:text-[21px] font-sans text-start font-normal p-5">
-                Spidero Technology worked like a true partner, & delivered a
-                top-notch software product that significantly elevated our
-                customer experience.
+              Cooking up innovation at  Spidero Technology , we're dedicated to pushing boundaries and delivering cutting-edge solutions
               </span>
               <div className="flex flex-row ml-5  ">
                 <img

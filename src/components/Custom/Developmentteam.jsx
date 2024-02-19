@@ -63,7 +63,7 @@ const Developmentteam = () => {
           Build Your Custom software development team
         </h2>
         <div className="flex flex-row mt-10">
-          <div className=" w-[50%] hidden md:block">
+          <div className=" w-[50%] hidden lg:block">
             <div class="  py-6 flex flex-col justify-center  ">
               <div class="py-3 sm:max-w-xl sm:mx-auto w-full px-2 sm:px-0 ">
                 <div class="relative text-gray-700 antialiased text-sm font-semibold">
@@ -192,7 +192,7 @@ const Developmentteam = () => {
               </div>
             </div>
           </div>
-          <div className=" items-center justify-center w-full md:w-[50%] ">
+          <div className=" items-center justify-center w-full lg:w-[50%] ">
             <div className=" flex justify-center items-center flex-col  ">
               {faqData.map((item, index) => (
                 <div key={index} className="mt-5 border-b-2 pb-5 w-[80%]">

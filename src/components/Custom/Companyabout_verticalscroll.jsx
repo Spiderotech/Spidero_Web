@@ -4,8 +4,8 @@ import StickyBox from "react-sticky-box";
 const Companyabout_verticalscroll = () => {
   return (
     <section className=" relative h-auto flex flex-col items-center justify-center text-center  text-white py-0 px-3 bg-white">
-      <div className="flex flex-col md:flex-row w-full h-auto  pt-20 mb-10 justify-center ">
-        <div className="w-full md:w-[40%]  h-auto   ">
+      <div className="flex flex-col lg:flex-row w-full h-auto  pt-20 mb-10 justify-center ">
+        <div className="w-full lg:w-[40%]  h-auto   ">
           <div className="flex flex-col items-start">
             <h2 className="text-black pt-8 text-start leading-10 font-sans font-bold text-xl md:text-3xl lg:text-4xl ml-10">
             What Makes Us the Most Trusted Custom Software Development Company?   
@@ -16,7 +16,7 @@ const Companyabout_verticalscroll = () => {
             </p>
           </div>
         </div>
-        <div className="  w-full md:w-[40%] h-auto  md:ml-10 ">
+        <div className="  w-full lg:w-[40%] h-auto  lg:ml-10 ">
           <div class=" border-2  "
           data-aos="fade-up"
           data-aos-duration="1000">

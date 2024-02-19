@@ -82,25 +82,25 @@ const Industries_we_serve = () => {
   
 
   return (
-    <div className="w-full h-auto flex flex-col justify-center items-center bg-black p-0 md:p-20">
+    <div className="w-full h-auto flex flex-col justify-center items-center bg-black p-5 lg:p-20">
       <h2 className="mb-4 text-4xl text-center tracking-tight font-bold text-white dark:text-white">
         Industries We Serve
       </h2>
-      <p className="mb-4 text-[18px] font-sans text-center leading-relaxed text-white">
+      <p className="mb-4 text-[18px] font-sans text-center leading-relaxed text-white p-5">
         At Spidero Technology, we collaborate with rapidly expanding enterprises, deploying dedicated teams to develop innovative, flawless, and enduring software solutions. Trust us on your mission-critical journey, as Spidero Technology is poised to be your guiding force.
       </p>
-      <div className="flex flex-col md:flex-row w-full md:w-[80%]">
+      <div className="flex flex-col lg:flex-row w-full lg:w-[80%]">
         <div className="flex-1 p-8">
           <img
             src={headingsData[currentIndex].image}
             alt={headingsData[currentIndex].title}
-            className="w-full h-[360px]"
+            className="w-full h-[360px] object-contain"
           />
           <p className="mt-4 text-white">
             {headingsData[currentIndex].content}
           </p>
         </div>
-        <div className="w-full md:w-auto mt-5 flex flex-row md:flex-col border-l">
+        <div className="w-full lg:w-auto mt-5 flex flex-row lg:flex-col border-l  ">
           {headingsData.map((heading) => (
             <button
               key={heading.id}

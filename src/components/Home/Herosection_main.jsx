@@ -22,7 +22,7 @@ const HerosectionMain = () => {
           </h2>
 
           <div className="mt-5 ml-10 hidden md:flex">
-            <a href="/contact">
+            <a href="/expertice">
               <button className="w-[198px] h-[51px] font-sans leading-6 tracking-2px text-[16px] font-medium text-black bg-white transition-all ease-in-out hover:bg-black hover:text-white">
                 EXPLORE US
               </button>

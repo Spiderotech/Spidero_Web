@@ -27,8 +27,8 @@ const Results_mobile = () => {
   };
   return (
     <section className="h-auto flex flex-col items-center justify-center   text-white py-0 px-3 bg-black ">
-      <div className="flex flex-col md:flex-row w-[90%] h-auto  text-center mb-10  ">
-        <div className="w-full  md:w-[40%]  mt-10   ">
+      <div className="flex flex-col lg:flex-row w-[90%] h-auto  text-center mb-10  ">
+        <div className="w-full  lg:w-[40%]  mt-10   ">
           <div className="flex flex-col items-start">
             <h2 className="text-white pt-8 text-start leading-10 font-sans font-bold text-xl md:text-3xl lg:text-4xl md:ml-10">
               Results - What we will do for your business?
@@ -55,7 +55,7 @@ const Results_mobile = () => {
             </div>
           </div>
         </div>
-        <div className=" w-full   md:w-[59%] mt-8  ">
+        <div className=" w-full   lg:w-[59%] mt-8  ">
           <Swiper
             effect="coverflow"
             modules={[Navigation]}

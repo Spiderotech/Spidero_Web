@@ -219,7 +219,7 @@ const Chatsystem = () => {
       </butoon>
       
       {isChatModalOpen && (
-        <div className="fixed bottom-20 right-5 w-4/5 md:w-1/4 h-auto bg-slate-50 rounded-md shadow-lg  z-10">
+        <div className="fixed bottom-20 right-5 w-2/5 lg:w-1/4 h-auto bg-slate-50 rounded-md shadow-lg  z-10">
           <div className="flex items-center  p-2 bg-white overflow-hidden rounded-md">
             <img
               className="w-10 h-10 rounded-full mr-2"

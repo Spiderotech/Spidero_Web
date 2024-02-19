@@ -6,7 +6,7 @@ const Developmentprocess = () => {
       <h2 class="mb-4 text-4xl mt-20  tracking-tight font-bold text-gray-900 dark:text-white">
         Our development process
       </h2>
-      <p class="mb-4 text-[20px] font-sans  leading-relaxed text-[#424242] w-full md:w-1/2">
+      <p class="mb-4 text-[20px] font-sans  leading-relaxed text-[#424242] w-full lg:w-1/2">
         Our process ensures that an interface is seamless for the end-user to
         become familiar with and competent in using during the first contact
         they make. The agile approach makes it intuitive for users to achieve

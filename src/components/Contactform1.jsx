@@ -94,9 +94,7 @@ const Contactform1 = () => {
                           >
                             <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
                           </svg>
-                          Spidero Technology functioned as a genuine
-                          collaborator and provided a superior software solution
-                          that greatly enhanced our customer experience.
+                          Spidero Technology served as an invaluable collaborator, delivering an exceptional software solution that significantly improved our customer experience.
                         </span>
                         <strong className="text-black text-sm sm:text-base md:text-lg lg:text-[20px] mt-5 ">
                         Akshay

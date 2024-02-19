@@ -4,8 +4,8 @@ import web6 from "../../assets/london.jpg";
 
 const Location = () => {
   return (
-    <div className="w-full h-auto flex flex-col md:flex-row justify-items-center items-center p-5 md:p-32 gap-10">
-      <div className=" w-full md:w-[50%] h-auto  flex flex-col p-10 border shadow-lg ">
+    <div className="w-full h-auto flex flex-col lg:flex-row justify-items-center items-center p-5 lg:p-32 gap-10">
+      <div className=" w-full lg:w-[50%] h-auto  flex flex-col p-10 border shadow-lg ">
         <div className="row  flex items-center">
           <div className="column mt-4">
             <img src={web6} alt="profile" className="w-9 h-6 " />
@@ -39,7 +39,7 @@ const Location = () => {
           </iframe>
         </div>
       </div>
-      <div className="w-full md:w-[50%] h-auto border shadow-lg    p-10">
+      <div className="w-full lg:w-[50%] h-auto border shadow-lg    p-10">
         <div className="row  flex items-center">
           <div className="column mt-5">
             <img src={web4} alt="profile" className="w-10 h-6" />

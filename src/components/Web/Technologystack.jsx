@@ -26,17 +26,17 @@ import open5 from "../../assets/Open/shopify.png"
 
 const Technologystack = () => {
   return (
-    <div class=" w-full  h-auto flex justify-center items-center flex-col mb-10 ">
-      <h2 className="text-[30px] font-sans leading-10 font-bold sm:text-[22px] md:text-[28px] lg:text-[22px] xl:text-[30px]   ">
+    <div class=" w-full  h-auto flex justify-center items-center flex-col mb-10 mt-10 ">
+      <h2 className="text-[22px] font-sans leading-10 font-bold sm:text-[22px] md:text-[38px] lg:text-[22px] xl:text-[30px]   ">
         Technology Stack We Practice
       </h2>
-      <div className="w-full  md:w-[60%]   mt-5 flex flex-col md:flex-row  items-center">
+      <div className="w-full  lg:w-[60%]   mt-5 flex flex-col md:flex-row  items-center">
         <div className="w-[200px]">
           <h2 className="ml-5 font-sans text-[18px]  leading-7 font-medium tracking-normal text-start  text-black">
             Back-end:
           </h2>
         </div>
-        <div className=" md:w-[80%]  h-auto">
+        <div className=" lg:w-[80%]  h-auto">
           <div class="p-3  grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 xl:gap-x-28 ">
             <div className="w-[113px] h-[80px] flex items-center p-5 ">
               <img src={web2} alt="Logo" className="object-contain" />
@@ -53,13 +53,13 @@ const Technologystack = () => {
           </div>
         </div>
       </div>
-      <div className="w-full  md:w-[60%]   mt-5 flex flex-col md:flex-row  items-center">
+      <div className="w-full  lg:w-[60%]   mt-5 flex flex-col md:flex-row  items-center">
         <div className="w-[200px]">
           <h2 className="ml-5 font-sans text-[18px]  leading-7 font-medium tracking-normal text-start  text-black">
             Front-end:
           </h2>
         </div>
-        <div className=" md:w-[80%]  h-auto">
+        <div className=" lg:w-[80%]  h-auto">
           <div class="p-3  grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 xl:gap-x-28 ">
             <div className="w-[113px] h-[80px] flex items-center p-5 ">
               <img src={web1} alt="Logo" className="object-contain" />
@@ -76,13 +76,13 @@ const Technologystack = () => {
           </div>
         </div>
       </div>
-      <div className="w-full  md:w-[60%]   flex flex-col md:flex-row  items-center">
+      <div className="w-full  lg:w-[60%]   flex flex-col md:flex-row  items-center">
         <div className="w-[200px]">
           <h2 className="ml-5 font-sans text-[18px]  leading-7 font-medium tracking-normal text-start  text-black">
             Database:
           </h2>
         </div>
-        <div className="md:w-[90%]  h-auto">
+        <div className="lg:w-[90%]  h-auto">
           <div class="p-3  grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 xl:gap-x-28 ">
             <div className="w-[113px] h-[80px] flex items-center p-5">
               <img src={db1} alt="Logo" className="object-contain" />
@@ -108,13 +108,13 @@ const Technologystack = () => {
           </div>
         </div>
       </div>
-      <div className="w-full  md:w-[60%]  flex flex-col md:flex-row  items-center">
+      <div className="w-full  lg:w-[60%]  flex flex-col md:flex-row  items-center">
         <div className="w-[200px]">
           <h2 className="ml-5 font-sans text-[18px]  leading-7 font-medium tracking-normal text-start  text-black">
             OpenSource:
           </h2>
         </div>
-        <div className="md:w-[90%]  h-auto">
+        <div className="lg:w-[90%]  h-auto">
           <div class="p-3  grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 xl:gap-x-28 ">
             <div className="w-[113px] h-[80px] flex items-center p-8">
               <img src={open1} alt="Logo" className="object-contain" />

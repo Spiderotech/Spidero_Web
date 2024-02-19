@@ -63,13 +63,13 @@ const HowWeApproach = () => {
 
   return (
     <div className="flex w-full h-auto flex-col">
-      <div className="w-full h-auto   flex flex-col md:flex-row justify-center items-center gap-3 p-5 ">
-        <div className=" w-full md:w-[40%] h-auto   ">
+      <div className="w-full h-auto   flex flex-col lg:flex-row justify-center items-center gap-3 p-5 ">
+        <div className=" w-full lg:w-[40%] h-auto   ">
           <div className="text-[40px] font-sans leading-10 font-bold  mb-4 lg:mb-8">
             How We Approach Custom Software Development
           </div>
         </div>
-        <div className=" w-full md:w-[30%] h-auto  ">
+        <div className=" w-full lg:w-[30%] h-auto  ">
           <p className="font-sans text-[18px] leading-7 font-medium tracking-normal  mb-3">
             Leveraging a deliberately designed software development process, we
             strictly adhere to industry-leading security practices. Our focus is
@@ -94,7 +94,7 @@ const HowWeApproach = () => {
             ))}
           </div>
         </div>
-        <div className="w-full  md:w-[70%] h-auto  ">
+        <div className="w-full  lg:w-[70%] h-auto  ">
           <div className="flex-1 p-8">
             <img
               src={content[currentSlide].image}

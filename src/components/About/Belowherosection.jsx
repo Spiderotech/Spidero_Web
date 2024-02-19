@@ -2,7 +2,7 @@ import React from "react";
 
 const Belowherosection = () => {
   return (
-    <footer className="flex flex-col  dark:bg-neutral-600 lg:text-left  mt-[370px] md:mt-10">
+    <footer className="flex flex-col  dark:bg-neutral-600 lg:text-left  mt-[370px] lg:mt-10">
       <div className="  text-neutral-800 dark:text-neutral-200 w-full h-auto ">
         <div className="grid  lg:grid-cols-1 ">
           <div className=" md:mb-0 ">

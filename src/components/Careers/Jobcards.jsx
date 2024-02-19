@@ -3,7 +3,7 @@ import { Tilt } from "react-tilt";
 
 const Jobcards = () => {
   return (
-    <section class=" bg-white md:mt-10  mt-60 mb-10">
+    <section class=" bg-white lg:mt-10  mt-60 mb-10">
       <div class=" mx-auto flex justify-center">
         <div class="max-w-screen-xl text-gray-500 sm:text-lg dark:text-gray-400 ">
           <div class=" grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-5  ">

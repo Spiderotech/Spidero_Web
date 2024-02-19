@@ -61,16 +61,16 @@ const How_wework = () => {
  
   return (
     <section className=" relative h-auto flex flex-col justify-center text-center  text-white py-0 px-3 bg-white ">
-      <div className="w-full md:w-[70%]    mt-32  " >
+      <div className="w-full lg:w-[70%]    mt-32  " >
         <h2 className="text-black pt-3 text-start leading-10 font-sans font-bold  ml-10">
           HOW WE WORK
         </h2>
-        <p className="font-sans text-[21px] md:text-[40px] font-bold tracking-normal text-start mb-3 p-6 text-black">
+        <p className="font-sans text-[28px] lg:text-[40px] font-bold tracking-normal text-start mb-3 p-6 text-black">
           The process is defined as a sequence of steps. When followed, it helps
           to achieve a goal. We consider it - the art of thinking through.
         </p>
       </div>
-      <div className="w-full md:w-[50%]   ">
+      <div className="w-full lg:w-[50%]   ">
         <h2 className="text-black pt-3 text-[28px] text-start leading-10 font-sans font-bold  ml-10">
           Let’s talk about the specifics
         </h2>
@@ -79,9 +79,9 @@ const How_wework = () => {
 
 
 
-      <div className=" w-full md:w-[80%] flex flex-col bg-white h-auto  mt-10    ">
-        <div className="w-full md:w-[90%] flex flex-col md:flex-row  h-auto " >
-          <div className=" w-full md:w-[70%] h-auto bg-black  p-10  ">
+      <div className=" w-full lg:w-[80%] flex flex-col bg-white h-auto  mt-10    ">
+        <div className="w-full lg:w-[90%] flex flex-col lg:flex-row  h-auto " >
+          <div className=" w-full lg:w-[70%] h-auto bg-black  p-10  ">
             <h1 className=" text-start font-sans text-3xl">1. Discovery Workshop</h1>
             <h1 className=" text-start font-sans font-semibold  mt-10">OBJECTIVE</h1>
             <ul className=" font-sans text-start  text-[18px] p-5 ">
@@ -110,7 +110,7 @@ const How_wework = () => {
               <li className="mb-2"><span className=" text-3xl" style={{ marginRight: "0.5rem" }}>&#10142;</span>Coming with a high level epic mapping.</li>
             </ul>
           </div>
-          <div className=" w-full md:w-[70%] h-auto bg-black p-10 flex justify-center" >
+          <div className=" w-full lg:w-[70%] h-auto bg-black p-10 flex justify-center" >
             <img
               src={img1}
               alt="profile"
@@ -152,9 +152,9 @@ const How_wework = () => {
 
 
 
-      <div className="w-full md:w-[80%] flex flex-col bg-white h-auto  mt-10  ">
-        <div className="w-full md:w-[90%] flex flex-col md:flex-row   h-auto" data-aos="fade-up">
-          <div className="w-full md:w-[70%] h-auto bg-black  p-10  ">
+      <div className="w-full lg:w-[80%] flex flex-col bg-white h-auto  mt-10  ">
+        <div className="w-full lg:w-[90%] flex flex-col lg:flex-row   h-auto" data-aos="fade-up">
+          <div className="w-full lg:w-[70%] h-auto bg-black  p-10  ">
             <h1 className=" text-start text-3xl">2. Planning</h1>
             <h1 className=" text-start font-sans font-semibold mt-5">OBJECTIVE</h1>
             <ul className=" text-start p-5 text-[18px] ">
@@ -170,7 +170,7 @@ const How_wework = () => {
               <li className="mb-2"><span className=" text-3xl" style={{ marginRight: "0.5rem" }}>&#10142;</span>Defining the design and branding guidelines of the project</li>
             </ul>
           </div>
-          <div className="w-full md:w-[70%] h-auto flex justify-center bg-black p-10"data-aos="zoom-in">
+          <div className="w-full lg:w-[70%] h-auto flex justify-center bg-black p-10"data-aos="zoom-in">
             <img
               src={img2}
               alt="profile"
@@ -178,7 +178,7 @@ const How_wework = () => {
             />
           </div>
         </div>
-        <div className="w-full md:w-[70%] h-auto text-black   p-10  "data-aos="fade-up">
+        <div className="w-full lg:w-[70%] h-auto text-black   p-10  "data-aos="fade-up">
           <h1 className=" text-start text-[16px] font-semibold">OUTCOME</h1>
           <ul className=" text-start  text-[18px] font-medium p-5 leading-8  ">
             <li >
@@ -221,8 +221,8 @@ const How_wework = () => {
 
 
 
-      <div className="w-full md:w-[80%] flex flex-col bg-white h-auto  mt-10  ">
-        <div className="w-full md:w-[90%] flex flex-col md:flex-row   h-auto">
+      <div className="w-full lg:w-[80%] flex flex-col bg-white h-auto  mt-10  ">
+        <div className="w-full lg:w-[90%] flex flex-col md:flex-row   h-auto">
           <div className="w-full  h-auto bg-black p-5" data-aos="zoom-in">
           <h1 className=" text-start text-3xl">3. Design</h1>
             <img
@@ -232,7 +232,7 @@ const How_wework = () => {
             />
           </div>
         </div>
-        <div className="w-full md:w-[70%] h-auto text-black   p-10  " data-aos="fade-up">
+        <div className="w-full lg:w-[70%] h-auto text-black   p-10  " data-aos="fade-up">
           <h1 className=" text-start text-[16px] font-semibold">OBJECTIVE</h1>
           <ul className=" text-start font-sans p-5 text-[18px] leading-8 font-medium ">
             <li>
@@ -271,9 +271,9 @@ const How_wework = () => {
 
 
 
-      <div className="  w-full md:w-[80%] flex flex-col bg-white h-auto  mt-10  ">
-        <div className="w-full md:w-[90%] flex flex-col md:flex-row   h-auto">
-          <div className="w-full md:w-[70%] h-auto bg-black  p-10  " data-aos="fade-up">
+      <div className="  w-full lg:w-[80%] flex flex-col bg-white h-auto  mt-10  ">
+        <div className="w-full lg:w-[90%] flex flex-col lg:flex-row   h-auto">
+          <div className="w-full lg:w-[70%] h-auto bg-black  p-10  " data-aos="fade-up">
             <h1 className=" text-start text-3xl">4. Development</h1>
             <h1 className=" text-start mt-5 font-semibold">OBJECTIVE</h1>
             <ul className=" text-[18px] text-start p-5  ">
@@ -299,7 +299,7 @@ const How_wework = () => {
               <li><span className=" text-3xl" style={{ marginRight: "0.5rem" }}>&#10142;</span>Involve client review in each sprint/milestone</li>
             </ul>
           </div>
-          <div className="w-full md:w-[70%] h-auto bg-black p-10 flex justify-center" data-aos="zoom-in">
+          <div className="w-full lg:w-[70%] h-auto bg-black p-10 flex justify-center" data-aos="zoom-in">
             <img
               src={img4}
               alt="profile"
@@ -307,7 +307,7 @@ const How_wework = () => {
             />
           </div>
         </div>
-        <div className="w-full md:w-[70%] h-auto text-black   p-10  " data-aos="fade-up">
+        <div className="w-full lg:w-[70%] h-auto text-black   p-10  " data-aos="fade-up">
           <h1 className=" text-start text-[16px] font-semibold">WEB TECHNOLOGIES</h1>
           <ul className=" text-start font-sans text-[18px] p-5 leading-8 font-medium ">
             <li>
@@ -353,9 +353,9 @@ const How_wework = () => {
       </div>
 
 
-      <div className="testing   w-full md:w-[80%] flex flex-col bg-white h-auto  mt-10  ">
-        <div className="w-full md:w-[90%] flex flex-col md:flex-row   h-auto">
-          <div className="w-full md:w-[70%] h-auto bg-black  p-10  " data-aos="fade-up">
+      <div className="testing   w-full lg:w-[80%] flex flex-col bg-white h-auto  mt-10  ">
+        <div className="w-full lg:w-[90%] flex flex-col lg:flex-row   h-auto">
+          <div className="w-full lg:w-[70%] h-auto bg-black  p-10  " data-aos="fade-up">
             <h1 className=" text-start text-3xl">5. Testing</h1>
             <h1 className=" text-start mt-5 font-semibold">OBJECTIVE</h1>
             <ul className=" text-start p-5 text-[18px]">
@@ -371,7 +371,7 @@ const How_wework = () => {
               <li className="mb-2"><span className=" text-3xl" style={{ marginRight: "0.5rem" }}>&#10142;</span>Regression testing after each sprint to ensure proper functioning of the previous approved sprints/milestones.</li>
             </ul>
           </div>
-          <div className="w-full md:w-[70%] h-auto flex justify-center bg-black p-10" data-aos="zoom-in">
+          <div className="w-full lg:w-[70%] h-auto flex justify-center bg-black p-10" data-aos="zoom-in">
             <img
               src={img5}
               alt="profile"
@@ -379,7 +379,7 @@ const How_wework = () => {
             />
           </div>
         </div>
-        <div className="w-full md:w-[70%] h-auto text-black   p-10  " data-aos="fade-up">
+        <div className="w-full lg:w-[70%] h-auto text-black   p-10  " data-aos="fade-up">
           <h1 className=" text-start text-[16px] font-semibold">TYPES OF TESTING</h1>
           <ul className=" text-start font-sans p-5 leading-8 font-medium text-[18px] ">
             <li><span style={{ marginRight: "0.5rem" }}>&#10150;</span>Unit Testing</li>
@@ -406,9 +406,9 @@ const How_wework = () => {
 
 
 
-      <div className="maintence  w-full md:w-[80%] flex flex-col bg-white h-auto  mt-10  ">
-        <div className="w-full md:w-[90%] flex flex-col md:flex-row   h-auto">
-          <div className="w-full md:w-[70%] h-auto bg-black  p-10  " data-aos="fade-up">
+      <div className="maintence  w-full lg:w-[80%] flex flex-col bg-white h-auto  mt-10  ">
+        <div className="w-full lg:w-[90%] flex flex-col lg:flex-row   h-auto">
+          <div className="w-full lg:w-[70%] h-auto bg-black  p-10  " data-aos="fade-up">
             <h1 className=" text-start text-3xl">6. Maintenance</h1>
             <h1 className=" text-start mt-5 font-semibold">OBJECTIVE</h1>
             <ul className=" text-start p-5  text-[18px]">
@@ -432,7 +432,7 @@ const How_wework = () => {
               </li>
             </ul>
           </div>
-          <div className="w-full md:w-[70%] h-auto bg-black flex justify-center p-10" data-aos="zoom-in">
+          <div className="w-full lg:w-[70%] h-auto bg-black flex justify-center p-10" data-aos="zoom-in">
             <img
               src={img6}
               alt="profile"
@@ -440,7 +440,7 @@ const How_wework = () => {
             />
           </div>
         </div>
-        <div className="w-full md:w-[70%] h-auto text-black   p-10  "data-aos="fade-up">
+        <div className="w-full lg:w-[70%] h-auto text-black   p-10  "data-aos="fade-up">
           <h1 className=" text-start text-[16px] font-semibold">OUTCOME</h1>
           <ul className=" text-start font-sans p-5 leading-8  text-[18px] font-medium">
             <li>

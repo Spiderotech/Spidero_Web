@@ -30,7 +30,7 @@ const Belowherosection = () => {
               </p>
             </div>
           </div>
-          <div className="flex items-center justify-center  h-[400px]">
+          <div className="flex items-center justify-center  p-5 h-[400px]">
             <div className="grid grid-cols-2 gap-4">
               <div
                 className="flex bg-black"

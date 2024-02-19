@@ -4,8 +4,8 @@ import img from "../../assets/mobile/testing@2x-570x0.jpg";
 const Humancentered_design = () => {
   return (
     <section className="h-auto flex flex-col items-center justify-center   text-white py-0 px-3 bg-white ">
-      <div className="flex flex-col md:flex-row w-[80%] h-auto  text-center mb-10  ">
-        <div className="w-full lg:w-full md:w-[50%]  mt-10  ">
+      <div className="flex flex-col lg:flex-row w-[80%] h-auto  text-center mb-10  ">
+        <div className="w-full lg:w-full   mt-10  ">
           <div className="flex flex-col items-start">
             <h2 className="text-black pt-8 text-start leading-10 font-sans font-bold text-xl md:text-3xl lg:text-4xl md:ml-10">
               How Spidero Technology, #1 app developer in UK, makes your app
@@ -37,7 +37,7 @@ const Humancentered_design = () => {
             </div>
           </div>
         </div>
-        <div className=" w-full md:w-[50%] hidden md:block mt-10">
+        <div className=" w-full md:w-[50%] hidden lg:block mt-10">
           <img src={img} alt="" className="w-full  h-[400px] m-10 " />
         </div>
       </div>

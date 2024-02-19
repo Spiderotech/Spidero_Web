@@ -9,7 +9,7 @@ function Ourcapacity() {
             Our capabilities
           </h2>
 
-          <div class="p-20 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5  ">
+          <div class=" p-10 lg:p-20 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-5  ">
             <div
               class=" overflow-hidden border-2 bg-white  "
               data-aos="fade-down"

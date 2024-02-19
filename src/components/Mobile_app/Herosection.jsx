@@ -28,7 +28,7 @@ const Herosection = () => {
             Spidero Technology develops impactful mobile apps ensuring seamless user experiences across all devices, making a difference in digital innovation.
             </p>
             <div className=" hidden md:flex">
-            <a href="/contact">
+            <a href="/expertice">
               <button className="w-[198px] h-[51px] border-2 font-sans leading-6 tracking-2px text-[16px] font-medium text-black bg-white transition-all ease-in-out hover:bg-black hover:text-white">
                 EXPLORE US
               </button>

@@ -5,16 +5,16 @@ const Mobile = () => {
   return (
     <div className="w-full h-auto flex flex-col justify-items-center items-cente p-0 md:p-10 bg-white">
       <div className=" w-full h-auto  flex flex-row justify-center items-center p-5 gap-5 ">
-        <div className=" w-full h-auto  flex flex-col  md:flex-row justify-center items-center p-5 gap-5 ">
+        <div className=" w-full h-auto  flex flex-col  lg:flex-row justify-center items-center p-5 gap-5 ">
           
-          <div className=" w-full md:w-[40%] h-auto ">
+          <div className=" w-full lg:w-[40%] h-auto ">
             <img
               src={img}
               alt="profile"
               className="w-full h-auto object-contain"
             />
           </div>
-          <div className=" w-full md:w-[50%] h-auto p-0  md:p-10">
+          <div className=" w-full lg:w-[50%] h-auto p-0  md:p-10">
             <div className="text-[30px] font-sans leading-10 font-bold underline">
             Mobile Apps
             </div>

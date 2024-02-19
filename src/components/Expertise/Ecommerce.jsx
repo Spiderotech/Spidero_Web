@@ -5,8 +5,8 @@ import img1 from "../../assets/expertise/cyber-monday-shopping-sales.jpg";
 const Ecommerce = () => {
   return (
     <div className="w-full h-auto flex flex-col justify-items-center items-cente p-3  md:p-10 bg-[#efefef]">
-      <div className=" w-full h-auto  flex flex-col  md:flex-row justify-center items-center p-5 gap-5 ">
-      <div className=" w-full md:w-[50%] h-auto ">
+      <div className=" w-full h-auto  flex flex-col  lg:flex-row justify-center items-center p-5 gap-5 ">
+      <div className=" w-full lg:w-[50%] h-auto ">
           <img
             src={img1}
             alt="profile"
@@ -20,7 +20,7 @@ const Ecommerce = () => {
           </div>
         
         </div>
-        <div className=" w-full md:w-[50%] h-auto  ">
+        <div className=" w-full lg:w-[50%] h-auto  ">
           <img
             src={img}
             alt="profile"

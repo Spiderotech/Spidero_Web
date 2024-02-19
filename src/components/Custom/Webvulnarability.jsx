@@ -67,15 +67,15 @@ const Webvulnarability = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-center flex-row  bg-black  ">
-            <div className="w-[50%] h-96 flex justify-center items-center ">
+          <div className="flex items-center justify-center flex-row  bg-black   ">
+            <div className="w-full lg:w-[50%] h-96 flex justify-center items-center   ">
               <img
                 src={security}
                 alt="Logo"
-                className="object-contain w-60 h-60"
+                className="object-contain w-60 h-60 "
               />
             </div>
-            <div className="w-[50%] flex items-center justify-center h-96   ">
+            <div className="w-full lg:w-[50%] flex items-center justify-center h-96   ">
               <ul className=" list-disc text-start font-sans text-white p-5 leading-8 font-medium text-[22px] ">
                 <li>Ingress traffic filtering</li>
                 <li>Bad Bot Protection</li>

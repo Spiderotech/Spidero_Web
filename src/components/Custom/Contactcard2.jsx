@@ -4,9 +4,9 @@ import web5 from "../../assets/custom/cloud-server.png";
 const Contactcard2 = () => {
   return (
     <div className="flex flex-col md:flex-row w-full h-auto items-center justify-center text-center mb-10 bg-[#f2f5f7] p-14 mt-20">
-      <div className="w-full md:w-[50%]">
+      <div className="w-full lg:w-[50%]">
         <div className=" flex ">
-          <div className=' hidden md:block'>
+          <div className=' hidden lg:block'>
             <img src={web5} alt="Logo" class=" h-20 w-20 mt-2 " />
           </div>
 
@@ -20,8 +20,8 @@ const Contactcard2 = () => {
           </div>
         </div>
       </div>
-      <div className="w-full mt-10  md:w-[40%] md:mt-0 ">
-        <div className=" md:ml-10">
+      <div className="w-full mt-10  lg:w-[40%] lg:mt-0 ">
+        <div className=" lg:ml-10">
           <a href="/contact">
             <button className="border   border-white  w-[200px] h-[51px] font-sans leading-6 tracking-{2px} text-[16px]  text-white font-bold bg-black transition-all ease-in-out hover:bg-white hover:text-black hover:border-black">
             CONTACT US

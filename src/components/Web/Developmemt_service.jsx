@@ -12,7 +12,7 @@ const Developmemt_service = () => {
           <p class="mb-4 text-[20px] font-sans text-center leading-relaxed text-[#424242]">
           We take pride in crafting enterprise web services and small business web solutions tailored to your specific needs. Our strategic selection of cutting-edge technologies and implementation of standardized coding frameworks ensure scalability and future-proof solutions, enhancing the user experience. Ultimately, the outcome is a potent software for the world. With over 2 years of combined expertise in web design and big/small business web development, we stand out.
           </p>
-          <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-5  ">
+          <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5  ">
             <div class=" overflow-hidden border-2 bg-white  " data-aos="fade-up"
                 data-aos-duration="1000">
               <div

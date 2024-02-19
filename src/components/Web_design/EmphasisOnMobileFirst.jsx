@@ -4,8 +4,8 @@ import img1 from "../../assets/design.png"
 const EmphasisOnMobileFirst = () => {
   return (
     <section className=" h-auto flex flex-col  text-white py-0 px-3 bg-[#efefef] mb-10">
-      <div className="flex flex-row w-full h-auto items-center justify-center text-center pt-10 mb-10">
-        <div className="w-full md:w-[50%] p-5  md:p-20">
+      <div className="flex flex-col lg:flex-row w-full h-auto items-center justify-center text-center pt-10 mb-10">
+        <div className="w-full lg:w-[50%] p-5  lg:p-20">
           <div className="flex flex-col ">
             <div className="text-[40px] text-black font-sans leading-10 font-bold text-start  mb-4 lg:mb-8">
               Emphasis On Mobile First Web Design
@@ -22,7 +22,7 @@ const EmphasisOnMobileFirst = () => {
             <p className=" font-sans text-[20px] leading-7 font-bold tracking-normal text-black text-start  mb-3">
             CONVINCED?
             </p>
-            <div className=" hidden md:flex">
+            <div className=" hidden lg:flex">
               <a href="/contact">
                 <button className="border border-black w-[200px] h-[51px] font-sans leading-6 tracking-2px text-[16px] font-medium text-black bg-white transition-all ease-in-out hover:bg-black hover:text-white hover:border-white">
                 DISCUSS YOUR PROJECT
@@ -32,7 +32,7 @@ const EmphasisOnMobileFirst = () => {
             
           </div>
         </div>
-        <div className="w-[50%]  h-auto  hidden md:block relative">
+        <div className="w-[50%]  h-auto  relative">
         <img src={img1} alt="" className="w-full object-contain  md:h-auto" />
         </div>
       </div>

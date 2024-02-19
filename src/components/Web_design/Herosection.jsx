@@ -97,14 +97,14 @@ const Herosection = () => {
     <section className="relative h-auto flex flex-col  text-white py-0  bg-white mb-10">
       <div className="absolute w-full h-full mt-[-190px] " id="app"></div>
       <div className="flex flex-row w-[90%] h-auto items-center justify-center text-center pt-32 mb-20">
-        <div className="w-full md:w-[50%]  relative ">
+        <div className="w-full lg:w-[50%]  relative ">
           <div className="flex flex-col items-start">
             <h2 className="text-white pt-8 text-start leading-10 font-sans font-bold text-xl md:text-3xl lg:text-4xl ml-10 w-80">
               A top-rated web design company in UK
             </h2>
 
             <div className="ml-10 mt-5 mb-9">
-            <a href="/contact">
+            <a href="/expertice">
               <button className="w-[198px] h-[51px] font-sans leading-6 tracking-2px text-[16px] font-medium text-black bg-white transition-all ease-in-out hover:bg-black hover:text-white">
                 EXPLORE US
               </button>
@@ -112,7 +112,7 @@ const Herosection = () => {
             </div>
           </div>
         </div>
-        <div className="w-[40%] h-auto  hidden md:block relative bg-black">
+        <div className="w-[40%] h-auto  hidden lg:block relative bg-black">
           <div className="p-10 ">
             <form onSubmit={formik.handleSubmit} className=" mt-5 ">
             <h3 className=" text-[24px] md:text-[36px] lg:text-[28px] sm:text-[26px] xl:text-[32px] font-bold   font-sans text-white ">
