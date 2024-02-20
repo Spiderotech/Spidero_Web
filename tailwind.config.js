@@ -8,8 +8,8 @@ export default {
   theme: {
     screens: {
       'sm': '640px',
-      'md': '768px',
-      'lg': '1024px',
+      'md': '1024px',
+      'lg': '1280px',
       'xl': '1280px',
     },
     fontFamily: {
@@ -19,7 +19,7 @@ export default {
     },
    extend: {
       cursor: {
-        pointer: 'url("./assets/icons8-hand-cursor-48.cur"), pointer !important',
+        pointer: 'url("./assets/icons8-hand-cursor-48.png"), pointer !important',
         
       },
     },

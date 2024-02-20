@@ -11,7 +11,7 @@ const Footer = () => {
         {/* <img src={twitter} alt="Logo" className="object-contain h-6 w-6" />
         <img src={fb} alt="Logo" className="object-contain h-6 w-6" />
         <img src={IG} alt="Logo" className="object-contain h-6 w-6" /> */}
-        <img src={lN} alt="Logo" className="object-contain h-6 w-6" />
+        <img src={lN} alt="Logo" className="object-contain h-6 w-6  cursor-pointer" />
       </div>
       <div className="w-full bg-neutral-200 p-2 text-center text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200">
         © 2023 Spidero Technology Inc. All rights reserved.

@@ -74,12 +74,12 @@ const Navbarnormal = () => {
         aria-label="Global"
       >
         <div className=" flex ">
-        <a href="/" className="">
+        <a href="/" className="cursor-pointer">
           <img className=" h-[30px] w-[160px] md:h-[50px] md:w-[280px]"src={logo}alt=""/>
           </a>
           
         </div>
-        <div className="flex lg:hidden">
+        <div className="flex md:hidden">
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -89,10 +89,10 @@ const Navbarnormal = () => {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <Popover.Group className="hidden lg:flex lg:gap-x-12  ml-[35%] ">
+        <Popover.Group className="hidden md:flex md:gap-x-12  lg:ml-[35%] ">
           <Popover className="relative" onMouseEnter={() => setPopoverOpen(true)} onMouseLeave={() => setPopoverOpen(false)}>
             <a href="/expertice">
-            <Popover.Button className="flex items-center gap-x-1 text-[18px] text-left font-sans  font-semibold  text-gray-900"
+            <Popover.Button className="flex items-center gap-x-1 text-[18px] text-left font-sans  font-semibold  text-gray-900 cursor-pointer"
              onMouseEnter={() => setExpertisePopoverOpen(true)}
              onMouseLeave={() => setExpertisePopoverOpen(false)}
              onClick={handleExpertiseLinkClick}
@@ -115,7 +115,7 @@ const Navbarnormal = () => {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3  w-80 max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3  w-80 max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 cursor-pointer">
                 <div className="p-4">
                   {products.map((item) => (
                     <div
@@ -137,12 +137,12 @@ const Navbarnormal = () => {
               </Popover.Panel>
             </Transition>
           </Popover>
-          <a href="/ourprocess" className="text-[18px] text-left font-sans font-semibold text-gray-900" >
+          <a href="/ourprocess" className="text-[18px] text-left font-sans font-semibold text-gray-900 cursor-pointer" >
             Our Process
           </a>
           
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-[18px] text-left font-sans  font-semibold text-gray-900">
+            <Popover.Button className="flex items-center gap-x-1 text-[18px] text-left font-sans  font-semibold text-gray-900 cursor-pointer">
               Company
              
             </Popover.Button>
@@ -156,7 +156,7 @@ const Navbarnormal = () => {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-60 max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-60 max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 ">
                 <div className="p-4">
                   {companyLinks.map((item) => (
                     <div
@@ -180,9 +180,9 @@ const Navbarnormal = () => {
             </Transition>
           </Popover>
         </Popover.Group>
-        <div className="hidden xl:flex lg:flex-1 ">
+        <div className="hidden md:flex lg:flex-1 ">
           <a href="/contact">
-          <button className="border border-black ml-5 h-[58px] w-[200px] font-sans leading-6 tracking-{2px}  text-white text-[16px]  bg-black bg-no-repeat bg-center transition-all ease-in-out hover:bg-white hover:text-black hover:border-black">
+          <button className="border border-black ml-5 h-[58px] w-[200px] font-sans leading-6 tracking-{2px} cursor-pointer  text-white text-[16px]  bg-black bg-no-repeat bg-center transition-all ease-in-out hover:bg-white hover:text-black hover:border-black">
           CONTACT US
           </button>
 

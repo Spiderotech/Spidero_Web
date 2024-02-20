@@ -25,7 +25,7 @@ const Herosection = () => {
             </p>
             <div className=" ml-5 md:ml-10">
               <a href="/expertice">
-                <button className="border border-black w-[307px] h-[51px] font-sans leading-6 tracking-2px text-[18px] font-medium text-black bg-white transition-all ease-in-out hover:bg-black hover:text-white hover:border-white">
+                <button className="cursor-pointer border border-black w-[307px] h-[51px] font-sans leading-6 tracking-2px text-[18px] font-medium text-black bg-white transition-all ease-in-out hover:bg-black hover:text-white hover:border-white">
                   EXPLORE US
                 </button>
               </a>

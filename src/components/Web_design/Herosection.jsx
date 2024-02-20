@@ -5,9 +5,26 @@ import "react-phone-number-input/style.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
+import toast, { Toaster } from 'react-hot-toast';
 
 const Herosection = () => {
   const canvasRef = useRef(null);
+
+  useEffect(() => {
+    
+    const script = document.createElement('script');
+    
+
+    script.src = 'https://smtpjs.com/v3/smtp.js';
+    
+    
+    document.body.appendChild(script);
+    
+    
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   useEffect(() => {
     console.log("useEffect is running");
@@ -67,25 +84,25 @@ const Herosection = () => {
       message: "",
     },
     validationSchema,
-    onSubmit: async (values) => {
+    onSubmit: async (values, { resetForm }) => {
       try {
-        const templateParams = {
-          fullName: values.fullName,
-          email: values.email,
-          countryCode: values.countryCode,
-          phone: values.phone,
-          message: values.message,
-        };
-
-        const response = await emailjs.send(
-          "service_7urphoj",
-          "template_vjxigd6",
-          templateParams,
-          "vV-8CGzjqVUojOxcq"
+        await toast.promise(
+          Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "contact@spiderotechnology.com",
+            Password: "C9FDC5CD4B4719C4310C9C5FF078133E3816",
+            To: "contact@spiderotechnology.com",
+            From: "contact@spiderotechnology.com",
+            Subject: "contact from submition from spidero technology website",
+            Body: `Name: ${values.fullName}\nEmail: ${values.email}\nCountry Code: ${values.countryCode}\nPhone: ${values.phone}\nMessage: ${values.message}`,
+          }),
+          {
+            loading: 'Sending email...',
+            success: 'Email sent successfully!',
+            error: 'Failed to send email.',
+            
+          }
         );
-
-        console.log("Email sent successfully!", response);
-        alert("Your message has been sent successfully!");
         resetForm();
       } catch (error) {
         console.error("Error sending email:", error);
@@ -194,7 +211,8 @@ const Herosection = () => {
                   }
                   onBlur={formik.handleBlur}
                   international
-                  className=" w-20 h-auto ml-2 mt-2 bg-white  text-black bg"
+                  defaultCountry="GB"
+                  className=" w-20 h-auto ml-2 mt-2 bg-BLACK  text-black bg"
                 />
                 {formik.touched.countryCode && formik.errors.countryCode && (
                   <div className="text-red-500  text-xs mt-1">
@@ -284,6 +302,10 @@ const Herosection = () => {
           </div>
         </div>
       </div>
+      <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
     </section>
   );
 };

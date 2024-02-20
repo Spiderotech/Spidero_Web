@@ -19,8 +19,8 @@ const Footer = () => {
             </div>
 
             <div className="mt-[40px]">
-              <a href="/contact">
-                <button className="border  border-white  w-[184px] h-[54px] font-sans leading-6 tracking-{2px} text-[16px] font-medium text-white  bg-black transition-all ease-in-out hover:bg-white hover:text-black hover:border-black">
+              <a href="/contact" className="cursor-pointer">
+                <button className="border  border-white  w-[184px] h-[54px] font-sans leading-6 tracking-{2px} text-[16px] font-medium text-white  bg-black transition-all ease-in-out hover:bg-white hover:text-black hover:border-black cursor-pointer">
                   <b>GET IN TOUCH</b>
                 </button>
               </a>
@@ -86,7 +86,7 @@ const Footer = () => {
             <span className="mr-4">
               <a
                 href="/privacy-policy"
-                className="text-neutral-700 hover:text-black text-sm"
+                className="text-neutral-700 hover:text-black text-sm "
               >
                 Privacy Policy
               </a>
@@ -106,12 +106,12 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="md:hidden fixed bottom-0 w-full h-auto ">
-        <Link to="/contact">
-          <button className="border border-white w-full h-[51px] font-sans leading-6 tracking-{2px} text-[16px] font-medium text-white bg-black transition-all ease-in-out hover:bg-white hover:text-black hover:border-black">
-            <b>GET IN TOUCH</b>
+      <div className="md:hidden fixed bottom-0 w-full h-auto  ">
+        <a href="/contact" className="cursor-pointer">
+          <button className="  border border-white w-full h-[51px] font-sans leading-6 tracking-{2px} text-[16px] font-medium text-white bg-black transition-all ease-in-out hover:bg-white hover:text-black hover:border-black cursor-pointer">
+           GET IN TOUCH
           </button>
-        </Link>
+        </a>
       </div>
     </footer>
   );

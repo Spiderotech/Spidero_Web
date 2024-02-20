@@ -41,7 +41,7 @@ const Collaborationtools = () => {
     <div className="w-full h-auto flex flex-col justify-items-center items-cente p-5 md:p-10 bg-white ">
       <div className=" w-full h-auto  flex flex-col  md:flex-row justify-center items-center p-5 gap-5 ">
         <div className=" w-full md:w-[40%] h-auto p-0  md:p-10">
-          <div className="text-[30px] font-sans leading-10 font-bold ">
+          <div className="text-[40px] font-sans leading-10 font-bold ">
             Collaboration Tools
           </div>
           <div className="text-[18px] font-sans font-normal mt-4 ">
@@ -50,36 +50,36 @@ const Collaborationtools = () => {
             that your ideas are executed with the highest level of efficiency.
           </div>
         </div>
-        <div className=" w-full md:w-[60%] h-auto">
-        <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  ">
-            <div className="w-[113px] h-[80px] flex items-center ">
+        <div className=" w-full lg:w-[60%] h-auto ">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4  ">
+            <div className="w-[80px] h-[80px] flex items-center ">
               <img src={web1} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center ">
+            <div className="w-[80px] h-[80px] flex items-center ">
               <img src={web2} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center ">
+            <div className="w-[80px] h-[80px] flex items-center ">
               <img src={web3} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center ">
+            <div className="w-[80px] h-[80px] flex items-center ">
               <img src={web4} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center ">
+            <div className="w-[80px] h-[80px] flex items-center ">
               <img src={web5} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center ">
+            <div className="w-[80px] h-[80px] flex items-center ">
               <img src={web6} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center ">
+            <div className="w-[80px] h-[80px] flex items-center ">
               <img src={web7} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center ">
+            <div className="w-[80px] h-[80px] flex items-center ">
               <img src={web8} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center ">
+            <div className="w-[80px] h-[80px] flex items-center ">
               <img src={web9} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center ">
+            <div className="w-[80px] h-[80px] flex items-center ">
               <img src={web10} alt="Logo" className="object-contain" />
             </div>
           </div>
@@ -87,7 +87,7 @@ const Collaborationtools = () => {
       </div>
       <div className=" w-full h-auto  flex flex-col  md:flex-row justify-center items-center p-5 gap-5 ">
         <div className=" w-full md:w-[40%] h-auto p-0  md:p-10">
-          <div className="text-[30px] font-sans leading-10 font-bold ">
+          <div className="text-[40px] font-sans leading-10 font-bold ">
           Engagement Models
           </div>
           <div className="text-[18px] font-sans font-normal mt-4 ">
@@ -106,7 +106,7 @@ const Collaborationtools = () => {
                       alignItems: "center",
                     }}
                   >
-                    <h2 className="text-[18px] font-sans font-medium">
+                    <h2 className="text-[18px] font-sans  font-semibold">
                       {item.question}
                     </h2>
                     <button
@@ -123,12 +123,12 @@ const Collaborationtools = () => {
                     >
                       {expandedIndex === index ? (
                         <MinusIcon
-                          className="h-10 w-10 flex-none text-gray-400"
+                          className="h-10 w-10 flex-none text-gray-400  cursor-pointer"
                           aria-hidden="true"
                         />
                       ) : (
                         <PlusIcon
-                          className="h-10 w-10 flex-none text-gray-400"
+                          className="h-10 w-10 flex-none text-gray-400  cursor-pointer"
                           aria-hidden="true"
                         />
                       )}

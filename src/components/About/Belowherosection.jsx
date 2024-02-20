@@ -19,11 +19,11 @@ const Belowherosection = () => {
                 accelerate efficiency and fuel growth for our clients.
               </p>
               <p className=" font-sans text-[18px] leading-7  tracking-normal mb-3">
-                From 2010, we are committed to achieving and pushing the level
+                From 2022, we are committed to achieving and pushing the level
                 of performance at all times. Leveraging the power of technology,
                 we deliver end-to-end solutions for multi-million dollar funded
                 start-ups to small and medium enterprises. Art and culture
-                inspire us too, and our office presence at New York and Kolkata
+                inspire us too, and our office presence at Uk and India
                 is a true reflection.
               </p>
             </div>

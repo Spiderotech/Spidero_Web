@@ -20,10 +20,10 @@ const Location = () => {
         <h2 className="text-black text-start leading-10 font-sans font-bold text-[18px] ">
         +44 7459850729
         </h2>
-        <h2 className="text-black text-start leading-10 font-sans font-bold text-[16px] ">
+        <h2 className="text-black text-start leading-10 font-sans font-bold text-[16px]  cursor-pointer ">
         contact@spiderotechnology.com
         </h2>
-        <div className="mt-5 mb-5">
+        <div className="mt-5 mb-5  cursor-pointer">
           <iframe
             width="100%"
             height="150"
@@ -54,10 +54,10 @@ const Location = () => {
         <h2 className="text-black text-start leading-10 font-sans font-bold text-[18px] ">
         +91 80896502
         </h2>
-        <h2 className="text-black text-start leading-10 font-sans font-bold text-[16px] ">
+        <h2 className="text-black text-start leading-10 font-sans font-bold text-[16px]  cursor-pointer ">
         contact@spiderotechnology.com
         </h2>
-        <div className="mt-5 mb-5">
+        <div className="mt-5 mb-5  cursor-pointer">
           <iframe
             width="100%"
             height="150"

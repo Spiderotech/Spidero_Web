@@ -20,7 +20,7 @@ const Mobileapppage = () => {
     <Herosection/>
     <Client_card/>
     <Belowherosection/>
-    {/* <Projects/> */}
+    <Projects/>
     <Developmentservice/>
     <Makes_yourappidea_a_reality/>
     <Humancentered_design/>

@@ -25,7 +25,7 @@ const Contactcard1 = () => {
       <div className="w-full mt-10  lg:w-[40%] md:mt-0 ">
         <div className=" md:ml-10">
           <a href="/contact">
-            <button className="border   border-white  w-[200px] h-[51px] font-sans leading-6 tracking-{2px} text-[16px]  text-white font-bold bg-black transition-all ease-in-out hover:bg-white hover:text-black hover:border-black">
+            <button className="cursor-pointer border   border-white  w-[200px] h-[51px] font-sans leading-6 tracking-{2px} text-[16px]  text-white font-bold bg-black transition-all ease-in-out hover:bg-white hover:text-black hover:border-black">
               CONTACT US
             </button>
           </a>

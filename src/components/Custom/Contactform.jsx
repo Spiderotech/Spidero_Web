@@ -1,11 +1,28 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import emailjs from "@emailjs/browser";
+import toast, { Toaster } from 'react-hot-toast';
 
 const Contactform = () => {
+
+  useEffect(() => {
+    
+    const script = document.createElement('script');
+    
+
+    script.src = 'https://smtpjs.com/v3/smtp.js';
+    
+    
+    document.body.appendChild(script);
+    
+    
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
   const validationSchema = Yup.object().shape({
     fullName: Yup.string().required("Full Name is required"),
     companyName: Yup.string().required("Company Name is required"),
@@ -31,32 +48,39 @@ const Contactform = () => {
       message: "",
     },
     validationSchema,
-    onSubmit: async (values) => {
+    onSubmit: async (values, { resetForm }) => {
       try {
-        const templateParams = {
-          name: values.fullName,
-          company: values.companyName,
-          email: values.email,
-          countryCode: values.countryCode,
-          phone: values.phone,
-          areaOfInterest: values.areaOfInterest,
-          budget: values.budget,
-          message: values.message,
-        };
-
-        const response = await emailjs.send(
-          "service_7urphoj",
-          "template_vflpuqd",
-          templateParams,
-          "vV-8CGzjqVUojOxcq"
+        await toast.promise(
+          Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "contact@spiderotechnology.com",
+            Password: "C9FDC5CD4B4719C4310C9C5FF078133E3816",
+            To: "contact@spiderotechnology.com",
+            From: "contact@spiderotechnology.com",
+            Subject: "contact from submition from spidero technology website",
+            Body: `
+              Name: ${values.fullName}
+              Company: ${values.companyName}
+              Email: ${values.email}
+              Country Code: ${values.countryCode}
+              Phone: ${values.phone}
+              Area of Interest: ${values.areaOfInterest}
+              Budget: ${values.budget}
+              Message: ${values.message}
+            `,
+          }),
+          {
+            loading: 'Sending email...',
+            success: 'Email sent successfully!',
+            error: 'Failed to send email.',
+          }
         );
-
-        console.log("Email sent successfully!", response);
-        alert("Your message has been sent successfully!");
-        form.reset();
+        resetForm();
       } catch (error) {
         console.error("Error sending email:", error);
       }
+      
+     
     },
   });
 
@@ -265,13 +289,17 @@ const Contactform = () => {
           <div className="flex justify-between w-full px-3">
             <button
               type="submit"
-              className="border mt-10 mr-20 border-black w-[198px] h-[51px] font-sans leading-6 tracking-{2px} text-[16px] font-medium text-black bg-white transition-all ease-in-out hover:bg-black hover:text-white hover:border-white"
+              className="border cursor-pointer mt-10 mr-20 border-black w-[198px] h-[51px] font-sans leading-6 tracking-{2px} text-[16px] font-medium text-black bg-white transition-all ease-in-out hover:bg-black hover:text-white hover:border-white"
             >
               SUBMIT
             </button>
           </div>
         </div>
       </form>
+      <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
     </div>
   );
 };

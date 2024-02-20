@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import logo from "../../assets/logo.jpg";
+import emailjs from "@emailjs/browser";
 
 const Chatsystem = () => {
   const [isChatModalOpen, setChatModalOpen] = useState(false);
@@ -12,6 +13,10 @@ const Chatsystem = () => {
   const [inputStage, setInputStage] = useState("name");
   const [isOpenback, setIsOpenback] = useState(false);
   const [userCategory, setUserCategory] = useState("");
+  const [userName, setUserName] = useState("");
+
+
+ 
 
   useEffect(() => {
     const updateDateTime = () => {
@@ -64,13 +69,30 @@ const Chatsystem = () => {
     setIsOpen(true);
   };
 
-   const handleUserInputSubmit = () => {
+
+  useEffect(() => {
+    
+    const script = document.createElement('script');
+    
+
+    script.src = 'https://smtpjs.com/v3/smtp.js';
+    
+    
+    document.body.appendChild(script);
+    
+    
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  const handleUserInputSubmit = async () => {
     if (inputStage === "name") {
       setChatMessages((prevMessages) => [
         ...prevMessages,
         {
           sender: "User",
-          message: userInput,
+          message: setUserName(userInput),
         },
         {
           sender: "Spidero",
@@ -103,17 +125,36 @@ const Chatsystem = () => {
           sender: "Spidero",
           message: "Processing...",
         },
-        {
-          sender: "Spidero",
-          message:
-            "Got it! Spidero Technology team will be in touch as soon as they can. If you have any further questions, please contact us at contact@spidero.in. Thanks!",
-        },
       ]);
-      setInputStage("finished");
-      setIsOpenback(true);
-      setIsOpen(false);
+      try {
+       
+        Email.send({
+          Host: "smtp.elasticemail.com",
+          Username: "contact@spiderotechnology.com",
+          Password: "C9FDC5CD4B4719C4310C9C5FF078133E3816",
+          To: "contact@spiderotechnology.com",
+          From: "contact@spiderotechnology.com",
+          Subject: " contact from chat from spidero technology website",
+          Body: `Name: ${userName}\nEmail: ${userInput}\nMessage: ${userCategory}`,
+        }),
+  
+        setChatMessages((prevMessages) => [
+          ...prevMessages,
+          {
+            sender: "Spidero",
+            message:
+              "Got it! Spidero Technology team will be in touch as soon as they can. If you have any further questions, please contact us at contact@spidero.in. Thanks!",
+          },
+        ]);
+        setInputStage("finished");
+        setIsOpenback(true);
+        setIsOpen(false);
+      } catch (error) {
+        console.error("Error while sending email:", error);
+       
+      }
     }
-
+  
     setUserInput("");
   };
 
@@ -191,7 +232,7 @@ const Chatsystem = () => {
   return (
     <div className="relative">
       <button
-        className="fixed bottom-20 right-10  bg-[#e96f3f] text-white px-4 py-3 rounded-md z-10"
+        className="fixed bottom-20 right-10  bg-[#e96f3f] text-white px-4 py-3 rounded-md z-10 cursor-pointer"
         onClick={openChatModal}
       >
         <svg
@@ -219,7 +260,7 @@ const Chatsystem = () => {
       </butoon>
       
       {isChatModalOpen && (
-        <div className="fixed bottom-20 right-5 w-2/5 lg:w-1/4 h-auto bg-slate-50 rounded-md shadow-lg  z-10">
+        <div className="fixed bottom-20 right-5 w-[80%] lg:w-1/4 h-auto bg-slate-50 rounded-md shadow-lg  z-10">
           <div className="flex items-center  p-2 bg-white overflow-hidden rounded-md">
             <img
               className="w-10 h-10 rounded-full mr-2"
@@ -229,7 +270,7 @@ const Chatsystem = () => {
             <div className="text-black  font-medium ml-5">Spidero</div>
 
             <button
-              className="absolute top-4 right-4 px-2 py-1 rounded"
+              className="absolute top-4 right-4 px-2 py-1 rounded  cursor-pointer"
               onClick={closeChatModal}
             >
               <svg

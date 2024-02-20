@@ -76,7 +76,7 @@ const Navbar = () => {
         aria-label="Global"
       >
         <div className=" flex ">
-          {isScrolled? <a href="/" className="">
+          {isScrolled? <a href="/" className="cursor-pointer">
           <img className=" h-[30px] w-[160px] md:h-[50px] md:w-[280px] "src={logo1}alt=""/>
           </a>:<a href="/" className="">
           <img className=" h-[30px] w-[160px] md:h-[50px] md:w-[280px] "src={logo}alt=""/>
@@ -84,7 +84,7 @@ const Navbar = () => {
           }
           
         </div>
-        <div className="flex lg:hidden">
+        <div className="flex md:hidden">
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -94,10 +94,10 @@ const Navbar = () => {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <Popover.Group className="hidden lg:flex lg:gap-x-12  ml-[35%] ">
+        <Popover.Group className="hidden md:flex md:gap-x-12  lg:ml-[35%] ">
           <Popover className="relative" onMouseEnter={() => setPopoverOpen(true)} onMouseLeave={() => setPopoverOpen(false)}>
             <a href="/expertice">
-            <Popover.Button className={`flex items-center gap-x-1 text-[18px] text-left font-sans  font-semibold  ${
+            <Popover.Button className={`flex items-center gap-x-1 text-[18px] text-left font-sans cursor-pointer  font-semibold  ${
         isScrolled ? "text-gray-900" : "text-white"
       } `}
              onMouseEnter={() => setExpertisePopoverOpen(true)}
@@ -122,12 +122,12 @@ const Navbar = () => {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3  w-80 max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3  w-80 max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 ">
                 <div className="p-4">
                   {products.map((item) => (
                     <div
                       key={item.name}
-                      className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50  hover:animate-bounce"
+                      className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50  hover:animate-bounce cursor-pointer"
                     >
                       <div className="flex-auto">
                         <a
@@ -144,13 +144,13 @@ const Navbar = () => {
               </Popover.Panel>
             </Transition>
           </Popover>
-          <a href="/ourprocess" className={`text-[18px] text-left font-sans font-semibold ${
+          <a href="/ourprocess" className={`text-[18px] text-left font-sans cursor-pointer font-semibold ${
         isScrolled ? "text-gray-900" : "text-white"
       }`}>
             Our Process
           </a>
           <Popover className="relative">
-            <Popover.Button className={`flex items-center gap-x-1 text-[18px] text-left font-sans font-semibold ${
+            <Popover.Button className={`flex items-center gap-x-1 text-[18px] text-left font-sans font-semibold cursor-pointer ${
         isScrolled ? "text-gray-900" : "text-white"
       }`}>
               Company
@@ -169,12 +169,12 @@ const Navbar = () => {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-60 max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-60 max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 cursor-pointer">
                 <div className="p-4">
                   {companyLinks.map((item) => (
                     <div
                       key={item.name}
-                      className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50  hover:animate-bounce"
+                      className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50  hover:animate-bounce cursor-pointer"
                     >
                       <div className="flex-auto">
                         <a
@@ -193,9 +193,9 @@ const Navbar = () => {
             </Transition>
           </Popover>
         </Popover.Group>
-        <div className="hidden xl:flex lg:flex-1 ">
+        <div className="hidden md:flex lg:flex-1 ">
           <a href="/contact">
-          <button className="border  border-black ml-5 h-[58px] w-[200px] font-sans leading-6 tracking-{2px}  text-black text-[16px]  bg-white bg-no-repeat bg-center transition-all ease-in-out hover:bg-black hover:text-white hover:border-black">
+          <button className="border  border-black ml-5 h-[58px] w-[200px] font-sans leading-6 tracking-{2px}  text-black text-[16px]  bg-white bg-no-repeat bg-center transition-all ease-in-out hover:bg-black hover:text-white hover:border-black cursor-pointer">
           CONTACT US
           </button>
 
@@ -221,14 +221,14 @@ const Navbar = () => {
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
               onClick={() => setMobileMenuOpen(false)}
             >
-              <span className="sr-only">Close menu</span>
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+              {/* <span className="sr-only">Close menu</span>
+              <XMarkIcon className="h-6 w-6" aria-hidden="true" /> */}
             </button>
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <Disclosure as="div" className="-mx-3 mt-5">
+                <Disclosure as="div" className="-mx-3 mt-10">
                   {({ open }) => (
                     <>
                       <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-lg font-semibold leading-7 text-gray-900 hover:bg-gray-50">

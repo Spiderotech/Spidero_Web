@@ -16,7 +16,7 @@ const Designprinciple = () => {
             Here's our approach to achieve pixel-perfect results.
           </p>
 
-          <div class="p-5 md:p-20 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5">
+          <div class="p-5 md:p-20 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5  cursor-pointer">
             <Tilt>
               <div class=" overflow-hidden border-2 rounded-lg bg-black  ">
                 <div class="px-3 py-10 ">

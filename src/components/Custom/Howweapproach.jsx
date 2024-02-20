@@ -4,6 +4,11 @@ import Journey from "../../assets/custom/design.jpg";
 import System from "../../assets/custom/quality.jpg";
 import Quality from "../../assets/custom/planing.jpg";
 import Ultimate from "../../assets/custom/discovery.jpg";
+import {
+  ChevronDownIcon,
+  PhoneIcon,
+  PlayCircleIcon,
+} from "@heroicons/react/20/solid";
 
 const HowWeApproach = () => {
   const content = [
@@ -37,6 +42,78 @@ const HowWeApproach = () => {
         "Deployment complexity varies with the project scope. Our experienced software developers utilize appropriate deployment tools, integration servers, and a robust rollback strategy. We provide essential training for end-users, operations, and IT on-call staff. Deployment strategies range from gradual implementation across branches to a full-scale rollout, ensuring a smooth process.",
       image: Ultimate,
     },
+  ];
+  const icons = [
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-6 h-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z"
+      />
+    </svg>,
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-6 h-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z"
+      />
+    </svg>,
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-6 h-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z"
+      />
+    </svg>,
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-6 h-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
+      />
+    </svg>,
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-6 h-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M9 3.75H6.912a2.25 2.25 0 0 0-2.15 1.588L2.35 13.177a2.25 2.25 0 0 0-.1.661V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 0 0-2.15-1.588H15M2.25 13.5h3.86a2.25 2.25 0 0 1 2.012 1.244l.256.512a2.25 2.25 0 0 0 2.013 1.244h3.218a2.25 2.25 0 0 0 2.013-1.244l.256-.512a2.25 2.25 0 0 1 2.013-1.244h3.859M12 3v8.25m0 0-3-3m3 3 3-3"
+      />
+    </svg>,
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -79,17 +156,39 @@ const HowWeApproach = () => {
         </div>
       </div>
       <div className="w-full h-auto flex flex-col md:flex-row justify-center items-center gap-3 ">
-        <div className="w-full md:w-[20%] h-auto  ">
-          <div className="w-64 flex-col hidden  text-black p-6">
+        <div className="w-full   md:w-[30%] h-auto  ">
+          <div className="w-auto flex flex-row md:flex-col  text-black p-6">
             {content.map((item, index) => (
               <div
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`cursor-pointer mb-14 px-2 py-1 font-sans font-medium rounded-md  ${
-                  currentSlide === index ? "bg-white" : "  bg-zinc-400"
+                className={`cursor-pointer mb-14 px-2 py-1 font-sans font-medium rounded-md flex flex-row items-center ${
+                  currentSlide === index ? "bg-white" : ""
                 }`}
+                style={{ position: "relative" }}
               >
-                {item.title}
+                <div
+                  style={{
+                    width: "50px",
+                    height: "50px",
+                    padding:"2px",
+                    borderRadius: "50%",
+                    borderWidth: "2px", 
+                    borderStyle: "solid", 
+                    borderColor: currentSlide === index ? 'blue' : 'gray',
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    marginRight: "10px",
+                  }}
+                >
+                  {icons[index]} 
+                </div>
+                <div
+                className={`hidden md:block font-semibold${currentSlide === index ? 'font-semibold' : 'text-gray-600 font-semibold'}`}
+
+                
+                >{item.title}</div> 
               </div>
             ))}
           </div>
@@ -104,7 +203,9 @@ const HowWeApproach = () => {
             <h2 className="text-2xl font-bold mb-2">
               {content[currentSlide].title}
             </h2>
-            <p className="text-gray-700 text-xl">{content[currentSlide].description}</p>
+            <p className="text-gray-700 text-xl">
+              {content[currentSlide].description}
+            </p>
           </div>
         </div>
       </div>

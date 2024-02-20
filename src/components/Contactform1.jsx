@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
+import toast, { Toaster } from 'react-hot-toast';
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,6 +14,24 @@ import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
 
 const Contactform1 = () => {
+
+useEffect(() => {
+    
+    const script = document.createElement('script');
+    
+
+    script.src = 'https://smtpjs.com/v3/smtp.js';
+    
+    
+    document.body.appendChild(script);
+    
+    
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+
   const validationSchema = Yup.object().shape({
     fullName: Yup.string().required("Full Name is required"),
     email: Yup.string()
@@ -34,30 +53,30 @@ const Contactform1 = () => {
       message: "",
     },
     validationSchema,
-    onSubmit: async (values) => {
-      try {
-        const templateParams = {
-          name: values.fullName,
-          email: values.email,
-          countryCode: values.countryCode,
-          phone: values.phone,
-          message: values.message,
-        };
-
-        const response = await emailjs.send(
-          "service_7urphoj",
-          "template_vjxigd6",
-          templateParams,
-          "vV-8CGzjqVUojOxcq"
-        );
-
-        console.log("Email sent successfully!", response);
-        alert("Your message has been sent successfully!");
-        formik.reset();
-      } catch (error) {
-        console.error("Error sending email:", error);
-      }
-    },
+   onSubmit: async (values, { resetForm }) => {
+    try {
+      await toast.promise(
+        Email.send({
+          Host: "smtp.elasticemail.com",
+          Username: "contact@spiderotechnology.com",
+          Password: "C9FDC5CD4B4719C4310C9C5FF078133E3816",
+          To: "contact@spiderotechnology.com",
+          From: "contact@spiderotechnology.com",
+          Subject: "contact from submition from spidero technology website",
+          Body: `Name: ${values.fullName}\nEmail: ${values.email}\nCountry Code: ${values.countryCode}\nPhone: ${values.phone}\nMessage: ${values.message}`,
+        }),
+        {
+          loading: 'Sending email...',
+          success: 'Email sent successfully!',
+          error: 'Failed to send email.',
+          
+        }
+      );
+      resetForm();
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
+}
   });
 
   return (
@@ -84,7 +103,7 @@ const Contactform1 = () => {
                           alt="profile"
                           className="w-[60px] h-[60px] sm:w-[100px] sm:h-[100px] lg:w-[120px] lg:h-[120px] rounded-full object-cover"
                         />
-                        <span className="text-black text-justify mt-4 sm:mt-6 md:mt-8 lg:mt-10 text-sm sm:text-base md:text-lg lg:text-[26px] ">
+                        <span className="text-black  text-center mt-4 sm:mt-6 md:mt-8 lg:mt-10 text-sm sm:text-base md:text-lg lg:text-[26px] ">
                           <svg
                             className="w-8 h-8 mr-4 mx-auto  text-gray-400 dark:text-gray-600 text-start inline-block"
                             aria-hidden="true"
@@ -111,7 +130,7 @@ const Contactform1 = () => {
             </div>
           </div>
 
-          <div className="w-full h-auto text-start bg-black flex justify-center items-center ">
+          <div className="w-full h-auto text-start bg-black flex justify-center items-center cursor-pointer ">
             <div className="w-[65%] pt-[60px] pb-[60px] ">
               <h3 className=" text-[24px] md:text-[36px] lg:text-[28px] sm:text-[26px] xl:text-[40px] font-bold  font-sans text-white ">
                 Connect With Us
@@ -193,7 +212,8 @@ const Contactform1 = () => {
                     }
                     onBlur={formik.handleBlur}
                     international
-                    className=" w-20 h-auto ml-2 mt-2  text-black bg"
+                    defaultCountry="GB"
+                    className=" w-20 h-auto ml-2 mt-2  text-black  bg-BLACK  "
                   />
                   {formik.touched.countryCode && formik.errors.countryCode && (
                     <div className="text-red-500  text-xs mt-1">
@@ -275,7 +295,7 @@ const Contactform1 = () => {
                 </div> */}
                 <button
                   type="submit"
-                  className="border mt-10 mr-20 border-black w-[198px] h-[51px] font-sans leading-6 tracking-{2px} text-[16px] font-medium text-black  bg-white transition-all ease-in-out hover:bg-black hover:text-white hover:border-white"
+                  className="border mt-10 mr-20 border-black w-[198px] h-[51px] font-sans leading-6 tracking-{2px} text-[16px] font-medium text-black  bg-white transition-all ease-in-out hover:bg-black hover:text-white hover:border-white cursor-pointer"
                 >
                   SUBMIT
                 </button>
@@ -284,6 +304,10 @@ const Contactform1 = () => {
           </div>
         </div>
       </div>
+      <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
     </footer>
   );
 };

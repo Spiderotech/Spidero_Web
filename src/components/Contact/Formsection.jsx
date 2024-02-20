@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useEffect} from "react";
+import toast, { Toaster } from 'react-hot-toast';
 
 import web4 from "../../assets/in.svg";
 import web6 from "../../assets/london.jpg";
@@ -11,6 +12,24 @@ import web5 from "../../assets/about1 (1).jpg";
 import web7 from "../../assets/about1 (2).jpg";
 
 const Formsection = () => {
+
+  useEffect(() => {
+    
+    const script = document.createElement('script');
+    
+
+    script.src = 'https://smtpjs.com/v3/smtp.js';
+    
+    
+    document.body.appendChild(script);
+    
+    
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+
   const validationSchema = Yup.object().shape({
     fullName: Yup.string().required("Full Name is required"),
     email: Yup.string()
@@ -32,34 +51,28 @@ const Formsection = () => {
       message: "",
     },
     validationSchema,
-    onSubmit:async (values) => {
+    onSubmit:async (values, { resetForm }) => {
       try {
-       
-        const templateParams = {
-          name: values.fullName,
-          email: values.email,
-          countryCode: values.countryCode,
-          phone: values.phone,
-          message: values.message,
-        };
-  
-        const response = await emailjs.send(
-          'service_7urphoj',
-          'template_vjxigd6',
-          templateParams,
-          'vV-8CGzjqVUojOxcq'
+        await toast.promise(
+          Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "contact@spiderotechnology.com",
+            Password: "C9FDC5CD4B4719C4310C9C5FF078133E3816",
+            To: "contact@spiderotechnology.com",
+            From: "contact@spiderotechnology.com",
+            Subject: "contact from submition from spidero technology website",
+            Body: `Name: ${values.fullName}\nEmail: ${values.email}\nCountry Code: ${values.countryCode}\nPhone: ${values.phone}\nMessage: ${values.message}`,
+          }),
+          {
+            loading: 'Sending email...',
+            success: 'Email sent successfully!',
+            error: 'Failed to send email.',
+            
+          }
         );
-       
-        console.log('Email sent successfully!', response);
-        alert("Your message has been sent successfully!");
         resetForm();
-       
-  
-       
       } catch (error) {
-        console.error('Error sending email:', error);
-  
-       
+        console.error("Error sending email:", error);
       }
     },
   });
@@ -81,7 +94,7 @@ const Formsection = () => {
                 htmlFor="email"
                 className="absolute left-2 bottom-10 text-sm font-medium text-black pointer-events-none transition-all "
               >
-                Full Name<span className="text-red-500 ">*</span>
+                Full Name<span className="text-red-500  ">*</span>
               </label>
               <input
                 type="text"
@@ -150,6 +163,7 @@ const Formsection = () => {
                 onChange={(value) => formik.setFieldValue("countryCode", value)}
                 onBlur={formik.handleBlur}
                 international
+                defaultCountry="GB"
                 className=" w-20 h-auto ml-2 mt-2  text-black bg-white"
               />
               {formik.touched.countryCode && formik.errors.countryCode && (
@@ -232,7 +246,7 @@ const Formsection = () => {
                 </div> */}
             <button
               type="submit"
-              className="border mt-10 mr-20 border-black w-[198px] h-[51px] font-sans leading-6 tracking-{2px} text-[16px] font-medium text-black  bg-white transition-all ease-in-out hover:bg-black hover:text-white hover:border-white"
+              className="border  cursor-pointer mt-10 mr-20 border-black w-[198px] h-[51px] font-sans leading-6 tracking-{2px} text-[16px] font-medium text-black  bg-white transition-all ease-in-out hover:bg-black hover:text-white hover:border-white"
             >
               SUBMIT
             </button>
@@ -264,7 +278,7 @@ const Formsection = () => {
               </div>
             </div>
             <a href="mailto:contact@spidero.in">
-              <h2 className="text-black text-start leading-7 mt-3 font-sans  font-semibold text-[18px] ">
+              <h2 className="text-black  cursor-pointer text-start leading-7 mt-3 font-sans  font-semibold text-[18px] ">
               contact@spiderotechnology.com
               </h2>
             </a>
@@ -316,6 +330,10 @@ const Formsection = () => {
           </div>
         </div>
       </div>
+      <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
     </section>
   );
 };

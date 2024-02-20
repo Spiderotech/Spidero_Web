@@ -16,7 +16,7 @@ const Companygrowthcard = () => {
               data-aos-duration="1000"
             >
               <b>
-                <b className="text-[32px] leading-10">3 + years</b>
+                <b className="text-[32px] leading-10">2 years</b>
               </b>
               <br />
               <span className="text-[16px] font-medium">in the business</span>

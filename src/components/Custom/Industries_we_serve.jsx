@@ -105,7 +105,7 @@ const Industries_we_serve = () => {
             <button
               key={heading.id}
               onClick={handleButtonClick}
-              className={`text-white text-start text-[10px] md:text-[16px] m-2 font-medium md:font-bold md:py-2 md:m-2 ${
+              className={`text-white text-start text-[10px] md:text-[16px] m-2 font-medium md:font-bold md:py-2 md:m-2 cursor-pointer ${
                 (selectedHeading && selectedHeading.id === heading.id) ||
                 (currentIndex === headingsData.findIndex((item) => item.title === heading.title))
                   ? "text-blue-500 border-blue-500"

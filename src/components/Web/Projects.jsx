@@ -34,7 +34,7 @@ const Project = ({ title,image, subTitle, companyName, description }) => {
           />
         </div>
         <div className="mb-6 md:mb-0 w-full h-auto">
-          <h1 className="text-[32px] sm:text-[26px] md:text-[32px] lg:text-[40px] font-black font-sans lg:ml-24 mt-0 lg:mt-32">
+          <h1 className="text-[32px] sm:text-[26px] md:text-[32px] lg:text-[40px] font-black font-sans lg:ml-24 mt-0 lg:mt-10">
             {title}
           </h1>
           <br />

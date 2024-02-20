@@ -4,11 +4,11 @@ import img from "../../assets/expertise/web.jpg";
 const Web = () => {
   return (
     <div className="w-full h-auto flex flex-col justify-items-center items-cente p-5 md:p-10 bg-white pt-10 md:pt-40">
-      <div className=" w-[80%] h-auto p-10 ">
-        <div className="text-[19px] font-sans  font-bold leading-loose  mb-4 lg:mb-8">
+      <div className=" lg:w-[72%] h-auto p-10 ">
+        <p className="text-[19px] font-sans  tracking-[2px]  font-bold  mb-2 lg:mb-3">
           OUR SERVICES
-        </div>
-        <div className=" text-[20px] sm:text-[40px] md:text-[28px] lg:text-[38px] font-sans font-bold  mb-4 lg:mb-8">
+        </p>
+        <div className=" text-[20px] sm:text-[28px] md:text-[30px] lg:text-[36px] font-sans font-bold    tracking-tight mb-4 lg:mb-8">
           Startup or a Fortune 500 company, Spidero Technology will act as your
           consultant and development partners to transform your idea into
           success. Take advantage of our full-service capabilities.

@@ -221,12 +221,12 @@ const Developmentteam = () => {
                     >
                       {expandedIndex === index ? (
                         <MinusIcon
-                          className="h-10 w-10 flex-none text-gray-400"
+                          className="h-10 w-10 flex-none text-gray-400 cursor-pointer"
                           aria-hidden="true"
                         />
                       ) : (
                         <PlusIcon
-                          className="h-10 w-10 flex-none text-gray-400"
+                          className="h-10 w-10 flex-none text-gray-400 cursor-pointer"
                           aria-hidden="true"
                         />
                       )}
@@ -254,7 +254,7 @@ const Developmentteam = () => {
               ))}
             </div>
             <a href="/contact" className=" ml-0 md:ml-10">
-              <button className="border ml-10 mt-5 mb-10 border-white  w-[300px] h-[51px] font-sans leading-6 tracking-{2px} text-[16px] font-medium text-white font-bold bg-black transition-all ease-in-out hover:bg-white hover:text-black hover:border-black">
+              <button className="border cursor-pointer ml-10 mt-5 mb-10 border-white  w-[300px] h-[51px] font-sans leading-6 tracking-{2px} text-[16px] font-medium text-white font-bold bg-black transition-all ease-in-out hover:bg-white hover:text-black hover:border-black">
               SHARE PROJECT REQUIREMENT
               </button>
             </a>

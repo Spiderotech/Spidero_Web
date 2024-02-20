@@ -19,12 +19,12 @@ const EmphasisOnMobileFirst = () => {
             Given the current emphasis on mobile indexing and ranking by Google, developing professional mobile web designs has become increasingly vital.
 
             </p>
-            <p className=" font-sans text-[20px] leading-7 font-bold tracking-normal text-black text-start  mb-3">
+            <p className="  cursor-pointer font-sans text-[20px] leading-7 font-bold tracking-normal text-black text-start  mb-3">
             CONVINCED?
             </p>
             <div className=" hidden lg:flex">
               <a href="/contact">
-                <button className="border border-black w-[200px] h-[51px] font-sans leading-6 tracking-2px text-[16px] font-medium text-black bg-white transition-all ease-in-out hover:bg-black hover:text-white hover:border-white">
+                <button className="border  cursor-pointer border-black w-[200px] h-[51px] font-sans leading-6 tracking-2px text-[16px] font-medium text-black bg-white transition-all ease-in-out hover:bg-black hover:text-white hover:border-white">
                 DISCUSS YOUR PROJECT
                 </button>
               </a>

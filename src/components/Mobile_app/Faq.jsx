@@ -72,12 +72,12 @@ const Faq = () => {
             >
               {expandedIndex === index ? (
                  <ChevronDownIcon
-                 className="h-10 w-10 flex-none text-gray-400"
+                 className="h-10 w-10 flex-none text-gray-400  cursor-pointer"
                  aria-hidden="true"
                />
               ) : (
                 <ChevronDownIcon
-                className="h-10 w-10 flex-none text-gray-400"
+                className="h-10 w-10 flex-none text-gray-400  cursor-pointer"
                 aria-hidden="true"
               />
               )}

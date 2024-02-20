@@ -15,16 +15,21 @@ import mobile6 from "../../assets/mobile/mobile6.png";
 
 const Results_mobile = () => {
   const breakpoints = {
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 10,
-    },
-
-    0: {
+    640: {
       slidesPerView: 1,
-      spaceBetween: 10,
+      spaceBetween: 20
     },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    }
   };
+  
+  
   return (
     <section className="h-auto flex flex-col items-center justify-center   text-white py-0 px-3 bg-black ">
       <div className="flex flex-col lg:flex-row w-[90%] h-auto  text-center mb-10  ">
@@ -43,12 +48,12 @@ const Results_mobile = () => {
               reflecting excellence in both iOS and Android app development,
               making us the best in London.
             </p>
-            <p className="font-sans text-[19px] leading-7 font-medium tracking-normal text-start p-9 text-white">
+            <p className="font-sans  cursor-pointer text-[19px] leading-7 font-medium tracking-normal text-start p-9 text-white">
               CONVINCED?
             </p>
             <div className="mt-1 text-center mb-10 ml-10">
               <a href="/contact">
-                <button className="border  border-white  w-[200px] h-[51px] font-sans leading-6 tracking-{2px} text-[14px]  text-white font-bold bg-black transition-all ease-in-out hover:bg-white hover:text-black hover:border-black">
+                <button className="border  cursor-pointer  border-white  w-[200px] h-[51px] font-sans leading-6 tracking-{2px} text-[14px]  text-white font-bold bg-black transition-all ease-in-out hover:bg-white hover:text-black hover:border-black">
                   CONTACT US
                 </button>
               </a>

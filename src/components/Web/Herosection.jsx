@@ -25,7 +25,7 @@ const Herosection = () => {
             </span>
             <div className=" hidden md:flex">
               <a href="/expertice">
-                <button className="border border-black w-[198px] h-[51px] font-sans leading-6 tracking-2px text-[16px] font-medium text-black bg-white transition-all ease-in-out hover:bg-black hover:text-white hover:border-white">
+                <button className="border cursor-pointer border-black w-[198px] h-[51px] font-sans leading-6 tracking-2px text-[16px] font-medium text-black bg-white transition-all ease-in-out hover:bg-black hover:text-white hover:border-white">
                 EXPLORE US
                 </button>
               </a>

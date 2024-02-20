@@ -76,7 +76,7 @@ const Developmemt_service = () => {
           </div>
           <div className="mt-10 text-center mb-10">
           <a href="/contact">
-            <button className="border  border-white  w-[200px] h-[51px] font-sans leading-6 tracking-{2px} text-[16px]  text-white font-bold bg-black transition-all ease-in-out hover:bg-white hover:text-black hover:border-black">
+            <button className="border  cursor-pointer border-white  w-[200px] h-[51px] font-sans leading-6 tracking-{2px} text-[16px]  text-white font-bold bg-black transition-all ease-in-out hover:bg-white hover:text-black hover:border-black">
               SEE OUR PORTFOLIO
             </button>
           </a>

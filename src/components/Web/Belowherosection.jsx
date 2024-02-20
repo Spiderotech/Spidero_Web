@@ -12,13 +12,13 @@ const Belowherosection = () => {
                 Your Development Partner. Committed to Excellence!
               </div>
               <br />
-              <p className="font-sans text-[18px] leading-7 font-semibold tracking-normal  mb-3">
+              <p className="font-sans text-[18px] leading-7 font-normal tracking-normal  mb-3">
                 Over the last decade, we've perfected the art of crafting
                 websites that innovate, engage, and yield results through a
                 blend of a human-centric approach and development ingenuity.
                 Hire skilled web developers to turn your vision into reality.
               </p>
-              <p className=" font-sans text-[18px] leading-7 font-semibold tracking-normal mb-3">
+              <p className=" font-sans text-[18px] leading-7 font-normal tracking-normal mb-3">
                 Whether it's custom web applications development and SaaS
                 platforms, ecommerce website development, or informative lead
                 generation sites, our value proposition in web development is to
@@ -42,7 +42,7 @@ const Belowherosection = () => {
                   data-aos="flip-up"
                   data-aos-duration="1000"
                 >
-                  <b className="text-white text-[32px]">3 + years</b>
+                  <b className="text-white text-[32px]">2 years</b>
 
                   <p className="text-white mt-3">in the business</p>
                 </div>

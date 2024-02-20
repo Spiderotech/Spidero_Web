@@ -69,7 +69,7 @@ const Herosection = () => {
                   data-aos="flip-up"
                   data-aos-duration="1000"
                 >
-                  <b className="text-white text-[32px]">3 + years</b>
+                  <b className="text-white text-[32px]">2 years</b>
                   <p className="text-white mt-3">in the business</p>
                 </div>
               </div>

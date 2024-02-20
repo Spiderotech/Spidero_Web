@@ -61,7 +61,7 @@ const Technologystack = () => {
           </h2>
         </div>
         <div className=" md:w-[90%]  h-auto">
-          <div class="p-3  grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-11 xl:gap-x-28 ">
+          <div class="p-3  grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-11 xl:gap-x-28 ">
             <div className="w-[113px] h-[80px] flex items-center p-5 ">
               <img src={web1} alt="Logo" className="object-contain" />
             </div>
@@ -102,7 +102,7 @@ const Technologystack = () => {
           </h2>
         </div>
         <div className="md:w-[90%]  h-auto">
-        <div class="p-3  grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-7 xl:gap-x-28 ">
+        <div class="p-3  grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-7 xl:gap-x-28 ">
             <div className="w-[113px] h-[80px] flex items-center p-2 ">
               <img src={db1} alt="Logo" className="object-contain" />
             </div>
@@ -135,7 +135,7 @@ const Technologystack = () => {
           </h2>
         </div>
         <div className="md:w-[90%]  h-auto">
-          <div class="p-3  grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-10 xl:gap-x-28 ">
+          <div class="p-3  grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-10 xl:gap-x-28 ">
             <div className="w-[113px] h-[80px] flex items-center p-8 ">
               <img src={mobile2} alt="Logo" className="object-contain" />
             </div>
@@ -176,7 +176,7 @@ const Technologystack = () => {
           </h2>
         </div>
         <div className="md:w-[90%]  h-auto">
-        <div class="p-3  grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-5 xl:gap-x-28 ">
+        <div class="p-3  grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 xl:gap-x-28 ">
             <div className="w-[113px] h-[80px] flex items-center p-8 ">
               <img src={open1} alt="Logo" className="object-contain" />
             </div>
@@ -202,7 +202,7 @@ const Technologystack = () => {
           </h2>
         </div>
         <div className="md:w-[90%]  h-auto">
-        <div class="p-3  grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 xl:gap-x-28 ">
+        <div class="p-3  grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 xl:gap-x-28 ">
             <div className="w-[113px] h-[80px] flex items-center  p-6">
               <img src={pay1} alt="Logo" className="object-contain" />
             </div>

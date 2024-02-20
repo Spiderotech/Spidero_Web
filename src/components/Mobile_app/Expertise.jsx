@@ -15,15 +15,18 @@ import web7 from "../../assets/mobile _swipper/full-shot-man-training-with-stats
 import web8 from "../../assets/mobile _swipper/representation-user-experience-interface-design (1).jpg";  
 const Expertise = () => {
   const breakpoints = {
-    768: {
-      slidesPerView: 4,
-      spaceBetween: 10,
-    },
-
-    0: {
+    640: {
       slidesPerView: 1,
-      spaceBetween: 10,
+      spaceBetween: 20
     },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 20
+    }
   };
   return (
     <div class="flex justify-center flex-col items-center w-full h-auto  ">
@@ -33,8 +36,6 @@ const Expertise = () => {
       <div className="w-[95%] h-auto p-10 mb-5">
         <Swiper
           modules={[Navigation, Autoplay, Pagination]}
-          spaceBetween={70}
-          slidesPerView={4}
           breakpoints={breakpoints}
           loop={true}
           autoplay={{

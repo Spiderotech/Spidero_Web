@@ -30,7 +30,7 @@ const Technologystack = () => {
       <h2 className="text-[22px] font-sans leading-10 font-bold sm:text-[22px] md:text-[38px] lg:text-[22px] xl:text-[30px]   ">
         Technology Stack We Practice
       </h2>
-      <div className="w-full  lg:w-[60%]   mt-5 flex flex-col md:flex-row  items-center">
+      <div className="w-full  md:w-[60%]   mt-5 flex flex-col md:flex-row  items-center">
         <div className="w-[200px]">
           <h2 className="ml-5 font-sans text-[18px]  leading-7 font-medium tracking-normal text-start  text-black">
             Back-end:
@@ -53,7 +53,7 @@ const Technologystack = () => {
           </div>
         </div>
       </div>
-      <div className="w-full  lg:w-[60%]   mt-5 flex flex-col md:flex-row  items-center">
+      <div className="w-full  md:w-[60%]   mt-5 flex flex-col md:flex-row  items-center">
         <div className="w-[200px]">
           <h2 className="ml-5 font-sans text-[18px]  leading-7 font-medium tracking-normal text-start  text-black">
             Front-end:
@@ -76,7 +76,7 @@ const Technologystack = () => {
           </div>
         </div>
       </div>
-      <div className="w-full  lg:w-[60%]   flex flex-col md:flex-row  items-center">
+      <div className="w-full  md:w-[60%]   flex flex-col md:flex-row  items-center">
         <div className="w-[200px]">
           <h2 className="ml-5 font-sans text-[18px]  leading-7 font-medium tracking-normal text-start  text-black">
             Database:
@@ -108,7 +108,7 @@ const Technologystack = () => {
           </div>
         </div>
       </div>
-      <div className="w-full  lg:w-[60%]  flex flex-col md:flex-row  items-center">
+      <div className="w-full  md:w-[60%]  flex flex-col md:flex-row  items-center">
         <div className="w-[200px]">
           <h2 className="ml-5 font-sans text-[18px]  leading-7 font-medium tracking-normal text-start  text-black">
             OpenSource:
