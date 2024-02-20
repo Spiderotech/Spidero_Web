@@ -1,6 +1,7 @@
 import React from "react";
 import client1 from "../assets/getmyroomlogo.webp";
 import client2 from "../assets/hustelmax.png";
+import client3 from "../assets/leafkerala.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -42,7 +43,7 @@ const ClientCard = () => {
           <Swiper
             spaceBetween={30}
             modules={[Autoplay, Pagination, FreeMode]}
-            slidesPerView={1}
+            slidesPerView={3}
             loop={true}
             autoplay={{
               delay: 2500,
@@ -68,6 +69,46 @@ const ClientCard = () => {
               <div className="w-auto h-auto flex items-center justify-center  ">
               <img
                   src={client2}
+                  className=" w-96 h-16 object-contain"
+                  alt="Logo 1"
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              
+              <div className="w-auto h-auto flex items-center justify-center  ">
+              <img
+                  src={client3}
+                  className=" w-96 h-16 object-contain"
+                  alt="Logo 1"
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              
+              <div className="w-auto h-auto flex items-center justify-center  ">
+              <img
+                  src={client1}
+                  className=" w-96 h-16 object-contain"
+                  alt="Logo 1"
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              
+              <div className="w-auto h-auto flex items-center justify-center  ">
+              <img
+                  src={client2}
+                  className=" w-96 h-16 object-contain"
+                  alt="Logo 1"
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              
+              <div className="w-auto h-auto flex items-center justify-center  ">
+              <img
+                  src={client3}
                   className=" w-96 h-16 object-contain"
                   alt="Logo 1"
                 />
