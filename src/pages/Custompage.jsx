@@ -18,12 +18,25 @@ import Industries_we_serve from '../components/Custom/Industries_we_serve'
 import Howweapproach from '../components/Custom/Howweapproach'
 import Contactform from '../components/Custom/contactform'
 import Navbarnormal from '../components/Navbarnormal'
+import { Helmet } from "react-helmet";
 
 
 
 const Custompage = () => {
   return (
    <>
+    <Helmet>
+        <meta charSet="utf-8" />
+        <title>
+        Custom Software Development Company | Spidero Technology London
+
+        </title>
+        <link rel="canonical" href="https://spiderotechnology.com/custom" />
+        <meta
+          name="description"
+          content="Need a unique software solution? Spidero Technology designs & develops custom software for businesses in London. Contact us for a consultation!"
+        />
+      </Helmet>
    <Navbarnormal/>
    <Herosection/>
    <Client_card/>

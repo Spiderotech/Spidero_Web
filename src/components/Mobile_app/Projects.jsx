@@ -9,7 +9,7 @@ const projectData = [
     subTitle: "",
     companyName: "Spidero technology",
     description:
-      "We designed and developed an AI-powered video streaming app putting user experience at top priority.",
+      "Our team crafted a cutting-edge AI-driven video streaming application, focusing on delivering an unparalleled user experience.",
   },
   {
     title: "MDX FOOD APP",
@@ -17,11 +17,9 @@ const projectData = [
     subTitle: "Food ordering app",
     companyName: "MDX",
     description:
-      "We designed and developed an AI-powered video streaming app putting user experience at top priority.",
+      "We meticulously designed and engineered a user-centric food ordering app,This application simplifies meal ordering for users, offering a seamless integration of technology and convenience. ",
   },
  
- 
-  
 ];
 
 const Project = ({ title,image, subTitle, companyName, description }) => {

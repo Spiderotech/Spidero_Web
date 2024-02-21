@@ -17,15 +17,16 @@ const Expertise = () => {
   const breakpoints = {
     640: {
       slidesPerView: 1,
-      spaceBetween: 20
+      spaceBetween: 20,
     },
     768: {
       slidesPerView: 2,
-      spaceBetween: 20
+      spaceBetween:20,
     },
     1200: {
-      slidesPerView: 4,
-      spaceBetween: 20
+      slidesPerView:4,
+      spaceBetween:20,
+     
     }
   };
   return (
@@ -33,7 +34,7 @@ const Expertise = () => {
       <h2 class="mb-4 text-4xl mt-10 text-center tracking-tight font-bold text-gray-900 dark:text-white">
         Industries we excel in and more
       </h2>
-      <div className="w-[95%] h-auto p-10 mb-5">
+      <div className="w-full flex justify-center items-center h-auto mb-5 p-5 sm:p-10">
         <Swiper
           modules={[Navigation, Autoplay, Pagination]}
           breakpoints={breakpoints}
@@ -42,7 +43,11 @@ const Expertise = () => {
             delay: 2500,
             disableOnInteraction: false,
           }}
-          navigation={true}
+          navigation={{
+            prevEl: null,
+            nextEl: null,
+          }}
+         
         >
           <SwiperSlide>
             <div className="shadow-[0_15px_15px_0_rgba(0,0,0,0.2)] w-80 h-auto mb-4  text-center bg-[white] p-5 ;">

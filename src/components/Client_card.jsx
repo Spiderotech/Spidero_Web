@@ -2,6 +2,8 @@ import React from "react";
 import client1 from "../assets/getmyroomlogo.webp";
 import client2 from "../assets/hustelmax.png";
 import client3 from "../assets/leafkerala.png";
+import client4 from "../assets/medoczen.png";
+import client5 from "../assets/400.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -88,8 +90,8 @@ const ClientCard = () => {
               
               <div className="w-auto h-auto flex items-center justify-center  ">
               <img
-                  src={client1}
-                  className=" w-96 h-16 object-contain"
+                  src={client4}
+                  className=" w-96  h-20  object-contain"
                   alt="Logo 1"
                 />
               </div>
@@ -98,22 +100,13 @@ const ClientCard = () => {
               
               <div className="w-auto h-auto flex items-center justify-center  ">
               <img
-                  src={client2}
-                  className=" w-96 h-16 object-contain"
+                  src={client5}
+                  className=" w-96 h-20 object-contain"
                   alt="Logo 1"
                 />
               </div>
             </SwiperSlide>
-            <SwiperSlide>
-              
-              <div className="w-auto h-auto flex items-center justify-center  ">
-              <img
-                  src={client3}
-                  className=" w-96 h-16 object-contain"
-                  alt="Logo 1"
-                />
-              </div>
-            </SwiperSlide>
+            
            
           </Swiper>
         </div>

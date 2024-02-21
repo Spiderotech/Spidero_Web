@@ -11,10 +11,24 @@ import Creative_webdesign from '../components/Web_design/Creative_webdesign'
 import Message_that from '../components/Web_design/Message_that'
 import Designprinciple from '../components/Web_design/Designprinciple'
 import EmphasisOnMobileFirst from '../components/Web_design/EmphasisOnMobileFirst'
+import { Helmet } from "react-helmet";
 
 const Webdesignpage = () => {
   return (
     <>
+     <Helmet>
+        <meta charSet="utf-8" />
+        <title>
+        Web Development & Design Company London | Spidero Technology
+
+        </title>
+        <link rel="canonical" href="https://spiderotechnology.com/webdesign" />
+        <meta
+          name="description"
+          content="Elevate your online presence with Spidero Technology's web development & design services. We build custom websites & offer SEO optimization – get started now!
+          "
+        />
+      </Helmet>
     <Navbar/>
     <Herosection/>
     <Client_card/>

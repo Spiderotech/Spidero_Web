@@ -1,7 +1,7 @@
 import React from "react";
-import logo from "../assets/Logo (1).png"; 
-import logo1 from "../assets/Logo.png"; 
-import logo2 from "../../public/logo.jpg"; 
+import logo from "../assets/Logo (1).png";
+import logo1 from "../assets/Logo.png";
+import logo2 from "../../public/logo.jpg";
 import { Fragment, useState, useEffect } from "react";
 import { useNavigation } from "react-router-dom";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
@@ -41,7 +41,6 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isPopoverOpen, setPopoverOpen] = useState(false);
- 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,8 +61,7 @@ const Navbar = () => {
 
   const handleExpertiseLinkClick = () => {
     window.location.href = "/expertice";
-};
-
+  };
 
   return (
     <header
@@ -76,13 +74,23 @@ const Navbar = () => {
         aria-label="Global"
       >
         <div className=" flex ">
-          {isScrolled? <a href="/" className="cursor-pointer">
-          <img className=" h-[30px] w-[160px] md:h-[50px] md:w-[280px] "src={logo1}alt=""/>
-          </a>:<a href="/" className="">
-          <img className=" h-[30px] w-[160px] md:h-[50px] md:w-[280px] "src={logo}alt=""/>
-          </a>
-          }
-          
+          {isScrolled ? (
+            <a href="/" className="cursor-pointer">
+              <img
+                className=" h-[30px] w-[160px] md:h-[50px] md:w-[280px] "
+                src={logo1}
+                alt=""
+              />
+            </a>
+          ) : (
+            <a href="/" className="">
+              <img
+                className=" h-[30px] w-[160px] md:h-[50px] md:w-[280px] "
+                src={logo}
+                alt=""
+              />
+            </a>
+          )}
         </div>
         <div className="flex md:hidden">
           <button
@@ -91,26 +99,27 @@ const Navbar = () => {
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+            <Bars3Icon className="h-9 w-9" aria-hidden="true" />
           </button>
         </div>
         <Popover.Group className="hidden md:flex md:gap-x-12  lg:ml-[35%] ">
-          <Popover className="relative" onMouseEnter={() => setPopoverOpen(true)} onMouseLeave={() => setPopoverOpen(false)}>
+          <Popover
+            className="relative"
+            onMouseEnter={() => setPopoverOpen(true)}
+            onMouseLeave={() => setPopoverOpen(false)}
+          >
             <a href="/expertice">
-            <Popover.Button className={`flex items-center gap-x-1 text-[18px] text-left font-sans cursor-pointer  font-semibold  ${
-        isScrolled ? "text-gray-900" : "text-white"
-      } `}
-             onMouseEnter={() => setExpertisePopoverOpen(true)}
-             onMouseLeave={() => setExpertisePopoverOpen(false)}
-             onClick={handleExpertiseLinkClick}
-            
-            >
-              Expertise
-             
-            </Popover.Button>
-
+              <Popover.Button
+                className={`flex items-center gap-x-1 text-[18px] text-left font-sans cursor-pointer  font-semibold  ${
+                  isScrolled ? "text-gray-900" : "text-white"
+                } `}
+                onMouseEnter={() => setExpertisePopoverOpen(true)}
+                onMouseLeave={() => setExpertisePopoverOpen(false)}
+                onClick={handleExpertiseLinkClick}
+              >
+                Expertise
+              </Popover.Button>
             </a>
-           
 
             <Transition
               as={Fragment}
@@ -144,15 +153,20 @@ const Navbar = () => {
               </Popover.Panel>
             </Transition>
           </Popover>
-          <a href="/ourprocess" className={`text-[18px] text-left font-sans cursor-pointer font-semibold ${
-        isScrolled ? "text-gray-900" : "text-white"
-      }`}>
+          <a
+            href="/ourprocess"
+            className={`text-[18px] text-left font-sans cursor-pointer font-semibold ${
+              isScrolled ? "text-gray-900" : "text-white"
+            }`}
+          >
             Our Process
           </a>
           <Popover className="relative">
-            <Popover.Button className={`flex items-center gap-x-1 text-[18px] text-left font-sans font-semibold cursor-pointer ${
-        isScrolled ? "text-gray-900" : "text-white"
-      }`}>
+            <Popover.Button
+              className={`flex items-center gap-x-1 text-[18px] text-left font-sans font-semibold cursor-pointer ${
+                isScrolled ? "text-gray-900" : "text-white"
+              }`}
+            >
               Company
               <ChevronDownIcon
                 className="h-5 w-5 flex-none text-gray-400"
@@ -184,7 +198,6 @@ const Navbar = () => {
                           {item.name}
                           <span className="absolute inset-0" />
                         </a>
-                        
                       </div>
                     </div>
                   ))}
@@ -195,12 +208,10 @@ const Navbar = () => {
         </Popover.Group>
         <div className="hidden md:flex lg:flex-1 ">
           <a href="/contact">
-          <button className="border  border-black ml-5 h-[58px] w-[200px] font-sans leading-6 tracking-{2px}  text-black text-[16px]  bg-white bg-no-repeat bg-center transition-all ease-in-out hover:bg-black hover:text-white hover:border-black cursor-pointer">
-          CONTACT US
-          </button>
-
+            <button className="border  border-black ml-5 h-[58px] w-[200px] font-sans leading-6 tracking-{2px}  text-black text-[16px]  bg-white bg-no-repeat bg-center transition-all ease-in-out hover:bg-black hover:text-white hover:border-black cursor-pointer">
+              CONTACT US
+            </button>
           </a>
-         
         </div>
       </nav>
       <Dialog
@@ -214,15 +225,13 @@ const Navbar = () => {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              {/* <img className="h-5 w-auto" src={logo2} alt="" /> */}
             </a>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-gray-700"
               onClick={() => setMobileMenuOpen(false)}
             >
-              {/* <span className="sr-only">Close menu</span>
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" /> */}
+              <span className="sr-only">Close menu</span>
             </button>
           </div>
           <div className="mt-6 flow-root">
@@ -231,8 +240,11 @@ const Navbar = () => {
                 <Disclosure as="div" className="-mx-3 mt-10">
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-lg font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                      Expertise
+                      <Disclosure.Button
+                        className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-lg font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                        onClick={() => (open ? close() : open())}
+                      >
+                        <a href="/expertice">Expertise</a>
                         <ChevronDownIcon
                           className={classNames(
                             open ? "rotate-180" : "",
@@ -241,7 +253,10 @@ const Navbar = () => {
                           aria-hidden="true"
                         />
                       </Disclosure.Button>
-                      <Disclosure.Panel className="mt-2 space-y-2">
+                      <Disclosure.Panel
+                        className="mt-2 space-y-2"
+                        static={true}
+                      >
                         {[...products].map((item) => (
                           <Disclosure.Button
                             key={item.name}
@@ -266,7 +281,7 @@ const Navbar = () => {
                   {({ open }) => (
                     <>
                       <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-lg font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                      Company
+                        Company
                         <ChevronDownIcon
                           className={classNames(
                             open ? "rotate-180" : "",
@@ -291,7 +306,6 @@ const Navbar = () => {
                   )}
                 </Disclosure>
               </div>
-              
             </div>
           </div>
         </Dialog.Panel>

@@ -12,10 +12,24 @@ import Humancentered_design from '../components/Mobile_app/Humancentered_design'
 import Results_mobile from '../components/Mobile_app/Results_mobile'
 import Faq from '../components/Mobile_app/Faq'
 import Expertise from '../components/Mobile_app/Expertise'
-
+import { Helmet } from "react-helmet";
 const Mobileapppage = () => {
   return (
     <>
+     <Helmet>
+        <meta charSet="utf-8" />
+        <title>
+        Secure Mobile App Development | Spidero Technology London
+
+        </title>
+        <link rel="canonical" href="https://spiderotechnology.com/mobile" />
+        <meta
+          name="description"
+          content="Develop secure & user-friendly mobile apps with Spidero Technology. Expertise in iOS & Android app development for businesses in London. Get a free quote!
+          Web Development:
+          "
+        />
+      </Helmet>
     <Navbarnormal/>
     <Herosection/>
     <Client_card/>

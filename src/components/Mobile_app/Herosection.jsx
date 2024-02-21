@@ -6,7 +6,7 @@ const Herosection = () => {
   return (
     <section className="h-auto flex flex-col  text-white py-0 px-3 bg-white">
     <div className="flex flex-row w-[90%] h-auto items-center justify-center text-center pt-40 mb-10">
-      <div className="w-full md:w-[60%] md:p-10 ">
+      <div className="w-full md:w-[60%] p-5 md:p-10 ">
       <video
         className="min-w-full min-h-full  ml-5 md:w-[60%] h-[400px] object-cover "
         src={hero}

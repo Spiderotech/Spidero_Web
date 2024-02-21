@@ -248,7 +248,7 @@ const Chatsystem = () => {
           />
         </svg>
       </button>
-      <butoon
+      <button
        className="fixed bottom-20 right-28 text-md bg-white shadow-xl shadow-slate-400  text-black px-8 py-3 rounded-2xl z-10 hidden lg:block"
       >
         Get Pricing
@@ -257,7 +257,7 @@ const Chatsystem = () => {
 
         </span>
 
-      </butoon>
+      </button>
       
       {isChatModalOpen && (
         <div className="fixed bottom-20 right-5 w-[80%] lg:w-1/4 h-auto bg-slate-50 rounded-md shadow-lg  z-10">

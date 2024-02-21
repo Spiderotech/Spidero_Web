@@ -41,10 +41,10 @@ const Technologystack = () => {
             <div className="w-[113px] h-[80px] flex items-center p-5 ">
               <img src={web2} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-5 ">
+            <div className="w-[113px] h-[80px] flex items-center p-8 ">
               <img src={web3} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-5 ">
+            <div className="w-[113px] h-[80px] flex items-center p-8 ">
               <img src={web4} alt="Logo" className="object-contain" />
             </div>
             <div className="w-[113px] h-[80px] flex items-center p-5 ">
@@ -64,10 +64,10 @@ const Technologystack = () => {
             <div className="w-[113px] h-[80px] flex items-center p-5 ">
               <img src={web1} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-5 ">
+            <div className="w-[113px] h-[80px] flex items-center p-8 ">
               <img src={web3} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-5 ">
+            <div className="w-[113px] h-[80px] flex items-center p-8 ">
               <img src={web6} alt="Logo" className="object-contain" />
             </div>
             {/* <div className="w-[113px] h-[80px] flex items-center ">
@@ -87,10 +87,10 @@ const Technologystack = () => {
             <div className="w-[113px] h-[80px] flex items-center p-5">
               <img src={db1} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-5 ">
+            <div className="w-[113px] h-[80px] flex items-center p-6 ">
               <img src={db2} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-5 ">
+            <div className="w-[113px] h-[80px] flex items-center p-6 ">
               <img src={db3} alt="Logo" className="object-contain" />
             </div>
             <div className="w-[113px] h-[80px] flex items-center p-5">
@@ -99,10 +99,10 @@ const Technologystack = () => {
             <div className="w-[113px] h-[80px] flex items-center ">
               <img src={db5} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-8 ">
+            <div className="w-[113px] h-[80px] flex items-center p-10 ">
               <img src={db6} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-5 ">
+            <div className="w-[113px] h-[80px] flex items-center p-6 ">
               <img src={db7} alt="Logo" className="object-contain" />
             </div>
           </div>
@@ -122,13 +122,13 @@ const Technologystack = () => {
             <div className="w-[113px] h-[80px] flex items-center p-5 ">
               <img src={open2} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-5 ">
+            <div className="w-[113px] h-[80px] flex items-center p-8 ">
               <img src={open3} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-8 ">
+            <div className="w-[113px] h-[80px] flex items-center p-10 ">
               <img src={open4} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-8 ">
+            <div className="w-[113px] h-[80px] flex items-center p-10 ">
               <img src={open5} alt="Logo" className="object-contain" />
             </div>
           </div>
