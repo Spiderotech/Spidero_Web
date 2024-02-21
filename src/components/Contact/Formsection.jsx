@@ -46,7 +46,7 @@ const Formsection = () => {
     initialValues: {
       fullName: "",
       email: "",
-      countryCode: "",
+      countryCode: "" || "+44",
       phone: "",
       message: "",
     },

@@ -1,5 +1,5 @@
-import React, { useState,useEffect } from "react";
-import toast, { Toaster } from 'react-hot-toast';
+import React, { useState, useEffect } from "react";
+import toast, { Toaster } from "react-hot-toast";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,25 +12,20 @@ import web7 from "../assets/about1 (2).jpg";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 const Contactform1 = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
 
-useEffect(() => {
-    
-    const script = document.createElement('script');
-    
+    script.src = "https://smtpjs.com/v3/smtp.js";
 
-    script.src = 'https://smtpjs.com/v3/smtp.js';
-    
-    
     document.body.appendChild(script);
-    
-    
+
     return () => {
       document.body.removeChild(script);
     };
   }, []);
-
 
   const validationSchema = Yup.object().shape({
     fullName: Yup.string().required("Full Name is required"),
@@ -48,35 +43,34 @@ useEffect(() => {
     initialValues: {
       fullName: "",
       email: "",
-      countryCode: "",
+      countryCode: "" || "+44",
       phone: "",
       message: "",
     },
     validationSchema,
-   onSubmit: async (values, { resetForm }) => {
-    try {
-      await toast.promise(
-        Email.send({
-          Host: "smtp.elasticemail.com",
-          Username: "contact@spiderotechnology.com",
-          Password: "C9FDC5CD4B4719C4310C9C5FF078133E3816",
-          To: "contact@spiderotechnology.com",
-          From: "contact@spiderotechnology.com",
-          Subject: "contact from submition from spidero technology website",
-          Body: `Name: ${values.fullName}\nEmail: ${values.email}\nCountry Code: ${values.countryCode}\nPhone: ${values.phone}\nMessage: ${values.message}`,
-        }),
-        {
-          loading: 'Sending email...',
-          success: 'Email sent successfully!',
-          error: 'Failed to send email.',
-          
-        }
-      );
-      resetForm();
-    } catch (error) {
-      console.error("Error sending email:", error);
-    }
-}
+    onSubmit: async (values, { resetForm }) => {
+      try {
+        await toast.promise(
+          Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "contact@spiderotechnology.com",
+            Password: "C9FDC5CD4B4719C4310C9C5FF078133E3816",
+            To: "contact@spiderotechnology.com",
+            From: "contact@spiderotechnology.com",
+            Subject: "contact from submition from spidero technology website",
+            Body: `Name: ${values.fullName}\nEmail: ${values.email}\nCountry Code: ${values.countryCode}\nPhone: ${values.phone}\nMessage: ${values.message}`,
+          }),
+          {
+            loading: "Sending email...",
+            success: "Email sent successfully!",
+            error: "Failed to send email.",
+          }
+        );
+        resetForm();
+      } catch (error) {
+        console.error("Error sending email:", error);
+      }
+    },
   });
 
   return (
@@ -113,15 +107,18 @@ useEffect(() => {
                           >
                             <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
                           </svg>
-                          Spidero Technology served as an invaluable collaborator, delivering an exceptional software solution that significantly improved our customer experience.
+                          Spidero Technology served as an invaluable
+                          collaborator, delivering an exceptional software
+                          solution that significantly improved our customer
+                          experience.
                         </span>
                         <strong className="text-black text-sm sm:text-base md:text-lg lg:text-[20px] mt-5 ">
-                        Akshay
+                          Akshay
                         </strong>
                       </div>
 
                       <span className="text-black text-sm sm:text-base md:text-[14px] lg:text-[16px] font-medium">
-                      Founder/ Director,Spidero Technology
+                        Founder/ Director,Spidero Technology
                       </span>
                     </div>
                   </SwiperSlide>
@@ -199,7 +196,7 @@ useEffect(() => {
                 <div className="relative pt-3 ">
                   <label
                     htmlFor="countryCode"
-                    className=" text-sm font-medium text-gray-300 pointer-events-none transition-all   "
+                    className=" text-sm font-medium text-gray-300 pointer-events-none transition-all    "
                   >
                     Country Code<span className="text-red-500 ">*</span>
                   </label>
@@ -213,8 +210,10 @@ useEffect(() => {
                     onBlur={formik.handleBlur}
                     international
                     defaultCountry="GB"
-                    className=" w-20 h-auto ml-2 mt-2  text-black  bg-BLACK  "
+                    className=" w-24 h-auto ml-2 mt-2  text-black  bg-white p-1 "
+                    
                   />
+                 
                   {formik.touched.countryCode && formik.errors.countryCode && (
                     <div className="text-red-500  text-xs mt-1">
                       {formik.errors.countryCode}
@@ -304,10 +303,7 @@ useEffect(() => {
           </div>
         </div>
       </div>
-      <Toaster
-  position="top-center"
-  reverseOrder={false}
-/>
+      <Toaster position="top-center" reverseOrder={false} />
     </footer>
   );
 };

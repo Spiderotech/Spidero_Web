@@ -79,7 +79,7 @@ const Herosection = () => {
     initialValues: {
       fullName: "",
       email: "",
-      countryCode: "",
+      countryCode: "" || "+44",
       phone: "",
       message: "",
     },
@@ -212,7 +212,7 @@ const Herosection = () => {
                   onBlur={formik.handleBlur}
                   international
                   defaultCountry="GB"
-                  className=" w-20 h-auto ml-2 mt-2 bg-BLACK  text-black bg"
+                  className=" w-24 h-auto ml-2 mt-2  p-1  text-black  bg-white"
                 />
                 {formik.touched.countryCode && formik.errors.countryCode && (
                   <div className="text-red-500  text-xs mt-1">
