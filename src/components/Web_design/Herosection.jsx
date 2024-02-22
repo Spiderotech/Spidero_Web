@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { particlesCursor } from "https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js";
-import PhoneInput from "react-phone-number-input";
-import "react-phone-number-input/style.css";
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
@@ -113,7 +113,7 @@ const Herosection = () => {
   return (
     <section className="relative h-auto flex flex-col  text-white py-0  bg-white mb-10">
       <div className="absolute w-full h-full mt-[-190px] " id="app"></div>
-      <div className="flex flex-row w-[90%] h-auto items-center justify-center text-center pt-32 mb-20">
+      <div className="flex flex-row w-[90%] h-auto  pt-32 mb-20">
         <div className="w-full lg:w-[50%]  relative ">
           <div className="flex flex-col items-start">
             <h2 className="text-white pt-8 text-start leading-10 font-sans font-bold text-xl md:text-3xl lg:text-4xl ml-10 w-80">
@@ -195,7 +195,7 @@ const Herosection = () => {
                   </div>
                 )}
               </div>
-              <div className="relative pt-3 mt-5 ">
+              <div className="relative pt-3 mt-5  ">
                 <label
                   htmlFor="countryCode"
                   className="absolute left-2 bottom-9 text-[16px] font-medium text-gray-300 p "
@@ -212,7 +212,8 @@ const Herosection = () => {
                   onBlur={formik.handleBlur}
                   international
                   defaultCountry="GB"
-                  className=" w-24 h-auto ml-2 mt-2  p-1  text-black  bg-white"
+                  className="ml-2 mt-3  text-black bg-black " 
+                  inputStyle={{ width: "6rem", pointerEvents: "none", }}
                 />
                 {formik.touched.countryCode && formik.errors.countryCode && (
                   <div className="text-red-500  text-xs mt-1">

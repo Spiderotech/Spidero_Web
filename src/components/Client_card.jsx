@@ -11,30 +11,6 @@ import "swiper/css/navigation";
 import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 
 const ClientCard = () => {
-  // const breakpoints = {
-    
-  //   768: {
-  //     slidesPerView: 5,
-  //     spaceBetween: 10,
-  //   },
-   
-  //   0: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 10,
-  //   },
-  // };
-  // const breakpoints1 = {
-   
-  //   768: {
-  //     slidesPerView: 5,
-  //     spaceBetween: 20,
-  //   },
-    
-  //   0: {
-  //     slidesPerView: 6,
-  //     spaceBetween: 10,
-  //   },
-  // };
   return (
     <div className="w-full justify-center  flex flex-col items-center mt-10 ">
       <h2 className="text-[40px] font-sans leading-10 font-bold ">
@@ -57,19 +33,8 @@ const ClientCard = () => {
             }}
           >
             <SwiperSlide>
-              
               <div className="w-auto h-auto flex items-center justify-center  ">
-              <img
-                  src={client1}
-                  className=" w-96 h-16 object-contain"
-                  alt="Logo 1"
-                />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              
-              <div className="w-auto h-auto flex items-center justify-center  ">
-              <img
+                <img
                   src={client2}
                   className=" w-96 h-16 object-contain"
                   alt="Logo 1"
@@ -77,9 +42,35 @@ const ClientCard = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              
               <div className="w-auto h-auto flex items-center justify-center  ">
-              <img
+                <img
+                  src={client5}
+                  className=" w-96 h-20 object-contain"
+                  alt="Logo 1"
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-auto h-auto flex items-center justify-center  ">
+                <img
+                  src={client1}
+                  className=" w-96 h-16 object-contain"
+                  alt="Logo 1"
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-auto h-auto flex items-center justify-center  ">
+                <img
+                  src={client2}
+                  className=" w-96 h-16 object-contain"
+                  alt="Logo 1"
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-auto h-auto flex items-center justify-center  ">
+                <img
                   src={client3}
                   className=" w-96 h-16 object-contain"
                   alt="Logo 1"
@@ -87,27 +78,14 @@ const ClientCard = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              
               <div className="w-auto h-auto flex items-center justify-center  ">
-              <img
+                <img
                   src={client4}
                   className=" w-96  h-20  object-contain"
                   alt="Logo 1"
                 />
               </div>
             </SwiperSlide>
-            <SwiperSlide>
-              
-              <div className="w-auto h-auto flex items-center justify-center  ">
-              <img
-                  src={client5}
-                  className=" w-96 h-20 object-contain"
-                  alt="Logo 1"
-                />
-              </div>
-            </SwiperSlide>
-            
-           
           </Swiper>
         </div>
       </div>

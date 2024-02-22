@@ -3,8 +3,8 @@ import toast, { Toaster } from 'react-hot-toast';
 
 import web4 from "../../assets/in.svg";
 import web6 from "../../assets/london.jpg";
-import PhoneInput from "react-phone-number-input";
-import "react-phone-number-input/style.css";
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
@@ -78,7 +78,7 @@ const Formsection = () => {
   });
 
   return (
-    <section className="h-auto flex flex-col  items-center justify-center text-center text-white py-0 px-3  pt-24">
+    <section className="h-auto flex flex-col  items-center justify-center  text-white py-0 px-3  pt-24">
       <h2 className="text-black pt-8 text-start leading-10 font-sans font-bold text-xl md:text-3xl lg:text-[48px] ">
         Awesomeness awaits!
       </h2>
@@ -86,8 +86,8 @@ const Formsection = () => {
       <h2 className="text-black pt-8 text-start leading-10 font-sans font-bold text-[30px]">
         Connect with our experts.
       </h2>
-      <div className="flex flex-col lg:flex-row w-full h-auto items-center justify-center text-center mb-10">
-        <div className=" w-full lg:w-[50%] h-auto bg-white lg:ml-5 p-20 ">
+      <div className="flex flex-col lg:flex-row w-full h-auto items-center justify-center  mb-10">
+        <div className=" w-full lg:w-[50%] h-auto bg-white lg:ml-5 p-10 lg:p-20 ">
           <form onSubmit={formik.handleSubmit}>
             <div className="relative pt-6">
               <label
@@ -164,7 +164,8 @@ const Formsection = () => {
                 onBlur={formik.handleBlur}
                 international
                 defaultCountry="GB"
-                className=" w-20 h-auto ml-2 mt-2  text-black bg-white"
+                className="ml-2 mt-4  text-black  " 
+                inputStyle={{ width:"6rem",  pointerEvents: "none", }}
               />
               {formik.touched.countryCode && formik.errors.countryCode && (
                 <div className="text-red-500  text-xs mt-1  absolute left-2">

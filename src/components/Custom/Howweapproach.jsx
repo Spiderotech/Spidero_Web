@@ -179,7 +179,6 @@ const HowWeApproach = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    marginRight: "10px",
                   }}
                 >
                   {icons[index]} 

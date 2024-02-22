@@ -93,14 +93,25 @@ const Navbar = () => {
           )}
         </div>
         <div className="flex md:hidden">
-          <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-            onClick={() => setMobileMenuOpen(true)}
-          >
-            <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-9 w-9" aria-hidden="true" />
-          </button>
+          {mobileMenuOpen ? (
+            <button
+              type="button"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <span className="sr-only">Close main menu</span>
+              <XMarkIcon className="h-9 w-9" aria-hidden="true" />
+            </button>
+          ) : (
+            <button
+              type="button"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              onClick={() => setMobileMenuOpen(true)}
+            >
+              <span className="sr-only">Open main menu</span>
+              <Bars3Icon className="h-9 w-9" aria-hidden="true" />
+            </button>
+          )}
         </div>
         <Popover.Group className="hidden md:flex md:gap-x-12  lg:ml-[35%] ">
           <Popover
@@ -232,6 +243,7 @@ const Navbar = () => {
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
+              {/* <XMarkIcon className="h-9 w-9" aria-hidden="true" /> */}
             </button>
           </div>
           <div className="mt-6 flow-root">

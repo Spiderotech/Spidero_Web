@@ -106,7 +106,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="md:hidden fixed bottom-0 w-full h-auto  ">
+      <div className="md:hidden fixed bottom-0 w-full h-auto z-10  ">
         <a href="/contact" className="cursor-pointer">
           <button className="  border border-white w-full h-[51px] font-sans leading-6 tracking-{2px} text-[16px] font-medium text-white bg-black transition-all ease-in-out hover:bg-white hover:text-black hover:border-black cursor-pointer">
            GET IN TOUCH

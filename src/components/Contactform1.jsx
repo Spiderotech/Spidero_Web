@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import PhoneInput from "react-phone-number-input";
-import "react-phone-number-input/style.css";
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
@@ -206,14 +206,15 @@ const Contactform1 = () => {
                     value={formik.values.countryCode}
                     onChange={(value) =>
                       formik.setFieldValue("countryCode", value)
+                      
                     }
                     onBlur={formik.handleBlur}
-                    international
-                    defaultCountry="GB"
-                    className=" w-24 h-auto ml-2 mt-2  text-black  bg-white p-1 "
-                    
+                    className="ml-2 mt-2 text-black bg-black " 
+                    inputStyle={{ width: "6rem", pointerEvents: "none", }}
+                   
+               
                   />
-                 
+
                   {formik.touched.countryCode && formik.errors.countryCode && (
                     <div className="text-red-500  text-xs mt-1">
                       {formik.errors.countryCode}
