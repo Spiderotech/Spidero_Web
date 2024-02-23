@@ -6,7 +6,7 @@ const projectData = [
   {
     title: "GetMyRoom",
     image:web1,
-    subTitle: "property search",
+    subTitle: "Property Search",
     companyName: "GetMyRoom",
     description:
       "Search and find your ideal property with GetMyRoom. Explore a wide range of listings and discover your dream home today.",
@@ -14,7 +14,7 @@ const projectData = [
   {
     title: "Hustle Max Merchant Private Limited",
     image:web2,
-    subTitle: "Product delivewry",
+    subTitle: "Product Delivewry",
     companyName: "Hustle Max Merchant",
     description:
       "Discover outstanding service and trustworthiness at Hustle Max Merchant Private Limited ",

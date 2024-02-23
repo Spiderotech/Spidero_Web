@@ -97,9 +97,9 @@ const Contactform1 = () => {
                           alt="profile"
                           className="w-[60px] h-[60px] sm:w-[100px] sm:h-[100px] lg:w-[120px] lg:h-[120px] rounded-full object-cover"
                         />
-                        <span className="text-black  text-center mt-4 sm:mt-6 md:mt-8 lg:mt-10 text-sm sm:text-base md:text-lg lg:text-[26px] ">
+                        <span className="text-black  text-center mt-3 sm:mt-6 md:mt-8 lg:mt-10 text-sm sm:text-base md:text-lg lg:text-[26px] ">
                           <svg
-                            className="w-8 h-8 mr-4 mx-auto  text-gray-400 dark:text-gray-600 text-start inline-block"
+                            className="w-4 h-4 lg:w-6 lg:h-6 mr-4 mx-auto  text-gray-400 dark:text-gray-600 text-start inline-block"
                             aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor"
@@ -113,12 +113,12 @@ const Contactform1 = () => {
                           experience.
                         </span>
                         <strong className="text-black text-sm sm:text-base md:text-lg lg:text-[20px] mt-5 ">
-                          Akshay
+                        Akshay Madhusudhanan
                         </strong>
                       </div>
 
                       <span className="text-black text-sm sm:text-base md:text-[14px] lg:text-[16px] font-medium">
-                        Founder/ Director,Spidero Technology
+                        Director, Spidero Technology
                       </span>
                     </div>
                   </SwiperSlide>

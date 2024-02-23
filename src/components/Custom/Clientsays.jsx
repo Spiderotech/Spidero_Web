@@ -12,9 +12,9 @@ const Clientsays = () => {
 
             <div>
               <div className="w-full md:w-[60%] h-auto flex flex-col justify-center ml-0 md:ml-[5%] ">
-                <span className="text-black  mt-4 sm:mt-6 md:mt-8 lg:mt-10 text-[18px] sm:text-[24px] md:text-[24px] lg:text-[32px] font-sans text-start font-normal leading-10 p-5 ">
+                <span className="text-black  mt-4 sm:mt-6 md:mt-8 lg:mt-10 text-[18px] sm:text-[24px] md:text-[24px] lg:text-[28px] font-sans text-start font-normal leading-10 p-5 ">
                   <svg
-                    className="w-8 h-8 mr-4 mx-auto  text-gray-400 dark:text-gray-600 text-start inline-block"
+                    className="w-6 h-6 mr-4 mx-auto  text-gray-400 dark:text-gray-600 text-start inline-block"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
@@ -37,7 +37,7 @@ const Clientsays = () => {
                     <strong className="text-black text-sm sm:text-base md:text-xl lg:text-2xl">
                       Alvin
                     </strong>
-                    <span className="text-blacktext-sm sm:text-base md:text-xl lg:text-2xl ">
+                    <span className="text-blacktext-sm sm:text-base md:text-lg lg:text-xl ">
                       Head of Development, GetMyRoom
                     </span>
                   </div>

@@ -143,7 +143,7 @@ const Chatsystem = () => {
           {
             sender: "Spidero",
             message:
-              "Got it! Spidero Technology team will be in touch as soon as they can. If you have any further questions, please contact us at contact@spidero.in. Thanks!",
+              "Got it! Spidero Technology team will be in touch as soon as they can. If you have any further questions, please contact us at contact@spiderotechnology.com . Thanks!",
           },
         ]);
         setInputStage("finished");
@@ -200,7 +200,7 @@ const Chatsystem = () => {
               },
               {
                 sender: "User",
-                message: "2.project estimation",
+                message: "2.Project Estimation",
               },
             ]);
           }, 1000);

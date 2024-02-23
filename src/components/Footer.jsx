@@ -32,7 +32,7 @@ const Footer = () => {
               </span>
               <div className="row mt-2 flex items-center">
                 <div className="column mt-4">
-                  <img src={web5} alt="profile" className="w-7 h-5" />
+                  <img src={web5} alt="profile" className="w-7 h-4 lg:h-5" />
                 </div>
                 <div className="column ml-4 mt-4">
                   <span className="text-lg md:text-xl lg:text-2xl font-sans">
@@ -52,8 +52,8 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="social-links mt-4 flex ">
-              <div className="w-full  p-2  flex flex-row  text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200 gap-5 md:gap-10">
+            <div className="social-links   mt-4 flex ">
+              <div className="w-full  p-2  flex flex-row justify-center  text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200 gap-5 md:gap-10">
                 {/* <img
                   src={twitter}
                   alt="Logo"

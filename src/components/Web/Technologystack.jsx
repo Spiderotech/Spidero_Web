@@ -32,68 +32,93 @@ const Technologystack = () => {
       </h2>
       <div className="w-full  md:w-[60%]   mt-5 flex flex-col md:flex-row  items-center">
         <div className="w-[200px]">
-          <h2 className="ml-5 font-sans text-[18px]  leading-7 font-medium tracking-normal text-start  text-black">
-            Back-end:
-          </h2>
-        </div>
-        <div className=" lg:w-[80%]  h-auto">
-          <div class="p-3  grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 xl:gap-x-28 ">
-            <div className="w-[113px] h-[80px] flex items-center p-5 ">
-              <img src={web2} alt="Logo" className="object-contain" />
-            </div>
-            <div className="w-[113px] h-[80px] flex items-center p-8 ">
-              <img src={web3} alt="Logo" className="object-contain" />
-            </div>
-            <div className="w-[113px] h-[80px] flex items-center p-8 ">
-              <img src={web4} alt="Logo" className="object-contain" />
-            </div>
-            <div className="w-[113px] h-[80px] flex items-center p-5 ">
-              <img src={web5} alt="Logo" className="object-contain" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="w-full  md:w-[60%]   mt-5 flex flex-col md:flex-row  items-center">
-        <div className="w-[200px]">
-          <h2 className="ml-5 font-sans text-[18px]  leading-7 font-medium tracking-normal text-start  text-black">
+          <h2 className="ml-14 lg:ml-5 font-sans text-[18px]  leading-7 font-medium tracking-normal text-start  text-black">
             Front-end:
           </h2>
         </div>
         <div className=" lg:w-[80%]  h-auto">
           <div class="p-3  grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 xl:gap-x-28 ">
-            <div className="w-[113px] h-[80px] flex items-center p-5 ">
+            <div className="w-[113px] h-[80px] flex items-center p-6 lg:p-5 ">
               <img src={web1} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-8 ">
+            <div className="w-[113px] h-[80px] flex items-center p-9 lg:p-8 ">
               <img src={web3} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-8 ">
+            <div className="w-[113px] h-[80px] flex items-center p-9 lg:p-8 ">
               <img src={web6} alt="Logo" className="object-contain" />
             </div>
-            {/* <div className="w-[113px] h-[80px] flex items-center ">
-              <img src={web5} alt="Logo" className="object-contain" />
-            </div> */}
+           
           </div>
         </div>
       </div>
+      <div className="w-full  md:w-[60%]   mt-5 flex flex-col md:flex-row  items-center">
+        <div className="w-[200px]">
+          <h2 className="ml-14 lg:ml-5 font-sans text-[18px]  leading-7 font-medium tracking-normal text-start  text-black">
+            Back-end:
+          </h2>
+        </div>
+        <div className=" lg:w-[80%]  h-auto">
+          <div class="p-3  grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 xl:gap-x-28 ">
+            <div className="w-[113px] h-[80px] flex items-center p-6 lg:p-5 ">
+              <img src={web2} alt="Logo" className="object-contain" />
+            </div>
+            <div className="w-[113px] h-[80px] flex items-center p-9 lg:p-8 ">
+              <img src={web3} alt="Logo" className="object-contain" />
+            </div>
+            <div className="w-[113px] h-[80px] flex items-center p-9 lg:p-8 ">
+              <img src={web4} alt="Logo" className="object-contain" />
+            </div>
+            <div className="w-[113px] h-[80px] flex items-center p-6 lg:p-5 ">
+              <img src={web5} alt="Logo" className="object-contain" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="w-full  md:w-[60%]  flex flex-col md:flex-row  items-center">
+        <div className="w-[200px]">
+          <h2 className="ml-14 lg:ml-5 font-sans text-[18px]  leading-7 font-medium tracking-normal text-start  text-black">
+            OpenSource:
+          </h2>
+        </div>
+        <div className="lg:w-[90%]  h-auto">
+          <div class="p-3  grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 xl:gap-x-28 ">
+            <div className="w-[113px] h-[80px] flex items-center p-10 lg:p-8">
+              <img src={open1} alt="Logo" className="object-contain" />
+            </div>
+            <div className="w-[113px] h-[80px] flex items-center p-6 lg:p-5 ">
+              <img src={open2} alt="Logo" className="object-contain" />
+            </div>
+            <div className="w-[113px] h-[80px] flex items-center p-9 lg:p-8 ">
+              <img src={open3} alt="Logo" className="object-contain" />
+            </div>
+            <div className="w-[113px] h-[80px] flex items-center p-11 lg:p-10 ">
+              <img src={open4} alt="Logo" className="object-contain" />
+            </div>
+            <div className="w-[113px] h-[80px] flex items-center p-11 lg:p-10 ">
+              <img src={open5} alt="Logo" className="object-contain" />
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <div className="w-full  md:w-[60%]   flex flex-col md:flex-row  items-center">
         <div className="w-[200px]">
-          <h2 className="ml-5 font-sans text-[18px]  leading-7 font-medium tracking-normal text-start  text-black">
+          <h2 className="ml-14 lg:ml-5 font-sans text-[18px]  leading-7 font-medium tracking-normal text-start  text-black">
             Database:
           </h2>
         </div>
         <div className="lg:w-[90%]  h-auto">
           <div class="p-3  grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 xl:gap-x-28 ">
-            <div className="w-[113px] h-[80px] flex items-center p-5">
+            <div className="w-[113px] h-[80px] flex items-center p-6 lg:p-5">
               <img src={db1} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-6 ">
+            <div className="w-[113px] h-[80px] flex items-center p-7 lg:p-6 ">
               <img src={db2} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-6 ">
+            <div className="w-[113px] h-[80px] flex items-center p-7 lg:p-6 ">
               <img src={db3} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-5">
+            <div className="w-[113px] h-[80px] flex items-center p-6 lg:p-5">
               <img src={db4} alt="Logo" className="object-contain" />
             </div>
             <div className="w-[113px] h-[80px] flex items-center ">
@@ -108,32 +133,7 @@ const Technologystack = () => {
           </div>
         </div>
       </div>
-      <div className="w-full  md:w-[60%]  flex flex-col md:flex-row  items-center">
-        <div className="w-[200px]">
-          <h2 className="ml-5 font-sans text-[18px]  leading-7 font-medium tracking-normal text-start  text-black">
-            OpenSource:
-          </h2>
-        </div>
-        <div className="lg:w-[90%]  h-auto">
-          <div class="p-3  grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 xl:gap-x-28 ">
-            <div className="w-[113px] h-[80px] flex items-center p-8">
-              <img src={open1} alt="Logo" className="object-contain" />
-            </div>
-            <div className="w-[113px] h-[80px] flex items-center p-5 ">
-              <img src={open2} alt="Logo" className="object-contain" />
-            </div>
-            <div className="w-[113px] h-[80px] flex items-center p-8 ">
-              <img src={open3} alt="Logo" className="object-contain" />
-            </div>
-            <div className="w-[113px] h-[80px] flex items-center p-10 ">
-              <img src={open4} alt="Logo" className="object-contain" />
-            </div>
-            <div className="w-[113px] h-[80px] flex items-center p-10 ">
-              <img src={open5} alt="Logo" className="object-contain" />
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </div>
   );
 };

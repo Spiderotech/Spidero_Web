@@ -18,7 +18,7 @@ const Jobcards = () => {
                 </div>
 
                 <div class="font-medium text-[13px] text-start mb-2 ml-3 text-black font-sans">
-                  VACANCIES 1
+                  VACANCIES 2
                 </div>
               </div>
             </div>
@@ -48,7 +48,7 @@ const Jobcards = () => {
                   UK
                 </div>
                 <div class="font-bold text-[20px] text-start mb-2 ml-3 text-black font-sans underline">
-                  React Developer
+                Python Developer
                 </div>
 
                 <div class="font-medium text-[13px] text-start mb-2 ml-3 text-black font-sans">

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Finance from "../../assets/custom/finace.jpg"
 import education from "../../assets/custom/education.jpg"
-import logistics from "../../assets/custom/logistics.webp"
+import logistics from "../../assets/custom/logistics.jpg"
 import healthcare from "../../assets/custom/medical.jpg"
-import media from "../../assets/custom/media.webp"
-import realestate from "../../assets/custom/real-estate.webp"
-import software from "../../assets/custom/finace.jpg"
+import media from "../../assets/custom/media.jpg"
+import realestate from "../../assets/custom/real.jpg"
+import software from "../../assets/custom/software.jpg"
 
 const headingsData = [
   {

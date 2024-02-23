@@ -51,7 +51,7 @@ import pay6 from "../../assets/payment/visa.png"
 const Technologystack = () => {
   return (
     <div class=" w-full  h-auto flex justify-center items-center flex-col mb-10 ">
-      <h2 className="text-[30px] font-sans leading-10 font-bold sm:text-[22px] md:text-[28px] lg:text-[22px] xl:text-[30px]   ">
+      <h2 className="text-[27px] font-sans leading-10 font-bold sm:text-[21px] md:text-[28px] lg:text-[22px]    ">
         Technology Stack We Practice
       </h2>
       <div className="w-full  md:w-[80%]   mt-5 flex flex-col md:flex-row  items-center">
@@ -62,34 +62,34 @@ const Technologystack = () => {
         </div>
         <div className=" md:w-[90%]  h-auto">
           <div class="p-3  grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-11 xl:gap-x-28 ">
-            <div className="w-[113px] h-[80px] flex items-center p-5 ">
+            <div className="w-[113px] h-[80px] flex items-center p-6 lg:p-5 ">
               <img src={web1} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-5 ">
+            <div className="w-[113px] h-[80px] flex items-center p-6 lg:p-5 ">
               <img src={web2} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center  p-5">
+            <div className="w-[113px] h-[80px] flex items-center  p-8 lg:p-5">
               <img src={web3} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center  p-5 ">
+            <div className="w-[113px] h-[80px] flex items-center  p-8 lg:p-5 ">
               <img src={web4} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center  p-5 ">
+            <div className="w-[113px] h-[80px] flex items-center  p-6 lg:p-5 ">
               <img src={web5} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-8 ">
+            <div className="w-[113px] h-[80px] flex items-center p-9 lg:p-8 ">
               <img src={web6} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center  p-8 ">
+            <div className="w-[113px] h-[80px] flex items-center  p-9  lg:p-8 ">
               <img src={web7} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center  p-8 ">
+            <div className="w-[113px] h-[80px] flex items-center p-9  lg:p-8 ">
               <img src={web8} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-6">
+            <div className="w-[113px] h-[80px] flex items-center p-8 lg:p-6">
               <img src={web9} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center  p-5 ">
+            <div className="w-[113px] h-[80px] flex items-center p-6 lg:p-5 ">
               <img src={web10} alt="Logo" className="object-contain" />
             </div>
           </div>
@@ -97,31 +97,31 @@ const Technologystack = () => {
       </div>
       <div className="w-full  md:w-[80%]   flex flex-col md:flex-row  items-center">
         <div className="w-[200px]">
-          <h2 className="ml-5 font-sans text-[18px]  leading-7 font-medium tracking-normal text-start  text-black">
+          <h2 className=" ml-14 lg:ml-5 font-sans text-[18px]  leading-7 font-medium tracking-normal text-start  text-black">
             Database
           </h2>
         </div>
         <div className="md:w-[90%]  h-auto">
         <div class="p-3  grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-7 xl:gap-x-28 ">
-            <div className="w-[113px] h-[80px] flex items-center p-2 ">
+            <div className="w-[113px] h-[80px] flex items-center p-3 lg:p-2 ">
               <img src={db1} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-5 ">
+            <div className="w-[113px] h-[80px] flex items-center p-8 lg:p-5 ">
               <img src={db2} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-5 ">
+            <div className="w-[113px] h-[80px] flex items-center p-7 lg:p-5 ">
               <img src={db3} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-4 ">
+            <div className="w-[113px] h-[80px] flex items-center p-6 lg:p-4 ">
               <img src={db4} alt="Logo" className="object-contain" />
             </div>
             <div className="w-[113px] h-[80px] flex items-center ">
               <img src={db5} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-8 ">
+            <div className="w-[113px] h-[80px] flex items-center p-10 lg:p-8 ">
               <img src={db6} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-6 ">
+            <div className="w-[113px] h-[80px] flex items-center p-8 lg:p-6 ">
               <img src={db7} alt="Logo" className="object-contain" />
             </div>
             
@@ -136,10 +136,10 @@ const Technologystack = () => {
         </div>
         <div className="md:w-[90%]  h-auto">
           <div class="p-3  grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-10 xl:gap-x-28 ">
-            <div className="w-[113px] h-[80px] flex items-center p-8 ">
+            <div className="w-[113px] h-[80px] flex items-center p-9 lg:p-8 ">
               <img src={mobile2} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-6 ">
+            <div className="w-[113px] h-[80px] flex items-center p-8 lg:p-6 ">
               <img src={web3} alt="Logo" className="object-contain" />
             </div>
             <div className="w-[113px] h-[80px] flex items-center ">
@@ -148,19 +148,19 @@ const Technologystack = () => {
             <div className="w-[113px] h-[80px] flex items-center ">
               <img src={mobile4} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-10">
+            <div className="w-[113px] h-[80px] flex items-center p-11 lg:p-10">
               <img src={mobile5} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-10 ">
+            <div className="w-[113px] h-[80px] flex items-center p-11 lg:p-10 ">
               <img src={mobile6} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-5">
+            <div className="w-[113px] h-[80px] flex items-center p-6 lg:p-5">
               <img src={mobile7} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-10 ">
+            <div className="w-[113px] h-[80px] flex items-center p-11 lg:p-10">
               <img src={mobile8} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-10 ">
+            <div className="w-[113px] h-[80px] flex items-center p-11 lg:p-10 ">
               <img src={mobile9} alt="Logo" className="object-contain" />
             </div>
             
@@ -171,25 +171,25 @@ const Technologystack = () => {
       
       <div className="w-full  md:w-[80%]  flex flex-col md:flex-row  items-center">
         <div className="w-[200px]">
-          <h2 className="ml-5 font-sans text-[18px]  leading-7 font-medium tracking-normal text-start  text-black">
+          <h2 className="ml-14 lg:ml-5 font-sans text-[18px]  leading-7 font-medium tracking-normal text-start  text-black">
             Opensource
           </h2>
         </div>
         <div className="md:w-[90%]  h-auto">
         <div class="p-3  grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 xl:gap-x-28 ">
-            <div className="w-[113px] h-[80px] flex items-center p-8 ">
+            <div className="w-[113px] h-[80px] flex items-center p-10 lg:p-8 ">
               <img src={open1} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-3">
+            <div className="w-[113px] h-[80px] flex items-center p-4 lg:p-3">
               <img src={open2} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-6 ">
+            <div className="w-[113px] h-[80px] flex items-center p-8 lg:p-6 ">
               <img src={open3} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-8 ">
+            <div className="w-[113px] h-[80px] flex items-center p-10 lg:p-8 ">
               <img src={open4} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-8 ">
+            <div className="w-[113px] h-[80px] flex items-center p-10 lg:p-8 ">
               <img src={open5} alt="Logo" className="object-contain" />
             </div>
           </div>
@@ -203,22 +203,22 @@ const Technologystack = () => {
         </div>
         <div className="md:w-[90%]  h-auto">
         <div class="p-3  grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 xl:gap-x-28 ">
-            <div className="w-[113px] h-[80px] flex items-center  p-6">
+            <div className="w-[113px] h-[80px] flex items-center  p-8 lg:p-6">
               <img src={pay1} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center  p-6 ">
+            <div className="w-[113px] h-[80px] flex items-center p-8 lg:p-6 ">
               <img src={pay2} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center  p-6 ">
+            <div className="w-[113px] h-[80px] flex items-center  p-8 lg:p-6 ">
               <img src={pay3} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-6 ">
+            <div className="w-[113px] h-[80px] flex items-center p-8 lg:p-6 ">
               <img src={pay4} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-6 ">
+            <div className="w-[113px] h-[80px] flex items-center p-8 lg:p-6">
               <img src={pay5} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-6 ">
+            <div className="w-[113px] h-[80px] flex items-center p-8 lg:p-6 ">
               <img src={pay6} alt="Logo" className="object-contain" />
             </div>
            
@@ -227,16 +227,16 @@ const Technologystack = () => {
       </div>
       <div className="w-full  md:w-[80%]  flex flex-col md:flex-row  items-center ">
         <div className="w-[200px]">
-          <h2 className="ml-5 font-sans text-[18px]  leading-7 font-medium tracking-normal text-start  text-black">
+          <h2 className="ml-10 lg:ml-5 font-sans text-[18px]  leading-7 font-medium tracking-normal text-start  text-black">
             Cloud Platforms
           </h2>
         </div>
         <div className=" md:w-[90%]  h-auto">
         <div class="p-3  grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5 xl:gap-x-28 ">
-            <div className="w-[113px] h-[80px] flex items-center p-6">
+            <div className="w-[113px] h-[80px] flex items-center p-8 lg:p-6">
               <img src={cloud1} alt="Logo" className="object-contain" />
             </div>
-            <div className="w-[113px] h-[80px] flex items-center p-8 ">
+            <div className="w-[113px] h-[80px] flex items-center p-10 lg:p-8 ">
               <img src={cloud2} alt="Logo" className="object-contain" />
             </div>
            

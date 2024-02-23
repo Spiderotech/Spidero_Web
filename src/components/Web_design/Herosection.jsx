@@ -114,15 +114,15 @@ const Herosection = () => {
     <section className="relative h-auto flex flex-col  text-white py-0  bg-white mb-10">
       <div className="absolute w-full h-full mt-[-190px] " id="app"></div>
       <div className="flex flex-row w-[90%] h-auto  pt-32 mb-20">
-        <div className="w-full lg:w-[50%]  relative ">
-          <div className="flex flex-col items-start">
-            <h2 className="text-white pt-8 text-start leading-10 font-sans font-bold text-xl md:text-3xl lg:text-4xl ml-10 w-80">
+        <div className="w-full lg:w-[50%]  relative flex justify-center items-center  ">
+          <div className="flex flex-col items-start  ">
+            <h2 className="text-white pt-8 text-start leading-10 font-sans font-bold text-3xl md:text-3xl lg:text-4xl ml-10 w-80">
               A top-rated web design company in UK
             </h2>
 
             <div className="ml-10 mt-5 mb-9">
             <a href="/expertice">
-              <button className="w-[198px] h-[51px] font-sans leading-6 tracking-2px text-[16px] font-medium text-black bg-white transition-all ease-in-out hover:bg-black hover:text-white">
+              <button className=" w-[150px] h-[40px]  lg:w-[198px] lg:h-[51px] font-sans leading-6 tracking-2px text-[16px] font-medium text-black bg-white transition-all ease-in-out hover:bg-black hover:text-white">
                 EXPLORE US
               </button>
             </a>
