@@ -23,13 +23,13 @@ const HerosectionMain = () => {
 
           <div className="mt-5 ml-10 hidden md:flex">
             <a href="/expertice">
-              <button className="w-[198px] h-[51px] font-sans leading-6 tracking-2px text-[16px] font-medium text-black bg-white transition-all ease-in-out hover:bg-black hover:text-white cursor-pointer">
+              <button className="w-[198px] h-[51px] tracking-wider  font-sans leading-6 tracking-2px text-[16px] font-medium text-black bg-white transition-all ease-in-out hover:bg-black hover:text-white cursor-pointer">
                 EXPLORE US
               </button>
             </a>
 
             <a href="/contact">
-              <button className="ml-10 w-[147px] h-[51px] font-sans leading-6 tracking-2px text-[16px] font-medium text-white bg-black transition-all ease-in-out hover:bg-white hover:text-black cursor-pointer">
+              <button className="ml-10 w-[147px] h-[51px] tracking-wider  font-sans leading-6 tracking-2px text-[16px] font-medium text-white bg-black transition-all ease-in-out hover:bg-white hover:text-black cursor-pointer">
                 CONTACT US
               </button>
             </a>

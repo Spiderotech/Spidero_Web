@@ -27,25 +27,25 @@ const Footer = () => {
             </div>
 
             <div className="address mt-20">
-              <span className="text-lg md:text-xl lg:text-2xl tracking-wide">
+              <span className="text-lg md:text-xl lg:text-xl tracking-wide">
                 Visit us at,
               </span>
               <div className="row mt-2 flex items-center">
                 <div className="column mt-4">
-                  <img src={web5} alt="profile" className="w-7 h-4 lg:h-5" />
+                  <img src={web5} alt="profile" className="w-5 h-4 lg:h-3" />
                 </div>
                 <div className="column ml-4 mt-4">
-                  <span className="text-lg md:text-xl lg:text-2xl font-sans">
+                  <span className="text-lg md:text-xl lg:text-xl font-sans">
                     2 Westbourne Crescent, London, W2 3DB
                   </span>
                 </div>
               </div>
               <div className="row mt-2 flex items-center">
                 <div className="column">
-                  <img src={web4} alt="profile" className="w-10 h-6" />
+                  <img src={web4} alt="profile" className="w-6 h-6" />
                 </div>
                 <div className="column ml-4 mt-4">
-                  <span className="text-lg md:text-xl lg:text-2xl font-sans">
+                  <span className="text-lg md:text-xl lg:text-xl font-sans">
                     Ennakkad Ulunthy Rd, Ennakkad Gramam, Kerala, 689624
                   </span>
                 </div>

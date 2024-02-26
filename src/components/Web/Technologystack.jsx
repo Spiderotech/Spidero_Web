@@ -26,8 +26,8 @@ import open5 from "../../assets/Open/shopify.png"
 
 const Technologystack = () => {
   return (
-    <div class=" w-full  h-auto flex justify-center items-center flex-col mb-10 mt-10 ">
-      <h2 className="text-[22px] font-sans leading-10 font-bold sm:text-[22px] md:text-[38px] lg:text-[22px] xl:text-[30px]   ">
+    <div class=" w-full  h-auto flex justify-center items-center flex-col mb-10 mt-20 ">
+      <h2 className="text-[22px] font-sans leading-10 font-bold sm:text-[22px] md:text-[32px]  xl:text-[40px]   ">
         Technology Stack We Practice
       </h2>
       <div className="w-full  md:w-[60%]   mt-5 flex flex-col md:flex-row  items-center">

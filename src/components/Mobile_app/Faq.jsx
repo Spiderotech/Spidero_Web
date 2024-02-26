@@ -50,9 +50,9 @@ const Faq = () => {
        
       ];
   return (
-<div className=" bg-[#f8f8f8] mb-10 mt-10 " >
+<div className=" bg-[#f8f8f8] mb-20 mt-10 " >
   <div className="faqhead">
-    <h4 className='text-[22px] sm:text-[28px] md:text-[36px] lg:text-[40px] text-center font-sans font-medium ' >Best practices that we follow</h4>
+    <h4 className='text-[22px] sm:text-[28px] md:text-[36px] lg:text-[40px] text-center font-sans  font-semibold  pt-5 ' >Best practices that we follow</h4>
     <div className=" flex justify-center items-center flex-col  " >
       {faqData.map((item, index) => (
         <div key={index} className="mt-5 border-b-2 pb-5 w-[70%]" >

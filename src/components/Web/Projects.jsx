@@ -14,7 +14,7 @@ const projectData = [
   {
     title: "Hustle Max Merchant Private Limited",
     image:web2,
-    subTitle: "Product Delivewry",
+    subTitle: "Product Delivery",
     companyName: "Hustle Max Merchant",
     description:
       "Discover outstanding service and trustworthiness at Hustle Max Merchant Private Limited ",
@@ -24,7 +24,7 @@ const projectData = [
 
 const Project = ({ title,image, subTitle, companyName, description }) => {
   return (
-    <div className="w-full h-auto p-10 ">
+    <div className="w-full h-auto p-10  ">
       <div className="grid lg:grid-cols-2">
         <div className="mb-6 md:mb-0 w-full h-auto  ">
           <img
@@ -38,12 +38,12 @@ const Project = ({ title,image, subTitle, companyName, description }) => {
             {title}
           </h1>
           <br />
-          <p className="text-base font-black lg:ml-36">{subTitle}</p>
+          <p className="text-base font-black lg:ml-24">{subTitle}</p>
           <br />
           <span className="font-sans text-[14px] -tracking-normal lg:ml-12 pt-24">
-            <u className="h-3 ">{companyName}</u>
+            {/* <u className="h-3 ">{companyName}</u> */}
           </span>
-          <p className="text-[28px] font-sans lg:ml-8 pt-8">{description}</p>
+          <p className="text-[28px] font-sans lg:ml-14 pt-8">{description}</p>
           
         </div>
       </div>

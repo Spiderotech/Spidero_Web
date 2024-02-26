@@ -136,7 +136,7 @@ const Contactform1 = () => {
                 <div className="relative pt-6">
                   <label
                     htmlFor="email"
-                    className="absolute left-2 bottom-9 text-[16px] font-medium text-gray-300 pointer-events-none transition-all "
+                    className="absolute left-0 bottom-9 text-[16px] font-medium text-gray-300 pointer-events-none transition-all "
                   >
                     Full Name<span className="text-red-500">*</span>
                   </label>
@@ -167,7 +167,7 @@ const Contactform1 = () => {
                 <div className="relative pt-6 mt-4">
                   <label
                     htmlFor="email"
-                    className="absolute left-2 bottom-9 text-[16px] font-medium text-gray-300 pointer-events-none transition-all "
+                    className="absolute left-0 bottom-9 text-[16px] font-medium text-gray-300 pointer-events-none transition-all "
                   >
                     Email<span className="text-red-500">*</span>
                   </label>
@@ -193,7 +193,7 @@ const Contactform1 = () => {
                     </div>
                   )}
                 </div>
-                <div className="relative pt-3 ">
+                <div className="relative mt-5 ">
                   <label
                     htmlFor="countryCode"
                     className=" text-sm font-medium text-gray-300 pointer-events-none transition-all    "
@@ -209,7 +209,7 @@ const Contactform1 = () => {
                       
                     }
                     onBlur={formik.handleBlur}
-                    className="ml-2 mt-2 text-black bg-black " 
+                    className=" mt-2 text-black bg-black " 
                     inputStyle={{ width: "6rem", pointerEvents: "none", }}
                    
                
@@ -225,7 +225,7 @@ const Contactform1 = () => {
                 <div className="relative pt-6  mt-4">
                   <label
                     htmlFor="email"
-                    className="absolute left-2 bottom-9 text-[16px] font-medium text-gray-300 pointer-events-none transition-all "
+                    className="absolute left-0 bottom-9 text-[16px] font-medium text-gray-300 pointer-events-none transition-all "
                   >
                     Phone<span className="text-red-500">*</span>
                   </label>
@@ -254,7 +254,7 @@ const Contactform1 = () => {
                 <div className="sm:col-span-2 relative mt-12 ">
                   <label
                     htmlFor="message"
-                    className="absolute left-2 bottom-16 text-[16px] font-medium text-gray-300 pointer-events-none transition-all"
+                    className="absolute left-0 bottom-16 text-[16px] font-medium text-gray-300 pointer-events-none transition-all"
                   >
                     Type your message here
                     <span className="text-red-500">*</span>

@@ -34,36 +34,36 @@ const Belowherosection = () => {
             <div className="grid grid-cols-2 ">
               
                 <div
-                  className=" w-auto h-[140px] px-12 md:px-20 bg-transparent justify-start md:border-b-2      "
+                  className=" w-auto h-[140px]  bg-transparent justify-start md:border-b-2       "
                   data-aos="flip-up"
                   data-aos-duration="1000"
                 >
-                  <img src={acc} className="m-2 w-20 h-20" alt="profile" />
-                  <p className=" m-2 text-[20px]">Accountability</p>
+                  <img src={acc} className="m-2 w-20 h-20 " alt="profile" />
+                  <p className="text-[20px]  ">Accountability</p>
                 </div>
                 <div
-                  className="   w-auto h-[140px]  px-12 md:px-20 bg-transparent justify-start  md:border-b-2  md:border-l-2   "
+                  className="   w-[250px] h-[140px]   bg-transparent justify-start  md:border-b-2  md:border-l-2   "
                   data-aos="flip-up"
                   data-aos-duration="1000"
                 >
                   <img src={qu} className="m-2 w-20 h-20" alt="profile" />
-                  <p className=" m-2 text-[20px]">Quality</p>
+                  <p className="  ml-5 text-[20px]">Quality</p>
                 </div>
                 <div
-                  className=" w-auto h-[140px]  px-12 md:px-20 bg-transparent justify-start   "
+                  className=" w-auto h-[140px]   bg-transparent justify-start   "
                   data-aos="flip-up"
                   data-aos-duration="1000"
                 >
                   <img src={proa} className="m-2 w-20 h-20" alt="profile" />
-                  <p className="m-2 text-[20px]">Proactivity</p>
+                  <p className=" text-[20px]">Proactivity</p>
                 </div>
                 <div
-                  className="   w-auto h-[140px]  px-12 md:px-20 bg-transparent justify-start   md:border-l-2   "
+                  className="   w-auto h-[140px] px-0   bg-transparent justify-start   md:border-l-2   "
                   data-aos="flip-up"
                   data-aos-duration="1000"
                 >
                   <img src={agi} className=" m-2 w-20 h-20" alt="profile" />
-                  <p className=" m-2  text-[20px]">Agility</p>
+                  <p className="  ml-5  text-[20px]">Agility</p>
                 </div>
               
             </div>

@@ -7,7 +7,7 @@ const Herosection = () => {
       <div className="flex flex-row w-[90%] h-auto items-center justify-center text-center pt-40 mb-10">
         <div className="w-full lg:w-[60%] md:p-10  ">
           <div className="flex flex-col items-start">
-            <h2 className="text-black pt-8 text-start  font-sans tracking-normal  font-normal text-xl md:text-3xl lg:text-[44px] ml-10 ">
+            <h2 className="text-black pt-8 text-start  font-sans tracking-normal   font-normal text-xl md:text-3xl lg:text-[44px] ml-10 ">
               Top-Tier{" "}
               <span className="text-black pt-8 text-start tracking-normal font-sans font-bold text-xl md:text-3xl lg:text-[44px] ">
                 Software Development Company

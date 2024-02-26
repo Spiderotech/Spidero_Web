@@ -48,12 +48,12 @@ const Results_mobile = () => {
               reflecting excellence in both iOS and Android app development,
               making us the best in London.
             </p>
-            <p className="font-sans  cursor-pointer text-[19px] leading-7 font-medium tracking-normal text-start p-9 text-white">
+            <p className="font-sans  cursor-pointer text-[19px] leading-7 font-medium  text-start p-9 text-white tracking-wider">
               CONVINCED?
             </p>
             <div className="mt-1 text-center mb-10 ml-10">
               <a href="/contact">
-                <button className="border  cursor-pointer  border-white  w-[200px] h-[51px] font-sans leading-6 tracking-{2px} text-[14px]  text-white font-bold bg-black transition-all ease-in-out hover:bg-white hover:text-black hover:border-black">
+                <button className="border tracking-wider  cursor-pointer  border-white  w-[200px] h-[51px] font-sans leading-6 tracking-{2px} text-[14px]  text-white font-bold bg-black transition-all ease-in-out hover:bg-white hover:text-black hover:border-black">
                   CONTACT US
                 </button>
               </a>

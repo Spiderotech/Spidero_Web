@@ -25,12 +25,12 @@ const Humancentered_design = () => {
               pixel orientation, information architecture, microinteractions,
               etc., ensuring maximum user engagement.
             </p>
-            <p className="font-sans text-[19px] leading-7 font-medium tracking-normal text-start p-9 text-black">
+            <p className="font-sans text-[19px] leading-7 font-medium  text-start p-9 text-black tracking-wider">
               FROM IDEATION TO VISUAL MANIFESTATION,
             </p>
             <div className="mt-1 text-center mb-10 ml-10">
               <a href="/contact">
-                <button className="border  cursor-pointer  border-white  w-[200px] h-[51px] font-sans leading-6 tracking-{2px} text-[14px]  text-white font-bold bg-black transition-all ease-in-out hover:bg-white hover:text-black hover:border-black">
+                <button className="border  cursor-pointer tracking-wider  border-white  w-[200px] h-[51px] font-sans leading-6 tracking-{2px} text-[14px]  text-white font-bold bg-black transition-all ease-in-out hover:bg-white hover:text-black hover:border-black">
                   OUR DESIGN PROCESS
                 </button>
               </a>

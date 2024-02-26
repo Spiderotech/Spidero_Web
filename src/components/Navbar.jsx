@@ -77,7 +77,7 @@ const Navbar = () => {
           {isScrolled ? (
             <a href="/" className="cursor-pointer">
               <img
-                className=" h-[30px] w-[160px] md:h-[50px] md:w-[280px] "
+                className=" h-[30px] w-[160px] ml-5 md:h-[50px] md:w-[280px] "
                 src={logo1}
                 alt=""
               />
@@ -85,7 +85,7 @@ const Navbar = () => {
           ) : (
             <a href="/" className="">
               <img
-                className=" h-[30px] w-[160px] md:h-[50px] md:w-[280px] "
+                className=" h-[30px] w-[160px] ml-5 md:h-[50px] md:w-[280px] "
                 src={logo}
                 alt=""
               />
@@ -121,7 +121,7 @@ const Navbar = () => {
           >
             <a href="/expertice">
               <Popover.Button
-                className={`flex items-center gap-x-1 text-[18px] text-left font-sans cursor-pointer  font-semibold  ${
+                className={`flex items-center gap-x-1 text-[18px] text-left font-sans cursor-pointer  font-semibold tracking-wider   ${
                   isScrolled ? "text-gray-900" : "text-white"
                 } `}
                 onMouseEnter={() => setExpertisePopoverOpen(true)}
@@ -166,7 +166,7 @@ const Navbar = () => {
           </Popover>
           <a
             href="/ourprocess"
-            className={`text-[18px] text-left font-sans cursor-pointer font-semibold ${
+            className={`text-[18px] text-left font-sans cursor-pointer font-semibold tracking-wider  ${
               isScrolled ? "text-gray-900" : "text-white"
             }`}
           >
@@ -174,7 +174,7 @@ const Navbar = () => {
           </a>
           <Popover className="relative">
             <Popover.Button
-              className={`flex items-center gap-x-1 text-[18px] text-left font-sans font-semibold cursor-pointer ${
+              className={`flex items-center gap-x-1 text-[18px] text-left font-sans font-semibold cursor-pointer tracking-wider  ${
                 isScrolled ? "text-gray-900" : "text-white"
               }`}
             >
@@ -219,7 +219,7 @@ const Navbar = () => {
         </Popover.Group>
         <div className="hidden md:flex lg:flex-1 ">
           <a href="/contact">
-            <button className="border  border-black ml-5 h-[58px] w-[200px] font-sans leading-6 tracking-{2px}  text-black text-[16px]  bg-white bg-no-repeat bg-center transition-all ease-in-out hover:bg-black hover:text-white hover:border-black cursor-pointer">
+            <button className="border  tracking-wider  border-black ml-5 h-[58px] w-[200px] font-sans leading-6 tracking-{2px}  text-black text-[16px]  bg-white bg-no-repeat bg-center transition-all ease-in-out hover:bg-black hover:text-white hover:border-black cursor-pointer">
               CONTACT US
             </button>
           </a>

@@ -109,7 +109,7 @@ const Navbarnormal = () => {
           >
             <a href="/expertice">
               <Popover.Button
-                className="flex items-center gap-x-1 text-[18px] text-left font-sans  font-semibold  text-gray-900 cursor-pointer"
+                className="flex items-center gap-x-1 text-[18px] text-left font-sans  font-semibold  text-gray-900 cursor-pointer leading-6"
                 onMouseEnter={() => setExpertisePopoverOpen(true)}
                 onMouseLeave={() => setExpertisePopoverOpen(false)}
                 onClick={handleExpertiseLinkClick}

@@ -116,11 +116,14 @@ const Herosection = () => {
       <div className="flex flex-row w-[90%] h-auto  pt-32 mb-20">
         <div className="w-full lg:w-[50%]  relative flex justify-center items-center  ">
           <div className="flex flex-col items-start  ">
-            <h2 className="text-white pt-8 text-start leading-10 font-sans font-bold text-3xl md:text-3xl lg:text-4xl ml-10 w-80">
-              A top-rated web design company in UK
-            </h2>
+            <span className="text-white  text-start  font-sans font-bold text-3xl md:text-3xl lg:text-[48px] ml-14 h-auto  ">
+              A top-rated web design
+            </span>
+            <span className="text-white  text-start  font-sans font-bold text-3xl md:text-3xl lg:text-[48px] ml-14 h-auto mt-5  ">
+              company in UK
+            </span>
 
-            <div className="ml-10 mt-5 mb-9">
+            <div className="ml-14 mt-20 mb-9">
             <a href="/expertice">
               <button className=" w-[150px] h-[40px]  lg:w-[198px] lg:h-[51px] font-sans leading-6 tracking-2px text-[16px] font-medium text-black bg-white transition-all ease-in-out hover:bg-black hover:text-white">
                 EXPLORE US
@@ -138,7 +141,7 @@ const Herosection = () => {
               <div className="relative mt-5 pt-6">
                 <label
                   htmlFor="email"
-                  className="absolute left-2 bottom-9 text-[16px] font-medium text-gray-300 pointer-events-none transition-all "
+                  className="absolute left-0 bottom-9 text-[16px] font-medium text-gray-300 pointer-events-none transition-all "
                 >
                   Full Name<span className="text-red-500">*</span>
                 </label>
@@ -169,7 +172,7 @@ const Herosection = () => {
               <div className="relative pt-6 mt-4">
                 <label
                   htmlFor="email"
-                  className="absolute left-2 bottom-9 text-[16px] font-medium text-gray-300 pointer-events-none transition-all "
+                  className="absolute left-0 bottom-9 text-[16px] font-medium text-gray-300 pointer-events-none transition-all "
                 >
                   Email<span className="text-red-500">*</span>
                 </label>
@@ -198,7 +201,7 @@ const Herosection = () => {
               <div className="relative pt-3 mt-5  ">
                 <label
                   htmlFor="countryCode"
-                  className="absolute left-2 bottom-9 text-[16px] font-medium text-gray-300 p "
+                  className="absolute left-0 bottom-9 text-[16px] font-medium text-gray-300 mb-2 "
                 >
                   Country Code<span className="text-red-500 ">*</span>
                 </label>
@@ -212,7 +215,7 @@ const Herosection = () => {
                   onBlur={formik.handleBlur}
                   international
                   defaultCountry="GB"
-                  className="ml-2 mt-3  text-black bg-black " 
+                  className=" mt-4  text-black bg-black " 
                   inputStyle={{ width: "6rem", pointerEvents: "none", }}
                 />
                 {formik.touched.countryCode && formik.errors.countryCode && (
@@ -225,7 +228,7 @@ const Herosection = () => {
               <div className="relative pt-6  mt-4">
                 <label
                   htmlFor="email"
-                  className="absolute left-2 bottom-9 text-[16px] font-medium text-gray-300 pointer-events-none transition-all "
+                  className="absolute left-0 bottom-9 text-[16px] font-medium text-gray-300 pointer-events-none transition-all "
                 >
                   Phone<span className="text-red-500">*</span>
                 </label>
@@ -254,7 +257,7 @@ const Herosection = () => {
               <div className="sm:col-span-2 relative mt-12 ">
                 <label
                   htmlFor="message"
-                  className="absolute left-2 bottom-16 text-[16px] font-medium text-gray-300 pointer-events-none transition-all"
+                  className="absolute left-0 bottom-16 text-[16px] font-medium text-gray-300 pointer-events-none transition-all"
                 >
                   Type your message here
                   <span className="text-red-500">*</span>

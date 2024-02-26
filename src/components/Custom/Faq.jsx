@@ -57,7 +57,7 @@ const Faq = () => {
           question:
             "Why should I hand over my custom software development project to Spidero Technology?",
           answer:
-            "Spidero Technology is an NYC-based enterprise software development company you can count on, backed by a team of dedicated, passionate professionals who are focused on delivering real, quantifiable business value.",
+            "Spidero Technology is an London-based enterprise software development company you can count on, backed by a team of dedicated, passionate professionals who are focused on delivering real, quantifiable business value.",
         },
         {
           question:

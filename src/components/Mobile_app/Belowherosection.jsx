@@ -17,7 +17,7 @@ const Belowherosection = () => {
                 at Spidero Technology. As a leading app development company, we
                 leverage agile methodologies and cutting-edge technologies,
                 including UX, smart consultation, bots, AIs, and IoT. Our
-                seasoned team of top app developers in NYC combines industry
+                seasoned team of top app developers in London combines industry
                 expertise and innovative solutions to ensure your product's
                 success within your timeframe and budget.
               </p>

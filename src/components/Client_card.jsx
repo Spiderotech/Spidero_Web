@@ -13,7 +13,7 @@ import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 const ClientCard = () => {
   return (
     <div className="w-full justify-center  flex flex-col items-center mt-10 ">
-      <h2 className="text-[40px] font-sans leading-10 font-bold ">
+      <h2 className="  text-[28px] md:text-[32px] lg:text-[40px] font-sans leading-10 font-bold ">
         Our Clients
       </h2>
       <div className="container mt-22 w-full flex justify-center items-center mt-10 ">

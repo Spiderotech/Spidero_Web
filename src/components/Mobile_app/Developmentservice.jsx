@@ -18,20 +18,21 @@ const Developmentservice = () => {
             <div class=" overflow-hidden border-2  bg-gray-300 rounded-xl  ">
               <div class="px-3 py-10 ">
                 <div class="font-bold text-[20px] text-start mb-2 ml-3 text-black font-sans">
-                  iOS App Development
+                  iOS App<br></br> Development
                 </div>
 
-                <p class="text-black text-[16px] text-start leading-relaxed font-sans tracking-wide font-normal mt-5">
+                <p class="text-black text-[16px] text-start leading-relaxed font-sans tracking-wide font-normal mt-5 ">
                   Crafting native iOS apps adhering to the Human Interface
                   Guidelines, we harness the latest iOS frameworks for optimal
                   performance. Our iPhone and iPad product web development
                   undergoes rigorous split testing, ensuring valuable insights
                   from early user feedback.
                 </p>
-                <div className="w-16 h-16 animate-bounce mt-5">
+                
+              </div>
+              <div className="w-16 h-16 animate-bounce m-3  ">
                   <BallCanvas icon={ios} />
                 </div>
-              </div>
             </div>
             <div class=" overflow-hidden border-2  bg-black rounded-xl  ">
               <div class="px-3 py-10 ">
@@ -46,10 +47,11 @@ const Developmentservice = () => {
                   of experience, having collaborated with both Fortune 500
                   companies and innovative startups.
                 </p>
-                <div className="w-16 h-16  animate-bounce mt-5 ">
+               
+              </div>
+              <div className="w-16 h-16  animate-bounce  ">
                   <BallCanvas icon={andro} />
                 </div>
-              </div>
             </div>
             <div class=" overflow-hidden border-2  bg-gray-300 rounded-xl  ">
               <div class="px-3 py-10 ">
@@ -64,10 +66,11 @@ const Developmentservice = () => {
                   Consult with our certified React Native app developers to
                   unlock the full potential of your project.
                 </p>
-                <div className="w-16 h-16 animate-bounce mt-5  ">
+               
+              </div>
+              <div className="w-16 h-16 animate-bounce mt-5  ">
                   <BallCanvas icon={react} />
                 </div>
-              </div>
             </div>
             <div class=" overflow-hidden border-2  bg-black rounded-xl  ">
               <div class="px-3 py-10 ">
@@ -75,16 +78,17 @@ const Developmentservice = () => {
                   Enterprise Mobile Solutions
                 </div>
 
-                <p class="text-white text-[16px] text-start leading-relaxed font-sans tracking-wide font-normal mt-5">
+                <p class="text-white text-[16px] text-start leading-relaxed font-sans tracking-wide font-normal mt-5 mb-10">
                   Consistently surpassing expectations, we stand out among
                   mobile app development companies by delivering intricate
                   projects within designated timelines, solidifying our
                   reputation as the preferred choice in London.
                 </p>
-                <div className="w-16 h-16 animate-bounce  mt-3  ">
+               
+              </div>
+              <div className="w-16 h-16 animate-bounce  ">
                   <BallCanvas icon={enter} />
                 </div>
-              </div>
             </div>
           </div>
           <div className="mt-10 text-center mb-10">
