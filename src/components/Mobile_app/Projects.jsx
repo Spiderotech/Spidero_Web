@@ -6,7 +6,7 @@ const projectData = [
   {
     title: "Crypto Live.ai",
     image:web1,
-    subTitle: "",
+    subTitle: "Crpto live",
     companyName: "Spidero technology",
     description:
       "Our team crafted a cutting-edge AI-driven video streaming application, focusing on delivering an unparalleled user experience.",
@@ -15,7 +15,7 @@ const projectData = [
     title: "MDX FOOD APP",
     image:web2,
     subTitle: "Food ordering app",
-    companyName: "MDX",
+    companyName: "MDX University",
     description:
       "We meticulously designed and engineered a user-centric food ordering app,This application simplifies meal ordering for users, offering a seamless integration of technology and convenience. ",
   },
@@ -38,7 +38,7 @@ const Project = ({ title,image, subTitle, companyName, description }) => {
             {title}
           </h1>
           <br />
-          <p className="text-base font-black lg:ml-36">{subTitle}</p>
+          <p className="text-base font-black lg:ml-24">{subTitle}</p>
           <br />
           <span className="font-sans text-[14px] -tracking-normal lg:ml-12 pt-24">
             <u className="h-3 ">{companyName}</u>

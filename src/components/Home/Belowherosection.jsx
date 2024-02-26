@@ -30,7 +30,7 @@ const Belowherosection = () => {
               </p>
             </div>
           </div>
-          <div className="flex items-center justify-center mt-10  ">
+          <div className="flex items-center justify-center mt-10 mb-20   ">
             <div className="grid grid-cols-2 ">
               
                 <div
@@ -38,16 +38,16 @@ const Belowherosection = () => {
                   data-aos="flip-up"
                   data-aos-duration="1000"
                 >
-                  <img src={acc} className="m-2 w-20 h-20 " alt="profile" />
+                  <img src={acc} className="m-2 w-20 h-20  " alt="profile" />
                   <p className="text-[20px]  ">Accountability</p>
                 </div>
                 <div
-                  className="   w-[250px] h-[140px]   bg-transparent justify-start  md:border-b-2  md:border-l-2   "
+                  className=" w-auto  lg:w-[250px] h-[140px]   bg-transparent justify-start  md:border-b-2  md:border-l-2   "
                   data-aos="flip-up"
                   data-aos-duration="1000"
                 >
-                  <img src={qu} className="m-2 w-20 h-20" alt="profile" />
-                  <p className="  ml-5 text-[20px]">Quality</p>
+                  <img src={qu} className="m-2 w-20 h-20  lg:ml-5 ml-10 " alt="profile" />
+                  <p className="  lg:ml-5 ml-14 text-[20px]">Quality</p>
                 </div>
                 <div
                   className=" w-auto h-[140px]   bg-transparent justify-start   "
@@ -62,8 +62,8 @@ const Belowherosection = () => {
                   data-aos="flip-up"
                   data-aos-duration="1000"
                 >
-                  <img src={agi} className=" m-2 w-20 h-20" alt="profile" />
-                  <p className="  ml-5  text-[20px]">Agility</p>
+                  <img src={agi} className=" m-2 w-20 h-20  lg:ml-5 ml-10  " alt="profile" />
+                  <p className=" lg:ml-5 ml-14   text-[20px]">Agility</p>
                 </div>
               
             </div>
