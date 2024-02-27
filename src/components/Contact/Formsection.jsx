@@ -86,10 +86,10 @@ const Formsection = () => {
       <h2 className="text-black pt-8 text-start leading-10 font-sans font-bold text-[30px]">
         Connect with our experts.
       </h2>
-      <div className="flex flex-col lg:flex-row w-full h-auto items-center justify-center  mb-10">
-        <div className=" w-full lg:w-[50%] h-auto bg-white lg:ml-5 p-10 lg:p-20 ">
+      <div className="flex flex-col lg:flex-row w-full h-auto items-center justify-center mb-10   mt-10">
+        <div className=" w-full lg:w-[50%] h-auto bg-white lg:ml-5 p-5 lg:p-20      ">
           <form onSubmit={formik.handleSubmit}>
-            <div className="relative pt-6">
+            <div className="relative">
               <label
                 htmlFor="email"
                 className="absolute left-0 bottom-10 text-sm font-medium text-black pointer-events-none transition-all "
@@ -103,7 +103,7 @@ const Formsection = () => {
                 value={formik.values.fullName}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                className="shadow-none bg-transparent border-b border-gray-300 text-black text-sm  block w-[80%] p-2.5 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-none"
+                className="shadow-none bg-transparent border-b border-gray-300 text-black text-sm  block w-full p-2.5 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-none"
                 placeholder=""
                 onFocus={(e) =>
                   e.target.previousSibling.classList.add(
@@ -133,7 +133,7 @@ const Formsection = () => {
                 value={formik.values.email}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                className="shadow-none bg-transparent border-b border-gray-300 text-black text-sm  block w-[80%] p-2.5 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-none"
+                className="shadow-none bg-transparent border-b border-gray-300 text-black text-sm  block w-full p-2.5 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-none"
                 placeholder=""
                 onFocus={(e) =>
                   e.target.previousSibling.classList.add(
@@ -187,7 +187,7 @@ const Formsection = () => {
                 value={formik.values.phone}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                className="shadow-none bg-transparent border-b border-gray-300 text-black text-sm  block w-[80%] p-2.5 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-none"
+                className="shadow-none bg-transparent border-b border-gray-300 text-black text-sm  block w-full p-2.5 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-none"
                 onFocus={(e) =>
                   e.target.previousSibling.classList.add(
                     "bottom-0",
@@ -217,7 +217,7 @@ const Formsection = () => {
                 value={formik.values.message}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                className="shadow-none bg-transparent border-b border-gray-300 text-black text-sm focus:ring-primary-500 focus:border-primary-500 block w-[80%] p-2.5 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-none"
+                className="shadow-none bg-transparent border-b border-gray-300 text-black text-sm focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-none"
                 onFocus={(e) =>
                   e.target.previousSibling.classList.add(
                     "bottom-0",
@@ -253,8 +253,8 @@ const Formsection = () => {
             </button>
           </form>
         </div>
-        <div className="w-full lg:w-[50%] h-auto j  flex flex-col p-10">
-          <div className="w-full h-56   ">
+        <div className="w-full lg:w-[50%] h-auto  flex flex-col   ">
+          <div className="w-full h-56 ml-0 p-5    lg:ml-10  ">
             <h2 className="text-black text-start leading-10 font-sans font-bold text-[21px] ">
               Get In Touch With Us:
             </h2>

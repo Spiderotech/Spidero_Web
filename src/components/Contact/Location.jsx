@@ -52,7 +52,7 @@ const Location = () => {
         Ennakkad Ulunthy Rd, Ennakkad Gramam, Kerala
         </h2>
         <h2 className="text-black text-start leading-10 font-sans font-bold text-[18px] ">
-        +91 80896502
+        +91 8089650271
         </h2>
         <h2 className="text-black text-start leading-10 font-sans font-bold text-[16px]  cursor-pointer ">
         contact@spiderotechnology.com

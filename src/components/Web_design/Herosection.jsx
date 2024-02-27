@@ -119,7 +119,7 @@ const Herosection = () => {
             <span className="text-white  text-start  font-sans font-bold text-3xl md:text-3xl lg:text-[48px] ml-14 h-auto  ">
               A top-rated web design
             </span>
-            <span className="text-white  text-start  font-sans font-bold text-3xl md:text-3xl lg:text-[48px] ml-14 h-auto mt-5  ">
+            <span className="text-white  text-start  font-sans font-bold text-3xl md:text-3xl lg:text-[48px] ml-14 h-auto lg:mt-5  ">
               company in UK
             </span>
 
