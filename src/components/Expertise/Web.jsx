@@ -17,17 +17,28 @@ const Web = () => {
       <div className=" w-full h-auto  flex flex-col  lg:flex-row justify-center items-center p-5 gap-5 bg-[#efefef] ">
         <div className=" w-full lg:w-[50%] h-auto p-0  md:p-10">
           <div className="text-[30px] font-sans leading-10 font-bold underline">
-            Web
+            <a href="/web" className=" cursor-pointer">Web</a>
           </div>
           <div className="text-[19px] font-sans font-normal mt-4 ">
             We understand the science of enhancing user experience with a
             combination of human-centric approach and development ingenuity.
           </div>
           <ul className=" mt-4 ml-6 text-[18px] font-sans leading-10 font-semibold">
-            <li><span style={{ marginRight: "0.5rem" }}>&#10138;</span> Web app development</li>
-            <li><span style={{ marginRight: "0.5rem" }}>&#10138;</span> Web design</li>
-            <li><span style={{ marginRight: "0.5rem" }}>&#10138;</span> Progressive web apps</li>
-            <li><span style={{ marginRight: "0.5rem" }}>&#10138;</span> UX UI Design</li>
+            <li>
+              <span style={{ marginRight: "0.5rem" }}>&#10138;</span> Web app
+              development
+            </li>
+            <li>
+              <span style={{ marginRight: "0.5rem" }}>&#10138;</span> Web design
+            </li>
+            <li>
+              <span style={{ marginRight: "0.5rem" }}>&#10138;</span>{" "}
+              Progressive web apps
+            </li>
+            <li>
+              <span style={{ marginRight: "0.5rem" }}>&#10138;</span> UX UI
+              Design
+            </li>
           </ul>
         </div>
         <div className=" w-full lg:w-[40%] h-auto ">

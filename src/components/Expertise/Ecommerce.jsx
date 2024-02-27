@@ -27,7 +27,7 @@ const Ecommerce = () => {
             className="w-[80%] h-auto object-contain"
           />
           <div className="text-[30px] font-sans leading-10 font-bold underline mt-5">
-          Blockchain development
+          Blockchain Development
           </div>
           <div className="text-[19px] font-sans font-normal mt-4  w-full md:w-3/5 ">
           We take pride in building secure and powerful Blockchain applications- from smart contracts to cryptocurrencies.

@@ -1,5 +1,5 @@
 import React from "react";
-import img1 from "../../assets/design.png"
+import img1 from "../../assets/design.jpg"
 
 const EmphasisOnMobileFirst = () => {
   return (
@@ -7,7 +7,7 @@ const EmphasisOnMobileFirst = () => {
       <div className="flex flex-col lg:flex-row w-full h-auto items-center justify-center text-center pt-10 mb-10">
         <div className="w-full lg:w-[50%] p-5  lg:p-20">
           <div className="flex flex-col ">
-            <div className="text-[40px] text-black font-sans leading-10 font-bold text-start  mb-4 lg:mb-8">
+            <div className="text-[40px] text-black font-sans  font-bold text-start leading-normal mb-4 lg:mb-8">
               Emphasis On Mobile First Web Design
             </div>
             <br />
@@ -19,12 +19,12 @@ const EmphasisOnMobileFirst = () => {
             Given the current emphasis on mobile indexing and ranking by Google, developing professional mobile web designs has become increasingly vital.
 
             </p>
-            <p className="  cursor-pointer font-sans text-[20px] leading-7 font-bold tracking-normal text-black text-start  mb-3">
+            <p className="  cursor-pointer font-sans text-[20px] leading-7 font-bold  text-black text-start tracking-wider  mb-3 ">
             CONVINCED?
             </p>
             <div className=" hidden lg:flex">
               <a href="/contact">
-                <button className="border  cursor-pointer border-black w-[200px] h-[51px] font-sans leading-6 tracking-2px text-[16px] font-medium text-black bg-white transition-all ease-in-out hover:bg-black hover:text-white hover:border-white">
+                <button className="border  cursor-pointer border-black w-[210px] h-[51px] font-sans leading-6  tracking-wider text-[16px] font-medium text-black bg-white transition-all ease-in-out hover:bg-black hover:text-white hover:border-white">
                 DISCUSS YOUR PROJECT
                 </button>
               </a>

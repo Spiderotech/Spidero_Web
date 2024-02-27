@@ -16,7 +16,8 @@ const Mobile = () => {
           </div>
           <div className=" w-full lg:w-[50%] h-auto p-0  md:p-10">
             <div className="text-[30px] font-sans leading-10 font-bold underline">
-            Mobile Apps
+            <a href="/mobile" className=" cursor-pointer"> Mobile Apps</a>
+           
             </div>
             <div className="text-[19px] font-sans font-normal mt-4 ">
             Leveraging mobility to bring business stability and visibility for you, we make your product next gen ready with the best of technology.

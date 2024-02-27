@@ -12,13 +12,13 @@ const Footer = () => {
   return (
     <footer className="flex flex-col text-center dark:bg-neutral-600 lg:text-left ">
       <div className="  text-neutral-800 dark:text-neutral-200 w-full ">
-        <div className="flex flex-col sm:flex-col  md:flex-col lg:flex-row">
-          <div className=" bg-black text-white float-left h-auto w-full lg:w-[47%] p-20">
-            <div className="text-[40px] md:text-[36px] lg:text-[40px] sm:text-[26px] font-bold  mt-5  font-sans">
+        <div className="flex flex-col-reverse  md:flex-col-reverse lg:flex-row">
+          <div className="  bg-white lg:bg-black text-black lg:text-white float-left h-auto w-full lg:w-[47%] p-5 lg:p-20">
+            <div className="text-[40px] md:text-[36px] lg:text-[40px] sm:text-[26px] font-bold  mt-5  font-sans hidden md:block ">
               Like what you see?<br></br> Let’s start a conversation.
             </div>
 
-            <div className="mt-[40px]">
+            <div className="mt-[40px] hidden md:block">
               <a href="/contact" className="cursor-pointer">
                 <button className="border  border-white  w-[184px] h-[54px] font-sans leading-6 tracking-{2px} text-[16px] font-medium text-white  bg-black transition-all ease-in-out hover:bg-white hover:text-black hover:border-black cursor-pointer">
                   <b>GET IN TOUCH</b>
@@ -26,26 +26,26 @@ const Footer = () => {
               </a>
             </div>
 
-            <div className="address mt-20">
-              <span className="text-lg md:text-xl lg:text-xl tracking-wide">
+            <div className=" lg:mt-20 text-start">
+              <span className="text-lg md:text-xl lg:text-xl tracking-wide ">
                 Visit us at,
               </span>
-              <div className="row mt-2 flex items-center">
-                <div className="column mt-4">
+              <div className="flex-row mt-5 flex items-center ">
+                <div className=" ">
                   <img src={web5} alt="profile" className="w-5 h-4 lg:h-3" />
                 </div>
-                <div className="column ml-4 mt-4">
+                <div className=" ml-4 ">
                   <span className="text-lg md:text-xl lg:text-xl font-sans">
                     2 Westbourne Crescent, London, W2 3DB
                   </span>
                 </div>
               </div>
-              <div className="row mt-2 flex items-center">
-                <div className="column">
+              <div className=" flex-row mt-2 flex items-center   ">
+                <div className="">
                   <img src={web4} alt="profile" className="w-6 h-6" />
                 </div>
-                <div className="column ml-4 mt-4">
-                  <span className="text-lg md:text-xl lg:text-xl font-sans">
+                <div className="column ml-4   ">
+                  <span className="text-lg md:text-xl lg:text-xl font-sans text-start">
                     Ennakkad Ulunthy Rd, Ennakkad Gramam, Kerala, 689624
                   </span>
                 </div>
@@ -70,17 +70,17 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="hidden md:flex items-center justify-center">
+          <div className=" items-center justify-center">
             <img
               src={foot}
               alt="Image Description"
-              className=" w-full h-[700px] "
+              className=" w-full  lg:h-[700px] object-contain "
             />
           </div>
         </div>
       </div>
 
-      <div className="w-full bg-neutral-200 p-2 text-center text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200 hidden md:block">
+      <div className="w-full bg-neutral-200 p-2 text-center text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200 ">
         <div className="md:flex md:justify-between">
           <div className="mb-2 md:mb-0">
             <span className="mr-4">
@@ -106,13 +106,13 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="md:hidden fixed bottom-0 w-full h-auto z-10  ">
+      {/* <div className="md:hidden fixed bottom-0 w-full h-auto z-10  ">
         <a href="/contact" className="cursor-pointer">
           <button className="  border border-white w-full h-[51px] font-sans leading-6 tracking-{2px} text-[16px] font-medium text-white bg-black transition-all ease-in-out hover:bg-white hover:text-black hover:border-black cursor-pointer">
            GET IN TOUCH
           </button>
         </a>
-      </div>
+      </div> */}
     </footer>
   );
 };

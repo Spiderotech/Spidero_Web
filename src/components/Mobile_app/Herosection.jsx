@@ -1,5 +1,6 @@
 import React from "react";
 import hero from "../../assets/mobileapp.mov";
+import img from "../../assets/mobileappimg.png";
 
 const Herosection = () => {
   return (
@@ -7,13 +8,19 @@ const Herosection = () => {
       <div className="flex  flex-col-reverse lg:flex-row w-full h-auto items-center justify-center text-center mt-40 ml-1  mb-10  ">
         <div className=" w-[60%] lg:w-[40%] h-auto bg-white  ">
           <video
-            className="w-full h-full object-cover "
+            className="w-full h-full object-cover hidden sm:block "
             src={hero}
             type="video/mp4"
             autoPlay
             loop
             muted
           ></video>
+          <img
+            className="w-full h-full object-cover sm:hidden"
+            src={img}
+            alt="Background Image"
+          />
+
           <div class="h-auto w-full lg:hidden">
             <p class="font-sans text-18px leading-7 font-medium tracking-normal text-start mb-3 mt-5 text-black">
               Spidero Technology develops impactful mobile apps ensuring
@@ -22,6 +29,7 @@ const Herosection = () => {
             </p>
           </div>
         </div>
+
         <div className=" w-[70%] mb-16 lg:w-[50%] h-auto ml-10 ">
           <div className="space-y-2 relative   ">
             <div className="flex  flex-col   w-full  lg:w-[60%] lg:ml-28   ">

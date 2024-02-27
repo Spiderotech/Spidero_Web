@@ -92,7 +92,7 @@ const Formsection = () => {
             <div className="relative pt-6">
               <label
                 htmlFor="email"
-                className="absolute left-2 bottom-10 text-sm font-medium text-black pointer-events-none transition-all "
+                className="absolute left-0 bottom-10 text-sm font-medium text-black pointer-events-none transition-all "
               >
                 Full Name<span className="text-red-500  ">*</span>
               </label>
@@ -123,7 +123,7 @@ const Formsection = () => {
             <div className="relative pt-6 mt-6">
               <label
                 htmlFor="email"
-                className="absolute left-2 bottom-10 text-sm font-medium text-black pointer-events-none transition-all "
+                className="absolute left-0 bottom-10 text-sm font-medium text-black pointer-events-none transition-all "
               >
                 Email<span className="text-red-500 ">*</span>
               </label>
@@ -152,7 +152,7 @@ const Formsection = () => {
             <div className="relative pt-6 mt-6 ">
               <label
                 htmlFor="countryCode"
-                className=" absolute left-2 bottom-10 text-sm font-medium text-black pointer-events-none transition-all "
+                className=" absolute left-0 bottom-10 text-sm font-medium text-black pointer-events-none transition-all "
               >
                 Country Code<span className="text-red-500 ">*</span>
               </label>
@@ -164,7 +164,7 @@ const Formsection = () => {
                 onBlur={formik.handleBlur}
                 international
                 defaultCountry="GB"
-                className="ml-2 mt-4  text-black  " 
+                className=" mt-4  text-black  " 
                 inputStyle={{ width:"6rem",  pointerEvents: "none", }}
               />
               {formik.touched.countryCode && formik.errors.countryCode && (
@@ -177,7 +177,7 @@ const Formsection = () => {
             <div className="relative pt-6  mt-6">
               <label
                 htmlFor="email"
-                className="absolute left-2 bottom-10 text-sm font-medium text-black pointer-events-none transition-all "
+                className="absolute left-0 bottom-10 text-sm font-medium text-black pointer-events-none transition-all "
               >
                 Phone<span className="text-red-500">*</span>
               </label>
@@ -206,7 +206,7 @@ const Formsection = () => {
             <div className="sm:col-span-2 relative mt-16">
               <label
                 htmlFor="message"
-                className="absolute left-2 bottom-20 text-sm font-medium text-black pointer-events-none transition-all"
+                className="absolute left-0 bottom-20 text-sm font-medium text-black pointer-events-none transition-all"
               >
                 Type your message here
                 <span className="text-red-500">*</span>

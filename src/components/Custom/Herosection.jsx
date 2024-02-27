@@ -1,5 +1,6 @@
 import React from "react";
 import hero from "../../assets/herovideo.mp4";
+import hero1 from "../../assets/homescreenimg.png";
 
 const Herosection = () => {
   return (
@@ -7,9 +8,9 @@ const Herosection = () => {
       <div className="flex flex-row w-[90%] h-auto items-center justify-center text-center pt-40 mb-10">
         <div className="w-full lg:w-[60%] md:p-10  ">
           <div className="flex flex-col items-start">
-            <h2 className="text-black pt-8 text-start  font-sans tracking-normal   font-normal text-xl md:text-3xl lg:text-[44px] ml-10 ">
+            <h2 className="text-black pt-8 text-start  font-sans md:leading-none  font-normal text-xl md:text-3xl lg:text-[44px] ml-10 ">
               Top-Tier{" "}
-              <span className="text-black pt-8 text-start tracking-normal font-sans font-bold text-xl md:text-3xl lg:text-[44px] ">
+              <span className="text-black pt-8 text-start md:leading-none font-sans font-bold text-xl md:text-3xl lg:text-[44px] ">
                 Software Development Company
               </span>
             </h2>
@@ -25,7 +26,7 @@ const Herosection = () => {
             </p>
             <div className=" ml-5 md:ml-10">
               <a href="/expertice">
-                <button className="cursor-pointer border border-black w-[307px] h-[51px] font-sans leading-6 tracking-2px text-[18px] font-medium text-black bg-white transition-all ease-in-out hover:bg-black hover:text-white hover:border-white">
+                <button className="cursor-pointer border border-black w-[307px] h-[51px] font-sans  tracking-wide tracking-2px text-[18px] font-medium text-black bg-white transition-all ease-in-out hover:bg-black hover:text-white hover:border-white">
                   EXPLORE US
                 </button>
               </a>
@@ -34,13 +35,18 @@ const Herosection = () => {
         </div>
         <div className="w-[40%]   h-auto hidden lg:block pb-28 ">
           <video
-            className="w-full h-[300px] object-cover  "
+            className="w-full h-[300px] object-cover hidden sm:block   "
             src={hero}
             type="video/mp4"
             autoPlay
             loop
             muted
           ></video>
+           <img
+            className="w-full h-[300px] object-cover sm:hidden"
+            src={hero1}
+            alt="Background Image"
+          />
         </div>
       </div>
     </section>

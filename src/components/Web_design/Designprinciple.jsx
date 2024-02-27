@@ -126,7 +126,7 @@ const Designprinciple = () => {
 
                   <p class="text-white text-[18px] text-start leading-relaxed font-sans tracking-wide font-normal mt-5 ml-3">
                     For a successful website marketing strategy, our seasoned
-                    web design agency in New York recommends maintaining a
+                    web design agency in London recommends maintaining a
                     balanced consistency in brand colors, essence, and featured
                     faces. This approach enhances user experience across both
                     computer and mobile-friendly web designs.

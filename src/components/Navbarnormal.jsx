@@ -101,7 +101,7 @@ const Navbarnormal = () => {
             </button>
           )}
         </div>
-        <Popover.Group className="hidden md:flex md:gap-x-12  lg:ml-[35%] ">
+        <Popover.Group className="hidden md:flex md:gap-x-12  lg:ml-[35%]  ">
           <Popover
             className="relative"
             onMouseEnter={() => setPopoverOpen(true)}
@@ -194,7 +194,7 @@ const Navbarnormal = () => {
             </Transition>
           </Popover>
         </Popover.Group>
-        <div className="hidden md:flex lg:flex-1 ">
+        <div className="hidden md:flex lg:flex-1   ml-8">
           <a href="/contact">
             <button className="border border-black ml-5 h-[58px] w-[200px] font-sans leading-6 tracking-{2px} cursor-pointer  text-white text-[16px]  bg-black bg-no-repeat bg-center transition-all ease-in-out hover:bg-white hover:text-black hover:border-black">
               CONTACT US
@@ -223,14 +223,14 @@ const Navbarnormal = () => {
               {/* <XMarkIcon className="h-9 w-9" aria-hidden="true" /> */}
             </button>
           </div>
-          <div className="mt-6 flow-root">
+          <div className="mt-6 flow-root ">
             <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
-                <Disclosure as="div" className="-mx-3 mt-10">
+              <div className="space-y-2  p-12 ">
+                <Disclosure as="div" className="-mx-3 mt-10  ">
                   {({ open }) => (
                     <>
                       <Disclosure.Button
-                        className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-lg font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                        className="flex w-full items-center justify-between text-[18px] rounded-lg py-2 pl-3 pr-3.5 text-lg font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                         onClick={() => (open ? close() : open())}
                       >
                         <a href="/expertice">Expertise</a>
@@ -251,7 +251,7 @@ const Navbarnormal = () => {
                             key={item.name}
                             as="a"
                             href={item.href}
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-medium leading-7 text-gray-900 hover:bg-gray-50"
                           >
                             {item.name}
                           </Disclosure.Button>
@@ -262,14 +262,14 @@ const Navbarnormal = () => {
                 </Disclosure>
                 <a
                   href="/ourprocess"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-lg font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-[18px] font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Our Process
                 </a>
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-lg font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                      <Disclosure.Button className="flex w-full text-[18px] items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-lg font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                         Company
                         <ChevronDownIcon
                           className={classNames(
@@ -285,7 +285,7 @@ const Navbarnormal = () => {
                             key={item.name}
                             as="a"
                             href={item.href}
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                            className="block rounded-lg py-2 pl-6 pr-3 text-sm  font-medium leading-7 text-gray-900 hover:bg-gray-50"
                           >
                             {item.name}
                           </Disclosure.Button>

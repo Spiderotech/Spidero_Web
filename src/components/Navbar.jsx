@@ -217,7 +217,7 @@ const Navbar = () => {
             </Transition>
           </Popover>
         </Popover.Group>
-        <div className="hidden md:flex lg:flex-1 ">
+        <div className="hidden md:flex lg:flex-1  ml-5">
           <a href="/contact">
             <button className="border  tracking-wider  border-black ml-5 h-[58px] w-[200px] font-sans leading-6 tracking-{2px}  text-black text-[16px]  bg-white bg-no-repeat bg-center transition-all ease-in-out hover:bg-black hover:text-white hover:border-black cursor-pointer">
               CONTACT US
@@ -248,12 +248,12 @@ const Navbar = () => {
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
+              <div className="space-y-2 p-12">
                 <Disclosure as="div" className="-mx-3 mt-10">
                   {({ open }) => (
                     <>
                       <Disclosure.Button
-                        className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-lg font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                        className="flex w-full items-center justify-between text-[18px] rounded-lg py-2 pl-3 pr-3.5 text-lg font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                         onClick={() => (open ? close() : open())}
                       >
                         <a href="/expertice">Expertise</a>
@@ -274,7 +274,7 @@ const Navbar = () => {
                             key={item.name}
                             as="a"
                             href={item.href}
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                            className="block rounded-lg py-2 pl-6 pr-3 text-sm  font-medium leading-7 text-gray-900 hover:bg-gray-50"
                           >
                             {item.name}
                           </Disclosure.Button>
@@ -285,14 +285,14 @@ const Navbar = () => {
                 </Disclosure>
                 <a
                   href="/ourprocess"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-lg font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-[18px] font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Our Process
                 </a>
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-lg font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                      <Disclosure.Button className="flex w-full items-center text-[18px] justify-between rounded-lg py-2 pl-3 pr-3.5 text-lg font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                         Company
                         <ChevronDownIcon
                           className={classNames(
@@ -308,7 +308,7 @@ const Navbar = () => {
                             key={item.name}
                             as="a"
                             href={item.href}
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-medium leading-7 text-gray-900 hover:bg-gray-50"
                           >
                             {item.name}
                           </Disclosure.Button>
