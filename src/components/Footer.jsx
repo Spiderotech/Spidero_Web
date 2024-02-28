@@ -53,7 +53,7 @@ const Footer = () => {
             </div>
 
             <div className="social-links   mt-4 flex ">
-              <div className="w-full  p-2  flex flex-row justify-center  text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200 gap-5 md:gap-10">
+              <div className="w-full  p-2  flex flex-row justify-center  text-neutral-700  dark:text-neutral-200 gap-5 md:gap-10">
                 {/* <img
                   src={twitter}
                   alt="Logo"
@@ -80,7 +80,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="w-full bg-neutral-200 p-2 text-center text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200 ">
+      <div className="w-full bg-neutral-200 p-2 text-center text-neutral-700  dark:text-neutral-200 ">
         <div className="md:flex md:justify-between">
           <div className="mb-2 md:mb-0">
             <span className="mr-4">

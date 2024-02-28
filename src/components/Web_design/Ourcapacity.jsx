@@ -5,7 +5,7 @@ function Ourcapacity() {
     <section class=" bg-[#efefef] mt-10">
       <div class=" mx-auto flex justify-center">
         <div class="max-w-screen-xl text-gray-500 sm:text-lg dark:text-gray-400 ">
-          <h2 class="mb-4 text-4xl mt-20 text-center tracking-tight font-bold text-gray-900 dark:text-white">
+          <h2 class="mb-4 text-4xl mt-20 text-center tracking-tight font-bold text-gray-900 ">
             Our capabilities
           </h2>
 

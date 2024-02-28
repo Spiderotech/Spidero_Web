@@ -204,7 +204,7 @@ const Developmentteam = () => {
                       alignItems: "center",
                     }}
                   >
-                    <h2 className="text-[20px] font-sans font-medium">
+                    <h2 className="text-[20px] text-[#333] font-sans font-medium">
                       {item.question}
                     </h2>
                     <button
@@ -241,7 +241,7 @@ const Developmentteam = () => {
                    <div className="flex flex-wrap mt-1">
                      {item.toolsUsed.map((tool, toolIndex) => (
                        <div key={toolIndex} className="mr-3 mb-2">
-                         <span className="text-sm font-sans bg-gray-200 px-2 py-1 rounded-full">
+                         <span className="text-sm font-sans text-black bg-gray-200 px-2 py-1 rounded-full">
                            {tool}
                          </span>
                        </div>

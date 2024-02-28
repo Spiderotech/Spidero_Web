@@ -31,7 +31,7 @@ const Expertise = () => {
   };
   return (
     <div class="flex justify-center flex-col items-center w-full h-auto  ">
-      <h2 class="mb-4 text-4xl mt-10 text-center tracking-tight font-bold text-gray-900 dark:text-white">
+      <h2 class="mb-4 text-4xl mt-10 text-center tracking-tight font-bold text-gray-900 ">
         Industries we excel in and more
       </h2>
       <div className="w-full flex justify-center items-center h-auto mb-5 p-5 sm:p-10">

@@ -5,7 +5,7 @@ const ProjectCommunicationStructure = () => {
     <section class=" bg-[#efefef] mt-10">
       <div class=" mx-auto flex justify-center">
         <div class="max-w-screen-xl text-gray-500 sm:text-lg dark:text-gray-400 ">
-          <h2 class="mb-4 text-[40px] mt-20 text-center tracking-tight font-bold text-gray-900 dark:text-white">
+          <h2 class="mb-4 text-[40px] mt-20 text-center tracking-tight font-bold text-gray-900 ">
             Project Communication Structure
           </h2>
           <div class="p-5 md:p-20 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-5  ">
