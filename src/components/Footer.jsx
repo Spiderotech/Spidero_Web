@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col text-center dark:bg-neutral-600 lg:text-left ">
+    <footer className="flex flex-col text-center  lg:text-left ">
       <div className="  text-neutral-800 dark:text-neutral-200 w-full ">
         <div className="flex flex-col-reverse  md:flex-col-reverse lg:flex-row">
           <div className="  bg-white lg:bg-black text-black lg:text-white float-left h-auto w-full lg:w-[47%] p-5 lg:p-20">

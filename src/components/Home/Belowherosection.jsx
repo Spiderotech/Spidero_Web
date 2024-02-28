@@ -6,7 +6,7 @@ import agi from "../../assets/investment-time.png";
 
 const Belowherosection = () => {
   return (
-    <footer className="flex flex-col  dark:bg-neutral-600 lg:text-left mt-10 ">
+    <footer className="flex flex-col   lg:text-left mt-10 ">
       <div className="  text-neutral-800 dark:text-neutral-200 w-full h-auto ">
         <div className="grid  lg:grid-cols-2 ">
           <div className=" md:mb-0 ">

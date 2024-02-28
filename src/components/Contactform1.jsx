@@ -74,7 +74,7 @@ const Contactform1 = () => {
   });
 
   return (
-    <footer className="flex flex-col text-center dark:bg-neutral-600 lg:text-left mt-10">
+    <footer className="flex flex-col text-center  lg:text-left mt-10">
       <div className="  text-neutral-800 dark:text-neutral-200 w-full h-auto ">
         <div className="grid grid-cols-1  lg:grid-cols-2 ">
           <div className="mb-6 md:mb-0 ">

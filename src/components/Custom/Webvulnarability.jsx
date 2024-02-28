@@ -2,7 +2,7 @@ import React from "react";
 import security from "../../assets/Animation - 1707129159818.gif";
 const Webvulnarability = () => {
   return (
-    <div className="flex flex-col  dark:bg-neutral-600 lg:text-left mt-10">
+    <div className="flex flex-col   lg:text-left mt-10">
       <div className="  text-neutral-800 dark:text-neutral-200 w-full h-auto ">
         <div className="grid  lg:grid-cols-2 ">
           <div className=" md:mb-0  pl-5  ">

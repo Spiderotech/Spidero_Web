@@ -57,7 +57,7 @@ const Developmentteam = () => {
     },
   ];
   return (
-    <div className="flex flex-col  dark:bg-neutral-600 lg:text-left mt-10">
+    <div className="flex flex-col   lg:text-left mt-10">
       <div className="  text-neutral-800 dark:text-neutral-200 w-full h-auto ">
         <h2 className="text-black text-center leading-10 font-sans font-bold text-[28px] md:text-[32px] lg:text-[36px]">
           Build Your Custom software development team
