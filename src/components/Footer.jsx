@@ -100,7 +100,7 @@ const Footer = () => {
               </a>
             </span>
           </div>
-          <div className="text-center text-sm">
+          <div className="text-center text-neutral-700 text-sm">
             © 2023 Spidero Technology Inc. All rights reserved.
           </div>
         </div>

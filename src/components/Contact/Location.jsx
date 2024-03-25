@@ -18,7 +18,7 @@ const Location = () => {
         2 Westbourne Crescent, London, W2 3DB
         </h2>
         <h2 className="text-black text-start leading-10 font-sans font-bold text-[18px] ">
-        +44 7459850729
+        +44 7368937674
         </h2>
         <h2 className="text-black text-start leading-10 font-sans font-bold text-[16px]  cursor-pointer ">
         contact@spiderotechnology.com
