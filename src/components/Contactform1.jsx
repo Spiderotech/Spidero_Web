@@ -118,7 +118,7 @@ const Contactform1 = () => {
                       </div>
 
                       <span className="text-black text-sm sm:text-base md:text-[14px] lg:text-[16px] font-medium">
-                        Director, Spidero Technology
+                       CEO & Founder, Spidero Technology
                       </span>
                     </div>
                   </SwiperSlide>

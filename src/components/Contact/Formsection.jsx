@@ -301,7 +301,7 @@ const Formsection = () => {
                   Akshay
                   </strong>
                   <span className="text-black text-sm ">
-                     Founder/ Director,Spidero Technology
+                     CEO & Founder,Spidero Technology
                   </span>
                 </div>
               </div>
