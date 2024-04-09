@@ -101,7 +101,13 @@ const Navbarnormal = () => {
             </button>
           )}
         </div>
-        <Popover.Group className="hidden md:flex md:gap-x-12  lg:ml-[35%]  ">
+        <Popover.Group className="hidden md:flex md:gap-x-12  lg:ml-[25%]  ">
+        <a
+              href="/hire_developers"
+            className="text-[18px] text-left font-sans font-semibold text-gray-900 cursor-pointer"
+          >
+           Hire
+          </a>
           <Popover
             className="relative"
             onMouseEnter={() => setPopoverOpen(true)}
@@ -227,6 +233,7 @@ const Navbarnormal = () => {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2  p-12 ">
                 <Disclosure as="div" className="-mx-3 mt-10  ">
+                  
                   {({ open }) => (
                     <>
                       <Disclosure.Button
@@ -294,6 +301,12 @@ const Navbarnormal = () => {
                     </>
                   )}
                 </Disclosure>
+                <a
+                  href="/hire_developers"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-[18px] font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                 Hire
+                </a>
               </div>
             </div>
           </div>

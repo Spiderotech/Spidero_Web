@@ -113,7 +113,15 @@ const Navbar = () => {
             </button>
           )}
         </div>
-        <Popover.Group className="hidden md:flex md:gap-x-12  lg:ml-[35%] ">
+        <Popover.Group className="hidden md:flex md:gap-x-12  lg:ml-[25%] ">
+        <a
+            href="/hire_developers"
+            className={`text-[18px] text-left font-sans cursor-pointer font-semibold tracking-wider  ${
+              isScrolled ? "text-gray-900" : "text-white"
+            }`}
+          >
+            Hire
+          </a>
           <Popover
             className="relative"
             onMouseEnter={() => setPopoverOpen(true)}
@@ -252,10 +260,12 @@ const Navbar = () => {
                 <Disclosure as="div" className="-mx-3 mt-10">
                   {({ open }) => (
                     <>
+                    
                       <Disclosure.Button
                         className="flex w-full items-center justify-between text-[18px] rounded-lg py-2 pl-3 pr-3.5 text-lg font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                         onClick={() => (open ? close() : open())}
                       >
+                        
                         <a href="/expertice">Expertise</a>
                         <ChevronDownIcon
                           className={classNames(
@@ -317,6 +327,12 @@ const Navbar = () => {
                     </>
                   )}
                 </Disclosure>
+                <a
+                  href="/hire_developers"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-[18px] font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                 Hire
+                </a>
               </div>
             </div>
           </div>

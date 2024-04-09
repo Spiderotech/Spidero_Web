@@ -13,6 +13,7 @@ import Ourprocess from './pages/Ourprocess';
 import Chatsystem from './components/Chat/Chatsystem';
 import Termspage from './pages/Termspage';
 import Privacypage from './pages/Privacypage';
+import Hiredeveloper from './pages/Hiredeveloper';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
      <Route path="/careers" element={<Careerspage/>} />
      <Route path="/privacy-policy" element={<Privacypage/>} />
      <Route path="/terms-conditions" element={<Termspage/>} />
+     <Route path="/hire_developers" element={<Hiredeveloper/>} />
    
 
      </Routes>

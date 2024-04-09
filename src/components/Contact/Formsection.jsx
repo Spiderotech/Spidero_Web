@@ -278,7 +278,7 @@ const Formsection = () => {
                 </h2>
               </div>
             </div>
-            <a href="mailto:contact@spidero.in">
+            <a href="mailto: contact@spiderotechnology.com">
               <h2 className="text-black  cursor-pointer text-start leading-7 mt-3 font-sans  font-semibold text-[18px] ">
               contact@spiderotechnology.com
               </h2>
