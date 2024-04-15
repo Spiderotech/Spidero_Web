@@ -21,7 +21,7 @@ const Faq = () => {
           question:
             "Does this plan cover the cost of AI development also?",
           answer:
-            "Spiderotechnology - Yes, it does!",
+            "Spiderotechnology - No",
         },
         {
           question:
