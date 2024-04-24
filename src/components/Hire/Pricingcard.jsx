@@ -8,7 +8,7 @@ const Pricingcard = () => {
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
             Plug-and-Play{" "}
             <span className=" text-orange-400">Monthly Development</span> Teams
-            from $ 2000 monthly!
+            from $ 600 monthly!
           </h2>
           <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">
             No more stuck ups with low/ no code solutions, move past the Figma
@@ -27,7 +27,7 @@ const Pricingcard = () => {
             <a href="/contact">
               <div class="flex justify-center  my-8 bg-orange-400 p-2 rounded-md">
                 <h1 class="mr-2  text-white  text-4xl font-extrabold">
-                  $2000/
+                  $2600/
                 </h1>
                 <span class=" text-white text-sm  font-semibold  ">
                   For 200 hours<br></br> billed Monthly
@@ -50,7 +50,7 @@ const Pricingcard = () => {
                   ></path>
                 </svg>
                 <span>
-                  A Dedicated Full Stack Dev 2+ Year Experience (Any Tech -
+                  A Dedicated Full Stack Developer (Any Tech -
                   Mobile Apps, Web).
                 </span>
               </li>
@@ -232,7 +232,7 @@ const Pricingcard = () => {
                   ></path>
                 </svg>
                 <span>
-                  2 Dedicated Full Stack Dev 2+ Year Experience (Any Tech -
+                  2 Dedicated Full Stack Developer (Any Tech -
                   Mobile Apps, Web).
                 </span>
               </li>
@@ -414,7 +414,7 @@ const Pricingcard = () => {
                   ></path>
                 </svg>
                 <span>
-                  3 Dedicated Full Stack Dev 2+ Year Experience (Any Tech -
+                  3 Dedicated Full Stack Developer (Any Tech -
                   Mobile Apps, Web).
                 </span>
               </li>
@@ -597,7 +597,7 @@ const Pricingcard = () => {
                   ></path>
                 </svg>
                 <span>
-                  A Dedicated Full Stack Dev 2+ Year Experience (Any Tech -
+                  A Dedicated Full Stack Developer (Any Tech -
                   Mobile Apps, Web).
                 </span>
               </li>
