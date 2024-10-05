@@ -37,7 +37,7 @@ const ClientCard = () => {
               <div className="w-auto h-auto flex items-center justify-center  ">
                 <img
                   src={client2}
-                  className=" w-96 h-16 object-contain"
+                  className=" w-96 h-16 object-contain "
                   alt="Logo 1"
                 />
               </div>
