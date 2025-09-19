@@ -5,6 +5,7 @@ import client3 from "../assets/leafkerala.png";
 import client4 from "../assets/medoczen.png";
 import client5 from "../assets/400.png";
 import client6 from "../assets/mdx.jpg"
+import client7 from "../assets/meristem.png"
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -81,6 +82,15 @@ const ClientCard = () => {
             <SwiperSlide>
               <div className="w-auto h-auto flex items-center justify-center  ">
                 <img
+                  src={client7}
+                  className=" w-96  h-20  object-contain"
+                  alt="Logo 1"
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="w-auto h-auto flex items-center justify-center  ">
+                <img
                   src={client4}
                   className=" w-96  h-20  object-contain"
                   alt="Logo 1"
@@ -96,6 +106,7 @@ const ClientCard = () => {
                 />
               </div>
             </SwiperSlide>
+            
           </Swiper>
         </div>
       </div>

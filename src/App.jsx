@@ -14,6 +14,8 @@ import Chatsystem from './components/Chat/Chatsystem';
 import Termspage from './pages/Termspage';
 import Privacypage from './pages/Privacypage';
 import Hiredeveloper from './pages/Hiredeveloper';
+import CookieConsent from './components/Chat/CookieConsent';
+import AnalyticsTracker from "./components/Chat/AnalyticsTracker";
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
 
   return (
     <BrowserRouter>
+     <AnalyticsTracker />
      <Routes>
      <Route path="/" element={<Homepage/>} />
      <Route path="/custom" element={<Custompage/>} />
@@ -39,6 +42,7 @@ function App() {
 
      </Routes>
      <Chatsystem/>
+      <CookieConsent/> 
     </BrowserRouter>
    
   )

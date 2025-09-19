@@ -8,7 +8,7 @@ const Pricingcard = () => {
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
             Plug-and-Play{" "}
             <span className=" text-orange-400">Monthly Development</span> Teams
-            from $ 600 monthly!
+            from $ 1600 monthly!
           </h2>
           <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">
             No more stuck ups with low/ no code solutions, move past the Figma
