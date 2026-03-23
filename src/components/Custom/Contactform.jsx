@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import PhoneInput from "react-phone-number-input";
@@ -7,29 +7,13 @@ import emailjs from "@emailjs/browser";
 import toast, { Toaster } from 'react-hot-toast';
 
 const Contactform = () => {
-
-  useEffect(() => {
-    
-    const script = document.createElement('script');
-    
-
-    script.src = 'https://smtpjs.com/v3/smtp.js';
-    
-    
-    document.body.appendChild(script);
-    
-    
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
   const validationSchema = Yup.object().shape({
     fullName: Yup.string().required("Full Name is required"),
     companyName: Yup.string().required("Company Name is required"),
     email: Yup.string()
       .email("Invalid email address")
       .required("Email is required"),
-      countryCode: Yup.string().required('Country Code is required'),
+    countryCode: Yup.string().required('Country Code is required'),
     phone: Yup.string().required("Phone is required"),
     areaOfInterest: Yup.string().required("Area Of Interest is required"),
     budget: Yup.string().required("Budget is required"),
@@ -41,7 +25,7 @@ const Contactform = () => {
       fullName: "",
       companyName: "",
       email: "",
-      countryCode:""|| "+44",
+      countryCode: "" || "+44",
       phone: "",
       areaOfInterest: "",
       budget: "",
@@ -51,37 +35,32 @@ const Contactform = () => {
     onSubmit: async (values, { resetForm }) => {
       try {
         await toast.promise(
-          Email.send({
-            Host: "smtp.elasticemail.com",
-            Username: "contact@spiderotechnology.com",
-            Password: "C9FDC5CD4B4719C4310C9C5FF078133E3816",
-            To: "contact@spiderotechnology.com",
-            From: "contact@spiderotechnology.com",
-            Subject: "contact from submition from spidero technology website",
-            Body: `
-              Name: ${values.fullName}
-              Company: ${values.companyName}
-              Email: ${values.email}
-              Country Code: ${values.countryCode}
-              Phone: ${values.phone}
-              Area of Interest: ${values.areaOfInterest}
-              Budget: ${values.budget}
-              Message: ${values.message}
-            `,
-          }),
+          emailjs.send(
+            "YOUR_SERVICE_ID",      // 🔁 replace
+            "YOUR_TEMPLATE_ID",     // 🔁 replace
+            {
+              fullName: values.fullName,
+              email: values.email,
+              countryCode: values.countryCode,
+              phone: values.phone,
+              message: values.message,
+            },
+            "YOUR_PUBLIC_KEY"       // 🔁 replace
+          ),
           {
-            loading: 'Sending email...',
-            success: 'Email sent successfully!',
-            error: 'Failed to send email.',
+            loading: "Sending email...",
+            success: "Email sent successfully!",
+            error: "Failed to send email.",
           }
         );
+
         resetForm();
       } catch (error) {
-        console.error("Error sending email:", error);
+        console.error("EmailJS Error:", error);
+        toast.error("Something went wrong. Please try again.");
       }
-      
-     
     },
+
   });
 
   return (
@@ -126,7 +105,7 @@ const Contactform = () => {
               id="companyName"
               type="text"
               className="appearance-none border-b-2 block w-full text-gray-700 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              placeholder=""  
+              placeholder=""
               value={formik.values.companyName}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -297,9 +276,9 @@ const Contactform = () => {
         </div>
       </form>
       <Toaster
-  position="top-center"
-  reverseOrder={false}
-/>
+        position="top-center"
+        reverseOrder={false}
+      />
     </div>
   );
 };

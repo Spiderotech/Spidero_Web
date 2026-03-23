@@ -15,18 +15,6 @@ import emailjs from "@emailjs/browser";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 const Contactform1 = () => {
-  useEffect(() => {
-    const script = document.createElement("script");
-
-    script.src = "https://smtpjs.com/v3/smtp.js";
-
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
   const validationSchema = Yup.object().shape({
     fullName: Yup.string().required("Full Name is required"),
     email: Yup.string()
@@ -49,28 +37,34 @@ const Contactform1 = () => {
     },
     validationSchema,
     onSubmit: async (values, { resetForm }) => {
-      try {
-        await toast.promise(
-          Email.send({
-            Host: "smtp.elasticemail.com",
-            Username: "contact@spiderotechnology.com",
-            Password: "C9FDC5CD4B4719C4310C9C5FF078133E3816",
-            To: "contact@spiderotechnology.com",
-            From: "contact@spiderotechnology.com",
-            Subject: "contact from submition from spidero technology website",
-            Body: `Name: ${values.fullName}\nEmail: ${values.email}\nCountry Code: ${values.countryCode}\nPhone: ${values.phone}\nMessage: ${values.message}`,
-          }),
-          {
-            loading: "Sending email...",
-            success: "Email sent successfully!",
-            error: "Failed to send email.",
-          }
-        );
-        resetForm();
-      } catch (error) {
-        console.error("Error sending email:", error);
+  try {
+    await toast.promise(
+      emailjs.send(
+        "YOUR_SERVICE_ID",      // 🔁 replace
+        "YOUR_TEMPLATE_ID",     // 🔁 replace
+        {
+          fullName: values.fullName,
+          email: values.email,
+          countryCode: values.countryCode,
+          phone: values.phone,
+          message: values.message,
+        },
+        "YOUR_PUBLIC_KEY"       // 🔁 replace
+      ),
+      {
+        loading: "Sending email...",
+        success: "Email sent successfully!",
+        error: "Failed to send email.",
       }
-    },
+    );
+
+    resetForm();
+  } catch (error) {
+    console.error("EmailJS Error:", error);
+    toast.error("Something went wrong. Please try again.");
+  }
+},
+
   });
 
   return (

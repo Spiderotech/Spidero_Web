@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import toast, { Toaster } from 'react-hot-toast';
 
 import web4 from "../../assets/in.svg";
@@ -12,23 +12,6 @@ import web5 from "../../assets/about1 (1).jpg";
 import web7 from "../../assets/about1 (2).jpg";
 
 const Formsection = () => {
-
-  useEffect(() => {
-    
-    const script = document.createElement('script');
-    
-
-    script.src = 'https://smtpjs.com/v3/smtp.js';
-    
-    
-    document.body.appendChild(script);
-    
-    
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
 
   const validationSchema = Yup.object().shape({
     fullName: Yup.string().required("Full Name is required"),
@@ -51,30 +34,35 @@ const Formsection = () => {
       message: "",
     },
     validationSchema,
-    onSubmit:async (values, { resetForm }) => {
+    onSubmit: async (values, { resetForm }) => {
       try {
         await toast.promise(
-          Email.send({
-            Host: "smtp.elasticemail.com",
-            Username: "contact@spiderotechnology.com",
-            Password: "C9FDC5CD4B4719C4310C9C5FF078133E3816",
-            To: "contact@spiderotechnology.com",
-            From: "contact@spiderotechnology.com",
-            Subject: "contact from submition from spidero technology website",
-            Body: `Name: ${values.fullName}\nEmail: ${values.email}\nCountry Code: ${values.countryCode}\nPhone: ${values.phone}\nMessage: ${values.message}`,
-          }),
+          emailjs.send(
+            "YOUR_SERVICE_ID",      // 🔁 replace
+            "YOUR_TEMPLATE_ID",     // 🔁 replace
+            {
+              fullName: values.fullName,
+              email: values.email,
+              countryCode: values.countryCode,
+              phone: values.phone,
+              message: values.message,
+            },
+            "YOUR_PUBLIC_KEY"       // 🔁 replace
+          ),
           {
-            loading: 'Sending email...',
-            success: 'Email sent successfully!',
-            error: 'Failed to send email.',
-            
+            loading: "Sending email...",
+            success: "Email sent successfully!",
+            error: "Failed to send email.",
           }
         );
+
         resetForm();
       } catch (error) {
-        console.error("Error sending email:", error);
+        console.error("EmailJS Error:", error);
+        toast.error("Something went wrong. Please try again.");
       }
     },
+
   });
 
   return (
@@ -164,8 +152,8 @@ const Formsection = () => {
                 onBlur={formik.handleBlur}
                 international
                 defaultCountry="GB"
-                className=" mt-4  text-black  " 
-                inputStyle={{ width:"6rem",  pointerEvents: "none", }}
+                className=" mt-4  text-black  "
+                inputStyle={{ width: "6rem", pointerEvents: "none", }}
               />
               {formik.touched.countryCode && formik.errors.countryCode && (
                 <div className="text-red-500  text-xs mt-1  absolute left-2">
@@ -264,7 +252,7 @@ const Formsection = () => {
               </div>
               <div className="column ml-4 mt-2">
                 <h2 className="text-black text-start leading-7 font-sans font-semibold text-[16px] ">
-                +44 7368937674
+                  +44 7368937674
                 </h2>
               </div>
             </div>
@@ -274,13 +262,13 @@ const Formsection = () => {
               </div>
               <div className="column  ml-4 mt-3">
                 <h2 className="text-black text-start leading-7  font-sans font-semibold text-[16px] ">
-                +91 8089650271
+                  +91 8089650271
                 </h2>
               </div>
             </div>
             <a href="mailto: contact@spiderotechnology.com">
               <h2 className="text-black  cursor-pointer text-start leading-7 mt-3 font-sans  font-semibold text-[18px] ">
-              contact@spiderotechnology.com
+                contact@spiderotechnology.com
               </h2>
             </a>
           </div>
@@ -288,7 +276,7 @@ const Formsection = () => {
           <div className="w-full h-auto">
             <div className="w-full lg:w-[70%] h-auto flex flex-col justify-center ml-0 lg:ml-[5%]  border p-19 pb-5 ">
               <span className="text-black m text-[16px] sm:text-[18px] md:text-[21px] lg:text-[21px] font-sans text-start font-normal p-5">
-              Spidero Technology served as an invaluable collaborator, delivering an exceptional software solution that significantly improved our customer experience
+                Spidero Technology served as an invaluable collaborator, delivering an exceptional software solution that significantly improved our customer experience
               </span>
               <div className="flex flex-row ml-5  ">
                 <img
@@ -298,10 +286,10 @@ const Formsection = () => {
                 />
                 <div className="flex flex-col ml-5">
                   <strong className="text-black text-sm sm:text-base md:text-lg lg:text-xl">
-                  Akshay
+                    Akshay
                   </strong>
                   <span className="text-black text-sm ">
-                     CEO & Founder,Spidero Technology
+                    CEO & Founder,Spidero Technology
                   </span>
                 </div>
               </div>
@@ -310,7 +298,7 @@ const Formsection = () => {
           <div className="w-full h-auto mt-5  ">
             <div className="w-full  lg:w-[70%] h-auto flex flex-col justify-center ml-0 lg:ml-[5%] border p-19 pb-5 ">
               <span className="text-black  text-[16px] sm:text-[18px] md:text-[21px] lg:text-[21px] font-sans text-start font-normal p-5">
-              Cooking up innovation at  Spidero Technology , we're dedicated to pushing boundaries and delivering cutting-edge solutions
+                Cooking up innovation at  Spidero Technology , we're dedicated to pushing boundaries and delivering cutting-edge solutions
               </span>
               <div className="flex flex-row ml-5  ">
                 <img
@@ -320,10 +308,10 @@ const Formsection = () => {
                 />
                 <div className="flex flex-col ml-5">
                   <strong className="text-black text-sm sm:text-base md:text-lg lg:text-xl">
-                  Taha Farooqui
+                    Taha Farooqui
                   </strong>
                   <span className="text-black text-sm ">
-                  Chief Technology Officer,Spidero Technology
+                    Chief Technology Officer,Spidero Technology
                   </span>
                 </div>
               </div>
@@ -332,9 +320,9 @@ const Formsection = () => {
         </div>
       </div>
       <Toaster
-  position="top-center"
-  reverseOrder={false}
-/>
+        position="top-center"
+        reverseOrder={false}
+      />
     </section>
   );
 };

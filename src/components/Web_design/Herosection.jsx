@@ -9,23 +9,6 @@ import toast, { Toaster } from 'react-hot-toast';
 
 const Herosection = () => {
   const canvasRef = useRef(null);
-
-  useEffect(() => {
-    
-    const script = document.createElement('script');
-    
-
-    script.src = 'https://smtpjs.com/v3/smtp.js';
-    
-    
-    document.body.appendChild(script);
-    
-    
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
   useEffect(() => {
     console.log("useEffect is running");
 
@@ -87,27 +70,32 @@ const Herosection = () => {
     onSubmit: async (values, { resetForm }) => {
       try {
         await toast.promise(
-          Email.send({
-            Host: "smtp.elasticemail.com",
-            Username: "contact@spiderotechnology.com",
-            Password: "C9FDC5CD4B4719C4310C9C5FF078133E3816",
-            To: "contact@spiderotechnology.com",
-            From: "contact@spiderotechnology.com",
-            Subject: "contact from submition from spidero technology website",
-            Body: `Name: ${values.fullName}\nEmail: ${values.email}\nCountry Code: ${values.countryCode}\nPhone: ${values.phone}\nMessage: ${values.message}`,
-          }),
+          emailjs.send(
+            "YOUR_SERVICE_ID",      // 🔁 replace
+            "YOUR_TEMPLATE_ID",     // 🔁 replace
+            {
+              fullName: values.fullName,
+              email: values.email,
+              countryCode: values.countryCode,
+              phone: values.phone,
+              message: values.message,
+            },
+            "YOUR_PUBLIC_KEY"       // 🔁 replace
+          ),
           {
-            loading: 'Sending email...',
-            success: 'Email sent successfully!',
-            error: 'Failed to send email.',
-            
+            loading: "Sending email...",
+            success: "Email sent successfully!",
+            error: "Failed to send email.",
           }
         );
+
         resetForm();
       } catch (error) {
-        console.error("Error sending email:", error);
+        console.error("EmailJS Error:", error);
+        toast.error("Something went wrong. Please try again.");
       }
     },
+
   });
 
   return (
@@ -124,18 +112,18 @@ const Herosection = () => {
             </span>
 
             <div className="ml-14 mt-20 mb-9">
-            <a href="/expertice">
-              <button className=" w-[150px] h-[40px]  lg:w-[198px] lg:h-[51px] font-sans leading-6 tracking-2px text-[16px] font-medium text-black bg-white transition-all ease-in-out hover:bg-black hover:text-white">
-                EXPLORE US
-              </button>
-            </a>
+              <a href="/expertice">
+                <button className=" w-[150px] h-[40px]  lg:w-[198px] lg:h-[51px] font-sans leading-6 tracking-2px text-[16px] font-medium text-black bg-white transition-all ease-in-out hover:bg-black hover:text-white">
+                  EXPLORE US
+                </button>
+              </a>
             </div>
           </div>
         </div>
         <div className="w-[40%] h-auto  hidden lg:block relative bg-black">
           <div className="p-10 ">
             <form onSubmit={formik.handleSubmit} className=" mt-5 ">
-            <h3 className=" text-[24px] md:text-[36px] lg:text-[28px] sm:text-[26px] xl:text-[32px] font-bold   font-sans text-white ">
+              <h3 className=" text-[24px] md:text-[36px] lg:text-[28px] sm:text-[26px] xl:text-[32px] font-bold   font-sans text-white ">
                 Connect With Us
               </h3>
               <div className="relative mt-5 pt-6">
@@ -215,7 +203,7 @@ const Herosection = () => {
                   onBlur={formik.handleBlur}
                   international
                   defaultCountry="GB"
-                  className=" mt-4  text-black bg-black " 
+                  className=" mt-4  text-black bg-black "
                   inputStyle={{ width: "6rem", pointerEvents: "none", }}
                 />
                 {formik.touched.countryCode && formik.errors.countryCode && (
@@ -307,9 +295,9 @@ const Herosection = () => {
         </div>
       </div>
       <Toaster
-  position="top-center"
-  reverseOrder={false}
-/>
+        position="top-center"
+        reverseOrder={false}
+      />
     </section>
   );
 };
