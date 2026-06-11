@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Homepage from './pages/Homepage';
 import Custompage from './pages/Custompage';
 import Webdevelopmentpage from './pages/webdevelopmentpage';
@@ -17,6 +17,15 @@ import Hiredeveloper from './pages/Hiredeveloper';
 import CookieConsent from './components/Chat/CookieConsent';
 import AnalyticsTracker from "./components/Chat/AnalyticsTracker";
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [pathname]);
+
+  return null;
+};
 
 function App() {
  
@@ -24,6 +33,7 @@ function App() {
   return (
     <BrowserRouter>
      <AnalyticsTracker />
+     <ScrollToTop />
      <Routes>
      <Route path="/" element={<Homepage/>} />
      <Route path="/custom" element={<Custompage/>} />

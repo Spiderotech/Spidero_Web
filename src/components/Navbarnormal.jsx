@@ -1,224 +1,108 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../assets/Logo.png";
-import { Fragment, useState, useEffect } from "react";
-import { useNavigation } from "react-router-dom";
-import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
+import { Dialog, Popover } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import {
-  ArrowPathIcon,
-  Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
-
-import {
-  ChevronDownIcon,
-  PhoneIcon,
-  PlayCircleIcon,
-} from "@heroicons/react/20/solid";
-
-const products = [
-  { name: "Custom Software Development", href: "/custom" },
-  { name: "Web Development", href: "/web" },
-  { name: "Web Design", href: "/webdesign" },
-  { name: "Mobile App Development", href: "/mobile" },
-];
-const companyLinks = [
-  { name: "About Us", href: "/about" },
-  { name: "Careers", href: "/careers" },
-  { name: "Contact Us", href: "/contact" },
-];
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+  companyLinks,
+  DesktopDropdown,
+  HeaderContactButton,
+  MobileDropdown,
+  services,
+} from "./HeaderDropdowns";
 
 const Navbarnormal = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isPopoverOpen, setPopoverOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-      if (scrollY > 0 && !isScrolled) {
-        setIsScrolled(true);
-      } else if (scrollY === 0 && isScrolled) {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 0);
     };
 
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [isScrolled]);
-
-  const handleExpertiseLinkClick = () => {
-    window.location.href = "/expertice";
-  };
+  }, []);
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-20 transition-bg duration-300 shadow-md ${
+      className={`fixed left-0 right-0 top-0 z-20 shadow-md transition-colors duration-300 ${
         isScrolled ? "bg-white" : "bg-transparent"
       }`}
     >
       <nav
-        className="mx-auto flex items-center justify-between p-6 lg:px-8 "
+        className="mx-auto flex items-center justify-between p-6 lg:px-8"
         aria-label="Global"
       >
-        <div className=" flex ">
+        <div className="flex">
           <a href="/" className="cursor-pointer">
             <img
-              className=" h-[30px] w-[160px] md:h-[50px] md:w-[280px]"
+              className="h-[30px] w-[160px] md:h-[50px] md:w-[280px]"
               src={logo}
-              alt=""
+              alt="Spidero Technology"
             />
           </a>
         </div>
-        <div className="flex md:hidden">
-          {mobileMenuOpen ? (
-            <button
-              type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <span className="sr-only">Close main menu</span>
-              <XMarkIcon className="h-9 w-9" aria-hidden="true" />
-            </button>
-          ) : (
-            <button
-              type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 "
-              onClick={() => setMobileMenuOpen(true)}
-            >
-              <span className="sr-only">Open main menu</span>
-              <Bars3Icon className="h-9 w-9" aria-hidden="true" />
-            </button>
-          )}
-        </div>
-        <Popover.Group className="hidden md:flex md:gap-x-12  lg:ml-[25%]  ">
-        <a
-              href="/hire_developers"
-            className="text-[18px] text-left font-sans font-semibold text-gray-900 cursor-pointer"
-          >
-           Hire
-          </a>
-          <Popover
-            className="relative"
-            onMouseEnter={() => setPopoverOpen(true)}
-            onMouseLeave={() => setPopoverOpen(false)}
-          >
-            <a href="/expertice">
-              <Popover.Button
-                className="flex items-center gap-x-1 text-[18px] text-left font-sans  font-semibold  text-gray-900 cursor-pointer leading-6"
-                onMouseEnter={() => setExpertisePopoverOpen(true)}
-                onMouseLeave={() => setExpertisePopoverOpen(false)}
-                onClick={handleExpertiseLinkClick}
-              >
-                Expertise
-              </Popover.Button>
-            </a>
 
-            <Transition
-              as={Fragment}
-              show={isPopoverOpen}
-              enter="transition ease-out duration-200"
-              enterFrom="opacity-0 translate-y-1"
-              enterTo="opacity-100 translate-y-0"
-              leave="transition ease-in duration-150"
-              leaveFrom="opacity-100 translate-y-0"
-              leaveTo="opacity-0 translate-y-1"
-            >
-              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3  w-80 max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 cursor-pointer">
-                <div className="p-4">
-                  {products.map((item) => (
-                    <div
-                      key={item.name}
-                      className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50  hover:animate-bounce"
-                    >
-                      <div className="flex-auto">
-                        <a
-                          href={item.href}
-                          className="block font-medium text-[16px] text-gray-900"
-                        >
-                          {item.name}
-                          <span className="absolute inset-0" />
-                        </a>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </Popover.Panel>
-            </Transition>
-          </Popover>
+        <div className="flex md:hidden">
+          <button
+            type="button"
+            className="inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            onClick={() => setMobileMenuOpen((open) => !open)}
+          >
+            <span className="sr-only">
+              {mobileMenuOpen ? "Close main menu" : "Open main menu"}
+            </span>
+            {mobileMenuOpen ? (
+              <XMarkIcon className="h-9 w-9" aria-hidden="true" />
+            ) : (
+              <Bars3Icon className="h-9 w-9" aria-hidden="true" />
+            )}
+          </button>
+        </div>
+
+        <Popover.Group className="hidden md:flex md:items-center md:gap-x-10 lg:ml-[18%] xl:ml-[25%]">
+          <a
+            href="/hire_developers"
+            className="text-[18px] font-semibold tracking-wider text-gray-900 transition hover:text-violet-600"
+          >
+            Hire
+          </a>
+          <DesktopDropdown
+            label="Expertise"
+            items={services}
+            footerHref="/expertice"
+            footerLabel="View All Expertise"
+          />
           <a
             href="/ourprocess"
-            className="text-[18px] text-left font-sans font-semibold text-gray-900 cursor-pointer"
+            className="text-[18px] font-semibold tracking-wider text-gray-900 transition hover:text-violet-600"
           >
             Our Process
           </a>
-
-          <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-[18px] text-left font-sans  font-semibold text-gray-900 cursor-pointer">
-              Company
-            </Popover.Button>
-
-            <Transition
-              as={Fragment}
-              enter="transition ease-out duration-200"
-              enterFrom="opacity-0 translate-y-1"
-              enterTo="opacity-100 translate-y-0"
-              leave="transition ease-in duration-150"
-              leaveFrom="opacity-100 translate-y-0"
-              leaveTo="opacity-0 translate-y-1"
-            >
-              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-60 max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 ">
-                <div className="p-4">
-                  {companyLinks.map((item) => (
-                    <div
-                      key={item.name}
-                      className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50  hover:animate-bounce"
-                    >
-                      <div className="flex-auto">
-                        <a
-                          href={item.href}
-                          className="block  font-medium text-[16px]  text-gray-900"
-                        >
-                          {item.name}
-                          <span className="absolute inset-0" />
-                        </a>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </Popover.Panel>
-            </Transition>
-          </Popover>
+          <DesktopDropdown label="Company" items={companyLinks} compact />
         </Popover.Group>
-        <div className="hidden md:flex lg:flex-1   ml-8">
-          <a href="/contact">
-            <button className="border border-black ml-5 h-[58px] w-[200px] font-sans leading-6 tracking-{2px} cursor-pointer  text-white text-[16px]  bg-black bg-no-repeat bg-center transition-all ease-in-out hover:bg-white hover:text-black hover:border-black">
-              CONTACT US
-            </button>
-          </a>
+
+        <div className="hidden md:flex lg:flex-1 ml-8">
+          <HeaderContactButton />
         </div>
       </nav>
+
       <Dialog
         as="div"
         className="lg:hidden"
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}
       >
-        <div className="fixed inset-0 z-10 " />
+        <div className="fixed inset-0 z-10 bg-slate-950/30" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
+            <a href="/" className="-m-1.5 p-1.5">
+              <span className="sr-only">Spidero Technology</span>
+              <img className="h-8 w-auto" src={logo} alt="" />
             </a>
             <button
               type="button"
@@ -226,88 +110,37 @@ const Navbarnormal = () => {
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
-              {/* <XMarkIcon className="h-9 w-9" aria-hidden="true" /> */}
+              <XMarkIcon className="h-8 w-8" aria-hidden="true" />
             </button>
           </div>
-          <div className="mt-6 flow-root ">
-            <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2  p-12 ">
-                <Disclosure as="div" className="-mx-3 mt-10  ">
-                  
-                  {({ open }) => (
-                    <>
-                      <Disclosure.Button
-                        className="flex w-full items-center justify-between text-[18px] rounded-lg py-2 pl-3 pr-3.5 text-lg font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                        onClick={() => (open ? close() : open())}
-                      >
-                        <a href="/expertice">Expertise</a>
-                        <ChevronDownIcon
-                          className={classNames(
-                            open ? "rotate-180" : "",
-                            "h-5 w-5 flex-none"
-                          )}
-                          aria-hidden="true"
-                        />
-                      </Disclosure.Button>
-                      <Disclosure.Panel
-                        className="mt-2 space-y-2"
-                        static={true}
-                      >
-                        {[...products].map((item) => (
-                          <Disclosure.Button
-                            key={item.name}
-                            as="a"
-                            href={item.href}
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-medium leading-7 text-gray-900 hover:bg-gray-50"
-                          >
-                            {item.name}
-                          </Disclosure.Button>
-                        ))}
-                      </Disclosure.Panel>
-                    </>
-                  )}
-                </Disclosure>
-                <a
-                  href="/ourprocess"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-[18px] font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Our Process
-                </a>
-                <Disclosure as="div" className="-mx-3">
-                  {({ open }) => (
-                    <>
-                      <Disclosure.Button className="flex w-full text-[18px] items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-lg font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                        Company
-                        <ChevronDownIcon
-                          className={classNames(
-                            open ? "rotate-180" : "",
-                            "h-5 w-5 flex-none"
-                          )}
-                          aria-hidden="true"
-                        />
-                      </Disclosure.Button>
-                      <Disclosure.Panel className="mt-2 space-y-2">
-                        {[...companyLinks].map((item) => (
-                          <Disclosure.Button
-                            key={item.name}
-                            as="a"
-                            href={item.href}
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm  font-medium leading-7 text-gray-900 hover:bg-gray-50"
-                          >
-                            {item.name}
-                          </Disclosure.Button>
-                        ))}
-                      </Disclosure.Panel>
-                    </>
-                  )}
-                </Disclosure>
-                <a
-                  href="/hire_developers"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-[18px] font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                 Hire
-                </a>
-              </div>
+
+          <div className="mt-8 flow-root">
+            <div className="space-y-2">
+              <a
+                href="/hire_developers"
+                className="-mx-3 block rounded-xl px-3 py-3 text-[17px] font-semibold leading-7 text-gray-950 transition hover:bg-violet-50"
+              >
+                Hire
+              </a>
+              <MobileDropdown
+                label="Expertise"
+                items={services}
+                footerHref="/expertice"
+                footerLabel="View All Expertise"
+              />
+              <a
+                href="/ourprocess"
+                className="-mx-3 block rounded-xl px-3 py-3 text-[17px] font-semibold leading-7 text-gray-950 transition hover:bg-violet-50"
+              >
+                Our Process
+              </a>
+              <MobileDropdown label="Company" items={companyLinks} />
+              <a
+                href="/contact"
+                className="mt-5 block rounded-2xl bg-slate-950 px-5 py-4 text-center text-[13px] font-bold uppercase tracking-[0.16em] text-white"
+              >
+                Contact Us
+              </a>
             </div>
           </div>
         </Dialog.Panel>

@@ -1,118 +1,221 @@
 import React from "react";
-import foot from "../assets/footer-banner1_2x.jpeg";
-import web4 from "../assets/in.svg";
-import web5 from "../assets/london.jpg";
+import { Link } from "react-router-dom";
+import {
+  ArrowRightIcon,
+  ArrowUpIcon,
+  ChevronRightIcon,
+  EnvelopeIcon,
+  MapPinIcon,
+  PaperAirplaneIcon,
+  PhoneIcon,
+} from "@heroicons/react/24/solid";
+import skyline from "../assets/footer-banner1_2x.png";
+import logo from "../assets/Logo.png";
 import twitter from "../assets/twitter.png";
 import fb from "../assets/fb.png";
 import IG from "../assets/ig.png";
 import lN from "../assets/ln.png";
-import { Link } from "react-router-dom";
+
+const quickLinks = [
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Services", href: "/expertice" },
+  { label: "Contact Us", href: "/contact" },
+];
+
+const services = [
+  "Web Development",
+  "Mobile App Development",
+  "UI/UX Design",
+  
+];
+
+const socialLinks = [
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/spidero-technology/",
+    icon: lN,
+  },
+  { label: "Twitter", href: "/", icon: twitter },
+  { label: "Facebook", href: "/", icon: fb },
+  { label: "Instagram", href: "/", icon: IG },
+];
+
+const SectionTitle = ({ children }) => (
+  <div>
+    <h3 className="text-lg font-bold text-[#071034]">{children}</h3>
+    <span className="mt-3 block h-[2px] w-8 rounded-full bg-[#1f63ff]" />
+  </div>
+);
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <footer className="flex flex-col text-center  lg:text-left ">
-      <div className="  text-neutral-800 dark:text-neutral-200 w-full ">
-        <div className="flex flex-col-reverse  md:flex-col-reverse lg:flex-row">
-          <div className="  bg-white lg:bg-black text-black lg:text-white float-left h-auto w-full lg:w-[47%] p-5 lg:p-20">
-            <div className="text-[40px] md:text-[36px] lg:text-[40px] sm:text-[26px] font-bold  mt-5  font-sans hidden md:block ">
-              Like what you see?<br></br> Let’s start a conversation.
-            </div>
-
-            <div className="mt-[40px] hidden md:block">
-              <a href="/contact" className="cursor-pointer">
-                <button className="border  border-white  w-[184px] h-[54px] font-sans leading-6 tracking-{2px} text-[16px] font-medium text-white  bg-black transition-all ease-in-out hover:bg-white hover:text-black hover:border-black cursor-pointer">
-                  <b>GET IN TOUCH</b>
-                </button>
-              </a>
-            </div>
-
-            <div className=" lg:mt-20 text-start">
-              <span className="text-lg md:text-xl lg:text-xl tracking-wide ">
-                Visit us at,
-              </span>
-              <div className="flex-row mt-5 flex items-center ">
-                <div className=" ">
-                  <img src={web5} alt="profile" className="w-5 h-4 lg:h-3" />
-                </div>
-                <div className=" ml-4 ">
-                  <span className="text-lg md:text-xl lg:text-xl font-sans">
-                    2 Westbourne Crescent, London, W2 3DB
-                  </span>
-                </div>
-              </div>
-              <div className=" flex-row mt-2 flex items-center   ">
-                <div className="">
-                  <img src={web4} alt="profile" className="w-6 h-6" />
-                </div>
-                <div className="column ml-4   ">
-                  <span className="text-lg md:text-xl lg:text-xl font-sans text-start">
-                    Ennakkad Ulunthy Rd, Ennakkad Gramam, Kerala, 689624
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className="social-links   mt-4 flex ">
-              <div className="w-full  p-2  flex flex-row justify-center  text-neutral-700  dark:text-neutral-200 gap-5 md:gap-10">
-                {/* <img
-                  src={twitter}
-                  alt="Logo"
-                  className="object-contain h-6 w-6"
-                />
-                <img src={fb} alt="Logo" className="object-contain h-6 w-6" />
-                <img src={IG} alt="Logo" className="object-contain h-6 w-6" /> */}
-                <a href="https://www.linkedin.com/company/spidero-technology/" target="new" className=" cursor-pointer">
-                <img src={lN} alt="Logo" className="object-contain h-6 w-6" />
-
-                </a>
-               
-              </div>
-            </div>
+    <footer className="bg-[#f8fbff] font-sans text-[#4e5875]">
+      <section className="relative overflow-hidden bg-white">
+        <div className="mx-auto grid min-h-[330px] w-full max-w-[1536px] items-center px-6 py-10 md:grid-cols-[0.9fr_1.4fr] md:px-16 lg:min-h-[390px] lg:px-[88px]">
+          <div className="relative z-10 max-w-[560px] text-left">
+            <h2 className="text-[30px] font-bold leading-tight text-[#071034] sm:text-[36px] lg:text-[40px]">
+              Like what you see?
+              <br />
+              Let&apos;s start a{" "}
+              <span className="text-[#2563ff]">conversation.</span>
+            </h2>
+            <p className="mt-5 max-w-[330px] text-base leading-7 text-[#5b6685] sm:text-lg">
+              We&apos;re here to help you build, grow and scale your digital
+              ideas.
+            </p>
+            <Link
+              to="/contact"
+              className="mt-6 inline-flex h-[54px] items-center gap-4 rounded-lg bg-[#145dff] px-6 text-base font-semibold text-white shadow-[0_16px_30px_rgba(20,93,255,0.22)] transition hover:-translate-y-0.5 hover:bg-[#064bea]"
+            >
+              <PaperAirplaneIcon className="h-6 w-6 -rotate-45" />
+              Get In Touch
+              <ArrowRightIcon className="h-5 w-5" />
+            </Link>
           </div>
 
-          <div className=" items-center justify-center">
+          <div className="relative mt-8 h-[170px] md:mt-0 md:h-[235px] lg:h-[300px]">
             <img
-              src={foot}
-              alt="Image Description"
-              className=" w-full  lg:h-[700px] object-contain "
+              src={skyline}
+              alt="London skyline"
+              className="absolute inset-x-0 bottom-0 h-full w-full object-contain object-bottom "
             />
+           
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="w-full bg-neutral-200 p-2 text-center text-neutral-700  dark:text-neutral-200 ">
-        <div className="md:flex md:justify-between">
-          <div className="mb-2 md:mb-0">
-            <span className="mr-4">
-              <a
-                href="/privacy-policy"
-                className="text-neutral-700 hover:text-black text-sm "
-              >
+      <section className="border-t border-[#eef3fb] bg-[#f8fbff]">
+        <div className="mx-auto max-w-[1360px] px-6 py-16 md:px-12 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-[1.35fr_0.9fr_1.05fr_1.2fr_1.15fr] lg:gap-0">
+            <div className="lg:pr-12">
+              <Link to="/" aria-label="Spidero Technology home">
+                <img
+                  src={logo}
+                  alt="Spidero Technology"
+                  className="h-auto w-[238px] max-w-full"
+                />
+              </Link>
+              <p className="mt-8 max-w-[300px] text-base leading-8">
+                We build innovative digital solutions that help businesses grow,
+                scale and succeed in the digital world.
+              </p>
+              <div className="mt-9 flex items-center gap-4">
+                {socialLinks.map((item) => (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    target={item.href.startsWith("http") ? "_blank" : "_self"}
+                    rel="noreferrer"
+                    aria-label={item.label}
+                    className="flex h-11 w-11 items-center justify-center rounded-full bg-[#eef2f8] transition hover:-translate-y-0.5 hover:bg-white hover:shadow-md"
+                  >
+                    <img
+                      src={item.icon}
+                      alt=""
+                      className="h-5 w-5 object-contain"
+                    />
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div className="border-[#e5ebf5] lg:border-l lg:px-12">
+              <SectionTitle>Quick Links</SectionTitle>
+              <ul className="mt-7 space-y-4">
+                {quickLinks.map((item) => (
+                  <li key={item.label}>
+                    <Link
+                      to={item.href}
+                      className="group flex items-center justify-between gap-4 text-base transition hover:text-[#145dff]"
+                    >
+                      {item.label}
+                      <ChevronRightIcon className="h-4 w-4 text-[#8a94ad] transition group-hover:translate-x-1 group-hover:text-[#145dff]" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="border-[#e5ebf5] lg:border-l lg:px-12">
+              <SectionTitle>Services</SectionTitle>
+              <ul className="mt-7 space-y-4">
+                {services.map((item) => (
+                  <li key={item} className="text-base">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="border-[#e5ebf5] lg:border-l lg:px-12">
+              <SectionTitle>Contact Us</SectionTitle>
+              <address className="mt-7 space-y-6 not-italic">
+                <div className="flex gap-4">
+                  <MapPinIcon className="mt-1 h-5 w-5 shrink-0 text-[#145dff]" />
+                  <p className="max-w-[260px] text-base leading-7">
+                    2 Westbourne Crescent, London, W2 3DB, UK
+                  </p>
+                </div>
+                <a
+                  href="tel:+447468333505"
+                  className="flex gap-4 text-base transition hover:text-[#145dff]"
+                >
+                  <PhoneIcon className="h-5 w-5 shrink-0 text-[#145dff]" />
+                  +44 7468 333 505
+                </a>
+              </address>
+            </div>
+
+            <div className="border-[#e5ebf5] lg:border-l lg:pl-12">
+              <SectionTitle>India Office</SectionTitle>
+              <address className="mt-7 space-y-7 not-italic">
+                <div className="flex gap-4">
+                  <MapPinIcon className="mt-1 h-5 w-5 shrink-0 text-[#145dff]" />
+                  <p className="max-w-[270px] text-base leading-7">
+                    Ennakkad Ulunthy Rd, Ennakkad Gramam, Kerala, 689624, India
+                  </p>
+                </div>
+                <a
+                  href="tel:+919496046046"
+                  className="flex gap-4 text-base transition hover:text-[#145dff]"
+                >
+                  <PhoneIcon className="h-5 w-5 shrink-0 text-[#145dff]" />
+                  +91 9496 046 046
+                </a>
+              </address>
+            </div>
+          </div>
+
+          <div className="mt-12 flex flex-col gap-6 border-t border-[#dfe6f2] pt-10 text-sm text-[#3f4863] md:flex-row md:items-center md:justify-between">
+            <p>© 2024 Spidero Technology Inc. All rights reserved.</p>
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
+              <Link to="/privacy-policy" className="transition hover:text-[#145dff]">
                 Privacy Policy
-              </a>
-            </span>
-            <span>
-              <a
-                href="/terms-conditions"
-                className="text-neutral-700 hover:text-black text-sm"
+              </Link>
+              <span className="h-5 w-px bg-[#c6cedd]" />
+              <Link
+                to="/terms-conditions"
+                className="transition hover:text-[#145dff]"
               >
-                Terms and Conditions
-              </a>
-            </span>
-          </div>
-          <div className="text-center text-neutral-700 text-sm">
-            © 2023 Spidero Technology Inc. All rights reserved.
+                Terms & Conditions
+              </Link>
+            </div>
+            <button
+              type="button"
+              onClick={scrollToTop}
+              aria-label="Back to top"
+              className="flex h-12 w-12 items-center justify-center rounded-lg bg-white text-[#145dff] shadow-[0_8px_20px_rgba(20,33,61,0.12)] transition hover:-translate-y-0.5 hover:bg-[#145dff] hover:text-white md:ml-4"
+            >
+              <ArrowUpIcon className="h-6 w-6" />
+            </button>
           </div>
         </div>
-      </div>
-
-      {/* <div className="md:hidden fixed bottom-0 w-full h-auto z-10  ">
-        <a href="/contact" className="cursor-pointer">
-          <button className="  border border-white w-full h-[51px] font-sans leading-6 tracking-{2px} text-[16px] font-medium text-white bg-black transition-all ease-in-out hover:bg-white hover:text-black hover:border-black cursor-pointer">
-           GET IN TOUCH
-          </button>
-        </a>
-      </div> */}
+      </section>
     </footer>
   );
 };

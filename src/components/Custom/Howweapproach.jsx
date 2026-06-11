@@ -1,122 +1,98 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import {
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  CodeBracketSquareIcon,
+  DocumentMagnifyingGlassIcon,
+  MapIcon,
+  RocketLaunchIcon,
+  ShieldCheckIcon,
+} from "@heroicons/react/24/outline";
 import Discovery from "../../assets/custom/development.jpg";
 import Journey from "../../assets/custom/design.jpg";
 import System from "../../assets/custom/quality.jpg";
 import Quality from "../../assets/custom/planing.jpg";
 import Ultimate from "../../assets/custom/discovery.jpg";
-import {
-  ChevronDownIcon,
-  PhoneIcon,
-  PlayCircleIcon,
-} from "@heroicons/react/20/solid";
+
+const content = [
+  {
+    title: "Discovery & Planning",
+    shortDescription: "Understanding your goals and requirements",
+    description:
+      "In the initial software product development stage, the discovery and planning phase takes precedence. This pivotal step aims to comprehend the end-user persona, delineate project scope and goals, and assess associated risks. Our dedicated discovery team conducts thorough planning, research, data collection, and analysis to evaluate the feasibility, practicality, and usability of the product concept.",
+    image: Discovery,
+    Icon: DocumentMagnifyingGlassIcon,
+    accent: "blue",
+  },
+  {
+    title: "User Journey Mapping to System Design",
+    shortDescription: "Designing intuitive and impactful solutions",
+    description:
+      "Insufficient design depth can adversely affect the delivery and functionality of your software solution, aligning with stakeholders' and users' needs. Building on the insights from the prior phase, our team focuses on software design, encompassing architecture, database tables, and user interface mock-ups. The ultimate design specification outlines the technical implementation of the project, ensuring a robust and tailored solution.",
+    image: Journey,
+    Icon: MapIcon,
+    accent: "cyan",
+  },
+  {
+    title: "System Engineering & Development",
+    shortDescription: "Building robust, scalable and secure systems",
+    description:
+      "Embarking on the functional development of the new software system, this phase marks the first real-world assessment of the evolving system. It provides a chance to detect potential bottlenecks in the development or planning process, allowing our team to troubleshoot and innovate solutions for any errors found. By addressing issues and devising innovative approaches, we pave the way for their implementation in the final system.",
+    image: System,
+    Icon: CodeBracketSquareIcon,
+    accent: "blue",
+  },
+  {
+    title: "Quality Analysis & Testing",
+    shortDescription: "Ensuring performance, security & reliability",
+    description:
+      "In the quality assurance & testing stage, we transition the system to the test environment, conducting comprehensive testing, including integration and system testing. The final phase involves user acceptance testing by end users to ensure the system meets their expectations. Potential bugs may surface, requiring additional work in analysis, design, or coding. Upon approval from all stakeholders, the implementation and deployment process commences for a seamless project conclusion.",
+    image: Quality,
+    Icon: ShieldCheckIcon,
+    accent: "violet",
+  },
+  {
+    title: "Ultimate Deployment",
+    shortDescription: "Seamless delivery and continuous support",
+    description:
+      "Deployment complexity varies with the project scope. Our experienced software developers utilize appropriate deployment tools, integration servers, and a robust rollback strategy. We provide essential training for end-users, operations, and IT on-call staff. Deployment strategies range from gradual implementation across branches to a full-scale rollout, ensuring a smooth process.",
+    image: Ultimate,
+    Icon: RocketLaunchIcon,
+    accent: "orange",
+  },
+];
+
+const accentClasses = {
+  blue: {
+    card: "border-[#2b74ff]",
+    icon: "bg-[#edf4ff] text-[#1d6cff]",
+    number: "bg-[#1d6cff] text-white",
+    dot: "border-[#1d6cff] bg-[#1d6cff]",
+  },
+  cyan: {
+    card: "border-[#e8edf7]",
+    icon: "bg-[#e9fbff] text-[#17b8d6]",
+    number: "bg-[#dff8ff] text-[#18a9c6]",
+    dot: "border-[#9fb0d1] bg-white",
+  },
+  violet: {
+    card: "border-[#e8edf7]",
+    icon: "bg-[#f1ebff] text-[#754cff]",
+    number: "bg-[#eee8ff] text-[#754cff]",
+    dot: "border-[#9fb0d1] bg-white",
+  },
+  orange: {
+    card: "border-[#e8edf7]",
+    icon: "bg-[#fff1e5] text-[#ff841f]",
+    number: "bg-[#fff1e5] text-[#ff841f]",
+    dot: "border-[#9fb0d1] bg-white",
+  },
+};
 
 const HowWeApproach = () => {
-  const content = [
-    {
-      title: "Discovery & Planning",
-      description:
-        "In the initial software product development stage, the discovery and planning phase takes precedence. This pivotal step aims to comprehend the end-user persona, delineate project scope and goals, and assess associated risks. Our dedicated discovery team conducts thorough planning, research, data collection, and analysis to evaluate the feasibility, practicality, and usability of the product concept.",
-      image: Discovery,
-    },
-    {
-      title: "User Journey Mapping to System Desig",
-      description:
-        "Insufficient design depth can adversely affect the delivery and functionality of your software solution, aligning with stakeholders' and users' needs. Building on the insights from the prior phase, our team focuses on software design, encompassing architecture, database tables, and user interface mock-ups. The ultimate design specification outlines the technical implementation of the project, ensuring a robust and tailored solution.",
-      image: Journey,
-    },
-    {
-      title: "System Engineering & Development",
-      description:
-        "Embarking on the functional development of the new software system, this phase marks the first real-world assessment of the evolving system. It provides a chance to detect potential bottlenecks in the development or planning process, allowing our team to troubleshoot and innovate solutions for any errors found. By addressing issues and devising innovative approaches, we pave the way for their implementation in the final system.",
-      image: System,
-    },
-    {
-      title: "Quality Analysis & Testing",
-      description:
-        "In the quality assurance & testing stage, we transition the system to the test environment, conducting comprehensive testing, including integration and system testing. The final phase involves user acceptance testing by end users to ensure the system meets their expectations. Potential bugs may surface, requiring additional work in analysis, design, or coding. Upon approval from all stakeholders, the implementation and deployment process commences for a seamless project conclusion.",
-      image: Quality,
-    },
-    {
-      title: "Ultimate Deployment",
-      description:
-        "Deployment complexity varies with the project scope. Our experienced software developers utilize appropriate deployment tools, integration servers, and a robust rollback strategy. We provide essential training for end-users, operations, and IT on-call staff. Deployment strategies range from gradual implementation across branches to a full-scale rollout, ensuring a smooth process.",
-      image: Ultimate,
-    },
-  ];
-  const icons = [
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="currentColor"
-      class="w-6 h-6"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z"
-      />
-    </svg>,
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="currentColor"
-      class="w-6 h-6"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z"
-      />
-    </svg>,
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="currentColor"
-      class="w-6 h-6"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z"
-      />
-    </svg>,
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="currentColor"
-      class="w-6 h-6"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
-      />
-    </svg>,
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke-width="1.5"
-      stroke="currentColor"
-      class="w-6 h-6"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        d="M9 3.75H6.912a2.25 2.25 0 0 0-2.15 1.588L2.35 13.177a2.25 2.25 0 0 0-.1.661V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 0 0-2.15-1.588H15M2.25 13.5h3.86a2.25 2.25 0 0 1 2.012 1.244l.256.512a2.25 2.25 0 0 0 2.013 1.244h3.218a2.25 2.25 0 0 0 2.013-1.244l.256-.512a2.25 2.25 0 0 1 2.013-1.244h3.859M12 3v8.25m0 0-3-3m3 3 3-3"
-      />
-    </svg>,
-  ];
-
   const [currentSlide, setCurrentSlide] = useState(0);
+  const activeStep = content[currentSlide];
+  const ActiveIcon = activeStep.Icon;
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -126,7 +102,7 @@ const HowWeApproach = () => {
     return () => {
       clearInterval(timer);
     };
-  }, [content.length]);
+  }, []);
 
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % content.length);
@@ -139,76 +115,139 @@ const HowWeApproach = () => {
   };
 
   return (
-    <div className="flex w-full h-auto flex-col">
-      <div className="w-full h-auto   flex flex-col lg:flex-row justify-center items-center gap-3 p-5 ">
-        <div className=" w-full lg:w-[40%] h-auto   ">
-          <div className="text-[40px] font-sans leading-10 font-bold  mb-4 lg:mb-8">
-            How We Approach Custom Software Development
+    <section className="relative overflow-hidden bg-[#f8fbff] px-6 py-8 font-sans text-[#071734] sm:px-8 lg:px-16">
+      <div className="pointer-events-none absolute bottom-[-160px] right-[-100px] h-[360px] w-[360px] rounded-full border border-dotted border-[#bcd4ff]" />
+      <div className="pointer-events-none absolute right-8 top-12 hidden grid-cols-6 gap-2 lg:grid">
+        {Array.from({ length: 36 }).map((_, index) => (
+          <span key={index} className="h-1 w-1 rounded-full bg-[#c7d8ff]" />
+        ))}
+      </div>
+
+      <div className="relative z-10 mx-auto w-full max-w-[1560px]">
+        <div className="grid gap-5 lg:grid-cols-[1fr_0.78fr] lg:items-start">
+          <div>
+            <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.16em] text-[#1d6cff]">
+              Our Development Process
+              <span className="h-px w-10 bg-[#9bbdff]" />
+            </p>
+            <h2 className="mt-2 max-w-[760px] text-[28px] font-bold leading-tight sm:text-[36px] lg:text-[42px]">
+              How We Approach Custom Software Development
+            </h2>
           </div>
-        </div>
-        <div className=" w-full lg:w-[30%] h-auto  ">
-          <p className="font-sans text-[18px] leading-7 font-medium tracking-normal  mb-3">
+          <p className="border-[#cad6eb] text-sm font-semibold leading-6 text-[#405078] sm:text-base lg:border-l lg:pl-6">
             Leveraging a deliberately designed software development process, we
             strictly adhere to industry-leading security practices. Our focus is
             on crafting customized software solutions for clients worldwide,
             ensuring unparalleled quality and security.
           </p>
         </div>
-      </div>
-      <div className="w-full h-auto flex flex-col md:flex-row justify-center items-center gap-3 ">
-        <div className="w-full   md:w-[30%] h-auto  ">
-          <div className="w-auto flex flex-row md:flex-col  text-black p-6">
-            {content.map((item, index) => (
-              <div
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`cursor-pointer mb-14 px-2 py-1 font-sans font-medium rounded-md flex flex-row items-center ${
-                  currentSlide === index ? "bg-white" : ""
-                }`}
-                style={{ position: "relative" }}
-              >
-                <div
-                  style={{
-                    width: "50px",
-                    height: "50px",
-                    padding:"2px",
-                    borderRadius: "50%",
-                    borderWidth: "2px", 
-                    borderStyle: "solid", 
-                    borderColor: currentSlide === index ? 'blue' : 'gray',
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  {icons[index]} 
-                </div>
-                <div
-                className={`hidden md:block font-semibold${currentSlide === index ? 'font-semibold' : 'text-gray-600 font-semibold'}`}
 
-                
-                >{item.title}</div> 
-              </div>
-            ))}
+        <div className="mt-7 grid gap-7 lg:grid-cols-[390px_1fr]">
+          <div className="relative lg:pl-8">
+            <div className="absolute bottom-5 left-[8px] top-5 hidden border-l-2 border-dashed border-[#b7c6e4] lg:block" />
+            <div className="space-y-2.5">
+              {content.map((item, index) => {
+                const Icon = item.Icon;
+                const isActive = currentSlide === index;
+                const colors = accentClasses[isActive ? "blue" : item.accent];
+
+                return (
+                  <button
+                    type="button"
+                    key={item.title}
+                    onClick={() => setCurrentSlide(index)}
+                    className={`relative flex w-full items-center gap-3 rounded-xl border bg-white p-3 text-left shadow-[0_10px_24px_rgba(14,32,64,0.05)] transition hover:-translate-y-0.5 ${
+                      isActive
+                        ? `${colors.card} shadow-[0_14px_30px_rgba(29,108,255,0.1)]`
+                        : "border-[#e8edf7]"
+                    }`}
+                  >
+                    <span
+                      className={`absolute left-[-31px] top-1/2 hidden h-4 w-4 -translate-y-1/2 rounded-full border-2 lg:block ${
+                        isActive ? accentClasses.blue.dot : colors.dot
+                      }`}
+                    />
+                    <span
+                      className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${colors.icon}`}
+                    >
+                      <Icon className="h-7 w-7" />
+                    </span>
+                    <span
+                      className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold ${colors.number}`}
+                    >
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span>
+                      <strong className="block text-base leading-snug text-[#071734]">
+                        {item.title}
+                      </strong>
+                      <span className="mt-1 block text-xs font-medium leading-4 text-[#405078]">
+                        {item.shortDescription}
+                      </span>
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
-        </div>
-        <div className="w-full  lg:w-[70%] h-auto  ">
-          <div className="flex-1 p-8">
-            <img
-              src={content[currentSlide].image}
-              alt={content[currentSlide].title}
-              className="w-full h-[400px] object-cover mb-4 rounded"
-            />
-            <h2 className="text-2xl font-bold mb-2">
-              {content[currentSlide].title}
-            </h2>
-            <p className="text-gray-700 text-xl">
-              {content[currentSlide].description}
-            </p>
+
+          <div>
+            <div className="relative overflow-hidden rounded-3xl shadow-[0_24px_60px_rgba(24,55,105,0.16)]">
+              <img
+                src={activeStep.image}
+                alt={activeStep.title}
+                className="h-[280px] w-full object-cover sm:h-[360px] lg:h-[430px]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0b1a35]/20 via-transparent to-[#1d6cff]/10" />
+              <button
+                type="button"
+                onClick={prevSlide}
+                aria-label="Previous process step"
+                className="absolute left-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#071734] shadow-lg transition hover:bg-[#edf4ff]"
+              >
+                <ArrowLeftIcon className="h-6 w-6" />
+              </button>
+              <button
+                type="button"
+                onClick={nextSlide}
+                aria-label="Next process step"
+                className="absolute right-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#071734] shadow-lg transition hover:bg-[#edf4ff]"
+              >
+                <ArrowRightIcon className="h-6 w-6" />
+              </button>
+            </div>
+
+            <div className="mt-3 flex justify-center gap-3">
+              {content.map((item, index) => (
+                <button
+                  type="button"
+                  key={item.title}
+                  onClick={() => setCurrentSlide(index)}
+                  aria-label={`Go to ${item.title}`}
+                  className={`h-2 w-2 rounded-full transition ${
+                    currentSlide === index ? "bg-[#1d6cff]" : "bg-[#c9d6eb]"
+                  }`}
+                />
+              ))}
+            </div>
+
+            <div className="mt-4 grid gap-4 md:grid-cols-[52px_1fr]">
+              <span className="flex h-[52px] w-[52px] items-center justify-center rounded-xl bg-white text-[#1d6cff] shadow-[0_14px_30px_rgba(29,108,255,0.14)]">
+                <ActiveIcon className="h-7 w-7" />
+              </span>
+              <div>
+                <h3 className="text-[22px] font-bold leading-tight text-[#071734]">
+                  {activeStep.title}
+                </h3>
+                <p className="mt-2 text-sm font-medium leading-6 text-[#405078]">
+                  {activeStep.description}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

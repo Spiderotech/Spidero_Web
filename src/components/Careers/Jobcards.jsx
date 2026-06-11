@@ -1,63 +1,94 @@
 import React from "react";
-import { Tilt } from "react-tilt";
+import {
+  ArrowRightIcon,
+  CodeBracketIcon,
+  PaintBrushIcon,
+  UserGroupIcon,
+} from "@heroicons/react/24/outline";
+
+const jobs = [
+  {
+    title: "React Developer",
+    location: "UK",
+    vacancies: "2 Vacancies",
+    icon: CodeBracketIcon,
+  },
+  {
+    title: "UI/UX Designer",
+    location: "UK",
+    vacancies: "1 Vacancy",
+    icon: PaintBrushIcon,
+  },
+  {
+    title: "Python Developer",
+    location: "UK",
+    vacancies: "1 Vacancy",
+    icon: CodeBracketIcon,
+  },
+];
 
 const Jobcards = () => {
   return (
-    <section class=" bg-white lg:mt-10  mt-60 mb-10">
-      <div class=" mx-auto flex justify-center">
-        <div class="max-w-screen-xl text-gray-500 sm:text-lg dark:text-gray-400 ">
-          <div class=" grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-5  ">
-          <Tilt>
-          <div class="  border-2 bg-white w-72  ">
-              <div class=" p-5 ">
-                <div class="font-medium text-[16px] text-start mb-2 ml-3  text-zinc-600 font-sans">
-                  UK
-                </div>
-                <div class="font-bold text-[20px] text-start mb-2 ml-3 text-black font-sans underline">
-                  React Developer
-                </div>
-
-                <div class="font-medium text-[13px] text-start mb-2 ml-3 text-black font-sans">
-                  VACANCIES 2
-                </div>
-              </div>
-            </div>
-
-          </Tilt>
-          <Tilt>
-            <div class="  border-2 bg-white w-72  ">
-              <div class=" p-5 ">
-                <div class="font-medium text-[16px] text-start mb-2 ml-3  text-zinc-600 font-sans">
-                  UK
-                </div>
-                <div class="font-bold text-[20px] text-start mb-2 ml-3 text-black font-sans underline">
-                  UI/UX Designer
-                </div>
-
-                <div class="font-medium text-[13px] text-start mb-2 ml-3 text-black font-sans">
-                  VACANCIES 1
-                </div>
-              </div>
-            </div>
-            </Tilt>
-            <Tilt>
-            
-            <div class="  border-2 bg-white w-72  ">
-              <div class=" p-5 ">
-                <div class="font-medium text-[16px] text-start mb-2 ml-3  text-zinc-600 font-sans">
-                  UK
-                </div>
-                <div class="font-bold text-[20px] text-start mb-2 ml-3 text-black font-sans underline">
-                Python Developer
-                </div>
-
-                <div class="font-medium text-[13px] text-start mb-2 ml-3 text-black font-sans">
-                  VACANCIES 1
-                </div>
-              </div>
-            </div>
-            </Tilt>
+    <section id="open-positions" className="bg-white px-5 pb-16 pt-12 font-sans sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-10 flex items-center gap-6">
+          <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600">
+            <UserGroupIcon className="h-10 w-10" />
+          </span>
+          <div>
+            <h2 className="text-3xl font-extrabold tracking-normal text-[#07122f] sm:text-4xl">
+              Open Positions
+            </h2>
+            <p className="mt-3 text-lg font-medium tracking-normal text-slate-600">
+              Explore current opportunities and become a part of our journey.
+            </p>
           </div>
+        </div>
+
+        <div className="grid gap-7 md:grid-cols-3">
+          {jobs.map(({ title, location, vacancies, icon: Icon }) => (
+            <article
+              key={title}
+              className="relative rounded-2xl border border-slate-200/80 bg-white p-8 text-center shadow-[0_18px_60px_rgba(15,23,42,0.07)] transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_26px_80px_rgba(37,99,235,0.13)]"
+            >
+              <span className="absolute left-6 top-6 rounded-md bg-blue-50 px-4 py-2 text-sm font-extrabold tracking-normal text-blue-600">
+                {location}
+              </span>
+
+              <span className="mx-auto mt-10 flex h-20 w-20 items-center justify-center rounded-full bg-blue-50 text-blue-600">
+                <Icon className="h-10 w-10" />
+              </span>
+
+              <h3 className="mt-8 text-2xl font-extrabold tracking-normal text-black">
+                {title}
+              </h3>
+
+              <div className="mx-auto my-7 h-px w-full bg-slate-200" />
+
+              <div className="flex items-center justify-center gap-2 text-base font-medium tracking-normal text-slate-600">
+                <UserGroupIcon className="h-5 w-5" />
+                <span>{vacancies}</span>
+              </div>
+
+              <a
+                href="/contact"
+                className="mt-8 inline-flex items-center justify-center gap-3 text-base font-extrabold tracking-normal text-blue-600 transition hover:text-blue-700"
+              >
+                View Details
+                <ArrowRightIcon className="h-5 w-5" />
+              </a>
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-12 flex justify-center">
+          <a
+            href="mailto:contact@spiderotechnology.com"
+            className="inline-flex h-14 items-center justify-center gap-4 rounded-lg border border-blue-600 bg-white px-8 text-base font-extrabold tracking-normal text-blue-600 transition hover:bg-blue-50"
+          >
+            Can’t find the right role? Send us your CV
+            <ArrowRightIcon className="h-5 w-5" />
+          </a>
         </div>
       </div>
     </section>

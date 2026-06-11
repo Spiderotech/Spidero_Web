@@ -1,199 +1,291 @@
 import React from "react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import "swiper/css/pagination";
+import {
+  ArrowRightIcon,
+  BeakerIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  CpuChipIcon,
+  CubeTransparentIcon,
+  HeartIcon,
+  LightBulbIcon,
+  PlayIcon,
+  ShieldCheckIcon,
+  SparklesIcon,
+  TrophyIcon,
+  UsersIcon,
+} from "@heroicons/react/24/outline";
 
-import web1 from "../../assets/mobile _swipper/3d-cryptocurrency-rendering-design.jpg";
-import web2 from "../../assets/mobile _swipper/ai-chip-artificial-intelligence-future-technology-innovation.jpg";
-import web3 from "../../assets/mobile _swipper/close-up-person-holding-smartphone.jpg";
-import web4 from "../../assets/mobile _swipper/marketing-creative-collage-with-phone.jpg";
-import web5 from "../../assets/mobile _swipper/online-banking-internet-finance-e-commerce.jpg";
-import web6 from "../../assets/mobile _swipper/person-using-augmented-reality-device.jpg";
-import web7 from "../../assets/mobile _swipper/full-shot-man-training-with-stats.jpg";
-import web8 from "../../assets/mobile _swipper/representation-user-experience-interface-design (1).jpg";  
+import blockchain from "../../assets/mobile _swipper/3d-cryptocurrency-rendering-design.jpg";
+import ai from "../../assets/mobile _swipper/ai-chip-artificial-intelligence-future-technology-innovation.jpg";
+import education from "../../assets/mobile _swipper/close-up-person-holding-smartphone.jpg";
+import ecommerce from "../../assets/mobile _swipper/marketing-creative-collage-with-phone.jpg";
+import finance from "../../assets/mobile _swipper/online-banking-internet-finance-e-commerce.jpg";
+import arvr from "../../assets/mobile _swipper/person-using-augmented-reality-device.jpg";
+import fitness from "../../assets/mobile _swipper/full-shot-man-training-with-stats.jpg";
+import media from "../../assets/mobile _swipper/representation-user-experience-interface-design (1).jpg";
+
+const industries = [
+  {
+    title: "AR/VR",
+    text: "Immersive app experiences for interactive training, product demos, entertainment, and next-generation digital engagement.",
+    image: arvr,
+    icon: SparklesIcon,
+    accent: "violet",
+  },
+  {
+    title: "Media & Entertainment",
+    text: "Be it music or video streaming, we create award-winning apps for next-generation users in media and entertainment.",
+    image: media,
+    icon: PlayIcon,
+    accent: "violet",
+  },
+  {
+    title: "Blockchain & IoT",
+    text: "Futuristic solutions like Blockchain and IoT are our expertise, from dApps to connected product ecosystems.",
+    image: blockchain,
+    icon: CubeTransparentIcon,
+    accent: "sky",
+  },
+  {
+    title: "AI/ML",
+    text: "Taking the big leap in artificial intelligence and machine learning with apps built for smarter business workflows.",
+    image: ai,
+    icon: CpuChipIcon,
+    accent: "violet",
+  },
+  {
+    title: "Health & Fitness Apps",
+    text: "High-end health and fitness apps that improve clinics, wellness brands, and personal health management.",
+    image: fitness,
+    icon: HeartIcon,
+    accent: "lime",
+  },
+  {
+    title: "Banking & Finance",
+    text: "Customer-centric finance platforms that help businesses and users move faster with secure digital services.",
+    image: finance,
+    icon: ShieldCheckIcon,
+    accent: "emerald",
+  },
+  {
+    title: "Shopping & eCommerce",
+    text: "Modern eCommerce apps that increase customer reach, brand exposure, and measurable return on investment.",
+    image: ecommerce,
+    icon: BeakerIcon,
+    accent: "pink",
+  },
+  {
+    title: "Education & eLearning",
+    text: "Learning platforms designed for engaging content, progress tracking, and accessible education experiences.",
+    image: education,
+    icon: LightBulbIcon,
+    accent: "cyan",
+  },
+];
+
+const strengths = [
+  {
+    title: "Industry Expertise",
+    text: "Deep knowledge across multiple domains.",
+    icon: TrophyIcon,
+    accent: "bg-teal-500/20 text-teal-300",
+  },
+  {
+    title: "Innovative Solutions",
+    text: "Cutting-edge technology for modern businesses.",
+    icon: LightBulbIcon,
+    accent: "bg-sky-500/20 text-sky-300",
+  },
+  {
+    title: "User-Centric Approach",
+    text: "Solutions designed for real user needs.",
+    icon: UsersIcon,
+    accent: "bg-violet-500/20 text-violet-300",
+  },
+  {
+    title: "Proven Success",
+    text: "Delivering measurable results that drive growth.",
+    icon: ShieldCheckIcon,
+    accent: "bg-lime-500/20 text-lime-300",
+  },
+];
+
+const accentStyles = {
+  violet: {
+    icon: "bg-violet-600 text-white",
+    line: "bg-violet-500",
+    arrow: "border-violet-500 text-violet-400",
+  },
+  sky: {
+    icon: "bg-sky-600 text-white",
+    line: "bg-sky-500",
+    arrow: "border-sky-500 text-sky-400",
+  },
+  lime: {
+    icon: "bg-lime-700 text-white",
+    line: "bg-lime-500",
+    arrow: "border-lime-500 text-lime-400",
+  },
+  emerald: {
+    icon: "bg-emerald-700 text-white",
+    line: "bg-emerald-500",
+    arrow: "border-emerald-500 text-emerald-400",
+  },
+  pink: {
+    icon: "bg-pink-600 text-white",
+    line: "bg-pink-500",
+    arrow: "border-pink-500 text-pink-400",
+  },
+  cyan: {
+    icon: "bg-cyan-600 text-white",
+    line: "bg-cyan-500",
+    arrow: "border-cyan-500 text-cyan-400",
+  },
+};
+
 const Expertise = () => {
-  const breakpoints = {
-    640: {
-      slidesPerView: 1,
-      spaceBetween: 20,
-    },
-    768: {
-      slidesPerView: 2,
-      spaceBetween:20,
-    },
-    1200: {
-      slidesPerView:4,
-      spaceBetween:20,
-     
-    }
-  };
   return (
-    <div class="flex justify-center flex-col items-center w-full h-auto  ">
-      <h2 class="mb-4 text-4xl mt-10 text-center tracking-tight font-bold text-gray-900 ">
-        Industries we excel in and more
-      </h2>
-      <div className="w-full flex justify-center items-center h-auto mb-5 p-5 sm:p-10">
-        <Swiper
-          modules={[Navigation, Autoplay, Pagination]}
-          breakpoints={breakpoints}
-          loop={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          navigation={{
-            prevEl: null,
-            nextEl: null,
-          }}
-         
-        >
-          <SwiperSlide>
-            <div className="shadow-[0_15px_15px_0_rgba(0,0,0,0.2)] w-80 h-auto mb-4  text-center bg-[white] p-5 ;">
-              <img
-                src={web6}
-                className="w-full h-60; object-contain"
-                alt="Logo 1"
-              />
-              <h2 class="mb-4 text-start  tracking-tight font-bold text-black dark:text-white ">
-                AR/VR
-              </h2>
-              <p class="mb-4 text-[18px] font-sans text-start ml-2 leading-relaxed text-black">
-              Be it music or video streaming we have created award-winning
-                apps for next-generation users in the field of media and
-                entertainment.Check our portfolio to know more.
-              </p>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="shadow-[0_15px_15px_0_rgba(0,0,0,0.2)] w-80 h-auto text-center  bg-[white] p-5 ;">
-              <img
-                src={web8}
-                className="w-full h-60; object-contain"
-                alt="Logo 1"
-              />
-              <h2 class="mb-4 text-start  tracking-tight font-bold text-black dark:text-white">
-                Media & Entertainment
-              </h2>
-              <p class="mb-4 text-[18px] font-sans text-start ml-2 leading-relaxed text-black">
-                Be it music or video streaming we have created award-winning
-                apps for next-generation users in the field of media and
-                entertainment.Check our portfolio to know more.
-              </p>
-            </div>
-          </SwiperSlide>
+    <section className="relative overflow-hidden bg-[#03070c] px-5 py-14 font-sans text-white sm:px-8 lg:px-10 lg:py-16">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-80 bg-[radial-gradient(circle_at_center,rgba(20,184,166,0.12),transparent_56%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(3,7,12,0.2),rgba(3,7,12,0.9))]" />
 
-          <SwiperSlide>
-            <div className="shadow-[0_15px_15px_0_rgba(0,0,0,0.2)] w-80 h-auto text-center bg-[white] p-5 ;">
-              <img
-                src={web1}
-                className="w-full h-60; object-contain"
-                alt="Logo 1"
-              />
-              <h2 class="mb-4 text-start  tracking-tight font-bold text-black dark:text-white">
-                Blockchain & IoT
-              </h2>
-              <p class="mb-4 text-[18px] font-sans text-start ml-2 leading-relaxed text-black">
-                The futuristic solutions like Blockchain and IoT are our
-                expertise.We have proudly created some mention-worthly dApps,IoT
-                apps, and cryptocurrency masterpieces.
-              </p>
-            </div>
-          </SwiperSlide>
+      <div className="relative mx-auto max-w-[1500px]">
+        <div className="text-center">
+          <div className="inline-flex items-center gap-5 text-sm font-extrabold uppercase tracking-[0.34em] text-teal-300">
+            <span className="h-px w-14 bg-teal-400" />
+            Industries We Excel In And More
+            <span className="h-px w-14 bg-teal-400" />
+          </div>
 
-          <SwiperSlide>
-            <div className="shadow-[0_15px_15px_0_rgba(0,0,0,0.2)] w-80 h-auto text-center bg-[white] p-5 ;">
-              <img
-                src={web2}
-                className="w-full h-60; object-contain"
-                alt="Logo 1"
-              />
-              <h2 class="mb-4 text-start  tracking-tight font-bold text-black dark:text-white mt-2">
-                AI/ML
-              </h2>
-              <p class="mb-4 text-[18px] font-sans text-start ml-2 leading-relaxed text-black">
-                Taking the big leap in artificial Intelligence and Machine
-                Learning. we have developed award-winning apps in segments that
-                needed the ultimate upgrade
-              </p>
-            </div>
-          </SwiperSlide>
+          <h2 className="mt-5 text-4xl font-extrabold leading-tight tracking-normal text-white sm:text-5xl lg:text-[58px]">
+            Industries we excel in and more
+          </h2>
 
-          <SwiperSlide>
-            <div className="shadow-[0_15px_15px_0_rgba(0,0,0,0.2)] w-80 h-auto text-center bg-[white] p-5 ;">
-              <img
-                src={web7}
-                className="w-full h-60; object-contain"
-                alt="Logo 1"
-              />
-              <h2 class="mb-4 text-start  tracking-tight font-bold text-black dark:text-white">
-                Health & Fitness Apps
-              </h2>
-              <p class="mb-4 text-[18px] font-sans text-start ml-2 leading-relaxed text-black">
-                We make high-end health and fitness mobile that aims to improve
-                medical domains and create highly advanced hospitals,clinics and
-                personal health management solutions.
-              </p>
-            </div>
-          </SwiperSlide>
+          <p className="mx-auto mt-4 max-w-2xl text-base font-medium leading-7 tracking-normal text-white/72 sm:text-lg">
+            We build innovative digital solutions across diverse industries,
+            helping businesses grow, scale and lead.
+          </p>
+        </div>
 
-          <SwiperSlide>
-            <div className="shadow-[0_15px_15px_0_rgba(0,0,0,0.2)] w-80 h-auto text-center bg-[white] p-5 ;">
-              <img
-                src={web5}
-                className="w-full h-60; object-contain"
-                alt="Logo 1"
-              />
-              <h2 class="mb-4 text-start  tracking-tight font-bold text-black dark:text-white">
-                Banking & Finance
-              </h2>
-              <p class="mb-4 text-[18px] font-sans text-start ml-2 leading-relaxed text-black">
-                Devising customer-centric banking and finance app platforms to
-                help both business and user get benefited with swift,smart and
-                modernized services.
-              </p>
-            </div>
-          </SwiperSlide>
+        <div className="relative mt-9">
+          <button
+            type="button"
+            aria-label="Previous industry"
+            className="mobile-expertise-prev absolute left-0 top-1/2 z-20 hidden h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full border border-white/35 bg-black/75 text-white shadow-[0_18px_50px_rgba(0,0,0,0.45)] transition hover:border-teal-300 hover:text-teal-300 lg:flex"
+          >
+            <ChevronLeftIcon className="h-8 w-8" />
+          </button>
 
-          <SwiperSlide>
-            <div className="shadow-[0_15px_15px_0_rgba(0,0,0,0.2)] w-80 h-auto text-center bg-[white] p-5 ;">
-              <img
-                src={web4}
-                className="w-full h-60; object-contain"
-                alt="Logo 1"
-              />
-              <h2 class="mb-4 text-start  tracking-tight font-bold text-black dark:text-white">
-                Shopping & eCommerce
-              </h2>
-              <p class="mb-4 text-[18px] font-sans text-start ml-2 leading-relaxed text-black">
-                eCommerce is the heart and soul of the market today. we assist
-                business to get a better edge to outsmart their competitors to
-                get more customers,brand exposure and better ROI with eCommerce.
-              </p>
-            </div>
-          </SwiperSlide>
+          <Swiper
+            modules={[Navigation, Autoplay, Pagination]}
+            slidesPerView={1}
+            spaceBetween={22}
+            loop
+            centeredSlides
+            autoplay={{
+              delay: 2600,
+              disableOnInteraction: false,
+            }}
+            navigation={{
+              prevEl: ".mobile-expertise-prev",
+              nextEl: ".mobile-expertise-next",
+            }}
+            pagination={{
+              clickable: true,
+              el: ".mobile-expertise-pagination",
+            }}
+            breakpoints={{
+              640: { slidesPerView: 2, spaceBetween: 22 },
+              1024: { slidesPerView: 3, spaceBetween: 24 },
+              1280: { slidesPerView: 4, spaceBetween: 26 },
+            }}
+            className="px-1 py-2 lg:px-16"
+          >
+            {industries.map(({ title, text, image, icon: Icon, accent }) => {
+              const theme = accentStyles[accent];
 
-          <SwiperSlide>
-            <div className="shadow-[0_15px_15px_0_rgba(0,0,0,0.2)] w-80 h-auto text-center bg-[white] p-5 ;">
-              <img
-                src={web3}
-                className="w-full h-60; object-contain"
-                alt="Logo 1"
-              />
-              <h2 class="mb-4 text-start  tracking-tight font-bold text-black dark:text-white mt-1">
-                Education & eLearning
-              </h2>
-              <p class="mb-4 text-[18px]  text-start ml-2 leading-relaxed text-black">
-                eCommerce is the heart and soul of the market today. we assist
-                business to get a better edge to outsmart their competitors to
-                get more customers,brand exposure and better ROI with eCommerce.
-              </p>
-            </div>
-          </SwiperSlide>
-        </Swiper>
+              return (
+                <SwiperSlide key={title}>
+                  <article className="group h-[430px] overflow-hidden rounded-2xl border border-white/16 bg-white/[0.045] shadow-[0_24px_70px_rgba(0,0,0,0.32)] backdrop-blur transition hover:-translate-y-1 hover:border-teal-300/40">
+                    <div className="relative h-[190px] overflow-hidden">
+                      <img
+                        src={image}
+                        alt={title}
+                        className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#03070c] via-transparent to-transparent" />
+                      <span
+                        className={`absolute left-5 top-5 flex h-16 w-16 items-center justify-center rounded-full shadow-[0_16px_45px_rgba(0,0,0,0.32)] ${theme.icon}`}
+                      >
+                        <Icon className="h-9 w-9" />
+                      </span>
+                    </div>
+
+                    <div className={`h-1 w-full ${theme.line}`} />
+
+                    <div className="flex h-[239px] flex-col p-6">
+                      <h3 className="text-2xl font-extrabold leading-tight tracking-normal text-white">
+                        {title}
+                      </h3>
+                      <p className="mt-4 text-[15px] font-medium leading-6 tracking-normal text-white/76">
+                        {text}
+                      </p>
+                      <button
+                        type="button"
+                        aria-label={`View ${title}`}
+                        className={`mt-auto ml-auto flex h-9 w-11 items-center justify-center rounded-lg border bg-black/20 transition hover:bg-white/10 ${theme.arrow}`}
+                      >
+                        <ArrowRightIcon className="h-5 w-5" />
+                      </button>
+                    </div>
+                  </article>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+
+          <button
+            type="button"
+            aria-label="Next industry"
+            className="mobile-expertise-next absolute right-0 top-1/2 z-20 hidden h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full border border-white/35 bg-black/75 text-white shadow-[0_18px_50px_rgba(0,0,0,0.45)] transition hover:border-teal-300 hover:text-teal-300 lg:flex"
+          >
+            <ChevronRightIcon className="h-8 w-8" />
+          </button>
+
+          <div className="mobile-expertise-pagination mt-6 flex justify-center gap-3" />
+        </div>
+
+        <div className="mx-auto mt-8 grid max-w-[1250px] overflow-hidden rounded-2xl border border-white/18 bg-white/[0.045] shadow-[0_24px_70px_rgba(0,0,0,0.26)] backdrop-blur md:grid-cols-2 xl:grid-cols-4">
+          {strengths.map(({ title, text, icon: Icon, accent }, index) => (
+            <article
+              key={title}
+              className={`flex items-center gap-5 p-6 ${
+                index > 0 ? "xl:border-l xl:border-white/20" : ""
+              } ${index % 2 === 1 ? "md:border-l md:border-white/20" : ""}`}
+            >
+              <span
+                className={`flex h-16 w-16 shrink-0 items-center justify-center rounded-full ${accent}`}
+              >
+                <Icon className="h-8 w-8" />
+              </span>
+              <div>
+                <h3 className="text-base font-extrabold tracking-normal text-white">
+                  {title}
+                </h3>
+                <p className="mt-1 text-sm font-medium leading-5 tracking-normal text-white/72">
+                  {text}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

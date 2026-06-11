@@ -1,183 +1,197 @@
 import React from "react";
+import {
+  CheckCircleIcon,
+  ClipboardDocumentCheckIcon,
+  CodeBracketIcon,
+  MagnifyingGlassIcon,
+  PencilSquareIcon,
+  RocketLaunchIcon,
+} from "@heroicons/react/24/outline";
+
+const steps = [
+  {
+    title: "Technical Discovery",
+    icon: MagnifyingGlassIcon,
+    tint: "violet",
+    items: [
+      "Establish detailed understanding of business goals and objectives.",
+      "Assess the current situation.",
+      "Analyze the target market and competitive landscape.",
+      "Analyze the target market and competitive landscape.",
+      "Understand and document clients' design and branding preferences.",
+    ],
+  },
+  {
+    title: "Planning",
+    icon: ClipboardDocumentCheckIcon,
+    tint: "emerald",
+    items: [
+      "Define the project plan.",
+      "Outline branding guidelines for the project.",
+      "Assist in developing a content strategy.",
+      "Provide guidance on user acquisition strategy.",
+    ],
+  },
+  {
+    title: "IA, Web Design + Copywriting",
+    icon: PencilSquareIcon,
+    tint: "violet",
+    items: [
+      "Craft corporate branding.",
+      "Design user interfaces based on approved wireframes, ensuring customer-centricity.",
+      "Tailor UX for mobile, tablet, and web platforms.",
+      "Obtain client approval for all UI designs.",
+    ],
+  },
+  {
+    title: "Front-end and Back-End Coding",
+    icon: CodeBracketIcon,
+    tint: "blue",
+    items: [
+      "Build website front-end to match approved designs.",
+      "Develop an intuitive backend for easy management.",
+      "Cater to API integration requirements.",
+      "Implement an optimized code structure.",
+      "Set up 2-3 week milestones/sprints with client reviews.",
+    ],
+  },
+  {
+    title: "QA & Launch",
+    icon: RocketLaunchIcon,
+    tint: "emerald",
+    items: [
+      "Manually test each milestone/sprint.",
+      "Report and address bugs, adding them to the product backlog.",
+      "Provide a quality release and send a final demo of the sprint to the client for approval.",
+      "Conduct regression testing after each sprint to ensure proper functioning of previously approved sprints.",
+    ],
+  },
+];
+
+const tintClasses = {
+  violet: "bg-violet-50 text-violet-600",
+  emerald: "bg-emerald-50 text-emerald-600",
+  blue: "bg-blue-50 text-blue-600",
+};
+
+const orbitIcons = [
+  MagnifyingGlassIcon,
+  ClipboardDocumentCheckIcon,
+  PencilSquareIcon,
+  CodeBracketIcon,
+];
 
 const Developmentprocess = () => {
   return (
-    <div class="space-y-8 p-10 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
-      <h2 class="mb-4 text-4xl mt-20  tracking-tight font-bold text-gray-900 dark:text-white">
-        Our development process
-      </h2>
-      <p class="mb-4 text-[20px] font-sans  leading-relaxed text-[#424242] w-full lg:w-1/2">
-        Our process ensures that an interface is seamless for the end-user to
-        become familiar with and competent in using during the first contact
-        they make. The agile approach makes it intuitive for users to achieve
-        their objectives and easy to recall on subsequent visits. Our designers
-        work with developers to make the attributes stand out by turning the
-        usability to the max.
-      </p>
-      <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active  ">
-        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-emerald-500 text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-          <h1>1</h1>
+    <section className="relative overflow-hidden bg-[#fbfcff] px-5 py-16 font-sans sm:px-8 lg:px-12">
+      <div className="pointer-events-none absolute right-8 top-0 hidden h-44 w-44 opacity-60 lg:block">
+        <div className="h-full w-full bg-[radial-gradient(circle,_#dbe5ff_2px,_transparent_2px)] [background-size:16px_16px]" />
+      </div>
+      <div className="pointer-events-none absolute bottom-10 left-0 hidden h-56 w-56 opacity-50 lg:block">
+        <div className="h-full w-full bg-[radial-gradient(circle,_#dbe5ff_2px,_transparent_2px)] [background-size:16px_16px]" />
+      </div>
+
+      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.82fr_1.18fr]">
+        <div className="lg:sticky lg:top-28 lg:h-fit">
+          <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-emerald-600">
+            Our Development Process
+          </p>
+          <div className="mt-5 h-1.5 w-16 rounded-full bg-emerald-500" />
+
+          <h2 className="mt-9 max-w-lg text-4xl font-extrabold leading-tight tracking-normal text-[#07122f] sm:text-5xl">
+            Our development process
+          </h2>
+
+          <div className="mt-8 max-w-md space-y-7 text-lg font-medium leading-8 tracking-normal text-slate-600">
+            <p>
+              Our process ensures that an interface is seamless for the end-user
+              to become familiar with and competent in using during the first
+              contact they make.
+            </p>
+            <p>
+              The agile approach makes it intuitive for users to achieve their
+              objectives and easy to recall on subsequent visits.
+            </p>
+            <p>
+              Our designers work with developers to make the attributes stand
+              out by turning the usability to the max.
+            </p>
+          </div>
+
+          <div className="relative mt-16 hidden h-[360px] max-w-[380px] items-center justify-center lg:flex">
+            <div className="absolute h-72 w-72 rounded-full border-2 border-dashed border-blue-200" />
+            <div className="flex h-28 w-28 items-center justify-center rounded-full bg-white text-violet-600 shadow-[0_20px_60px_rgba(37,99,235,0.12)]">
+              <RocketLaunchIcon className="h-16 w-16" />
+            </div>
+            {orbitIcons.map((Icon, index) => {
+              const positions = [
+                "left-4 top-10",
+                "right-4 top-10",
+                "left-0 bottom-16",
+                "right-0 bottom-16",
+              ];
+
+              return (
+                <span
+                  key={index}
+                  className={`absolute ${positions[index]} flex h-20 w-20 items-center justify-center rounded-2xl bg-white text-blue-600 shadow-[0_18px_45px_rgba(37,99,235,0.12)]`}
+                >
+                  <Icon className="h-10 w-10" />
+                </span>
+              );
+            })}
+          </div>
         </div>
 
-        <div
-          class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-black p-4 rounded border border-slate-200 shadow"
-          data-aos="fade-up"
-        >
-          <div class="flex items-center justify-between space-x-2 mb-1 ">
-            <div class="text-[32px] font-sans text-white">
-              Technical Discovery
-            </div>
-          </div>
-          <div class="text-white text-[16px] font-sans" data-aos="fade-up">
-            
-          &#9658; Establish detailed understanding of business goals and objectives.
+        <div className="relative">
+          <div className="absolute left-5 top-0 hidden h-full border-l-2 border-dotted border-blue-200 lg:block" />
 
-          </div>
-          <div class="text-white text-[16px] font-sans mt-5" data-aos="fade-up">
-          &#9658;  Assess the current situation.
+          <div className="space-y-9">
+            {steps.map(({ title, icon: Icon, tint, items }, index) => (
+              <div key={title} className="relative lg:pl-16">
+                <div className="absolute left-0 top-28 hidden items-center lg:flex">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500 text-lg font-extrabold text-white shadow-[0_14px_35px_rgba(16,185,129,0.35)]">
+                    {index + 1}
+                  </span>
+                  <span className="h-2 w-8 rounded-full bg-blue-500" />
+                </div>
 
-          </div>
-          <div class="text-white text-[16px] font-sans mt-5" data-aos="fade-up">
-          &#9658; Analyze the target market and competitive landscape.
+                <article
+                  className="rounded-[1.7rem] border border-slate-100 bg-white p-8 shadow-[0_24px_80px_rgba(15,23,42,0.08)]"
+                  data-aos="fade-up"
+                >
+                  <div className="grid gap-6 sm:grid-cols-[96px_1fr]">
+                    <span className={`flex h-24 w-24 items-center justify-center rounded-2xl ${tintClasses[tint]}`}>
+                      <Icon className="h-14 w-14" />
+                    </span>
 
-          </div>
-          <div class="text-white text-[16px] font-sans mt-5" data-aos="fade-up">
-          &#9658; Analyze the target market and competitive landscape.
+                    <div>
+                      <h3 className="text-2xl font-extrabold leading-tight tracking-normal text-[#07122f] sm:text-3xl">
+                        {title}
+                      </h3>
+                      <div className="mt-5 h-1 w-12 rounded-full bg-violet-600" />
 
-          </div>
-          <div class="text-white text-[16px] font-sans mt-5" data-aos="fade-up">
-          &#9658;  Understand and document clients' design and branding preferences.
-
+                      <ul className="mt-8 space-y-4">
+                        {items.map((item, itemIndex) => (
+                          <li
+                            key={`${title}-${itemIndex}`}
+                            className="flex gap-4 text-base font-medium leading-7 tracking-normal text-slate-700"
+                            data-aos="fade-up"
+                          >
+                            <CheckCircleIcon className="mt-1 h-5 w-5 shrink-0 text-teal-500" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-
-      <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-emerald-500 text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"> <h1>2</h1></div>
-       
-        <div
-          class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-black p-4 rounded border border-slate-200 shadow"
-          data-aos="fade-up"
-        >
-          <div class="flex items-center justify-between space-x-2 mb-1">
-            <div class="text-[32px] font-sans text-white">
-            Planning
-            </div>
-          </div>
-          <div class="text-white text-[16px] font-sans" data-aos="fade-up">
-          &#9658;  Define the project plan
-          </div>
-          <div class="text-white text-[16px] font-sans mt-5" data-aos="fade-up">
-          &#9658;  Outline branding guidelines for the project.
-
-          </div>
-          <div class="text-white text-[16px] font-sans mt-5" data-aos="fade-up">
-          &#9658; Assist in developing a content strategy.
-
-          </div>
-          <div class="text-white text-[16px] font-sans mt-5" data-aos="fade-up">
-          &#9658;  Provide guidance on user acquisition strategy.
-
-          </div>
-        </div>
-      </div>
-
-      <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-emerald-500 text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"> <h1>3</h1></div>
-
-        <div
-          class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-black p-4 rounded border border-slate-200 shadow"
-          data-aos="fade-up"
-        >
-          <div class="flex items-center justify-between space-x-2 mb-1">
-            <div class="text-[32px] font-sans text-white">
-            IA, Web Design + Copywriting
-            </div>
-          </div>
-          <div class="text-white text-[16px] font-sans" data-aos="fade-up">
-          &#9658;  Craft corporate branding.
-
-          </div>
-          <div class="text-white text-[16px] font-sans mt-5" data-aos="fade-up">
-          &#9658;  Design user interfaces based on approved wireframes, ensuring customer-centricity.
-
-          </div>
-          <div class="text-white text-[16px] font-sans mt-5" data-aos="fade-up">
-          &#9658;  Tailor UX for mobile, tablet, and web platforms.
-
-          </div>
-          <div class="text-white text-[16px] font-sans mt-5" data-aos="fade-up">
-          &#9658; Obtain client approval for all UI designs.
-
-          </div>
-        </div>
-      </div>
-
-      <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-emerald-500 text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"> <h1>4</h1></div>
-
-        <div
-          class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-black p-4 rounded border border-slate-200 shadow"
-          data-aos="fade-up"
-        >
-          <div class="flex items-center justify-between space-x-2 mb-1">
-            <div class="text-[32px] font-sans text-white">
-            Front-end and Back-End Coding
-            </div>
-          </div>
-          <div class="text-white text-[16px] font-sans" data-aos="fade-up">
-          &#9658; Build website front-end to match approved designs.
-
-          </div>
-          <div class="text-white text-[16px] font-sans mt-5" data-aos="fade-up">
-          &#9658; Develop an intuitive backend for easy management.
-
-          </div>
-          <div class="text-white text-[16px] font-sans mt-5" data-aos="fade-up">
-          &#9658; Cater to API integration requirements.
-
-          </div>
-          <div class="text-white text-[16px] font-sans mt-5" data-aos="fade-up">
-          &#9658; Implement an optimized code structure.
-
-          </div>
-          <div class="text-white text-[16px] font-sans mt-5" data-aos="fade-up">
-          &#9658; Set up 2-3 week milestones/sprints with client reviews.
-
-          </div>
-        </div>
-      </div>
-
-      <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-        <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-emerald-500 text-slate-500 group-[.is-active]:text-emerald-50 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2"> <h1>5</h1></div>
-
-        <div
-          class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-black p-4 rounded border border-slate-200 shadow"
-          data-aos="fade-up"
-        >
-          <div class="flex items-center justify-between space-x-2 mb-1">
-            <div class="text-[32px] font-sans text-white">
-            QA & Launch
-            </div>
-          </div>
-          <div class="text-white text-[16px] font-sans" data-aos="fade-up">
-          &#9658;  Manually test each milestone/sprint.
-
-          </div>
-          <div class="text-white text-[16px] font-sans mt-5" data-aos="fade-up">
-          &#9658; Report and address bugs, adding them to the product backlog.
-
-          </div>
-          <div class="text-white text-[16px] font-sans mt-5" data-aos="fade-up">
-          &#9658; Provide a quality release and send a final demo of the sprint to the client for approval.
-
-          </div>
-          <div class="text-white text-[16px] font-sans mt-5" data-aos="fade-up">
-          &#9658; Conduct regression testing after each sprint to ensure proper functioning of previously approved sprints.
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,52 +1,46 @@
 import React from "react";
-import hero from "../../assets/herovideo.mp4";
-import hero1 from "../../assets/homescreenimg.png";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import hero from "../../assets/Customhero.png";
 
 const Herosection = () => {
   return (
-    <section className="h-auto flex flex-col  text-white py-0 px-3 bg-white">
-      <div className="flex flex-row w-full lg:w-[90%] h-auto items-center justify-center text-center pt-28 lg:pt-40 mb-10">
-        <div className="w-full lg:w-[60%]     ">
-          <div className="flex flex-col items-start ">
-            <h2 className="text-black pt-8 text-start  font-sans md:leading-none  font-normal text-[30px] sm:text-[36px] lg:text-[44px] ml-2 lg:ml-10 ">
-              Top-Tier{" "}
-              <span className="text-black pt-8 text-start md:leading-none font-sans font-bold text-[30px] sm:text-[36px] lg:text-[44px] ">
-                Software Development Company
-              </span>
-            </h2>
-            <p className="font-sans text-[18px] leading-7  font-medium tracking-normal text-start mb-3 p-2 lg:p-9 text-black">
-              We specialize in strategic planning, design, development, and the
-              seamless, scalable implementation of tailor-made software
-              solutions. Employing a highly consultative approach, we are
-              trusted collaborative partners committed to delivering measurable
-              results and elevating business performance. Our custom-engineered
-              software solutions are meticulously crafted to meet the unique
-              needs of diverse industry verticals, ensuring optimal outcomes for
-              our clients.
-            </p>
-            <div className="ml-2 lg:ml-5 md:ml-10">
-              <a href="/expertice">
-                <button className="cursor-pointer border border-black w-[307px] h-[51px] font-sans  tracking-wide tracking-2px text-[18px] font-medium text-black bg-white transition-all ease-in-out hover:bg-black hover:text-white hover:border-white">
-                  EXPLORE US
-                </button>
-              </a>
-            </div>
-          </div>
+    <section className="overflow-hidden bg-white px-6 pt-28 font-sans text-[#1d2433] md:pt-36 lg:pt-40">
+      <div className="mx-auto grid min-h-[620px] max-w-[1536px] items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+        <div className="max-w-[690px] text-left lg:pl-16">
+          <h1 className="text-[34px] font-bold leading-tight text-black sm:text-[46px] lg:text-[42px]">
+            Top-Tier Software
+            <br />
+            Development Company
+          </h1>
+          <span className="mt-8 block h-[3px] w-16 bg-[#1f8cff]" />
+
+          <p className="mt-9 text-[18px] leading-9 text-[#2f3a4e]">
+            We specialize in strategic planning, design, development, and the
+            seamless, scalable implementation of tailor-made software solutions.
+            Employing a highly consultative approach, we are trusted
+            collaborative partners committed to delivering measurable results
+            and elevating business performance. Our custom-engineered software
+            solutions are meticulously crafted to meet the unique needs of
+            diverse industry verticals, ensuring optimal outcomes for our
+            clients.
+          </p>
+
+          <a
+            href="/expertice"
+            className="mt-10 inline-flex h-[62px] w-[280px] items-center justify-between border border-black bg-white px-11 text-lg font-semibold uppercase tracking-wide text-black transition hover:bg-black hover:text-white"
+          >
+            Explore Us
+            <ArrowRightIcon className="h-7 w-7" />
+          </a>
         </div>
-        <div className="w-[40%]   h-auto hidden lg:block pb-28 ">
-          <video
-            className="w-full h-[300px] object-cover hidden sm:block   "
+
+        <div className="relative flex min-h-[360px] items-end justify-center lg:min-h-[560px] lg:justify-end">
+          <img
             src={hero}
-            type="video/mp4"
-            autoPlay
-            loop
-            muted
-          ></video>
-           <img
-            className="w-full h-[300px] object-cover sm:hidden"
-            src={hero1}
-            alt="Background Image"
+            alt="Software developer working on custom code"
+            className="w-full max-w-[780px] object-contain lg:max-w-[880px]"
           />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white to-transparent" />
         </div>
       </div>
     </section>

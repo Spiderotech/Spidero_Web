@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import toast, { Toaster } from "react-hot-toast";
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
@@ -12,7 +12,15 @@ import web7 from "../assets/about1 (2).jpg";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import {
+  ArrowRightIcon,
+  ChatBubbleLeftRightIcon,
+  EnvelopeIcon,
+  GlobeAltIcon,
+  PaperAirplaneIcon,
+  PencilSquareIcon,
+  UserIcon,
+} from "@heroicons/react/24/outline";
 
 const Contactform1 = () => {
   const validationSchema = Yup.object().shape({
@@ -68,72 +76,74 @@ const Contactform1 = () => {
   });
 
   return (
-    <footer className="flex flex-col text-center  lg:text-left mt-10">
-      <div className="  text-neutral-800 dark:text-neutral-200 w-full h-auto ">
-        <div className="grid grid-cols-1  lg:grid-cols-2 ">
-          <div className="mb-6 md:mb-0 ">
-            <div className="  text-white h-auto ">
-              <div className="h-auto mt-14 w-full">
-                <Swiper
-                  effect="coverflow"
-                  modules={[Pagination]}
-                  spaceBetween={50}
-                  slidesPerView={1}
-                  pagination={{ clickable: true }}
-                  onSlideChange={() => console.log("slide change")}
-                  onSwiper={(swiper) => console.log(swiper)}
-                >
-                  <SwiperSlide>
-                    <div className="sm:w-[300px] md:w-[400px] lg:w-[550px] h-auto mx-4 sm:mx-auto my-4 flex flex-col justify-center items-center mb-8">
-                      <div className="w-full h-auto flex flex-col justify-center items-center">
-                        <img
-                          src={web7}
-                          alt="profile"
-                          className="w-[60px] h-[60px] sm:w-[100px] sm:h-[100px] lg:w-[120px] lg:h-[120px] rounded-full object-cover"
-                        />
-                        <span className="text-black  text-center mt-3 sm:mt-6 md:mt-8 lg:mt-10 text-sm sm:text-base md:text-lg lg:text-[26px] ">
-                          <svg
-                            className="w-4 h-4 lg:w-6 lg:h-6 mr-4 mx-auto  text-gray-400 dark:text-gray-600 text-start inline-block"
-                            aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="currentColor"
-                            viewBox="0 0 18 14"
-                          >
-                            <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z" />
-                          </svg>
-                          Spidero Technology served as an invaluable
-                          collaborator, delivering an exceptional software
-                          solution that significantly improved our customer
-                          experience.
-                        </span>
-                        <strong className="text-black text-sm sm:text-base md:text-lg lg:text-[20px] mt-5 ">
-                        Akshay Madhusudhanan
-                        </strong>
-                      </div>
+    <section className="relative mt-8 overflow-hidden bg-[#f6f9fe] px-5 py-6 font-sans sm:px-8 lg:px-10">
+      <div className="pointer-events-none absolute left-12 top-12 hidden h-20 w-20 opacity-50 md:block">
+        <div className="h-full w-full bg-[radial-gradient(circle,_#cfe0f8_1.8px,_transparent_1.8px)] [background-size:16px_16px]" />
+      </div>
+      <div className="pointer-events-none absolute -left-24 bottom-[-120px] h-72 w-72 rounded-full border border-blue-100/70" />
 
-                      <span className="text-black text-sm sm:text-base md:text-[14px] lg:text-[16px] font-medium">
-                       CEO & Founder, Spidero Technology
-                      </span>
-                    </div>
-                  </SwiperSlide>
-                </Swiper>
-              </div>
+      <div className="relative mx-auto grid max-w-[1420px] gap-6 lg:grid-cols-[0.76fr_1.14fr]">
+        <div className="relative flex min-h-[430px] items-center justify-center py-8">
+          <Swiper
+            modules={[Pagination]}
+            spaceBetween={40}
+            slidesPerView={1}
+            pagination={{ clickable: true }}
+            className="contact-testimonial-swiper w-full max-w-[500px] !pb-10"
+          >
+            <SwiperSlide>
+              <article className="relative mx-auto mt-10 rounded-xl bg-white px-7 pb-9 pt-20 text-center shadow-[0_20px_55px_rgba(15,23,42,0.12)] sm:px-11">
+                <img
+                  src={web7}
+                  alt="Akshay Madhusudhanan"
+                  className="absolute left-1/2 top-0 h-24 w-24 -translate-x-1/2 -translate-y-1/2 rounded-full border-[6px] border-white object-cover shadow-[0_16px_30px_rgba(15,23,42,0.15)]"
+                />
+                <span className="absolute left-8 top-11 text-[60px] font-bold leading-none text-[#1374f6]">
+                  “
+                </span>
+                <div className="pointer-events-none absolute right-7 top-8 h-12 w-12 opacity-70">
+                  <div className="h-full w-full bg-[radial-gradient(circle,_#cbd8e8_2px,_transparent_2px)] [background-size:16px_16px]" />
+                </div>
+                <p className="mx-auto max-w-[390px] text-[17px] leading-8 text-black sm:text-[20px] sm:leading-9">
+                  Spidero Technology served as an invaluable collaborator,
+                  delivering an exceptional software solution that significantly
+                  improved our customer experience.
+                </p>
+                <span className="mx-auto mt-6 block h-1 w-14 rounded-full bg-[#1178ff]" />
+                <h3 className="mt-5 text-[19px] font-bold text-black">
+                  Akshay Madhusudhanan
+                </h3>
+                <p className="mt-1.5 text-[15px] font-medium text-[#5d6778]">
+                  CEO & Founder, Spidero Technology
+                </p>
+              </article>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+
+        <div className="rounded-[22px] bg-white p-5 shadow-[0_22px_65px_rgba(15,23,42,0.10)] sm:p-6 lg:p-8">
+          <div className="mb-6 flex items-center gap-5">
+            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#eef5ff] text-[#0877ff]">
+              <EnvelopeIcon className="h-8 w-8" />
+            </div>
+            <div>
+              <h3 className="text-[28px] font-bold leading-tight text-[#071435] md:text-[34px]">
+                Let&apos;s Connect
+              </h3>
+              <p className="mt-1.5 text-[15px] font-medium text-[#6a7183] md:text-[17px]">
+                We&apos;d love to hear about your project.
+              </p>
             </div>
           </div>
 
-          <div className="w-full h-auto text-start bg-black flex justify-center items-center cursor-pointer ">
-            <div className="w-[65%] pt-[60px] pb-[60px] ">
-              <h3 className=" text-[24px] md:text-[36px] lg:text-[28px] sm:text-[26px] xl:text-[40px] font-bold  font-sans text-white ">
-                Connect With Us
-              </h3>
-              <form onSubmit={formik.handleSubmit} className=" mt-5 ">
-                <div className="relative pt-6">
-                  <label
-                    htmlFor="email"
-                    className="absolute left-0 bottom-9 text-[16px] font-medium text-gray-300 pointer-events-none transition-all "
-                  >
-                    Full Name<span className="text-red-500">*</span>
-                  </label>
+          <form onSubmit={formik.handleSubmit} className="space-y-4">
+            <div className="grid gap-4 md:grid-cols-2">
+              <div>
+                <label htmlFor="fullName" className="sr-only">
+                  Full Name
+                </label>
+                <div className="flex h-[60px] items-center gap-3 rounded-lg border border-[#d8dee8] bg-white px-5">
+                  <UserIcon className="h-6 w-6 shrink-0 text-[#697386]" />
                   <input
                     type="text"
                     id="fullName"
@@ -141,165 +151,149 @@ const Contactform1 = () => {
                     value={formik.values.fullName}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className="shadow-none bg-transparent border-b border-gray-300 text-white text-sm  block w-full p-1 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-none"
-                    placeholder=""
-                    onFocus={(e) =>
-                      e.target.previousSibling.classList.add(
-                        "bottom-0",
-                        "text-xs",
-                        "text-gray-500"
-                      )
-                    }
+                    className="h-full w-full bg-transparent text-[16px] font-medium text-[#152033] outline-none placeholder:text-[#2d3546]"
+                    placeholder="Full Name *"
                   />
-                  {formik.touched.fullName && formik.errors.fullName && (
-                    <div className="text-red-500  text-xs mt-1">
-                      {formik.errors.fullName}
-                    </div>
-                  )}
                 </div>
+                {formik.touched.fullName && formik.errors.fullName && (
+                  <div className="mt-1 text-xs text-red-500">
+                    {formik.errors.fullName}
+                  </div>
+                )}
+              </div>
 
-                <div className="relative pt-6 mt-4">
-                  <label
-                    htmlFor="email"
-                    className="absolute left-0 bottom-9 text-[16px] font-medium text-gray-300 pointer-events-none transition-all "
-                  >
-                    Email<span className="text-red-500">*</span>
-                  </label>
+              <div>
+                <label htmlFor="email" className="sr-only">
+                  Email
+                </label>
+                <div className="flex h-[60px] items-center gap-3 rounded-lg border border-[#d8dee8] bg-white px-5">
+                  <EnvelopeIcon className="h-6 w-6 shrink-0 text-[#697386]" />
                   <input
                     type="email"
                     id="email"
+                    name="email"
                     value={formik.values.email}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className="shadow-none bg-transparent border-b border-gray-300 text-white text-sm  block w-full p-1 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-none"
-                    placeholder=""
-                    onFocus={(e) =>
-                      e.target.previousSibling.classList.add(
-                        "bottom-0",
-                        "text-xs",
-                        "text-gray-500"
-                      )
-                    }
+                    className="h-full w-full bg-transparent text-[16px] font-medium text-[#152033] outline-none placeholder:text-[#2d3546]"
+                    placeholder="Email *"
                   />
-                  {formik.touched.email && formik.errors.email && (
-                    <div className="text-red-500  text-xs mt-1">
-                      {formik.errors.email}
-                    </div>
-                  )}
                 </div>
-                <div className="relative mt-5 ">
-                  <label
-                    htmlFor="countryCode"
-                    className=" text-sm font-medium text-gray-300 pointer-events-none transition-all    "
-                  >
-                    Country Code<span className="text-red-500 ">*</span>
-                  </label>
+                {formik.touched.email && formik.errors.email && (
+                  <div className="mt-1 text-xs text-red-500">
+                    {formik.errors.email}
+                  </div>
+                )}
+              </div>
+            </div>
 
+            <div className="grid overflow-hidden rounded-lg border border-[#d8dee8] bg-white md:grid-cols-[0.48fr_0.52fr]">
+              <div className="flex min-h-[60px] items-center gap-3 border-b border-[#d8dee8] px-5 md:border-b-0 md:border-r">
+                <GlobeAltIcon className="h-6 w-6 shrink-0 text-[#697386]" />
+                <div className="min-w-0 flex-1">
+                  <span className="mb-0.5 block text-[16px] font-medium text-[#2d3546]">
+                    Country Code <span className="text-red-500">*</span>
+                  </span>
                   <PhoneInput
                     id="countryCode"
+                    country="gb"
                     value={formik.values.countryCode}
                     onChange={(value) =>
                       formik.setFieldValue("countryCode", value)
-                      
                     }
-                    onBlur={formik.handleBlur}
-                    className=" mt-2 text-black bg-black " 
-                    inputStyle={{ width: "6rem", pointerEvents: "none", }}
-                   
-               
+                    onBlur={() => formik.setFieldTouched("countryCode", true)}
+                    inputStyle={{
+                      width: "100%",
+                      height: "24px",
+                      border: "0",
+                      paddingLeft: "48px",
+                      fontSize: "15px",
+                      fontWeight: "600",
+                      color: "#152033",
+                      background: "transparent",
+                      boxShadow: "none",
+                    }}
+                    buttonStyle={{
+                      border: "0",
+                      background: "transparent",
+                    }}
+                    containerStyle={{ width: "100%" }}
+                    dropdownStyle={{ zIndex: 30 }}
                   />
-
-                  {formik.touched.countryCode && formik.errors.countryCode && (
-                    <div className="text-red-500  text-xs mt-1">
-                      {formik.errors.countryCode}
-                    </div>
-                  )}
                 </div>
-
-                <div className="relative pt-6  mt-4">
-                  <label
-                    htmlFor="email"
-                    className="absolute left-0 bottom-9 text-[16px] font-medium text-gray-300 pointer-events-none transition-all "
-                  >
-                    Phone<span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    id="phone"
-                    type="tel"
-                    value={formik.values.phone}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    className="shadow-none bg-transparent border-b border-gray-300 text-white text-sm  block w-full p-1 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-none"
-                    onFocus={(e) =>
-                      e.target.previousSibling.classList.add(
-                        "bottom-0",
-                        "text-xs",
-                        "text-gray-500"
-                      )
-                    }
-                  />
-                  {formik.touched.phone && formik.errors.phone && (
-                    <div className="text-red-500  text-xs mt-1">
-                      {formik.errors.phone}
-                    </div>
-                  )}
-                </div>
-
-                <div className="sm:col-span-2 relative mt-12 ">
-                  <label
-                    htmlFor="message"
-                    className="absolute left-0 bottom-16 text-[16px] font-medium text-gray-300 pointer-events-none transition-all"
-                  >
-                    Type your message here
-                    <span className="text-red-500">*</span>
-                  </label>
-                  <textarea
-                    id="message"
-                    rows="2"
-                    value={formik.values.message}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    className="shadow-none bg-transparent border-b border-gray-300 text-white text-sm focus:ring-primary-500 focus:border-primary-500 block w-full p-1 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-none"
-                    onFocus={(e) =>
-                      e.target.previousSibling.classList.add(
-                        "bottom-0",
-                        "text-xs",
-                        "text-gray-500"
-                      )
-                    }
-                  ></textarea>
-                  {formik.touched.message && formik.errors.message && (
-                    <div className="text-red-500  text-xs mt-1">
-                      {formik.errors.message}
-                    </div>
-                  )}
-                </div>
-
-                {/* <div className="mt-10">
-                    <button className="border border-white w-[180px] h-[51px] font-sans leading-6 tracking-{2px} text-[16px] font-medium text-white  bg-black ">
-                      UPLOAD FILE
-                      <input
-                      id="fileInput"
-                      type="file"
-                      className="hidden"
-                      multiple
-                      onChange={handleFileChange}
-                    />
-                    </button> 
-                </div> */}
-                <button
-                  type="submit"
-                  className="border mt-10 mr-20 border-black w-[198px] h-[51px] font-sans leading-6 tracking-{2px} text-[16px] font-medium text-black  bg-white transition-all ease-in-out hover:bg-black hover:text-white hover:border-white cursor-pointer"
-                >
-                  SUBMIT
-                </button>
-              </form>
+              </div>
+              <div className="flex min-h-[60px] items-center px-5">
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  value={formik.values.phone}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  className="h-full w-full bg-transparent text-[16px] font-medium text-[#152033] outline-none placeholder:text-[#2d3546]"
+                  placeholder="Phone *"
+                />
+              </div>
             </div>
-          </div>
+            {(formik.touched.countryCode && formik.errors.countryCode) ||
+            (formik.touched.phone && formik.errors.phone) ? (
+              <div className="text-xs text-red-500">
+                {formik.errors.countryCode || formik.errors.phone}
+              </div>
+            ) : null}
+
+            <div>
+              <label htmlFor="message" className="sr-only">
+                Type your message here
+              </label>
+              <div className="flex min-h-[130px] items-start gap-3 rounded-lg border border-[#d8dee8] bg-white px-5 py-5">
+                <PencilSquareIcon className="mt-1 h-6 w-6 shrink-0 text-[#697386]" />
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  value={formik.values.message}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  className="min-h-[90px] w-full resize-y bg-transparent text-[16px] font-medium text-[#152033] outline-none placeholder:text-[#2d3546]"
+                  placeholder="Type your message here *"
+                />
+              </div>
+              {formik.touched.message && formik.errors.message && (
+                <div className="mt-1 text-xs text-red-500">
+                  {formik.errors.message}
+                </div>
+              )}
+            </div>
+
+            <div className="grid gap-4 pt-1 md:grid-cols-[0.82fr_0.94fr]">
+              <button
+                type="submit"
+                className="flex h-[62px] items-center justify-center gap-3 rounded-lg bg-[#e96f3f] px-6 text-[17px] font-bold text-white shadow-[0_16px_34px_rgba(8,119,255,0.28)] transition hover:bg-[#0068e5]"
+              >
+                <PaperAirplaneIcon className="h-6 w-6" />
+                Send Message
+              </button>
+              <a
+                href="/contact"
+                className="flex h-[62px] items-center justify-center gap-3 rounded-lg bg-[#f3f7fc] px-5 text-[15px] font-bold text-[#071435] transition hover:bg-[#eaf2fb]"
+              >
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#0877ff]">
+                  <ChatBubbleLeftRightIcon className="h-6 w-6" />
+                </span>
+                <span className="text-left">
+                  <span className="block">Need a quick answer?</span>
+                  <span className="flex items-center gap-2 text-[#0877ff]">
+                    Get Pricing <ArrowRightIcon className="h-4 w-4" />
+                  </span>
+                </span>
+              </a>
+            </div>
+          </form>
         </div>
       </div>
       <Toaster position="top-center" reverseOrder={false} />
-    </footer>
+    </section>
   );
 };
 

@@ -3,7 +3,7 @@ import Footer from '../components/Footer'
 import Herosection from '../components/Custom/Herosection'
 import Client_card from '../components/Client_card'
 import Developmemt_service from '../components/Custom/Developmemt_service'
-// import Success from '../components/Custom/Success'
+
 import Contactcard1 from '../components/Custom/Contactcard1'
 import Contactcard2 from '../components/Custom/Contactcard2'
 import Contactcard3 from '../components/Custom/Contactcard3'
@@ -41,7 +41,6 @@ const Custompage = () => {
    <Herosection/>
    <Client_card/>
    <Developmemt_service/>
-   {/* <Success/> */}
    <Contactcard1/>
    <Howweapproach/>
    <Webvulnarability/>

@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from "react";
 import logo from "../../assets/logo.jpg";
 import emailjs from "@emailjs/browser";
+import {
+  ChatBubbleLeftRightIcon,
+  CubeIcon,
+  DocumentTextIcon,
+  PaperAirplaneIcon,
+  PaperClipIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
 
 const Chatsystem = () => {
   const [isChatModalOpen, setChatModalOpen] = useState(false);
@@ -22,12 +30,11 @@ const Chatsystem = () => {
     const updateDateTime = () => {
       const now = new Date();
       const options = {
-        weekday: "long",
         hour: "numeric",
         minute: "numeric",
         hour12: true,
       };
-      setCurrentDateTime(now.toLocaleDateString("en-US", options));
+      setCurrentDateTime(`Today, ${now.toLocaleTimeString("en-US", options)}`);
     };
 
     const loadChatMessages = () => {
@@ -41,6 +48,7 @@ const Chatsystem = () => {
       setChatModalOpen(true);
     }, 5000);
 
+    updateDateTime();
     const intervalId = setInterval(updateDateTime, 1000);
 
     loadChatMessages();
@@ -88,11 +96,13 @@ const Chatsystem = () => {
 
   const handleUserInputSubmit = async () => {
     if (inputStage === "name") {
+      const submittedName = userInput;
+      setUserName(submittedName);
       setChatMessages((prevMessages) => [
         ...prevMessages,
         {
           sender: "User",
-          message: setUserName(userInput),
+          message: submittedName,
         },
         {
           sender: "Spidero",
@@ -160,6 +170,7 @@ const Chatsystem = () => {
 
 
   const startChat = () => {
+    setIsLoading(false);
     setChatMessages([]); 
     setIsTyping(true);
   
@@ -178,7 +189,7 @@ const Chatsystem = () => {
           ...prevMessages.slice(0, -1),
           {
             sender: "Spidero",
-            message: "Welcome to Spidero!",
+            message: "Welcome to Spidero!\nHow can I help you today?",
           },
         ]);
   
@@ -196,11 +207,11 @@ const Chatsystem = () => {
               ...prevMessages,
               {
                 sender: "User",
-                message: "1.Product Information",
+                message: "1. Product Information",
               },
               {
                 sender: "User",
-                message: "2.Project Estimation",
+                message: "2. Project Estimation",
               },
             ]);
           }, 1000);
@@ -225,138 +236,166 @@ const Chatsystem = () => {
     }, 1000);
   };
 
-  
+  const getOptionIcon = (message) => {
+    if (message.includes("Product")) return CubeIcon;
+    if (message.includes("Project")) return DocumentTextIcon;
+    return DocumentTextIcon;
+  };
+
+  const isChoiceOption = (message) =>
+    message === "1. Product Information" || message === "2. Project Estimation";
 
 
 
   return (
-    <div className="relative">
-      <button
-        className="fixed bottom-20 right-10  bg-[#e96f3f] text-white px-4 py-3 rounded-md z-10 cursor-pointer"
-        onClick={openChatModal}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          className="w-6 h-6"
-        >
-          <path
-            fillRule="evenodd"
-            d="M12 2.25c-2.429 0-4.817.178-7.152.521C2.87 3.061 1.5 4.795 1.5 6.741v6.018c0 1.946 1.37 3.68 3.348 3.97.877.129 1.761.234 2.652.316V21a.75.75 0 0 0 1.28.53l4.184-4.183a.39.39 0 0 1 .266-.112c2.006-.05 3.982-.22 5.922-.506 1.978-.29 3.348-2.023 3.348-3.97V6.741c0-1.947-1.37-3.68-3.348-3.97A49.145 49.145 0 0 0 12 2.25ZM8.25 8.625a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25Zm2.625 1.125a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0Zm4.875-1.125a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25Z"
-            clipRule="evenodd"
-          />
-        </svg>
-      </button>
-      <button
-       className="fixed bottom-20 right-28 text-md bg-white shadow-xl shadow-slate-400  text-black px-8 py-3 rounded-2xl z-10 hidden lg:block"
-      >
-        Get Pricing
-        <span className="text-[20px]">
-        &#x1F44B;
-
-        </span>
-
-      </button>
+    <div className="relative font-sans">
+      {!isChatModalOpen && (
+        <div className="fixed bottom-5 right-5 z-50 flex items-center gap-3 sm:bottom-7 sm:right-7">
+          <button
+            className="hidden rounded-full border border-orange-100 bg-white px-4 py-2.5 text-xs font-bold text-slate-950 shadow-[0_14px_34px_rgba(15,23,42,0.14)] transition hover:-translate-y-0.5 hover:border-orange-200 hover:bg-orange-50 lg:block"
+            onClick={openChatModal}
+            type="button"
+          >
+            Get Pricing
+          </button>
+          <button
+            className="group flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-[#ff6b3d] to-[#e9361f] text-white shadow-[0_16px_34px_rgba(233,63,34,0.32)] transition hover:-translate-y-1 hover:from-blue-800 hover:to-blue-800 hover:shadow-[0_20px_40px_rgba(30,64,175,0.32)]"
+            onClick={openChatModal}
+            type="button"
+            aria-label="Open chat"
+          >
+            <ChatBubbleLeftRightIcon className="h-6 w-6 transition group-hover:scale-110" />
+          </button>
+        </div>
+      )}
       
       {isChatModalOpen && (
-        <div className="fixed bottom-20 right-5 w-[80%] lg:w-1/4 h-auto bg-slate-50 rounded-md shadow-lg  z-10">
-          <div className="flex items-center  p-2 bg-white overflow-hidden rounded-md">
-            <img
-              className="w-10 h-10 rounded-full mr-2"
-              src={logo}
-              alt="User Avatar"
-            />
-            <div className="text-black  font-medium ml-5">Spidero</div>
-
-            <button
-              className="absolute top-4 right-4 px-2 py-1 rounded  cursor-pointer"
-              onClick={closeChatModal}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
-                  clipRule="evenodd"
+        <div className="fixed inset-x-4 bottom-4 z-50 mx-auto flex max-h-[calc(100vh-32px)] max-w-[430px] flex-col overflow-hidden rounded-[22px] border border-white/80 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.2)] sm:bottom-7 sm:right-7 sm:left-auto sm:mx-0 sm:w-[430px]">
+          <div className="flex items-center gap-3 border-b border-slate-200/80 bg-white px-5 py-4">
+            <div className="relative">
+              <span className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-[#ff6b3d] to-[#e9341d] p-1.5 shadow-[0_12px_26px_rgba(233,63,34,0.25)]">
+                <img
+                  className="h-full w-full rounded-full object-cover"
+                  src={logo}
+                  alt="Spidero"
                 />
-              </svg>
+              </span>
+              <span className="absolute bottom-0 right-0 h-3.5 w-3.5 rounded-full border-2 border-white bg-emerald-500" />
+            </div>
+            <div>
+              <div className="text-xl font-extrabold tracking-normal text-slate-950">
+                Spidero
+              </div>
+              <div className="mt-0.5 text-xs font-semibold text-emerald-600">
+                Online
+              </div>
+            </div>
+            <button
+              className="ml-auto flex h-9 w-9 items-center justify-center rounded-full text-slate-500 transition hover:bg-slate-100 hover:text-slate-950"
+              onClick={closeChatModal}
+              type="button"
+              aria-label="Close chat"
+            >
+              <XMarkIcon className="h-6 w-6" />
             </button>
           </div>
+
           <div
-            className="overflow-y-auto p-2 text-white h-72"
+            className="min-h-[330px] flex-1 overflow-y-auto bg-gradient-to-br from-white via-[#f8fbff] to-[#eef5ff] px-5 py-5"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
-            <div className="text-center text-sm text-black p-2">
+            <div className="mb-5 flex items-center gap-3 text-xs font-semibold text-slate-400">
+              <span className="h-px flex-1 bg-slate-200" />
               {currentDateTime}
+              <span className="h-px flex-1 bg-slate-200" />
             </div>
-            <div className="overflow-y-auto p-2 text-black">
-              {chatMessages.map((message, index) => (
-                <div
-                  key={index}
-                  className={
-                    message.sender === "Spidero"
-                      ? "flex items-start mb-2"
-                      : "flex items-end mb-2 justify-end"
-                  }
-                >
-                  {message.sender === "Spidero" && (
-                    <img
-                      className="w-8 h-8 rounded-full mr-2"
-                      src={logo}
-                      alt="User Avatar"
-                    />
-                  )}
-                  <div
-                    className="bg-gray-200 p-3  rounded-md"
-                    onClick={
-                      message.sender === "User"
-                        ? handleUserMessageClick
-                        : undefined
-                    }
-                    style={{
-                      cursor: message.sender === "User" ? "pointer" : "default",
-                    }}
-                  >
-                    <span className="text-gray-400 text-sm"></span>
-                    <p>{isTyping ? "Typing..." : message.message}</p>
+            <div className="space-y-4 text-slate-950">
+              {isLoading && chatMessages.length === 0 && (
+                <div className="flex items-start gap-3">
+                  <img
+                    className="h-8 w-8 rounded-full object-cover"
+                    src={logo}
+                    alt="Spidero"
+                  />
+                  <div className="rounded-2xl bg-white px-4 py-3 text-xs shadow-[0_12px_26px_rgba(15,23,42,0.08)]">
+                    Loading...
                   </div>
                 </div>
+              )}
+              {chatMessages.map((message, index) => (
+                message.sender === "Spidero" ? (
+                  <div key={index} className="flex items-start gap-3">
+                    <img
+                      className="mt-1 h-8 w-8 rounded-full object-cover"
+                      src={logo}
+                      alt="Spidero"
+                    />
+                    <div className="max-w-[78%] rounded-2xl bg-white px-4 py-3 text-sm font-medium leading-6 text-slate-950 shadow-[0_12px_26px_rgba(15,23,42,0.08)]">
+                      <p className="whitespace-pre-line">
+                        {isTyping ? "Typing..." : message.message}
+                      </p>
+                    </div>
+                  </div>
+                ) : isChoiceOption(message.message) ? (
+                  <div key={index} className="flex justify-end">
+                    <button
+                      className="group flex w-[78%] items-center gap-3 rounded-2xl border border-orange-200 bg-orange-50/60 px-4 py-3 text-left text-sm font-semibold text-slate-950 transition hover:border-orange-300 hover:bg-orange-100/80"
+                      onClick={handleUserMessageClick}
+                      type="button"
+                    >
+                      {React.createElement(getOptionIcon(message.message), {
+                        className: "h-5 w-5 shrink-0 text-[#ef4b25]",
+                      })}
+                      <span>{message.message}</span>
+                    </button>
+                  </div>
+                ) : (
+                  <div key={index} className="flex justify-end">
+                    <div className="max-w-[78%] rounded-2xl bg-orange-50 px-4 py-2.5 text-sm font-semibold leading-6 text-slate-950 ring-1 ring-orange-100">
+                      {message.message}
+                    </div>
+                  </div>
+                )
               ))}
             </div>
           </div>
+
           {isOpen && (
-            <div className="flex items-center m-2 bg-white ml-5 rounded-md">
+            <div className="border-t border-orange-100 bg-white px-4 py-3">
+              <div className="flex h-12 items-center gap-2.5 rounded-full border border-orange-200 bg-white px-3.5 shadow-[0_10px_26px_rgba(249,115,22,0.12)]">
+                <PaperClipIcon className="h-5 w-5 shrink-0 text-slate-400" />
+                <span className="h-7 w-px bg-slate-200" />
               <input
                 type="text"
                 value={userInput}
                 onChange={(e) => setUserInput(e.target.value)}
-                className="border border-gray-300 p-2 rounded-md mr-2 w-3/4"
-                placeholder="Type your response..."
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") handleUserInputSubmit();
+                  }}
+                  className="min-w-0 flex-1 bg-transparent text-sm font-medium text-slate-950 outline-none placeholder:text-slate-400"
+                  placeholder="Type your message..."
               />
               <button
                 onClick={handleUserInputSubmit}
-                className="bg-[#e96f3f] text-white px-4 py-2 rounded-md"
+                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#ff6b3d] to-[#e9361f] text-white shadow-[0_8px_20px_rgba(233,63,34,0.28)] transition hover:from-blue-800 hover:to-blue-800"
+                  type="button"
+                  aria-label="Send message"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path d="M3.478 2.404a.75.75 0 0 0-.926.941l2.432 7.905H13.5a.75.75 0 0 1 0 1.5H4.984l-2.432 7.905a.75.75 0 0 0 .926.94 60.519 60.519 0 0 0 18.445-8.986.75.75 0 0 0 0-1.218A60.517 60.517 0 0 0 3.478 2.404Z" />
-                </svg>
+                  <PaperAirplaneIcon className="h-4 w-4" />
               </button>
+              </div>
             </div>
           )}
 
           {isOpenback && (
-            <div className="flex items-center justify-center m-2 bg-white ml-5 rounded-md">
-              <h1 className=" text-center text-orange-600 cursor-pointer"  onClick={handleresetchat}>Restart conversation</h1>
+            <div className="border-t border-orange-100 bg-white px-4 py-3">
+              <button
+                className="flex h-11 w-full items-center justify-center rounded-full bg-slate-950 text-xs font-bold uppercase tracking-[0.12em] text-white transition hover:bg-blue-800"
+                onClick={handleresetchat}
+                type="button"
+              >
+                Restart Conversation
+              </button>
             </div>
           )}
         </div>

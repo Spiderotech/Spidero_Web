@@ -1,169 +1,234 @@
 import React from "react";
-import call from "../../assets/Hire/discovery-call.png"
-import agile from "../../assets/Hire/agile.png"
-import dev from "../../assets/Hire/dev.png"
-import Test from "../../assets/Hire/testing.png"
-import invoice from "../../assets/Hire/invoice.png"
-import communication from "../../assets/Hire/communication.png"
-import escaltion from "../../assets/Hire/escalatiom.png"
+import {
+  ArrowRightIcon,
+  CheckCircleIcon,
+  RocketLaunchIcon,
+} from "@heroicons/react/24/solid";
+import call from "../../assets/Hire/discovery-call.png";
+import agile from "../../assets/Hire/agile.png";
+import dev from "../../assets/Hire/dev.png";
+import testing from "../../assets/Hire/testing.png";
+import invoice from "../../assets/Hire/invoice.png";
+import communication from "../../assets/Hire/communication.png";
+import escalation from "../../assets/Hire/escalatiom.png";
+
+const processSteps = [
+  {
+    title: "Initial Discovery Call",
+    description:
+      "We understand your needs, goals, market dynamics and propose the right team size, skills, and development approach. A team is allocated to the project after this phase.",
+    image: call,
+    points: [
+      "Business analysis",
+      "Goal & risk assessment",
+      "Team recommendation",
+    ],
+  },
+  {
+    title: "Agile Development",
+    description:
+      "The project is broken into 2-week sprints with clear deliverables. Your Project Manager manages the entire process, provides daily updates and arranges any skills needed within the team plan.",
+    image: agile,
+    points: [
+      "Sprint planning & execution",
+      "Daily updates & bi-weekly releases",
+      "UI/UX, Testing, DevOps as needed",
+    ],
+  },
+  {
+    title: "Deliverables / DevOps",
+    description:
+      "We deploy on live bi-weekly or monthly based on your priorities and ensure smooth, continuous delivery in a truly Agile way.",
+    image: dev,
+    points: [
+      "Continuous deployment",
+      "Infrastructure & DevOps",
+      "Monitoring & optimization",
+    ],
+  },
+  {
+    title: "Testing",
+    description:
+      "Every team member, big or small, has a tester involved and becomes more involved as the project progresses.",
+    image: testing,
+    points: [
+      "Manual & automation testing",
+      "Cross-browser & device testing",
+      "Quality assurance",
+    ],
+  },
+  {
+    title: "Communication & Management",
+    description:
+      "We adapt to your availability with daily or twice-a-week standups. Our Project Manager is available all workday and you can track time in real-time.",
+    image: communication,
+    points: [
+      "Daily standups / regular syncs",
+      "Time tracking & timesheets",
+      "Tools: Slack, Jira, Zoom",
+    ],
+  },
+  {
+    title: "Invoicing",
+    description:
+      "For the first month, we charge 50% upfront and 50% at the end of the month. Post that, it is 100% within the first week of every work month.",
+    image: invoice,
+    points: ["Multiple payment methods", "Transparent billing", "Currency: USD"],
+  },
+  {
+    title: "Escalation Points",
+    description:
+      "Your escalation contacts include our CEO, CTO and Engineering Manager. Our leadership ensures your project stays on track and delivers maximum value.",
+    image: escalation,
+    points: [
+      "Leadership oversight",
+      "Quick resolution",
+      "Accountability & transparency",
+    ],
+  },
+];
+
+const CheckItem = ({ children }) => (
+  <li className="flex items-start gap-2 text-sm font-semibold leading-5 text-[#101b32]">
+    <CheckCircleIcon className="mt-0.5 h-4 w-4 shrink-0 text-red-500" />
+    <span>{children}</span>
+  </li>
+);
+
+const ProcessCard = ({ step, index }) => (
+  <article
+    className="relative rounded-2xl border border-slate-100 bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(15,23,42,0.12)]"
+    data-aos="fade-up"
+    data-aos-duration="900"
+    data-aos-delay={(index % 2) * 120}
+  >
+    <h3 className="text-xl font-extrabold leading-7 text-[#071435]">
+      {step.title}
+    </h3>
+    <p className="mt-3 text-sm font-medium leading-7 text-[#526078]">
+      {step.description}
+    </p>
+    <ul className="mt-5 space-y-3">
+      {step.points.map((point) => (
+        <CheckItem key={point}>{point}</CheckItem>
+      ))}
+    </ul>
+  </article>
+);
+
+const ProcessImage = ({ step, index }) => (
+  <div
+    className="flex min-h-[220px] items-center justify-center"
+    data-aos="zoom-in"
+    data-aos-duration="900"
+    data-aos-delay={(index % 2) * 120}
+  >
+    <div className="relative flex h-48 w-48 items-center justify-center rounded-full bg-[#eef0ff]">
+      <span className="absolute inset-5 rounded-full border border-dashed border-red-200" />
+      <img
+        src={step.image}
+        alt=""
+        className="relative z-10 max-h-40 max-w-[180px] object-contain drop-shadow-[0_18px_22px_rgba(30,64,175,0.12)]"
+      />
+    </div>
+  </div>
+);
+
+const DesktopRow = ({ step, index }) => {
+  const cardFirst = index % 2 === 1;
+
+  return (
+    <div className="relative hidden grid-cols-[1fr_90px_1fr] items-center gap-5 lg:grid">
+      {cardFirst ? (
+        <ProcessCard step={step} index={index} />
+      ) : (
+        <ProcessImage step={step} index={index} />
+      )}
+
+      <div className="relative z-10 flex justify-center">
+        <span className="flex h-14 w-14 items-center justify-center rounded-full border border-red-100 bg-white text-lg font-extrabold text-red-500 shadow-[0_10px_28px_rgba(239,68,68,0.16)]">
+          {String(index + 1).padStart(2, "0")}
+        </span>
+      </div>
+
+      {cardFirst ? (
+        <ProcessImage step={step} index={index} />
+      ) : (
+        <ProcessCard step={step} index={index} />
+      )}
+    </div>
+  );
+};
+
+const MobileRow = ({ step, index }) => (
+  <div className="relative grid gap-4 rounded-2xl border border-slate-100 bg-white p-5 shadow-[0_14px_34px_rgba(15,23,42,0.08)] lg:hidden">
+    <div className="flex items-center gap-3">
+      <span className="flex h-11 w-11 items-center justify-center rounded-full bg-red-50 text-base font-extrabold text-red-500">
+        {String(index + 1).padStart(2, "0")}
+      </span>
+      <h3 className="text-lg font-extrabold text-[#071435]">{step.title}</h3>
+    </div>
+    <ProcessImage step={step} index={index} />
+    <p className="text-sm font-medium leading-7 text-[#526078]">
+      {step.description}
+    </p>
+    <ul className="space-y-3">
+      {step.points.map((point) => (
+        <CheckItem key={point}>{point}</CheckItem>
+      ))}
+    </ul>
+  </div>
+);
+
 const Howit_done = () => {
   return (
-    <div className="w-full h-auto flex flex-col justify-items-center items-cente p-5 md:p-10 bg-white pt-10 md:pt-40">
-      <p className="text-[42px] font-sans  tracking-[2px] text-center  font-bold  mb-2 lg:mb-3">
-        Here's How it is Done
-      </p>
-
-      <div className=" w-full h-auto  flex flex-col  lg:flex-row justify-center items-center p-5 gap-5 ">
-        <div className=" w-full lg:w-[40%] h-auto flex justify-center items-center ">
-          <img src={call} alt="profile" className="w-60 h-52 object-contain" />
+    <section className="relative overflow-hidden bg-gradient-to-b from-white via-[#f9fbff] to-white px-5 py-16 font-sans sm:px-8 lg:px-10">
+      <div className="pointer-events-none absolute left-1/2 top-20 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-blue-50 blur-3xl" />
+      <div className="relative mx-auto max-w-[1180px]">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-red-500">
+            Our Process
+          </p>
+          <h2 className="mt-3 text-3xl font-extrabold leading-tight tracking-normal text-[#071435] sm:text-4xl lg:text-[46px]">
+            Here's How it is Done
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-base font-medium leading-7 text-[#526078]">
+            A transparent, collaborative and agile approach to deliver
+            high-quality digital solutions.
+          </p>
         </div>
-        <div className=" w-full lg:w-[50%] h-auto p-0  md:p-10">
-          <div className="text-[30px] font-sans leading-10 font-bold ">
-            <a href="/mobile" className=" cursor-pointer">
-              Initial discovery call
-            </a>
+
+        <div className="relative mt-10 space-y-8 lg:mt-14 lg:space-y-4">
+          <span className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-red-100 to-transparent lg:block" />
+
+          {processSteps.map((step, index) => (
+            <React.Fragment key={step.title}>
+              <DesktopRow step={step} index={index} />
+              <MobileRow step={step} index={index} />
+            </React.Fragment>
+          ))}
+        </div>
+
+        <div className="mt-10 flex flex-col items-center justify-between gap-5 rounded-2xl border border-slate-100 bg-white px-6 py-5 shadow-[0_18px_45px_rgba(15,23,42,0.08)] md:flex-row">
+          <div className="flex items-center gap-4">
+            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-red-50 text-red-500">
+              <RocketLaunchIcon className="h-7 w-7" />
+            </span>
+            <p className="max-w-xl text-sm font-extrabold leading-6 text-[#071435]">
+              We follow a proven process to deliver results that drive your
+              business forward.
+            </p>
           </div>
-          <div className="text-[19px] font-sans font-normal mt-4 ">
-            Our Business analysts and Tech Leads understand your needs,
-            development goals, market dynamics and propose you the right team
-            size, skills, and development skills. A team is allocated to the
-            project after this phase.
-          </div>
+          <a
+            href="/contact"
+            className="inline-flex h-12 shrink-0 items-center justify-center gap-4 rounded-xl bg-red-500 px-7 text-sm font-extrabold uppercase tracking-[0.12em] text-white shadow-[0_14px_30px_rgba(239,68,68,0.24)] transition hover:-translate-y-0.5 hover:bg-blue-800"
+          >
+            Let's Get Started
+            <ArrowRightIcon className="h-4 w-4" />
+          </a>
         </div>
       </div>
-
-      <div className=" w-full h-auto  flex  flex-col-reverse  lg:flex-row justify-center items-center p-5 gap-5  ">
-        <div className=" w-full lg:w-[50%] h-auto p-0  md:p-10">
-          <div className="text-[30px] font-sans leading-10 font-bold">
-            <a href="/web" className=" cursor-pointer">
-              Agile Development
-            </a>
-          </div>
-          <div className="text-[19px] font-sans font-normal mt-4 ">
-            The whole scope is broken into 2 weeks sprints with clear
-            deliverables expectations, your Project Manager will manage the
-            whole process, give you daily updates followed by bi-weekly
-            releases, arrange for any tech or non tech skill needed inside the
-            Team Plan hours you have.
-          </div>
-          <div className="text-[19px] font-sans font-normal mt-4 ">
-          Basically plays the role of total
-            accountability and management. We take care of side things like
-            UI/UX, Testing, DevOps on a need basis all the time.
-
-          </div>
-        </div>
-        <div className=" w-full lg:w-[40%] h-auto flex justify-center items-center ">
-          <img src={agile} alt="profile" className=" w-32 h-32 object-contain" />
-        </div>
-      </div>
-      <div className=" w-full h-auto  flex flex-col  lg:flex-row justify-center items-center p-5 gap-5 ">
-        <div className=" w-full lg:w-[40%] h-auto flex justify-center items-center  ">
-          <img src={dev} alt="profile" className="w-32 h-32 object-contain" />
-        </div>
-        <div className=" w-full lg:w-[50%] h-auto p-0  md:p-10">
-          <div className="text-[30px] font-sans leading-10 font-bold ">
-            <a href="/mobile" className=" cursor-pointer">
-              Deliverables/ DevOPS
-            </a>
-          </div>
-          <div className="text-[19px] font-sans font-normal mt-4 ">
-            Depending upon your priorities, we do the deployment on live
-            bi-weekly or monthly so we develop, ship, and develop fluidly in a
-            truly Agile way. 
-          </div>
-          <div className="text-[19px] font-sans font-normal mt-4 ">
-          You don't need to pay additional for DevOps as we
-            cover all skills inside the retainer hours plan.
-
-          </div>
-        </div>
-      </div>
-
-      <div className=" w-full h-auto flex  flex-col-reverse  lg:flex-row justify-center items-center p-5 gap-5  ">
-        <div className=" w-full lg:w-[50%] h-auto p-0  md:p-10">
-          <div className="text-[30px] font-sans leading-10 font-bold">
-            <a href="/web" className=" cursor-pointer">
-              Testing
-            </a>
-          </div>
-          <div className="text-[19px] font-sans font-normal mt-4 ">
-            Every size of the team (big or small) has a Tester involved and
-            becomes more and more involved as the project progresses.
-          </div>
-        </div>
-        <div className="  w-full lg:w-[40%] h-auto flex justify-center items-center  ">
-          <img src={Test} alt="profile" className="w-32 h-32 object-contain" />
-        </div>
-      </div>
-      <div className=" w-full h-auto  flex flex-col  lg:flex-row justify-center items-center p-5 gap-5 ">
-        <div className=" w-full lg:w-[40%] h-auto flex justify-center items-center ">
-          <img src={communication} alt="profile" className="w-32 h-32 object-contain" />
-        </div>
-        <div className=" w-full lg:w-[50%] h-auto p-0  md:p-10">
-          <div className="text-[30px] font-sans leading-10 font-bold ">
-            <a href="/mobile" className=" cursor-pointer">
-              Communication & Management
-            </a>
-          </div>
-          <div className="text-[19px] font-sans font-normal mt-4 ">
-            Depending upon your availability and need, we can have daily
-            stand-up or twice a week stand-ups.
-          </div>
-          <div className="text-[19px] font-sans font-normal mt-4 ">
-          Our Project Manager will be
-            available to talk to you the whole work day + can extend hours
-            anytime according to your time-zone.The timesheets and hours are
-            tracked real time, and you can check the sheets whenever you want
-            to.
-
-          </div>
-         
-        </div>
-      </div>
-
-      <div className=" w-full h-auto flex  flex-col-reverse lg:flex-row justify-center items-center p-5 gap-5  ">
-        <div className=" w-full lg:w-[50%] h-auto p-0  md:p-10">
-          <div className="text-[30px] font-sans leading-10 font-bold">
-            <a href="/web" className=" cursor-pointer">
-              Invoicing
-            </a>
-          </div>
-          <div className="text-[19px] font-sans font-normal mt-4 ">
-            For the first month, we charge 50% of total monthly fee upfront to
-            start the work and 50% at the end of the work month. Post that, it
-            is 100% within the first week of every work month.
-          </div>
-          <div className="text-[19px] font-sans font-normal mt-4 ">
-          You can pay us
-            via payoneer, bank wire/ ACH, credit card, debit card etc. The
-            currency will be United States Dollars.
-
-          </div>
-         
-        </div>
-        <div className="w-full lg:w-[40%] h-auto flex justify-center items-center ">
-          <img src={invoice} alt="profile" className="w-32 h-32 object-contain" />
-        </div>
-      </div>
-      <div className=" w-full h-auto  flex flex-col  lg:flex-row justify-center items-center p-5 gap-5 ">
-        <div className=" w-full lg:w-[40%] h-auto flex justify-center items-center ">
-          <img src={escaltion} alt="profile" className="w-32 h-32 object-contain" />
-        </div>
-        <div className=" w-full lg:w-[50%] h-auto p-0  md:p-10">
-          <div className="text-[30px] font-sans leading-10 font-bold ">
-            <a href="/mobile" className=" cursor-pointer">
-              Escalation Points
-            </a>
-          </div>
-          <div className="text-[19px] font-sans font-normal mt-4 ">
-            Your Escalation contact would be our CEO, CTO, Engineering Manager.
-            Our leadership makes sure that your team never goes off track and
-            you always get the best return on your investment.
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>
   );
 };
 

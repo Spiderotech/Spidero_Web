@@ -1,303 +1,117 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { particlesCursor } from "https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js";
-import PhoneInput from 'react-phone-input-2'
-import 'react-phone-input-2/lib/style.css'
-import { useFormik } from "formik";
-import * as Yup from "yup";
-import emailjs from "@emailjs/browser";
-import toast, { Toaster } from 'react-hot-toast';
+import {
+  ArrowRightIcon,
+  GlobeAltIcon,
+  RocketLaunchIcon,
+  SparklesIcon,
+  StarIcon,
+  UserGroupIcon,
+} from "@heroicons/react/24/outline";
+
+const stats = [
+  {
+    value: "250+",
+    label: "Projects Completed",
+    icon: StarIcon,
+    color: "text-violet-400",
+  },
+  {
+    value: "150+",
+    label: "Happy Clients",
+    icon: UserGroupIcon,
+    color: "text-pink-400",
+  },
+  {
+    value: "10+",
+    label: "Years Experience",
+    icon: RocketLaunchIcon,
+    color: "text-indigo-400",
+  },
+  {
+    value: "UK Based",
+    label: "Serving Worldwide",
+    icon: GlobeAltIcon,
+    color: "text-pink-400",
+  },
+];
 
 const Herosection = () => {
-  const canvasRef = useRef(null);
   useEffect(() => {
-    console.log("useEffect is running");
-
-    const canvas = document.createElement("canvas");
-    canvas.id = "particlesCanvas";
-    canvasRef.current = canvas;
-
-    document.getElementById("app").appendChild(canvas);
+    const app = document.getElementById("web-design-particles");
+    if (!app) return undefined;
 
     const pc = particlesCursor({
-      el: document.getElementById("app"),
+      el: app,
       gpgpuSize: 512,
-      colors: [0x00ff00, 0x0000ff],
-      color: 0xff0000,
-      coordScale: 0.5,
-      noiseIntensity: 0.001,
-      noiseTimeCoef: 0.0001,
-      pointSize: 5,
-      pointDecay: 0.0025,
-      sleepRadiusX: 250,
-      sleepRadiusY: 250,
+      colors: [0x7c3aed, 0xec4899],
+      color: 0xa855f7,
+      coordScale: 0.62,
+      noiseIntensity: 0.0012,
+      noiseTimeCoef: 0.00015,
+      pointSize: 3.5,
+      pointDecay: 0.002,
+      sleepRadiusX: 260,
+      sleepRadiusY: 220,
       sleepTimeCoefX: 0.001,
       sleepTimeCoefY: 0.002,
     });
 
-    document.body.addEventListener("click", () => {
-      pc.uniforms.uColor.value.set(Math.random() * 0xffffff);
-      pc.uniforms.uCoordScale.value = 0.001 + Math.random() * 2;
-      pc.uniforms.uNoiseIntensity.value = 0.0001 + Math.random() * 0.001;
-      pc.uniforms.uPointSize.value = 1 + Math.random() * 10;
-    });
+    const handleClick = () => {
+      pc.uniforms.uColor.value.set(Math.random() > 0.5 ? 0xec4899 : 0x8b5cf6);
+      pc.uniforms.uCoordScale.value = 0.45 + Math.random() * 0.7;
+      pc.uniforms.uNoiseIntensity.value = 0.0005 + Math.random() * 0.001;
+      pc.uniforms.uPointSize.value = 2.5 + Math.random() * 4;
+    };
+
+    document.body.addEventListener("click", handleClick);
 
     return () => {
-      document.getElementById("app").removeChild(canvasRef.current);
+      document.body.removeEventListener("click", handleClick);
+      app.querySelector("canvas")?.remove();
     };
   }, []);
 
-  const validationSchema = Yup.object().shape({
-    fullName: Yup.string().required("Full Name is required"),
-    email: Yup.string()
-      .email("Invalid email address")
-      .required("Email is required"),
-    countryCode: Yup.string().required("Country Code is required"),
-    phone: Yup.string()
-      .required("Phone is required")
-      .matches(/^\d{10}$/, "Phone number must be 10 digits"),
-    message: Yup.string().required("Message is required"),
-  });
-
-  const formik = useFormik({
-    initialValues: {
-      fullName: "",
-      email: "",
-      countryCode: "" || "+44",
-      phone: "",
-      message: "",
-    },
-    validationSchema,
-    onSubmit: async (values, { resetForm }) => {
-      try {
-        await toast.promise(
-          emailjs.send(
-            "YOUR_SERVICE_ID",      // 🔁 replace
-            "YOUR_TEMPLATE_ID",     // 🔁 replace
-            {
-              fullName: values.fullName,
-              email: values.email,
-              countryCode: values.countryCode,
-              phone: values.phone,
-              message: values.message,
-            },
-            "YOUR_PUBLIC_KEY"       // 🔁 replace
-          ),
-          {
-            loading: "Sending email...",
-            success: "Email sent successfully!",
-            error: "Failed to send email.",
-          }
-        );
-
-        resetForm();
-      } catch (error) {
-        console.error("EmailJS Error:", error);
-        toast.error("Something went wrong. Please try again.");
-      }
-    },
-
-  });
-
   return (
-    <section className="relative h-auto flex flex-col  text-white py-0  bg-white mb-10">
-      <div className="absolute w-full h-full mt-[-190px] " id="app"></div>
-      <div className="flex flex-row w-[90%] h-auto  pt-32 mb-20">
-        <div className="w-full lg:w-[50%]  relative flex justify-center items-center  ">
-          <div className="flex flex-col items-start  ">
-            <span className="text-white  text-start  font-sans font-bold text-3xl md:text-3xl lg:text-[48px] ml-14 h-auto  ">
-              A top-rated web design
-            </span>
-            <span className="text-white  text-start  font-sans font-bold text-3xl md:text-3xl lg:text-[48px] ml-14 h-auto lg:mt-5  ">
-              company in UK
-            </span>
-
-            <div className="ml-14 mt-20 mb-9">
-              <a href="/expertice">
-                <button className=" w-[150px] h-[40px]  lg:w-[198px] lg:h-[51px] font-sans leading-6 tracking-2px text-[16px] font-medium text-black bg-white transition-all ease-in-out hover:bg-black hover:text-white">
-                  EXPLORE US
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="w-[40%] h-auto  hidden lg:block relative bg-black">
-          <div className="p-10 ">
-            <form onSubmit={formik.handleSubmit} className=" mt-5 ">
-              <h3 className=" text-[24px] md:text-[36px] lg:text-[28px] sm:text-[26px] xl:text-[32px] font-bold   font-sans text-white ">
-                Connect With Us
-              </h3>
-              <div className="relative mt-5 pt-6">
-                <label
-                  htmlFor="email"
-                  className="absolute left-0 bottom-9 text-[16px] font-medium text-gray-300 pointer-events-none transition-all "
-                >
-                  Full Name<span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="fullName"
-                  name="fullName"
-                  value={formik.values.fullName}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  className="shadow-none bg-transparent border-b border-gray-300 text-white text-sm  block w-full p-1 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-none"
-                  placeholder=""
-                  onFocus={(e) =>
-                    e.target.previousSibling.classList.add(
-                      "bottom-0",
-                      "text-xs",
-                      "text-gray-500"
-                    )
-                  }
-                />
-                {formik.touched.fullName && formik.errors.fullName && (
-                  <div className="text-red-500  text-xs mt-1">
-                    {formik.errors.fullName}
-                  </div>
-                )}
-              </div>
-
-              <div className="relative pt-6 mt-4">
-                <label
-                  htmlFor="email"
-                  className="absolute left-0 bottom-9 text-[16px] font-medium text-gray-300 pointer-events-none transition-all "
-                >
-                  Email<span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  value={formik.values.email}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  className="shadow-none bg-transparent border-b border-gray-300 text-white text-sm  block w-full p-1 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-none"
-                  placeholder=""
-                  onFocus={(e) =>
-                    e.target.previousSibling.classList.add(
-                      "bottom-0",
-                      "text-xs",
-                      "text-gray-500"
-                    )
-                  }
-                />
-                {formik.touched.email && formik.errors.email && (
-                  <div className="text-red-500  text-xs mt-1">
-                    {formik.errors.email}
-                  </div>
-                )}
-              </div>
-              <div className="relative pt-3 mt-5  ">
-                <label
-                  htmlFor="countryCode"
-                  className="absolute left-0 bottom-9 text-[16px] font-medium text-gray-300 mb-2 "
-                >
-                  Country Code<span className="text-red-500 ">*</span>
-                </label>
-
-                <PhoneInput
-                  id="countryCode"
-                  value={formik.values.countryCode}
-                  onChange={(value) =>
-                    formik.setFieldValue("countryCode", value)
-                  }
-                  onBlur={formik.handleBlur}
-                  international
-                  defaultCountry="GB"
-                  className=" mt-4  text-black bg-black "
-                  inputStyle={{ width: "6rem", pointerEvents: "none", }}
-                />
-                {formik.touched.countryCode && formik.errors.countryCode && (
-                  <div className="text-red-500  text-xs mt-1">
-                    {formik.errors.countryCode}
-                  </div>
-                )}
-              </div>
-
-              <div className="relative pt-6  mt-4">
-                <label
-                  htmlFor="email"
-                  className="absolute left-0 bottom-9 text-[16px] font-medium text-gray-300 pointer-events-none transition-all "
-                >
-                  Phone<span className="text-red-500">*</span>
-                </label>
-                <input
-                  id="phone"
-                  type="tel"
-                  value={formik.values.phone}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  className="shadow-none bg-transparent border-b border-gray-300 text-white text-sm  block w-full p-1 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-none"
-                  onFocus={(e) =>
-                    e.target.previousSibling.classList.add(
-                      "bottom-0",
-                      "text-xs",
-                      "text-gray-500"
-                    )
-                  }
-                />
-                {formik.touched.phone && formik.errors.phone && (
-                  <div className="text-red-500  text-xs mt-1">
-                    {formik.errors.phone}
-                  </div>
-                )}
-              </div>
-
-              <div className="sm:col-span-2 relative mt-12 ">
-                <label
-                  htmlFor="message"
-                  className="absolute left-0 bottom-16 text-[16px] font-medium text-gray-300 pointer-events-none transition-all"
-                >
-                  Type your message here
-                  <span className="text-red-500">*</span>
-                </label>
-                <textarea
-                  id="message"
-                  rows="2"
-                  value={formik.values.message}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  className="shadow-none bg-transparent border-b border-gray-300 text-white text-sm focus:ring-primary-500 focus:border-primary-500 block w-full p-1 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-none"
-                  onFocus={(e) =>
-                    e.target.previousSibling.classList.add(
-                      "bottom-0",
-                      "text-xs",
-                      "text-gray-500"
-                    )
-                  }
-                ></textarea>
-                {formik.touched.message && formik.errors.message && (
-                  <div className="text-red-500  text-xs mt-1">
-                    {formik.errors.message}
-                  </div>
-                )}
-              </div>
-
-              {/* <div className="mt-10">
-                    <button className="border border-white w-[180px] h-[51px] font-sans leading-6 tracking-{2px} text-[16px] font-medium text-white  bg-black ">
-                      UPLOAD FILE
-                      <input
-                      id="fileInput"
-                      type="file"
-                      className="hidden"
-                      multiple
-                      onChange={handleFileChange}
-                    />
-                    </button> 
-                </div> */}
-              <button
-                type="submit"
-                className="border mt-10 mr-20 border-black w-[198px] h-[51px] font-sans leading-6 tracking-{2px} text-[16px] font-medium text-black  bg-white transition-all ease-in-out hover:bg-black hover:text-white hover:border-white"
-              >
-                SUBMIT
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-      <Toaster
-        position="top-center"
-        reverseOrder={false}
+    <section className="relative min-h-[750px] overflow-hidden bg-[#02040a] px-5 pt-32 pb-10 font-sans text-white sm:px-8 lg:px-10 lg:pt-36">
+      <div
+        id="web-design-particles"
+        className="absolute inset-y-0 right-0 z-0 w-full opacity-95 lg:w-[64%]"
       />
+      <div className="pointer-events-none absolute inset-0 z-[1] bg-[radial-gradient(circle_at_80%_34%,rgba(168,85,247,0.18),transparent_32%),linear-gradient(90deg,#02040a_0%,rgba(2,4,10,0.94)_34%,rgba(2,4,10,0.42)_72%,rgba(2,4,10,0.72)_100%)]" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-52 bg-gradient-to-t from-[#02040a] to-transparent" />
+
+      <div className="relative z-10 mx-auto flex min-h-[580px] max-w-[1500px] flex-col justify-between">
+        <div className="max-w-[790px]">
+          <div className="inline-flex items-center gap-3 rounded-full border border-violet-400/35 bg-black/40 px-5 py-2.5 text-sm font-extrabold uppercase tracking-normal text-white shadow-[0_0_34px_rgba(168,85,247,0.2)] backdrop-blur">
+            <SparklesIcon className="h-5 w-5 text-violet-400" />
+            Top Rated In The UK
+          </div>
+
+          <h1 className="mt-9 text-5xl font-extrabold leading-[1.08] tracking-normal text-white sm:text-6xl lg:text-[74px] xl:text-[82px]">
+            A top-rated{" "}
+            <span className="bg-gradient-to-r from-violet-500 to-pink-500 bg-clip-text text-transparent">
+              web design
+            </span>{" "}
+            company in the UK
+          </h1>
+
+          <p className="mt-7 max-w-[620px] text-base font-medium leading-7 tracking-normal text-white/72 sm:text-lg">
+            We create high-performance websites that help brands stand out,
+            engage users, and grow their business.
+          </p>
+
+          <a
+            href="/expertice"
+            className="mt-9 inline-flex h-14 items-center justify-center gap-8 rounded-md bg-white px-8 text-sm font-extrabold uppercase tracking-normal text-[#060817] shadow-[0_18px_45px_rgba(255,255,255,0.12)] transition hover:-translate-y-1 hover:bg-violet-500 hover:text-white"
+          >
+            Explore Us
+            <ArrowRightIcon className="h-5 w-5" />
+          </a>
+        </div>
+
+       
+      </div>
     </section>
   );
 };

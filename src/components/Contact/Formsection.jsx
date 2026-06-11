@@ -1,18 +1,76 @@
-import React, { useEffect } from "react";
-import toast, { Toaster } from 'react-hot-toast';
-
-import web4 from "../../assets/in.svg";
-import web6 from "../../assets/london.jpg";
-import PhoneInput from 'react-phone-input-2'
-import 'react-phone-input-2/lib/style.css'
+import React from "react";
+import toast, { Toaster } from "react-hot-toast";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
-import web5 from "../../assets/about1 (1).jpg";
-import web7 from "../../assets/about1 (2).jpg";
+import indiaFlag from "../../assets/in.svg";
+import ukFlag from "../../assets/london.jpg";
+import akshay from "../../assets/about1 (2).jpg";
+import taha from "../../assets/about1 (1).jpg";
+import {
+  CalendarDaysIcon,
+  ChatBubbleLeftRightIcon,
+  ClockIcon,
+  EnvelopeIcon,
+  LockClosedIcon,
+  PaperAirplaneIcon,
+  PencilSquareIcon,
+  PhoneIcon,
+  ShieldCheckIcon,
+  UserIcon,
+} from "@heroicons/react/24/outline";
+
+const fieldWrap =
+  "flex h-[70px] items-center gap-3 rounded-xl border border-slate-200 bg-white px-5 shadow-[0_10px_30px_rgba(15,23,42,0.04)] transition focus-within:border-blue-400 focus-within:shadow-[0_0_0_4px_rgba(37,99,235,0.08)]";
+const inputClass =
+  "h-full w-full bg-transparent text-[15px] font-semibold tracking-normal text-[#07122f] outline-none placeholder:text-slate-500";
+const errorClass = "mt-1 text-xs font-medium text-red-500";
+
+const testimonials = [
+  {
+    text: "Spidero Technology served as an invaluable collaborator, delivering an exceptional software solution that significantly improved our customer experience.",
+    name: "Akshay",
+    role: "CEO & Founder, Spidero Technology",
+    image: akshay,
+  },
+  {
+    text: "Cooking up innovation at Spidero Technology, we’re dedicated to pushing boundaries and delivering cutting-edge solutions.",
+    name: "Taha Farooqui",
+    role: "Chief Technology Officer, Spidero Technology",
+    image: taha,
+  },
+];
+
+const benefits = [
+  {
+    title: "Quick Response",
+    text: "We typically reply within 24 hours.",
+    icon: ClockIcon,
+    color: "text-blue-600 bg-blue-50",
+  },
+  {
+    title: "Privacy Guaranteed",
+    text: "Your information is secure and never shared.",
+    icon: ShieldCheckIcon,
+    color: "text-emerald-500 bg-emerald-50",
+  },
+  {
+    title: "Expert Support",
+    text: "Talk to experienced professionals.",
+    icon: ChatBubbleLeftRightIcon,
+    color: "text-violet-500 bg-violet-50",
+  },
+  {
+    title: "Flexible Meetings",
+    text: "Schedule a call at your convenience.",
+    icon: CalendarDaysIcon,
+    color: "text-orange-500 bg-orange-50",
+  },
+];
 
 const Formsection = () => {
-
   const validationSchema = Yup.object().shape({
     fullName: Yup.string().required("Full Name is required"),
     email: Yup.string()
@@ -29,7 +87,7 @@ const Formsection = () => {
     initialValues: {
       fullName: "",
       email: "",
-      countryCode: "" || "+44",
+      countryCode: "+44",
       phone: "",
       message: "",
     },
@@ -38,8 +96,8 @@ const Formsection = () => {
       try {
         await toast.promise(
           emailjs.send(
-            "YOUR_SERVICE_ID",      // 🔁 replace
-            "YOUR_TEMPLATE_ID",     // 🔁 replace
+            "YOUR_SERVICE_ID",
+            "YOUR_TEMPLATE_ID",
             {
               fullName: values.fullName,
               email: values.email,
@@ -47,7 +105,7 @@ const Formsection = () => {
               phone: values.phone,
               message: values.message,
             },
-            "YOUR_PUBLIC_KEY"       // 🔁 replace
+            "YOUR_PUBLIC_KEY"
           ),
           {
             loading: "Sending email...",
@@ -62,267 +120,282 @@ const Formsection = () => {
         toast.error("Something went wrong. Please try again.");
       }
     },
-
   });
 
   return (
-    <section className="h-auto flex flex-col  items-center justify-center  text-white py-0 px-3  pt-24">
-      <h2 className="text-black pt-8 text-start leading-10 font-sans font-bold text-xl md:text-3xl lg:text-[48px] ">
-        Awesomeness awaits!
-      </h2>
+    <section className="relative overflow-hidden bg-[#f7faff] px-5 pb-10 pt-28 font-sans sm:px-8 lg:px-12">
+      <div className="pointer-events-none absolute left-6 top-44 hidden h-36 w-16 opacity-60 lg:block">
+        <div className="h-full w-full bg-[radial-gradient(circle,_#dbe5ff_2px,_transparent_2px)] [background-size:18px_18px]" />
+      </div>
+      <div className="pointer-events-none absolute -right-28 top-0 h-96 w-96 rounded-full bg-blue-100/50 blur-3xl" />
 
-      <h2 className="text-black pt-8 text-start leading-10 font-sans font-bold text-[30px]">
-        Connect with our experts.
-      </h2>
-      <div className="flex flex-col lg:flex-row w-full h-auto items-center justify-center mb-10   mt-10">
-        <div className=" w-full lg:w-[50%] h-auto bg-white lg:ml-5 p-5 lg:p-20      ">
-          <form onSubmit={formik.handleSubmit}>
-            <div className="relative">
-              <label
-                htmlFor="email"
-                className="absolute left-0 bottom-10 text-sm font-medium text-black pointer-events-none transition-all "
-              >
-                Full Name<span className="text-red-500  ">*</span>
-              </label>
-              <input
-                type="text"
-                id="fullName"
-                name="fullName"
-                value={formik.values.fullName}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                className="shadow-none bg-transparent border-b border-gray-300 text-black text-sm  block w-full p-2.5 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-none"
-                placeholder=""
-                onFocus={(e) =>
-                  e.target.previousSibling.classList.add(
-                    "bottom-0",
-                    "text-xs",
-                    "text-gray-500"
-                  )
-                }
-              />
-              {formik.touched.fullName && formik.errors.fullName && (
-                <div className="text-red-500  text-xs mt-1  absolute left-2">
-                  {formik.errors.fullName}
-                </div>
-              )}
-            </div>
-
-            <div className="relative pt-6 mt-6">
-              <label
-                htmlFor="email"
-                className="absolute left-0 bottom-10 text-sm font-medium text-black pointer-events-none transition-all "
-              >
-                Email<span className="text-red-500 ">*</span>
-              </label>
-              <input
-                type="email"
-                id="email"
-                value={formik.values.email}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                className="shadow-none bg-transparent border-b border-gray-300 text-black text-sm  block w-full p-2.5 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-none"
-                placeholder=""
-                onFocus={(e) =>
-                  e.target.previousSibling.classList.add(
-                    "bottom-0",
-                    "text-xs",
-                    "text-gray-500"
-                  )
-                }
-              />
-              {formik.touched.email && formik.errors.email && (
-                <div className="text-red-500  text-xs mt-1  absolute left-2">
-                  {formik.errors.email}
-                </div>
-              )}
-            </div>
-            <div className="relative pt-6 mt-6 ">
-              <label
-                htmlFor="countryCode"
-                className=" absolute left-0 bottom-10 text-sm font-medium text-black pointer-events-none transition-all "
-              >
-                Country Code<span className="text-red-500 ">*</span>
-              </label>
-
-              <PhoneInput
-                id="countryCode"
-                value={formik.values.countryCode}
-                onChange={(value) => formik.setFieldValue("countryCode", value)}
-                onBlur={formik.handleBlur}
-                international
-                defaultCountry="GB"
-                className=" mt-4  text-black  "
-                inputStyle={{ width: "6rem", pointerEvents: "none", }}
-              />
-              {formik.touched.countryCode && formik.errors.countryCode && (
-                <div className="text-red-500  text-xs mt-1  absolute left-2">
-                  {formik.errors.countryCode}
-                </div>
-              )}
-            </div>
-
-            <div className="relative pt-6  mt-6">
-              <label
-                htmlFor="email"
-                className="absolute left-0 bottom-10 text-sm font-medium text-black pointer-events-none transition-all "
-              >
-                Phone<span className="text-red-500">*</span>
-              </label>
-              <input
-                id="phone"
-                type="tel"
-                value={formik.values.phone}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                className="shadow-none bg-transparent border-b border-gray-300 text-black text-sm  block w-full p-2.5 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-none"
-                onFocus={(e) =>
-                  e.target.previousSibling.classList.add(
-                    "bottom-0",
-                    "text-xs",
-                    "text-gray-500"
-                  )
-                }
-              />
-              {formik.touched.phone && formik.errors.phone && (
-                <div className="text-red-500  text-xs mt-1  absolute left-2">
-                  {formik.errors.phone}
-                </div>
-              )}
-            </div>
-
-            <div className="sm:col-span-2 relative mt-16">
-              <label
-                htmlFor="message"
-                className="absolute left-0 bottom-20 text-sm font-medium text-black pointer-events-none transition-all"
-              >
-                Type your message here
-                <span className="text-red-500">*</span>
-              </label>
-              <textarea
-                id="message"
-                rows="2"
-                value={formik.values.message}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-                className="shadow-none bg-transparent border-b border-gray-300 text-black text-sm focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-none"
-                onFocus={(e) =>
-                  e.target.previousSibling.classList.add(
-                    "bottom-0",
-                    "text-xs",
-                    "text-gray-500"
-                  )
-                }
-              ></textarea>
-              {formik.touched.message && formik.errors.message && (
-                <div className="text-red-500  text-xs mt-1  absolute left-2">
-                  {formik.errors.message}
-                </div>
-              )}
-            </div>
-
-            {/* <div className="mt-10">
-                    <button className="border border-white w-[180px] h-[51px] font-sans leading-6 tracking-{2px} text-[16px] font-medium text-white  bg-black ">
-                      UPLOAD FILE
-                      <input
-                      id="fileInput"
-                      type="file"
-                      className="hidden"
-                      multiple
-                      onChange={handleFileChange}
-                    />
-                    </button> 
-                </div> */}
-            <button
-              type="submit"
-              className="border  cursor-pointer mt-10 mr-20 border-black w-[198px] h-[51px] font-sans leading-6 tracking-{2px} text-[16px] font-medium text-black  bg-white transition-all ease-in-out hover:bg-black hover:text-white hover:border-white"
-            >
-              SUBMIT
-            </button>
-          </form>
+      <div className="relative mx-auto max-w-7xl">
+        <div className="mx-auto max-w-4xl text-center">
+          <h1 className="text-4xl font-extrabold leading-tight tracking-normal text-[#07122f] sm:text-5xl lg:text-6xl">
+            Awesomeness awaits!
+          </h1>
+          <div className="mt-6 flex items-center justify-center gap-2">
+            <span className="h-1.5 w-20 rounded-full bg-blue-600" />
+            <span className="h-1.5 w-2 rounded-full bg-blue-600" />
+          </div>
+          <p className="mt-6 text-lg font-medium leading-8 tracking-normal text-slate-600 sm:text-xl">
+            Connect with our experts and let&apos;s build something extraordinary together.
+          </p>
         </div>
-        <div className="w-full lg:w-[50%] h-auto  flex flex-col   ">
-          <div className="w-full h-56 ml-0 p-5    lg:ml-10  ">
-            <h2 className="text-black text-start leading-10 font-sans font-bold text-[21px] ">
-              Get In Touch With Us:
-            </h2>
-            <div className="row mt-2 flex items-center">
-              <div className="column mt-2">
-                <img src={web6} alt="profile" className="w-6 h-4 " />
-              </div>
-              <div className="column ml-4 mt-2">
-                <h2 className="text-black text-start leading-7 font-sans font-semibold text-[16px] ">
-                  +44 7368937674
+
+        <div className="mt-9 grid gap-7 lg:grid-cols-[1.08fr_0.92fr]">
+          <div className="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-[0_24px_80px_rgba(15,23,42,0.08)] sm:p-8">
+            <div className="mb-7 flex items-center gap-5">
+              <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white shadow-[0_18px_38px_rgba(37,99,235,0.28)]">
+                <PaperAirplaneIcon className="h-10 w-10" />
+              </span>
+              <div>
+                <h2 className="text-2xl font-extrabold tracking-normal text-[#07122f]">
+                  Let&apos;s Start a Conversation
                 </h2>
+                <p className="mt-2 text-base font-medium tracking-normal text-slate-600">
+                  Share your ideas, and we&apos;ll get back to you within 24 hours.
+                </p>
               </div>
             </div>
-            <div className="row mt-2 flex items-center">
-              <div className="column mt-3">
-                <img src={web4} alt="profile" className="w-6 h-6" />
+
+            <form onSubmit={formik.handleSubmit} className="space-y-5">
+              <div className="grid gap-5 md:grid-cols-2">
+                <div>
+                  <label htmlFor="fullName" className="sr-only">
+                    Full Name
+                  </label>
+                  <div className={fieldWrap}>
+                    <input
+                      type="text"
+                      id="fullName"
+                      name="fullName"
+                      value={formik.values.fullName}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      className={inputClass}
+                      placeholder="Full Name *"
+                    />
+                    <UserIcon className="h-6 w-6 shrink-0 text-slate-400" />
+                  </div>
+                  {formik.touched.fullName && formik.errors.fullName && (
+                    <div className={errorClass}>{formik.errors.fullName}</div>
+                  )}
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="sr-only">
+                    Email Address
+                  </label>
+                  <div className={fieldWrap}>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formik.values.email}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      className={inputClass}
+                      placeholder="Email Address *"
+                    />
+                    <EnvelopeIcon className="h-6 w-6 shrink-0 text-slate-400" />
+                  </div>
+                  {formik.touched.email && formik.errors.email && (
+                    <div className={errorClass}>{formik.errors.email}</div>
+                  )}
+                </div>
               </div>
-              <div className="column  ml-4 mt-3">
-                <h2 className="text-black text-start leading-7  font-sans font-semibold text-[16px] ">
-                  +91 8089650271
-                </h2>
+
+              <div className="grid gap-5 md:grid-cols-[0.95fr_1.45fr]">
+                <div>
+                  <div className="rounded-xl border border-slate-200 bg-white px-5 py-4 shadow-[0_10px_30px_rgba(15,23,42,0.04)] transition focus-within:border-blue-400 focus-within:shadow-[0_0_0_4px_rgba(37,99,235,0.08)]">
+                    <span className="block text-[15px] font-semibold tracking-normal text-slate-500">
+                      Country Code <span className="text-red-500">*</span>
+                    </span>
+                    <PhoneInput
+                      id="countryCode"
+                      country="gb"
+                      value={formik.values.countryCode}
+                      onChange={(value) =>
+                        formik.setFieldValue("countryCode", value)
+                      }
+                      onBlur={() => formik.setFieldTouched("countryCode", true)}
+                      inputStyle={{
+                        width: "100%",
+                        height: "28px",
+                        border: "0",
+                        paddingLeft: "48px",
+                        fontSize: "15px",
+                        fontWeight: "700",
+                        color: "#07122f",
+                        background: "transparent",
+                        boxShadow: "none",
+                      }}
+                      buttonStyle={{
+                        border: "0",
+                        background: "transparent",
+                      }}
+                      containerStyle={{ width: "100%", marginTop: "8px" }}
+                      dropdownStyle={{ zIndex: 30 }}
+                    />
+                  </div>
+                  {formik.touched.countryCode && formik.errors.countryCode && (
+                    <div className={errorClass}>{formik.errors.countryCode}</div>
+                  )}
+                </div>
+
+                <div>
+                  <label htmlFor="phone" className="sr-only">
+                    Phone Number
+                  </label>
+                  <div className={fieldWrap}>
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      value={formik.values.phone}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      className={inputClass}
+                      placeholder="Phone Number *"
+                    />
+                    <PhoneIcon className="h-6 w-6 shrink-0 text-slate-400" />
+                  </div>
+                  {formik.touched.phone && formik.errors.phone && (
+                    <div className={errorClass}>{formik.errors.phone}</div>
+                  )}
+                </div>
               </div>
-            </div>
-            <a href="mailto: contact@spiderotechnology.com">
-              <h2 className="text-black  cursor-pointer text-start leading-7 mt-3 font-sans  font-semibold text-[18px] ">
-                contact@spiderotechnology.com
-              </h2>
-            </a>
+
+              <div>
+                <label htmlFor="message" className="sr-only">
+                  Type your message here
+                </label>
+                <div className="flex min-h-[170px] items-start gap-3 rounded-xl border border-slate-200 bg-white px-5 py-5 shadow-[0_10px_30px_rgba(15,23,42,0.04)] transition focus-within:border-blue-400 focus-within:shadow-[0_0_0_4px_rgba(37,99,235,0.08)]">
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    value={formik.values.message}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    className="min-h-[130px] w-full resize-y bg-transparent text-[15px] font-semibold tracking-normal text-[#07122f] outline-none placeholder:text-slate-500"
+                    placeholder="Type your message here *"
+                  />
+                  <PencilSquareIcon className="mt-auto h-6 w-6 shrink-0 text-slate-400" />
+                </div>
+                {formik.touched.message && formik.errors.message && (
+                  <div className={errorClass}>{formik.errors.message}</div>
+                )}
+              </div>
+
+              <div className="flex flex-col gap-5 pt-2 sm:flex-row sm:items-center">
+                <button
+                  type="submit"
+                  className="inline-flex h-16 items-center justify-center gap-3 rounded-lg bg-blue-600 px-9 text-base font-bold text-white shadow-[0_18px_38px_rgba(37,99,235,0.26)] transition hover:bg-blue-700"
+                >
+                  <PaperAirplaneIcon className="h-6 w-6" />
+                  Send Message
+                </button>
+                <div className="flex items-center gap-3 text-sm font-semibold tracking-normal text-slate-500">
+                  <LockClosedIcon className="h-5 w-5 text-slate-400" />
+                  We respect your privacy. Your information is safe with us.
+                </div>
+              </div>
+            </form>
           </div>
 
-          <div className="w-full h-auto">
-            <div className="w-full lg:w-[70%] h-auto flex flex-col justify-center ml-0 lg:ml-[5%]  border p-19 pb-5 ">
-              <span className="text-black m text-[16px] sm:text-[18px] md:text-[21px] lg:text-[21px] font-sans text-start font-normal p-5">
-                Spidero Technology served as an invaluable collaborator, delivering an exceptional software solution that significantly improved our customer experience
-              </span>
-              <div className="flex flex-row ml-5  ">
-                <img
-                  src={web7}
-                  alt="profile"
-                  className="w-[20px] h-[20px] sm:w-[20px] sm:h-[20px] lg:w-[50px] lg:h-[50px] rounded-full object-cover "
-                />
-                <div className="flex flex-col ml-5">
-                  <strong className="text-black text-sm sm:text-base md:text-lg lg:text-xl">
-                    Akshay
-                  </strong>
-                  <span className="text-black text-sm ">
-                    CEO & Founder,Spidero Technology
+          <div className="space-y-5">
+            <div className="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-[0_24px_80px_rgba(15,23,42,0.08)] sm:p-8">
+              <h2 className="text-2xl font-extrabold tracking-normal text-[#07122f]">
+                Get In Touch With Us
+              </h2>
+              <div className="mt-5 space-y-4">
+                <a href="tel:+447368937674" className="flex items-center gap-4">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-50 text-blue-600">
+                    <PhoneIcon className="h-6 w-6" />
                   </span>
-                </div>
+                  <img src={ukFlag} alt="United Kingdom" className="h-6 w-9 rounded-sm object-cover" />
+                  <span className="text-base font-extrabold tracking-normal text-[#07122f]">
+                    +44 7368937674
+                  </span>
+                </a>
+                <a href="tel:+918089650271" className="flex items-center gap-4">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-50 text-emerald-600">
+                    <PhoneIcon className="h-6 w-6" />
+                  </span>
+                  <img src={indiaFlag} alt="India" className="h-6 w-9 rounded-sm object-cover" />
+                  <span className="text-base font-extrabold tracking-normal text-[#07122f]">
+                    +91 8089650271
+                  </span>
+                </a>
+                <a href="mailto:contact@spiderotechnology.com" className="flex items-center gap-4">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-lg bg-violet-50 text-violet-600">
+                    <EnvelopeIcon className="h-6 w-6" />
+                  </span>
+                  <span className="text-base font-extrabold tracking-normal text-[#07122f]">
+                    contact@spiderotechnology.com
+                  </span>
+                </a>
               </div>
             </div>
-          </div>
-          <div className="w-full h-auto mt-5  ">
-            <div className="w-full  lg:w-[70%] h-auto flex flex-col justify-center ml-0 lg:ml-[5%] border p-19 pb-5 ">
-              <span className="text-black  text-[16px] sm:text-[18px] md:text-[21px] lg:text-[21px] font-sans text-start font-normal p-5">
-                Cooking up innovation at  Spidero Technology , we're dedicated to pushing boundaries and delivering cutting-edge solutions
-              </span>
-              <div className="flex flex-row ml-5  ">
-                <img
-                  src={web5}
-                  alt="profile"
-                  className="w-[20px] h-[20px] sm:w-[20px] sm:h-[20px] lg:w-[50px] lg:h-[50px] rounded-full object-cover "
-                />
-                <div className="flex flex-col ml-5">
-                  <strong className="text-black text-sm sm:text-base md:text-lg lg:text-xl">
-                    Taha Farooqui
-                  </strong>
-                  <span className="text-black text-sm ">
-                    Chief Technology Officer,Spidero Technology
+
+            {testimonials.map((item) => (
+              <article
+                key={item.name}
+                className="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-[0_18px_55px_rgba(15,23,42,0.06)]"
+              >
+                <div className="flex gap-5">
+                  <span className="font-serif text-6xl font-bold leading-none text-blue-600">
+                    “
                   </span>
+                  <div>
+                    <p className="text-base font-semibold leading-7 tracking-normal text-[#07122f]">
+                      {item.text}
+                    </p>
+                    <div className="mt-5 flex items-center gap-4">
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="h-12 w-12 rounded-full object-cover"
+                      />
+                      <div>
+                        <h3 className="text-lg font-extrabold tracking-normal text-[#07122f]">
+                          {item.name}
+                        </h3>
+                        <p className="text-sm font-medium tracking-normal text-slate-600">
+                          {item.role}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-7 grid gap-5 rounded-2xl border border-slate-200/80 bg-white p-5 shadow-[0_18px_55px_rgba(15,23,42,0.06)] sm:grid-cols-2 lg:grid-cols-4">
+          {benefits.map(({ title, text, icon: Icon, color }, index) => (
+            <div
+              key={title}
+              className={`flex items-center gap-5 px-4 py-3 ${index > 0 ? "lg:border-l lg:border-slate-200" : ""}`}
+            >
+              <span className={`flex h-16 w-16 shrink-0 items-center justify-center rounded-full ${color}`}>
+                <Icon className="h-8 w-8" />
+              </span>
+              <div>
+                <h3 className="font-extrabold tracking-normal text-[#07122f]">{title}</h3>
+                <p className="mt-1 text-sm font-medium leading-6 tracking-normal text-slate-600">
+                  {text}
+                </p>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
-      <Toaster
-        position="top-center"
-        reverseOrder={false}
-      />
+
+      <Toaster position="top-center" reverseOrder={false} />
     </section>
   );
 };
