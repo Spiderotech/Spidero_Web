@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Tilt } from "react-tilt";
 import {
   ArrowRightIcon,
   CursorArrowRaysIcon,
@@ -21,10 +20,10 @@ const principles = [
     action: "APPLY HICK'S LAW",
     icon: CursorArrowRippleIcon,
     theme: {
-      icon: "bg-violet-100 text-violet-600",
-      number: "bg-violet-50 text-violet-600",
-      border: "border-b-violet-600",
-      text: "text-violet-600",
+      icon: "bg-blue-50 text-blue-800",
+      number: "bg-blue-50 text-blue-800",
+      border: "border-b-blue-800",
+      text: "text-blue-800",
     },
   },
   {
@@ -34,10 +33,10 @@ const principles = [
     action: "USE NEGATIVE SPACE",
     icon: Squares2X2Icon,
     theme: {
-      icon: "bg-blue-100 text-blue-600",
-      number: "bg-blue-50 text-blue-600",
-      border: "border-b-blue-600",
-      text: "text-blue-600",
+      icon: "bg-blue-50 text-blue-800",
+      number: "bg-blue-50 text-blue-800",
+      border: "border-b-blue-800",
+      text: "text-blue-800",
     },
   },
   {
@@ -47,10 +46,10 @@ const principles = [
     action: "RULE OF THIRDS",
     icon: CursorArrowRaysIcon,
     theme: {
-      icon: "bg-emerald-100 text-emerald-600",
-      number: "bg-emerald-50 text-emerald-600",
-      border: "border-b-emerald-600",
-      text: "text-emerald-600",
+      icon: "bg-blue-50 text-blue-800",
+      number: "bg-blue-50 text-blue-800",
+      border: "border-b-blue-800",
+      text: "text-blue-800",
     },
   },
   {
@@ -60,10 +59,10 @@ const principles = [
     action: "BUILD HIERARCHY",
     icon: PaintBrushIcon,
     theme: {
-      icon: "bg-orange-100 text-orange-500",
-      number: "bg-orange-50 text-orange-500",
-      border: "border-b-orange-500",
-      text: "text-orange-500",
+      icon: "bg-blue-50 text-blue-800",
+      number: "bg-blue-50 text-blue-800",
+      border: "border-b-blue-800",
+      text: "text-blue-800",
     },
   },
   {
@@ -73,10 +72,10 @@ const principles = [
     action: "ESTABLISH RECOGNITION",
     icon: UserIcon,
     theme: {
-      icon: "bg-pink-100 text-pink-500",
-      number: "bg-pink-50 text-pink-500",
-      border: "border-b-pink-500",
-      text: "text-pink-500",
+      icon: "bg-blue-50 text-blue-800",
+      number: "bg-blue-50 text-blue-800",
+      border: "border-b-blue-800",
+      text: "text-blue-800",
     },
   },
   {
@@ -86,19 +85,13 @@ const principles = [
     action: "SET THE TONE",
     icon: LinkIcon,
     theme: {
-      icon: "bg-violet-100 text-violet-600",
-      number: "bg-violet-50 text-violet-600",
-      border: "border-b-violet-500",
-      text: "text-violet-600",
+      icon: "bg-blue-50 text-blue-800",
+      number: "bg-blue-50 text-blue-800",
+      border: "border-b-blue-800",
+      text: "text-blue-800",
     },
   },
 ];
-
-const tiltOptions = {
-  max: 8,
-  scale: 1.01,
-  speed: 450,
-};
 
 const Designprinciple = () => {
   useEffect(() => {
@@ -111,24 +104,24 @@ const Designprinciple = () => {
 
   return (
     <section className="relative overflow-hidden bg-[#fbfcff] px-5 py-12 font-sans sm:px-8 lg:px-10 lg:py-14">
-      <div className="pointer-events-none absolute -left-20 -top-20 h-64 w-64 rounded-full bg-indigo-50" />
+      <div className="pointer-events-none absolute -left-20 -top-20 h-64 w-64 rounded-full bg-blue-50" />
       <div className="pointer-events-none absolute right-12 top-20 hidden h-28 w-28 bg-[radial-gradient(circle,#c7d2fe_2px,transparent_2px)] [background-size:18px_18px] opacity-80 lg:block" />
-      <div className="pointer-events-none absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-indigo-50" />
+      <div className="pointer-events-none absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-blue-50" />
 
       <div className="relative mx-auto max-w-[1180px]">
         <div className="text-center">
-          <div className="inline-flex items-center rounded-md bg-violet-50 px-5 py-2 text-sm font-extrabold uppercase tracking-[0.18em] text-violet-600">
+          <div className="inline-flex items-center rounded-md bg-blue-50 px-5 py-2 text-sm font-extrabold uppercase tracking-[0.18em] text-blue-800">
             Our Design Philosophy
           </div>
 
           <h2 className="mx-auto mt-5 max-w-[980px] text-4xl font-extrabold leading-tight tracking-normal text-[#07122f] sm:text-5xl lg:text-[58px]">
             6 design principles{" "}
-            <span className="text-violet-600">we follow</span>
+            <span className="text-blue-800">we follow</span>
           </h2>
 
           <div className="mt-5 flex items-center justify-center gap-3">
-            <span className="h-1 w-20 rounded-full bg-violet-600" />
-            <span className="h-1 w-2 rounded-full bg-violet-600" />
+            <span className="h-1 w-20 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
+            <span className="h-1 w-2 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
           </div>
 
           <p className="mx-auto mt-7 max-w-4xl text-base font-medium leading-7 tracking-normal text-slate-600">
@@ -141,9 +134,9 @@ const Designprinciple = () => {
 
         <div className="mt-10 grid auto-rows-fr gap-6 md:grid-cols-2 xl:grid-cols-3">
           {principles.map(({ number, title, text, action, icon: Icon, theme }, index) => (
-            <Tilt key={number} options={tiltOptions}>
+            <div key={number}>
               <article
-                className={`relative flex h-full min-h-[390px] flex-col overflow-hidden rounded-xl border border-slate-200 ${theme.border} border-b-4 bg-white p-7 shadow-[0_18px_55px_rgba(15,23,42,0.08)] transition hover:shadow-[0_24px_75px_rgba(15,23,42,0.12)]`}
+                className={`relative flex h-full min-h-[auto] flex-col overflow-hidden rounded-xl border border-slate-200 ${theme.border} border-b-4 bg-white p-5 shadow-[0_16px_45px_rgba(15,23,42,0.07)] sm:min-h-[390px] sm:p-7`}
                 data-aos="zoom-out-down"
                 data-aos-duration="1000"
                 data-aos-delay={index * 90}
@@ -179,7 +172,7 @@ const Designprinciple = () => {
                   </a>
                 </div>
               </article>
-            </Tilt>
+            </div>
           ))}
         </div>
 

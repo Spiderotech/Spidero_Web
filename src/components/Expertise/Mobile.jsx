@@ -4,7 +4,7 @@ import {
   DevicePhoneMobileIcon,
   RocketLaunchIcon,
 } from "@heroicons/react/24/outline";
-import img from "../../assets/expertise/mobile.jpg";
+import img from "../../assets/expertise/mobile.webp";
 import ExpertiseServiceSection from "./ExpertiseServiceSection";
 
 const Mobile = () => {

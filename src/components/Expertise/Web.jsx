@@ -5,7 +5,7 @@ import {
   GlobeAltIcon,
   PaintBrushIcon,
 } from "@heroicons/react/24/outline";
-import img from "../../assets/expertise/web.jpg";
+import img from "../../assets/expertise/web.webp";
 import ExpertiseServiceSection from "./ExpertiseServiceSection";
 
 const Web = () => {
@@ -17,7 +17,7 @@ const Web = () => {
         title: (
           <>
             Startup or a Fortune 500 company,{" "}
-            <span className="text-blue-600">Spidero Technology</span> will act
+            <span className="text-blue-800">Spidero Technology</span> will act
             as your consultant and development partners to transform your idea
             into success.
           </>

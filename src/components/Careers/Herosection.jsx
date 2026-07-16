@@ -10,18 +10,18 @@ const Herosection = () => {
     <section className="bg-white px-5 pt-28 font-sans sm:px-8 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-4xl">
-          <p className="text-sm font-extrabold uppercase tracking-[0.08em] text-blue-600">
+          <p className="text-sm font-extrabold uppercase tracking-[0.08em] text-blue-800">
             Careers
           </p>
-          <div className="mt-4 h-1.5 w-12 rounded-full bg-blue-600" />
+          <div className="mt-4 h-1.5 w-12 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
 
-          <h1 className="mt-8 max-w-5xl text-4xl font-extrabold leading-tight tracking-normal text-black sm:text-5xl lg:text-6xl">
+          <h1 className="mt-8 max-w-5xl text-4xl font-extrabold leading-tight tracking-normal text-[#07122f] sm:text-5xl lg:text-6xl">
             We’re looking for brilliant minds to join our top-notch team and
             make it even better.{" "}
-            <span className="text-blue-600">Are you ready?</span>
+            <span className="text-blue-800">Are you ready?</span>
           </h1>
 
-          <p className="mt-6 max-w-3xl text-lg font-medium leading-8 tracking-normal text-slate-700 sm:text-xl">
+          <p className="mt-6 max-w-3xl text-lg font-medium leading-8 tracking-normal text-slate-600 sm:text-xl">
             We love curious problem solvers, creative thinkers, and passionate
             builders who want to create impact. Let’s build the future together.
           </p>
@@ -38,18 +38,18 @@ const Herosection = () => {
           <div className="absolute left-6 top-1/2 w-[calc(100%-3rem)] -translate-y-1/2 sm:left-10 sm:w-[430px] lg:left-20">
             <div className="rounded-2xl bg-white p-8 shadow-[0_24px_70px_rgba(0,0,0,0.22)] sm:p-10">
               <div className="flex items-center gap-5">
-                <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600">
+                <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-800">
                   <BriefcaseIcon className="h-9 w-9" />
                 </span>
                 <div>
                   <h2 className="text-xl font-extrabold tracking-normal text-[#07122f]">
                     Explore Opportunities
                   </h2>
-                  <div className="mt-4 h-1 w-10 rounded-full bg-blue-600" />
+                  <div className="mt-4 h-1 w-10 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
                 </div>
               </div>
 
-              <p className="mt-8 text-lg font-medium leading-8 tracking-normal text-[#07122f]">
+              <p className="mt-8 text-lg font-medium leading-8 tracking-normal text-slate-700">
                 If you love everything web & mobile, you have landed on the
                 right page. Pick what describes you the best and we will walk
                 the talk.
@@ -57,7 +57,7 @@ const Herosection = () => {
 
               <a
                 href="#open-positions"
-                className="mt-10 inline-flex h-14 items-center justify-center gap-3 rounded-lg bg-blue-600 px-8 text-base font-bold text-white shadow-[0_16px_34px_rgba(37,99,235,0.26)] transition hover:bg-blue-700"
+                className="mt-10 inline-flex h-14 items-center justify-center gap-3 rounded-lg bg-gradient-to-br from-blue-800 to-blue-800 px-8 text-base font-bold text-white shadow-[0_16px_34px_rgba(37,99,235,0.26)] transition hover:translate-y-[-2px]"
               >
                 View Open Positions
                 <ArrowRightIcon className="h-5 w-5" />

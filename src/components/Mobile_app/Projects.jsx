@@ -26,7 +26,7 @@ const projectData = [
     companyName: "MDX University",
     description:
       "We meticulously designed and engineered a user-centric food ordering app,This application simplifies meal ordering for users, offering a seamless integration of technology and convenience. ",
-    accent: "rose",
+    accent: "blue",
     icon: TruckIcon,
   },
   {
@@ -36,7 +36,7 @@ const projectData = [
     companyName: "Spidero technology",
     description:
       "Our team crafted a cutting-edge AI-driven video streaming application, focusing on delivering an unparalleled user experience.",
-    accent: "violet",
+    accent: "blue",
     icon: ChartBarIcon,
   },
   {
@@ -46,7 +46,7 @@ const projectData = [
     companyName: "Fizzbell",
     description:
       "Fizzbell helps users take control of monthly finances with clear expense tracking, payment reminders, income insights, and a smooth mobile dashboard.",
-    accent: "emerald",
+    accent: "blue",
     icon: BanknotesIcon,
   },
   {
@@ -56,7 +56,7 @@ const projectData = [
     companyName: "DoraDrink",
     description:
       "DoraDrink builds healthier hydration routines with smart water goals, reminders, rewards, progress tracking, and an engaging daily-use experience.",
-    accent: "cyan",
+    accent: "blue",
     icon: BellAlertIcon,
   },
   {
@@ -66,51 +66,19 @@ const projectData = [
     companyName: "Struwaa",
     description:
       "Struwaa connects users with service providers through a clean mobile marketplace experience, category discovery, user profiles, and simple service access.",
-    accent: "teal",
+    accent: "blue",
     icon: BriefcaseIcon,
   },
 ];
 
 const accents = {
-  rose: {
-    text: "text-rose-500",
-    bg: "bg-rose-50",
-    iconBg: "bg-rose-100",
+  blue: {
+    text: "text-blue-800",
+    bg: "bg-blue-50",
+    iconBg: "bg-blue-50 shadow-[inset_0_1px_0_rgba(255,255,255,0.85)]",
     button:
-      "border-rose-400 text-rose-500 hover:bg-rose-500 hover:text-white",
-    line: "bg-rose-500",
-  },
-  violet: {
-    text: "text-violet-500",
-    bg: "bg-violet-50",
-    iconBg: "bg-violet-100",
-    button:
-      "border-violet-400 text-violet-500 hover:bg-violet-500 hover:text-white",
-    line: "bg-violet-500",
-  },
-  emerald: {
-    text: "text-emerald-600",
-    bg: "bg-emerald-50",
-    iconBg: "bg-emerald-100",
-    button:
-      "border-emerald-500 text-emerald-600 hover:bg-emerald-600 hover:text-white",
-    line: "bg-emerald-600",
-  },
-  cyan: {
-    text: "text-cyan-500",
-    bg: "bg-cyan-50",
-    iconBg: "bg-cyan-100",
-    button:
-      "border-cyan-500 text-cyan-600 hover:bg-cyan-500 hover:text-white",
-    line: "bg-cyan-500",
-  },
-  teal: {
-    text: "text-teal-600",
-    bg: "bg-teal-50",
-    iconBg: "bg-teal-100",
-    button:
-      "border-teal-500 text-teal-600 hover:bg-teal-600 hover:text-white",
-    line: "bg-teal-600",
+      "border-blue-800 text-blue-800 hover:bg-blue-800 hover:text-white",
+    line: "bg-gradient-to-br from-blue-800 to-blue-800",
   },
 };
 
@@ -211,15 +179,15 @@ const Projects = () => {
     <section className="relative scroll-mt-28 overflow-hidden bg-white px-5 py-14 font-sans sm:px-8 lg:px-10">
       <div className="mx-auto max-w-[1250px]">
         <div className="text-center">
-          <div className="inline-flex items-center gap-5 text-sm font-extrabold uppercase tracking-[0.08em] text-rose-500">
-            <span className="h-px w-6 bg-rose-400" />
+          <div className="inline-flex items-center gap-5 text-sm font-extrabold uppercase tracking-[0.08em] text-blue-800">
+            <span className="h-px w-6 bg-blue-800" />
             Our Mobile App Projects
-            <span className="h-px w-6 bg-rose-400" />
+            <span className="h-px w-6 bg-blue-800" />
           </div>
 
           <h2 className="mt-5 text-4xl font-extrabold leading-tight tracking-normal text-[#07122f] sm:text-5xl lg:text-[58px]">
             Innovative Apps.{" "}
-            <span className="text-rose-500">Real Impact.</span>
+            <span className="text-blue-800">Real Impact.</span>
           </h2>
 
           <p className="mx-auto mt-5 max-w-3xl text-base font-semibold leading-7 tracking-normal text-slate-500 sm:text-lg">

@@ -72,16 +72,16 @@ const DotGrid = ({ className = "" }) => (
 
 const Developmemt_service = () => {
   return (
-    <section className="relative overflow-hidden bg-[#f8fbff] px-6 py-16 font-sans md:py-20 lg:px-10">
+    <section className="relative overflow-hidden bg-[#f8fbff] px-5 py-12 font-sans sm:px-6 md:py-16 lg:px-10 lg:py-20">
       <DotGrid className="left-10 top-24 hidden lg:grid" />
       <DotGrid className="right-14 top-24 hidden lg:grid" />
 
       <div className="relative z-10 mx-auto max-w-[1500px]">
         <div className="mx-auto max-w-[1050px] text-center">
-          <h2 className="text-[32px] font-bold leading-tight text-[#071734] sm:text-[42px] lg:text-[46px]">
+          <h2 className="text-[28px] font-bold leading-tight text-[#071734] sm:text-[42px] lg:text-[46px]">
             End-To-End Custom Software Development Services
           </h2>
-          <p className="mt-6 text-base leading-8 text-[#59657d] sm:text-lg">
+          <p className="mt-5 text-[15px] leading-7 text-[#59657d] sm:mt-6 sm:text-lg sm:leading-8">
             Explore Spidero Technology&apos;s robust, secure, and scalable
             software development solutions, crafted to amplify business value.
             From collaborative ideation and strategic product planning to
@@ -93,11 +93,11 @@ const Developmemt_service = () => {
           </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid grid-cols-1 gap-4 sm:mt-10 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => (
             <article
               key={service.title}
-              className="min-h-[300px] rounded-xl border border-[#e8edf6] bg-white p-6 text-left tracking-normal shadow-[0_18px_45px_rgba(14,32,64,0.06)] transition hover:-translate-y-1 hover:shadow-[0_24px_55px_rgba(14,32,64,0.1)]"
+              className="min-h-[auto] rounded-xl border border-[#e8edf6] bg-white p-5 text-left tracking-normal shadow-[0_12px_30px_rgba(14,32,64,0.055)] sm:min-h-[300px] sm:p-6"
               data-aos="fade-up"
               data-aos-duration="1000"
             >
@@ -111,7 +111,7 @@ const Developmemt_service = () => {
               <h3 className="mt-6 text-[19px] font-bold leading-snug tracking-normal text-[#071734]">
                 {service.title}
               </h3>
-              <span className="mt-4 block h-[2px] w-9 rounded-full bg-[#1f70ff]" />
+              <span className="mt-4 block h-[2px] w-9 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
               <p className="mt-5 text-[14px] leading-7 tracking-normal text-[#202b44]">
                 {service.description}
               </p>

@@ -7,16 +7,16 @@ import {
   DevicePhoneMobileIcon,
   GlobeAltIcon,
 } from "@heroicons/react/24/outline";
-import web1 from "../../assets/techlogo/angular.png";
-import web2 from "../../assets/techlogo/node-js.png";
-import web3 from "../../assets/techlogo/java.png";
-import web4 from "../../assets/techlogo/php.png";
-import web5 from "../../assets/techlogo/python.png";
-import web6 from "../../assets/techlogo/react.png";
-import web7 from "../../assets/techlogo/vuejs.png";
-import web8 from "../../assets/techlogo/laravel.png";
-import web9 from "../../assets/techlogo/microsoft-dotnet.png";
-import web10 from "../../assets/techlogo/ember.png";
+import web1 from "../../assets/techlogo/angular.webp";
+import web2 from "../../assets/techlogo/node-js.webp";
+import web3 from "../../assets/techlogo/java.webp";
+import web4 from "../../assets/techlogo/php.webp";
+import web5 from "../../assets/techlogo/python.webp";
+import web6 from "../../assets/techlogo/react.webp";
+import web7 from "../../assets/techlogo/vuejs.webp";
+import web8 from "../../assets/techlogo/laravel.webp";
+import web9 from "../../assets/techlogo/microsoft-dotnet.webp";
+import web10 from "../../assets/techlogo/ember.webp";
 import mobile3 from "../../assets/mobile/app-icon-02.webp";
 import mobile4 from "../../assets/mobile/cordova-icon.webp";
 import mobile5 from "../../assets/mobile/flutter.png";
@@ -24,19 +24,19 @@ import mobile6 from "../../assets/mobile/kotlin (1).png";
 import mobile7 from "../../assets/mobile/swift.png";
 import mobile8 from "../../assets/mobile/xamarin.png";
 import mobile9 from "../../assets/mobile/ionic.png";
-import db1 from "../../assets/DB/mongodb.png";
-import db2 from "../../assets/DB/mysql.png";
-import db3 from "../../assets/DB/oracle.png";
+import db1 from "../../assets/DB/mongodb.webp";
+import db2 from "../../assets/DB/mysql.webp";
+import db3 from "../../assets/DB/oracle.webp";
 import db4 from "../../assets/DB/psql-icon.webp";
-import db5 from "../../assets/DB/redis.png";
-import db6 from "../../assets/DB/sql.png";
+import db5 from "../../assets/DB/redis.webp";
+import db6 from "../../assets/DB/sql.webp";
 import open1 from "../../assets/Open/drupal.png";
 import open2 from "../../assets/Open/magento.png";
 import open3 from "../../assets/Open/woocommerce.png";
 import open4 from "../../assets/Open/wordpress.png";
 import open5 from "../../assets/Open/shopify.png";
-import cloud1 from "../../assets/Cloud/aws.png";
-import cloud2 from "../../assets/Cloud/google-cloud.png";
+import cloud1 from "../../assets/Cloud/aws.webp";
+import cloud2 from "../../assets/Cloud/google-cloud.webp";
 import pay1 from "../../assets/payment/apple-pay.png";
 import pay2 from "../../assets/payment/google-pay.png";
 import pay3 from "../../assets/payment/mastercard.png";
@@ -132,7 +132,7 @@ const Technologystack = () => {
     <section className="bg-white px-6 py-16 font-sans text-[#071734] md:py-20 lg:px-10">
       <div className="mx-auto max-w-[1500px]">
         <div className="mx-auto max-w-[900px] text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.28em] text-[#5b73ff]">
+          <p className="text-sm font-bold uppercase tracking-[0.28em] text-blue-800">
             • • Technology Stack • •
           </p>
           <h2 className="mt-3 text-[34px] font-bold leading-tight sm:text-[46px] lg:text-[52px]">
@@ -153,7 +153,7 @@ const Technologystack = () => {
             >
               <div className="flex items-center gap-5 border-b border-[#e6ecf8] p-5 lg:border-b-0 lg:border-r lg:border-dashed lg:border-[#9eb5ff]">
                 <div className="flex h-[68px] w-[68px] shrink-0 items-center justify-center rounded-full bg-[#eef3ff] shadow-[0_12px_28px_rgba(66,103,255,0.14)]">
-                  <Icon className="h-9 w-9 text-[#4f69f6]" />
+                  <Icon className="h-9 w-9 text-blue-800" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold leading-tight">{title}</h3>

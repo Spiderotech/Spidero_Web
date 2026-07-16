@@ -22,7 +22,7 @@ const cards = [
   {
     title: "Weekly Review",
     icon: CalendarDaysIcon,
-    color: "emerald",
+    color: "blue",
     frequency: "Weekly",
     duration: "45-60 minutes",
     items: [
@@ -33,7 +33,7 @@ const cards = [
   {
     title: "Sprint Delivery",
     icon: RocketLaunchIcon,
-    color: "violet",
+    color: "blue",
     frequency: "2-3 weeks",
     duration: "1-2 hours",
     items: [
@@ -44,7 +44,7 @@ const cards = [
   {
     title: "Code Reviews",
     icon: CodeBracketIcon,
-    color: "orange",
+    color: "blue",
     frequency: "Bi-Weekly",
     duration: "3-4 hours",
     items: ["Code Review", "Tech Lead"],
@@ -53,28 +53,10 @@ const cards = [
 
 const colorMap = {
   blue: {
-    border: "border-t-blue-600",
-    text: "text-blue-600",
+    border: "border-t-blue-800",
+    text: "text-blue-800",
     bg: "bg-blue-50",
     ring: "shadow-blue-100",
-  },
-  emerald: {
-    border: "border-t-emerald-500",
-    text: "text-emerald-500",
-    bg: "bg-emerald-50",
-    ring: "shadow-emerald-100",
-  },
-  violet: {
-    border: "border-t-violet-500",
-    text: "text-violet-500",
-    bg: "bg-violet-50",
-    ring: "shadow-violet-100",
-  },
-  orange: {
-    border: "border-t-orange-500",
-    text: "text-orange-500",
-    bg: "bg-orange-50",
-    ring: "shadow-orange-100",
   },
 };
 
@@ -83,18 +65,18 @@ const ProjectCommunicationStructure = () => {
     <section className="bg-white px-5 py-16 font-sans sm:px-8 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-blue-600">
+          <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-blue-800">
             HOW WE COMMUNICATE
           </p>
           <div className="mt-4 flex items-center justify-center gap-2">
-            <span className="h-1.5 w-14 rounded-full bg-blue-600" />
+            <span className="h-1.5 w-14 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
             <span className="h-1.5 w-8 rounded-full bg-blue-100" />
-            <span className="h-1.5 w-2 rounded-full bg-blue-600" />
+            <span className="h-1.5 w-2 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
           </div>
           <h2 className="mt-7 text-3xl font-extrabold leading-tight tracking-normal text-[#07122f] sm:text-4xl lg:text-5xl">
             Project Communication Structure
           </h2>
-          <p className="mx-auto mt-5 max-w-3xl text-lg font-medium leading-8 tracking-normal text-slate-500">
+          <p className="mx-auto mt-5 max-w-3xl text-lg font-medium leading-8 tracking-normal text-slate-600">
             We follow a transparent and consistent communication cadence to keep
             everyone aligned, informed, and moving forward.
           </p>

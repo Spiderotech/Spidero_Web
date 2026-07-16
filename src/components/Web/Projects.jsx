@@ -31,7 +31,7 @@ const projectData = [
     companyName: "GetMyRoom",
     description:
       "Search and find your ideal property with GetMyRoom. Explore a wide range of listings and discover your dream home today.",
-    accent: "pink",
+    accent: "blue",
     icon: HomeIcon,
     features: [
       { label: "Smart Search", icon: MagnifyingGlassIcon },
@@ -76,7 +76,7 @@ const projectData = [
     companyName: "Struwaa",
     description:
       "Struwaa brings verified freelancers, client requests, chat, escrow, and payouts into a polished marketplace built for local and remote work.",
-    accent: "emerald",
+    accent: "blue",
     icon: BriefcaseIcon,
     features: [
       { label: "Verified Talent", icon: ShieldCheckIcon },
@@ -91,7 +91,7 @@ const projectData = [
     companyName: "Fizzbell",
     description:
       "Fizzbell gives users full control of monthly finances with income tracking, expense visibility, recurring payment reminders, and a clean mobile app flow.",
-    accent: "green",
+    accent: "blue",
     icon: BanknotesIcon,
     features: [
       { label: "Expense Tracking", icon: ChartBarIcon },
@@ -102,29 +102,11 @@ const projectData = [
 ];
 
 const theme = {
-  pink: {
-    bg: "bg-pink-600",
-    text: "text-pink-600",
-    soft: "bg-pink-50",
-    button: "bg-pink-600",
-  },
   blue: {
-    bg: "bg-blue-600",
-    text: "text-blue-600",
+    bg: "bg-gradient-to-br from-blue-800 to-blue-800",
+    text: "text-blue-800",
     soft: "bg-blue-50",
-    button: "bg-blue-600",
-  },
-  emerald: {
-    bg: "bg-emerald-600",
-    text: "text-emerald-600",
-    soft: "bg-emerald-50",
-    button: "bg-emerald-600",
-  },
-  green: {
-    bg: "bg-green-700",
-    text: "text-green-700",
-    soft: "bg-green-50",
-    button: "bg-green-700",
+    button: "bg-gradient-to-br from-blue-800 to-blue-800",
   },
 };
 
@@ -189,7 +171,7 @@ const Projects = () => {
           <h2 className="text-4xl font-extrabold tracking-normal text-[#07122f] sm:text-5xl">
             Our Projects
           </h2>
-          <p className="mt-5 text-lg font-medium leading-8 tracking-normal text-slate-500">
+          <p className="mt-5 text-lg font-medium leading-8 tracking-normal text-slate-600">
             Explore the digital products we have helped bring to life.
           </p>
         </div>

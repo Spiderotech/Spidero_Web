@@ -12,31 +12,31 @@ const values = [
     accent: "blue",
     card: "border-blue-100",
     iconBg: "bg-blue-50",
-    line: "bg-blue-500",
+    line: "bg-gradient-to-br from-blue-800 to-blue-800",
   },
   {
     title: "Quality",
     icon: qu,
     accent: "orange",
-    card: "border-orange-100",
-    iconBg: "bg-orange-50",
-    line: "bg-orange-500",
+    card: "border-blue-100",
+    iconBg: "bg-blue-50",
+    line: "bg-gradient-to-br from-blue-800 to-blue-800",
   },
   {
     title: "Proactivity",
     icon: proa,
     accent: "emerald",
-    card: "border-emerald-100",
-    iconBg: "bg-emerald-50",
-    line: "bg-emerald-500",
+    card: "border-blue-100",
+    iconBg: "bg-blue-50",
+    line: "bg-gradient-to-br from-blue-800 to-blue-800",
   },
   {
     title: "Agility",
     icon: agi,
     accent: "purple",
-    card: "border-purple-100",
-    iconBg: "bg-purple-50",
-    line: "bg-purple-500",
+    card: "border-blue-100",
+    iconBg: "bg-blue-50",
+    line: "bg-gradient-to-br from-blue-800 to-blue-800",
   },
 ];
 
@@ -44,14 +44,14 @@ const Belowherosection = () => {
   return (
     <section className="relative mt-8 overflow-hidden bg-white px-6 py-10 font-sans sm:px-10 md:px-14 lg:px-20 lg:py-14">
       <div className="pointer-events-none absolute -left-24 bottom-0 h-64 w-64 rounded-full bg-blue-50" />
-      <div className="pointer-events-none absolute -right-28 top-0 h-[430px] w-[430px] rounded-full bg-sky-50" />
+      <div className="pointer-events-none absolute -right-28 top-0 h-[430px] w-[430px] rounded-full bg-blue-50" />
       <div className="pointer-events-none absolute left-[44%] top-14 hidden h-24 w-24 opacity-50 md:block">
         <div className="h-full w-full bg-[radial-gradient(circle,_#b9d7ff_1.7px,_transparent_1.7px)] [background-size:16px_16px]" />
       </div>
 
       <div className="relative mx-auto grid max-w-[1280px] items-center gap-9 lg:grid-cols-[0.9fr_1fr] lg:gap-12">
         <div>
-          <div className="inline-flex rounded-full bg-[#eef5ff] px-4 py-2 text-[11px] font-bold uppercase tracking-[0.22em] text-[#1d6df2]">
+          <div className="inline-flex rounded-full bg-blue-50 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.22em] text-blue-800">
             Our Value Proposition
           </div>
 
@@ -60,8 +60,8 @@ const Belowherosection = () => {
           </h2>
 
           <div className="mt-5 flex items-center gap-4">
-            <span className="h-1 w-16 rounded-full bg-[#ff4d37]" />
-            <span className="h-1.5 w-1.5 rounded-full bg-[#ff735f]" />
+            <span className="h-1 w-16 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
+            <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
           </div>
 
           <div className="mt-7 max-w-[580px] space-y-4 text-[15px] leading-7 text-[#4b5568] md:text-[17px] md:leading-8">
@@ -119,9 +119,7 @@ const Belowherosection = () => {
         </div>
       </div>
 
-      <span className="pointer-events-none absolute bottom-24 left-40 h-6 w-6 rounded-full bg-rose-200/80 blur-[1px]" />
-      <span className="pointer-events-none absolute bottom-32 left-[40%] h-5 w-5 rounded-full bg-orange-200/90 blur-[1px]" />
-      <span className="pointer-events-none absolute right-16 top-1/2 h-5 w-5 rounded-full bg-blue-300" />
+      
     </section>
   );
 };

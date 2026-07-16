@@ -7,9 +7,9 @@ import {
   LifebuoyIcon,
   ShieldCheckIcon,
 } from "@heroicons/react/24/solid";
-import pricecard1 from "../../assets/Hire/pricecard1.png";
-import pricecard2 from "../../assets/Hire/pricecard2.png";
-import pricecard3 from "../../assets/Hire/pricecard3.png";
+import pricecard1 from "../../assets/Hire/pricecard1.webp";
+import pricecard2 from "../../assets/Hire/pricecard2.webp";
+import pricecard3 from "../../assets/Hire/pricecard3.webp";
 
 const sharedFeatures = [
   "Shared Project Manager",
@@ -128,7 +128,7 @@ const PlanCard = ({ plan }) => {
 
   return (
     <article
-      className={`group relative flex h-full flex-col rounded-2xl border ${styles.border} bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1 ${styles.glow}`}
+      className={`relative flex h-full flex-col rounded-2xl border ${styles.border} bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.08)]`}
     >
       {plan.popular && (
         <div className="absolute left-1/2 top-0 flex h-8 min-w-[170px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-blue-700 px-6 text-xs font-extrabold uppercase tracking-[0.12em] text-white shadow-[0_12px_28px_rgba(30,64,175,0.22)]">

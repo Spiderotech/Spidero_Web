@@ -73,7 +73,7 @@ const Faq = () => {
     <section className="bg-white px-6 py-14 font-sans text-[#071734] lg:px-10">
       <div className="mx-auto max-w-[1180px]">
         <div className="text-center">
-          <span className="inline-flex items-center gap-2 rounded-full bg-[#eef3ff] px-4 py-2 text-sm font-bold uppercase tracking-wide text-[#1f63ff]">
+          <span className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-2 text-sm font-bold uppercase tracking-wide text-blue-800">
             <QuestionMarkCircleIcon className="h-5 w-5" />
             FAQs
           </span>
@@ -95,7 +95,7 @@ const Faq = () => {
                 key={`${item.question}-${index}`}
                 className={`overflow-hidden rounded-xl border bg-white transition ${
                   isExpanded
-                    ? "border-[#2f60ff] shadow-[0_18px_45px_rgba(47,96,255,0.09)]"
+                    ? "border-blue-800 shadow-[0_18px_45px_rgba(30,64,175,0.09)]"
                     : "border-[#e1e7f2] shadow-[0_8px_24px_rgba(14,32,64,0.035)]"
                 }`}
               >
@@ -104,14 +104,14 @@ const Faq = () => {
                   onClick={() => handleToggle(index)}
                   className="flex w-full items-center gap-5 px-6 py-5 text-left"
                 >
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f0f4ff] text-base font-bold text-[#1f63ff]">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-50 text-base font-bold text-blue-800">
                     {isExpanded ? <MinusIcon className="h-5 w-5" /> : String(index + 1).padStart(2, "0")}
                   </span>
                   <span className="flex-1 text-lg font-bold leading-snug text-[#071734]">
                     {item.question}
                   </span>
                   {isExpanded ? (
-                    <ChevronUpIcon className="h-6 w-6 shrink-0 text-[#1f63ff]" />
+                    <ChevronUpIcon className="h-6 w-6 shrink-0 text-blue-800" />
                   ) : (
                     <ChevronDownIcon className="h-6 w-6 shrink-0 text-[#1f2f54]" />
                   )}
@@ -119,7 +119,7 @@ const Faq = () => {
 
                 {isExpanded && (
                   <div className="grid gap-6 px-6 pb-6 md:grid-cols-[112px_1fr] md:items-center">
-                    <span className="flex h-[84px] w-[84px] items-center justify-center rounded-2xl bg-[#eef3ff] text-[#1f63ff]">
+                    <span className="flex h-[84px] w-[84px] items-center justify-center rounded-2xl bg-blue-50 text-blue-800">
                       <QuestionMarkCircleIcon className="h-10 w-10" />
                     </span>
                     <p className="text-base font-medium leading-8 text-[#405078]">

@@ -13,32 +13,32 @@ const stats = [
     label: "Years in Business",
     icon: CalendarDaysIcon,
     iconBg: "bg-[#eef5ff]",
-    iconClass: "text-[#1267f1]",
-    valueClass: "text-[#1267f1]",
+    iconClass: "text-blue-800",
+    valueClass: "text-blue-800",
   },
   {
     value: "98%",
     label: "Client Retention",
     icon: UserGroupIcon,
-    iconBg: "bg-[#eafff5]",
-    iconClass: "text-[#12b9a4]",
-    valueClass: "text-[#12b9a4]",
+    iconBg: "bg-blue-50",
+    iconClass: "text-blue-800",
+    valueClass: "text-blue-800",
   },
   {
     value: "100+",
     label: "Solutions Delivered",
     icon: RocketLaunchIcon,
-    iconBg: "bg-[#f2f0ff]",
-    iconClass: "text-[#6848f5]",
-    valueClass: "text-[#6848f5]",
+    iconBg: "bg-blue-50",
+    iconClass: "text-blue-800",
+    valueClass: "text-blue-800",
   },
   {
     value: "10x",
     label: "Growth in 4 Years",
     icon: ChartBarIcon,
-    iconBg: "bg-[#fff5ea]",
-    iconClass: "text-[#ff5b1f]",
-    valueClass: "text-[#ff5b1f]",
+    iconBg: "bg-blue-50",
+    iconClass: "text-blue-800",
+    valueClass: "text-blue-800",
   },
 ];
 
@@ -56,12 +56,12 @@ const Companygrowthcard = () => {
 
       <div className="relative mx-auto max-w-[1320px]">
         <div className="mx-auto max-w-[920px] text-center">
-          <div className="flex items-center justify-center gap-5 text-[12px] font-bold uppercase tracking-[0.32em] text-[#1267f1] md:text-[14px]">
-            <span className="h-px w-5 bg-[#1267f1]" />
+          <div className="flex items-center justify-center gap-5 text-[12px] font-bold uppercase tracking-[0.32em] text-blue-800 md:text-[14px]">
+            <span className="h-px w-5 bg-blue-800" />
             <span>Our Growth Journey</span>
-            <span className="h-px w-5 bg-[#1267f1]" />
+            <span className="h-px w-5 bg-blue-800" />
           </div>
-          <span className="mx-auto mt-3 block h-1 w-16 rounded-full bg-[#1267f1]" />
+          <span className="mx-auto mt-3 block h-1 w-16 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
         </div>
 
         <div className="mt-10 grid gap-y-10 sm:grid-cols-2 lg:mt-12 lg:grid-cols-4 lg:gap-y-0">
@@ -95,7 +95,7 @@ const Companygrowthcard = () => {
                   {stat.label}
                 </div>
 
-                <span className="mt-5 h-1 w-12 rounded-full bg-[#1267f1]" />
+                <span className="mt-5 h-1 w-12 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
               </div>
             );
           })}

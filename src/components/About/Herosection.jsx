@@ -17,29 +17,29 @@ const stats = [
     value: "100+",
     label: "Solutions Delivered",
     icon: TrophyIcon,
-    color: "text-blue-600",
+    color: "text-blue-800",
     bg: "bg-blue-50",
   },
   {
     value: "10+",
     label: "Technology Experts",
     icon: UserGroupIcon,
-    color: "text-blue-600",
+    color: "text-blue-800",
     bg: "bg-blue-50",
   },
   {
     value: "10x",
     label: "Growth in 4 Years",
     icon: ChartBarIcon,
-    color: "text-emerald-500",
-    bg: "bg-emerald-50",
+    color: "text-blue-800",
+    bg: "bg-blue-50",
   },
   {
     value: "4",
     label: "Years of Excellence",
     icon: CalendarDaysIcon,
-    color: "text-violet-500",
-    bg: "bg-violet-50",
+    color: "text-blue-800",
+    bg: "bg-blue-50",
   },
 ];
 
@@ -72,14 +72,14 @@ const Herosection = () => {
       <div className="mx-auto max-w-[1500px] overflow-hidden rounded-2xl bg-white px-6 py-10 shadow-[0_24px_90px_rgba(15,23,42,0.08)] sm:px-10 lg:px-16">
         <div className="grid gap-10 lg:grid-cols-[0.83fr_1.17fr] lg:items-center">
           <div>
-            <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-blue-600">
+            <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-blue-800">
               About Spidero
             </p>
-            <div className="mt-4 h-1.5 w-16 rounded-full bg-blue-600" />
+            <div className="mt-4 h-1.5 w-16 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
 
             <h1 className="mt-7 max-w-xl text-4xl font-extrabold leading-tight tracking-normal text-[#07122f] sm:text-5xl">
               It’s always about YOU at{" "}
-              <span className="text-blue-600">Spidero Technology</span>
+              <span className="text-blue-800">Spidero Technology</span>
             </h1>
 
             <div className="mt-6 max-w-2xl space-y-4 text-base font-medium leading-8 tracking-normal text-slate-600">
@@ -108,13 +108,13 @@ const Herosection = () => {
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a
                 href="/expertice"
-                className="inline-flex h-14 items-center justify-center rounded-lg bg-blue-600 px-8 text-base font-bold text-white shadow-[0_16px_34px_rgba(37,99,235,0.22)] transition hover:bg-blue-700"
+                className="inline-flex h-14 items-center justify-center rounded-lg bg-gradient-to-br from-blue-800 to-blue-800 px-8 text-base font-bold text-white shadow-[0_16px_34px_rgba(37,99,235,0.22)] transition hover:translate-y-[-2px]"
               >
                 Explore Our Services
               </a>
               <a
                 href="/contact"
-                className="inline-flex h-14 items-center justify-center gap-3 rounded-lg border border-blue-600 px-8 text-base font-bold text-blue-600 transition hover:bg-blue-50"
+                className="inline-flex h-14 items-center justify-center gap-3 rounded-lg border border-blue-800 px-8 text-base font-bold text-blue-800 transition hover:bg-blue-50"
               >
                 <PlayCircleIcon className="h-7 w-7" />
                 Let&apos;s Talk
@@ -160,7 +160,7 @@ const Herosection = () => {
           <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
             {values.map(({ title, text, icon: Icon }) => (
               <div key={title} className="text-center">
-                <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-50 text-blue-600">
+                <span className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-50 text-blue-800">
                   <Icon className="h-8 w-8" />
                 </span>
                 <h3 className="mt-4 text-base font-extrabold tracking-normal text-[#07122f]">
@@ -179,7 +179,7 @@ const Herosection = () => {
             </h3>
             <div className="mt-5 space-y-3">
               <div className="flex items-center gap-4 rounded-lg border border-blue-100 bg-white px-4 py-3">
-                <span className="flex h-9 w-12 items-center justify-center rounded-md bg-blue-50 text-xs font-extrabold text-blue-600">
+                <span className="flex h-9 w-12 items-center justify-center rounded-md bg-blue-50 text-xs font-extrabold text-blue-800">
                   UK
                 </span>
                 <span className="text-sm font-semibold tracking-normal text-[#07122f]">
@@ -187,7 +187,7 @@ const Herosection = () => {
                 </span>
               </div>
               <div className="flex items-center gap-4 rounded-lg border border-blue-100 bg-white px-4 py-3">
-                <span className="flex h-9 w-12 items-center justify-center rounded-md bg-emerald-50 text-xs font-extrabold text-emerald-600">
+                <span className="flex h-9 w-12 items-center justify-center rounded-md bg-blue-50 text-xs font-extrabold text-blue-800">
                   IN
                 </span>
                 <span className="text-sm font-semibold tracking-normal text-[#07122f]">
@@ -195,7 +195,7 @@ const Herosection = () => {
                 </span>
               </div>
             </div>
-            <p className="mt-4 text-sm font-bold tracking-normal text-blue-600">
+            <p className="mt-4 text-sm font-bold tracking-normal text-blue-800">
               And growing globally!
             </p>
           </div>

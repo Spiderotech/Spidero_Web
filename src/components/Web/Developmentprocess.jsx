@@ -12,7 +12,7 @@ const steps = [
   {
     title: "Technical Discovery",
     icon: MagnifyingGlassIcon,
-    tint: "violet",
+    tint: "blue",
     items: [
       "Establish detailed understanding of business goals and objectives.",
       "Assess the current situation.",
@@ -24,7 +24,7 @@ const steps = [
   {
     title: "Planning",
     icon: ClipboardDocumentCheckIcon,
-    tint: "emerald",
+    tint: "blue",
     items: [
       "Define the project plan.",
       "Outline branding guidelines for the project.",
@@ -35,7 +35,7 @@ const steps = [
   {
     title: "IA, Web Design + Copywriting",
     icon: PencilSquareIcon,
-    tint: "violet",
+    tint: "blue",
     items: [
       "Craft corporate branding.",
       "Design user interfaces based on approved wireframes, ensuring customer-centricity.",
@@ -58,7 +58,7 @@ const steps = [
   {
     title: "QA & Launch",
     icon: RocketLaunchIcon,
-    tint: "emerald",
+    tint: "blue",
     items: [
       "Manually test each milestone/sprint.",
       "Report and address bugs, adding them to the product backlog.",
@@ -69,9 +69,7 @@ const steps = [
 ];
 
 const tintClasses = {
-  violet: "bg-violet-50 text-violet-600",
-  emerald: "bg-emerald-50 text-emerald-600",
-  blue: "bg-blue-50 text-blue-600",
+  blue: "bg-blue-50 text-blue-800",
 };
 
 const orbitIcons = [
@@ -93,10 +91,10 @@ const Developmentprocess = () => {
 
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.82fr_1.18fr]">
         <div className="lg:sticky lg:top-28 lg:h-fit">
-          <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-emerald-600">
+          <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-blue-800">
             Our Development Process
           </p>
-          <div className="mt-5 h-1.5 w-16 rounded-full bg-emerald-500" />
+          <div className="mt-5 h-1.5 w-16 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
 
           <h2 className="mt-9 max-w-lg text-4xl font-extrabold leading-tight tracking-normal text-[#07122f] sm:text-5xl">
             Our development process
@@ -120,7 +118,7 @@ const Developmentprocess = () => {
 
           <div className="relative mt-16 hidden h-[360px] max-w-[380px] items-center justify-center lg:flex">
             <div className="absolute h-72 w-72 rounded-full border-2 border-dashed border-blue-200" />
-            <div className="flex h-28 w-28 items-center justify-center rounded-full bg-white text-violet-600 shadow-[0_20px_60px_rgba(37,99,235,0.12)]">
+            <div className="flex h-28 w-28 items-center justify-center rounded-full bg-white text-blue-800 shadow-[0_20px_60px_rgba(37,99,235,0.12)]">
               <RocketLaunchIcon className="h-16 w-16" />
             </div>
             {orbitIcons.map((Icon, index) => {
@@ -134,7 +132,7 @@ const Developmentprocess = () => {
               return (
                 <span
                   key={index}
-                  className={`absolute ${positions[index]} flex h-20 w-20 items-center justify-center rounded-2xl bg-white text-blue-600 shadow-[0_18px_45px_rgba(37,99,235,0.12)]`}
+                  className={`absolute ${positions[index]} flex h-20 w-20 items-center justify-center rounded-2xl bg-white text-blue-800 shadow-[0_18px_45px_rgba(37,99,235,0.12)]`}
                 >
                   <Icon className="h-10 w-10" />
                 </span>
@@ -150,7 +148,7 @@ const Developmentprocess = () => {
             {steps.map(({ title, icon: Icon, tint, items }, index) => (
               <div key={title} className="relative lg:pl-16">
                 <div className="absolute left-0 top-28 hidden items-center lg:flex">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500 text-lg font-extrabold text-white shadow-[0_14px_35px_rgba(16,185,129,0.35)]">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-blue-800 to-blue-800 text-lg font-extrabold text-white shadow-[0_14px_35px_rgba(37,99,235,0.28)]">
                     {index + 1}
                   </span>
                   <span className="h-2 w-8 rounded-full bg-blue-500" />
@@ -169,7 +167,7 @@ const Developmentprocess = () => {
                       <h3 className="text-2xl font-extrabold leading-tight tracking-normal text-[#07122f] sm:text-3xl">
                         {title}
                       </h3>
-                      <div className="mt-5 h-1 w-12 rounded-full bg-violet-600" />
+                      <div className="mt-5 h-1 w-12 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
 
                       <ul className="mt-8 space-y-4">
                         {items.map((item, itemIndex) => (
@@ -178,7 +176,7 @@ const Developmentprocess = () => {
                             className="flex gap-4 text-base font-medium leading-7 tracking-normal text-slate-700"
                             data-aos="fade-up"
                           >
-                            <CheckCircleIcon className="mt-1 h-5 w-5 shrink-0 text-teal-500" />
+                            <CheckCircleIcon className="mt-1 h-5 w-5 shrink-0 text-blue-800" />
                             <span>{item}</span>
                           </li>
                         ))}

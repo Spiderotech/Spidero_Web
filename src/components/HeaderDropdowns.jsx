@@ -19,28 +19,28 @@ export const services = [
     href: "/custom",
     description: "Tailored platforms that solve complex business needs.",
     icon: CpuChipIcon,
-    accent: "from-violet-500 to-indigo-500",
+    accent: "from-blue-800 to-blue-800",
   },
   {
     name: "Web Development",
     href: "/web",
     description: "Fast, secure, and scalable websites built to grow.",
     icon: CodeBracketIcon,
-    accent: "from-sky-500 to-blue-600",
+    accent: "from-blue-800 to-blue-800",
   },
   {
     name: "Web Design",
     href: "/webdesign",
     description: "Conversion focused interfaces with polished visual systems.",
     icon: PaintBrushIcon,
-    accent: "from-fuchsia-500 to-violet-600",
+    accent: "from-blue-800 to-blue-800",
   },
   {
     name: "Mobile App Development",
     href: "/mobile",
     description: "iOS and Android products crafted for smooth user journeys.",
     icon: DevicePhoneMobileIcon,
-    accent: "from-emerald-500 to-teal-500",
+    accent: "from-blue-800 to-blue-800",
   },
 ];
 
@@ -50,21 +50,21 @@ export const companyLinks = [
     href: "/about",
     description: "Meet the people, story, and values behind Spidero.",
     icon: BuildingOffice2Icon,
-    accent: "from-violet-500 to-indigo-500",
+    accent: "from-blue-800 to-blue-800",
   },
   {
     name: "Careers",
     href: "/careers",
     description: "Join a team building thoughtful digital products.",
     icon: UsersIcon,
-    accent: "from-sky-500 to-blue-600",
+    accent: "from-blue-800 to-blue-800",
   },
   {
     name: "Contact Us",
     href: "/contact",
     description: "Start a conversation about your next project.",
     icon: EnvelopeIcon,
-    accent: "from-fuchsia-500 to-rose-500",
+    accent: "from-blue-800 to-blue-800",
   },
 ];
 
@@ -87,7 +87,7 @@ export const DesktopDropdown = ({
           <Popover.Button
             className={classNames(
               "group flex items-center gap-x-1 text-[18px] font-semibold tracking-wider outline-none transition",
-              isDark ? "text-white hover:text-violet-200" : "text-gray-900 hover:text-violet-600"
+              isDark ? "text-white hover:text-blue-200" : "text-gray-900 hover:text-blue-800"
             )}
           >
             {label}
@@ -130,7 +130,7 @@ export const DesktopDropdown = ({
                       <a
                         key={item.name}
                         href={item.href}
-                        className="group/item flex gap-2.5 rounded-xl border border-transparent bg-white/60 p-3 transition duration-200 hover:-translate-y-0.5 hover:border-violet-100 hover:bg-white hover:shadow-[0_12px_26px_rgba(79,70,229,0.12)]"
+                        className="group/item flex gap-2.5 rounded-xl border border-transparent bg-white/60 p-3 transition duration-200 hover:-translate-y-0.5 hover:border-blue-100 hover:bg-white hover:shadow-[0_12px_26px_rgba(30,64,175,0.12)]"
                       >
                         <span
                           className={classNames(
@@ -157,7 +157,7 @@ export const DesktopDropdown = ({
                 {footerHref && (
                   <a
                     href={footerHref}
-                    className="mt-2.5 flex items-center justify-between rounded-xl border border-violet-100 bg-white px-3.5 py-2.5 text-[12px] font-bold uppercase tracking-[0.14em] text-violet-600 transition hover:border-violet-300 hover:bg-violet-50"
+                    className="mt-2.5 flex items-center justify-between rounded-xl border border-blue-100 bg-white px-3.5 py-2.5 text-[12px] font-bold uppercase tracking-[0.14em] text-blue-800 transition hover:border-blue-200 hover:bg-blue-50"
                   >
                     <span className="flex items-center gap-2">
                       <SparklesIcon className="h-4 w-4" />
@@ -176,20 +176,20 @@ export const DesktopDropdown = ({
 };
 
 export const MobileDropdown = ({ label, items, footerHref, footerLabel }) => (
-  <Disclosure as="div" className="-mx-3">
+  <Disclosure as="div">
     {({ open }) => (
       <>
-        <Disclosure.Button className="flex w-full items-center justify-between rounded-xl px-3 py-2.5 text-[16px] font-semibold leading-7 text-gray-950 transition hover:bg-violet-50">
+        <Disclosure.Button className="flex w-full items-center justify-between rounded-xl px-3 py-3 text-[17px] font-semibold leading-7 text-gray-950 transition hover:bg-blue-50 sm:text-[18px]">
           {label}
           <ChevronDownIcon
             className={classNames(
-              open ? "rotate-180 text-violet-600" : "text-gray-500",
+              open ? "rotate-180 text-blue-800" : "text-gray-500",
               "h-5 w-5 flex-none transition"
             )}
             aria-hidden="true"
           />
         </Disclosure.Button>
-        <Disclosure.Panel className="mt-1.5 space-y-1.5 rounded-2xl border border-violet-100 bg-violet-50/60 p-2">
+        <Disclosure.Panel className="mt-1.5 space-y-1.5 rounded-2xl border border-blue-100 bg-blue-50/60 p-2 sm:p-2.5">
           {items.map((item) => {
             const Icon = item.icon;
             return (
@@ -197,7 +197,7 @@ export const MobileDropdown = ({ label, items, footerHref, footerLabel }) => (
                 key={item.name}
                 as="a"
                 href={item.href}
-                className="flex gap-2.5 rounded-xl bg-white px-3 py-2.5 text-left shadow-sm transition hover:bg-white"
+                className="flex gap-3 rounded-xl bg-white px-3 py-3 text-left shadow-sm transition hover:bg-white"
               >
                 <span
                   className={classNames(
@@ -222,7 +222,7 @@ export const MobileDropdown = ({ label, items, footerHref, footerLabel }) => (
             <Disclosure.Button
               as="a"
               href={footerHref}
-              className="flex items-center justify-between rounded-xl bg-slate-950 px-4 py-2.5 text-[11px] font-bold uppercase tracking-[0.14em] text-white"
+              className="flex items-center justify-between rounded-xl bg-slate-950 px-4 py-3 text-[11px] font-bold uppercase tracking-[0.14em] text-white"
             >
               {footerLabel}
               <ArrowRightIcon className="h-4 w-4" />
@@ -240,8 +240,8 @@ export const HeaderContactButton = ({ isDark = false }) => (
     className={classNames(
       "group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full px-5 text-[12px] font-bold uppercase tracking-[0.16em] transition duration-300",
       isDark
-        ? "border border-white/20 bg-white text-slate-950 shadow-[0_14px_34px_rgba(255,255,255,0.16)] hover:border-blue-800 hover:bg-blue-800 hover:text-white"
-        : "border border-violet-100 bg-slate-950 text-white shadow-[0_14px_34px_rgba(79,70,229,0.22)] hover:border-blue-800 hover:bg-blue-800"
+        ? "border border-white/20 bg-white text-slate-950 shadow-[0_14px_34px_rgba(255,255,255,0.16)] hover:border-blue-800 hover:bg-blue-800 hover:shadow-[0_20px_40px_rgba(30,64,175,0.32)] hover:text-white"
+        : "border border-blue-100 bg-slate-950 text-white shadow-[0_14px_34px_rgba(30,64,175,0.22)] hover:border-blue-800 hover:bg-blue-800 hover:shadow-[0_20px_40px_rgba(30,64,175,0.32)]"
     )}
   >
     <span className="relative z-10 flex items-center gap-2">

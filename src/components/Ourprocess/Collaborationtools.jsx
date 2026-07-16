@@ -49,12 +49,12 @@ const engagementModels = [
 
 const SectionTitle = ({ eyebrow, title, description }) => (
   <div>
-    <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-blue-600">
+    <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-blue-800">
       {eyebrow}
     </p>
     <div className="mt-4 flex items-center gap-2">
-      <span className="h-1.5 w-12 rounded-full bg-blue-600" />
-      <span className="h-1.5 w-2 rounded-full bg-blue-600" />
+      <span className="h-1.5 w-12 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
+      <span className="h-1.5 w-2 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
     </div>
     <h2 className="mt-7 text-3xl font-extrabold leading-tight tracking-normal text-[#07122f] sm:text-4xl lg:text-5xl">
       {title}
@@ -86,7 +86,7 @@ const Collaborationtools = () => {
             {tools.map((tool) => (
               <div
                 key={tool.name}
-                className="flex h-24 items-center justify-center rounded-lg border border-slate-200 bg-white px-8 shadow-[0_12px_35px_rgba(15,23,42,0.05)] transition hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(37,99,235,0.11)]"
+                className="flex h-20 items-center justify-center rounded-lg border border-slate-200 bg-white px-6 shadow-[0_12px_35px_rgba(15,23,42,0.05)] sm:h-24 sm:px-8"
               >
                 <img src={tool.logo} alt={tool.name} className="max-h-12 max-w-full object-contain" />
               </div>
@@ -124,7 +124,7 @@ const Collaborationtools = () => {
                       onClick={() => setExpandedIndex(isExpanded ? null : index)}
                       className="flex w-full items-center gap-6 text-left"
                     >
-                      <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+                      <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-800">
                         <Icon className="h-10 w-10" />
                       </span>
                       <span className="min-w-0 flex-1">
@@ -135,12 +135,12 @@ const Collaborationtools = () => {
                           {item.short}
                         </span>
                         {isExpanded && (
-                          <span className="mt-4 block text-sm font-medium leading-7 tracking-normal text-slate-500">
+                          <span className="mt-4 block text-sm font-medium leading-7 tracking-normal text-slate-600">
                             {item.answer}
                           </span>
                         )}
                       </span>
-                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-blue-600 transition">
+                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-blue-800 transition">
                         <PlusIcon
                           className={`h-8 w-8 transition duration-300 ${isExpanded ? "rotate-45" : ""}`}
                         />

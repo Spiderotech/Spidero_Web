@@ -1,17 +1,17 @@
 import React from "react";
-import web1 from "../../assets/techlogo/angular.png";
-import web2 from "../../assets/techlogo/node-js.png";
-import web3 from "../../assets/techlogo/java.png";
-import web4 from "../../assets/techlogo/php.png";
-import web5 from "../../assets/techlogo/python.png";
-import web6 from "../../assets/techlogo/react.png";
+import web1 from "../../assets/techlogo/angular.webp";
+import web2 from "../../assets/techlogo/node-js.webp";
+import web3 from "../../assets/techlogo/java.webp";
+import web4 from "../../assets/techlogo/php.webp";
+import web5 from "../../assets/techlogo/python.webp";
+import web6 from "../../assets/techlogo/react.webp";
 
-import db1 from "../../assets/DB/mongodb.png";
-import db3 from "../../assets/DB/mysql.png";
-import db4 from "../../assets/DB/oracle.png";
+import db1 from "../../assets/DB/mongodb.webp";
+import db3 from "../../assets/DB/mysql.webp";
+import db4 from "../../assets/DB/oracle.webp";
 import db5 from "../../assets/DB/psql-icon.webp";
-import db6 from "../../assets/DB/redis.png";
-import db7 from "../../assets/DB/sql.png";
+import db6 from "../../assets/DB/redis.webp";
+import db7 from "../../assets/DB/sql.webp";
 
 import open1 from "../../assets/Open/drupal.png";
 import open2 from "../../assets/Open/magento.png";
@@ -31,7 +31,7 @@ const rows = [
     title: "Front-end",
     description: "Technologies we use to build fast and interactive user interfaces.",
     icon: CodeBracketSquareIcon,
-    color: "violet",
+    color: "blue",
     items: [
       { name: "Angular", logo: web1 },
       { name: "Java", logo: web3 },
@@ -42,7 +42,7 @@ const rows = [
     title: "Back-end",
     description: "Robust technologies that power our server-side applications.",
     icon: ServerStackIcon,
-    color: "emerald",
+    color: "blue",
     items: [
       { name: "Node.js", logo: web2 },
       { name: "Java", logo: web3 },
@@ -67,7 +67,7 @@ const rows = [
     title: "Database",
     description: "Reliable database systems that ensure data integrity and performance.",
     icon: CircleStackIcon,
-    color: "orange",
+    color: "blue",
     items: [
       { name: "MongoDB", logo: db1 },
       { name: "MySQL", logo: db3 },
@@ -80,25 +80,10 @@ const rows = [
 ];
 
 const theme = {
-  violet: {
-    border: "border-l-violet-500",
-    text: "text-violet-600",
-    bg: "bg-violet-50",
-  },
-  emerald: {
-    border: "border-l-emerald-500",
-    text: "text-emerald-500",
-    bg: "bg-emerald-50",
-  },
   blue: {
-    border: "border-l-blue-500",
-    text: "text-blue-600",
+    border: "border-l-blue-800",
+    text: "text-blue-800",
     bg: "bg-blue-50",
-  },
-  orange: {
-    border: "border-l-orange-500",
-    text: "text-orange-500",
-    bg: "bg-orange-50",
   },
 };
 
@@ -107,18 +92,18 @@ const Technologystack = () => {
     <section className="bg-white px-5 py-16 font-sans sm:px-8 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-5xl text-center">
-          <div className="flex items-center justify-center gap-4 text-sm font-extrabold uppercase tracking-[0.22em] text-violet-600">
+          <div className="flex items-center justify-center gap-4 text-sm font-extrabold uppercase tracking-[0.22em] text-blue-800">
             <span className="hidden h-5 w-5 bg-[radial-gradient(circle,_#c4b5fd_1.8px,_transparent_1.8px)] [background-size:7px_7px] sm:block" />
             Technology Stack
             <span className="hidden h-5 w-5 bg-[radial-gradient(circle,_#c4b5fd_1.8px,_transparent_1.8px)] [background-size:7px_7px] sm:block" />
           </div>
           <h2 className="mt-6 text-4xl font-extrabold leading-tight tracking-normal text-[#07122f] sm:text-5xl lg:text-6xl">
             Technology Stack{" "}
-            <span className="bg-gradient-to-r from-violet-600 to-blue-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-br from-blue-800 to-blue-800 bg-clip-text text-transparent">
               We Practice
             </span>
           </h2>
-          <div className="mx-auto mt-6 h-1.5 w-16 rounded-full bg-violet-600" />
+          <div className="mx-auto mt-6 h-1.5 w-16 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
           <p className="mx-auto mt-6 max-w-3xl text-lg font-medium leading-8 tracking-normal text-slate-600">
             We leverage modern technologies and robust frameworks to build
             scalable, secure, and future-ready digital solutions.

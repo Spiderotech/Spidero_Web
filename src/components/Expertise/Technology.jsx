@@ -5,7 +5,7 @@ import {
   CpuChipIcon,
   ServerStackIcon,
 } from "@heroicons/react/24/outline";
-import img from "../../assets/expertise/tech.jpg";
+import img from "../../assets/expertise/tech.webp";
 import ExpertiseServiceSection from "./ExpertiseServiceSection";
 
 const Technology = () => {

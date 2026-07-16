@@ -13,6 +13,7 @@ import Results_mobile from '../components/Mobile_app/Results_mobile'
 import Faq from '../components/Mobile_app/Faq'
 import Expertise from '../components/Mobile_app/Expertise'
 import { Helmet } from "react-helmet";
+import Navbar from '../components/Navbar'
 const Mobileapppage = () => {
   return (
     <>
@@ -30,7 +31,7 @@ const Mobileapppage = () => {
           "
         />
       </Helmet>
-    <Navbarnormal/>
+    <Navbar/>
     <Herosection/>
     <Client_card/>
     <Belowherosection/>

@@ -99,7 +99,7 @@ const Contactform = () => {
               alt="Akshay Madhusudhanan"
               className="absolute left-1/2 top-0 h-24 w-24 -translate-x-1/2 -translate-y-1/2 rounded-full border-[6px] border-white object-cover shadow-[0_16px_30px_rgba(15,23,42,0.15)]"
             />
-            <span className="absolute left-8 top-11 text-[60px] font-bold leading-none text-[#1374f6]">
+            <span className="absolute left-8 top-11 text-[60px] font-bold leading-none text-blue-800">
               “
             </span>
             <div className="pointer-events-none absolute right-7 top-8 h-12 w-12 opacity-70">
@@ -108,7 +108,7 @@ const Contactform = () => {
             <p className="mx-auto max-w-[390px] text-[17px] leading-8 text-black sm:text-[20px] sm:leading-9">
               Cooking up innovation at Spidero Technology , we're dedicated to pushing boundaries and delivering cutting-edge solutions
             </p>
-            <span className="mx-auto mt-6 block h-1 w-14 rounded-full bg-[#1178ff]" />
+            <span className="mx-auto mt-6 block h-1 w-14 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
             <h3 className="mt-5 text-[19px] font-bold text-black">
               Taha Farooqui
             </h3>
@@ -120,7 +120,7 @@ const Contactform = () => {
 
         <div className="rounded-[22px] bg-white p-5 shadow-[0_22px_65px_rgba(15,23,42,0.10)] sm:p-6 lg:p-8">
           <div className="mb-6 flex items-center gap-5">
-            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#eef5ff] text-[#0877ff]">
+            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-800">
               <EnvelopeIcon className="h-8 w-8" />
             </div>
             <div>
@@ -346,7 +346,7 @@ const Contactform = () => {
             <div className="grid gap-4 pt-1 md:grid-cols-[0.82fr_0.94fr]">
               <button
                 type="submit"
-                className="flex h-[62px] items-center justify-center gap-3 rounded-lg bg-[#e96f3f] px-6 text-[17px] font-bold text-white shadow-[0_16px_34px_rgba(8,119,255,0.22)] transition hover:bg-[#0068e5]"
+                className="flex h-[62px] items-center justify-center gap-3 rounded-lg bg-gradient-to-br from-blue-800 to-blue-800 px-6 text-[17px] font-bold text-white shadow-[0_16px_34px_rgba(30,64,175,0.22)] transition hover:from-blue-900 hover:to-blue-900"
               >
                 <PaperAirplaneIcon className="h-6 w-6" />
                 Send Message
@@ -355,12 +355,12 @@ const Contactform = () => {
                 href="/contact"
                 className="flex h-[62px] items-center justify-center gap-3 rounded-lg bg-[#f3f7fc] px-5 text-[15px] font-bold text-[#071435] transition hover:bg-[#eaf2fb]"
               >
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#0877ff]">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-blue-800">
                   <ChatBubbleLeftRightIcon className="h-6 w-6" />
                 </span>
                 <span className="text-left">
                   <span className="block">Need a quick answer?</span>
-                  <span className="flex items-center gap-2 text-[#0877ff]">
+                  <span className="flex items-center gap-2 text-blue-800">
                     Get Pricing <ArrowRightIcon className="h-4 w-4" />
                   </span>
                 </span>

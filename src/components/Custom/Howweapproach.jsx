@@ -64,27 +64,27 @@ const content = [
 
 const accentClasses = {
   blue: {
-    card: "border-[#2b74ff]",
-    icon: "bg-[#edf4ff] text-[#1d6cff]",
-    number: "bg-[#1d6cff] text-white",
-    dot: "border-[#1d6cff] bg-[#1d6cff]",
+    card: "border-blue-800",
+    icon: "bg-blue-50 text-blue-800",
+    number: "bg-blue-800 text-white",
+    dot: "border-blue-800 bg-blue-800",
   },
   cyan: {
     card: "border-[#e8edf7]",
-    icon: "bg-[#e9fbff] text-[#17b8d6]",
-    number: "bg-[#dff8ff] text-[#18a9c6]",
+    icon: "bg-blue-50 text-blue-800",
+    number: "bg-blue-50 text-blue-800",
     dot: "border-[#9fb0d1] bg-white",
   },
   violet: {
     card: "border-[#e8edf7]",
-    icon: "bg-[#f1ebff] text-[#754cff]",
-    number: "bg-[#eee8ff] text-[#754cff]",
+    icon: "bg-blue-50 text-blue-800",
+    number: "bg-blue-50 text-blue-800",
     dot: "border-[#9fb0d1] bg-white",
   },
   orange: {
     card: "border-[#e8edf7]",
-    icon: "bg-[#fff1e5] text-[#ff841f]",
-    number: "bg-[#fff1e5] text-[#ff841f]",
+    icon: "bg-blue-50 text-blue-800",
+    number: "bg-blue-50 text-blue-800",
     dot: "border-[#9fb0d1] bg-white",
   },
 };
@@ -115,7 +115,7 @@ const HowWeApproach = () => {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#f8fbff] px-6 py-8 font-sans text-[#071734] sm:px-8 lg:px-16">
+    <section className="relative overflow-hidden bg-[#f8fbff] px-5 py-10 font-sans text-[#071734] sm:px-8 lg:px-16">
       <div className="pointer-events-none absolute bottom-[-160px] right-[-100px] h-[360px] w-[360px] rounded-full border border-dotted border-[#bcd4ff]" />
       <div className="pointer-events-none absolute right-8 top-12 hidden grid-cols-6 gap-2 lg:grid">
         {Array.from({ length: 36 }).map((_, index) => (
@@ -124,13 +124,13 @@ const HowWeApproach = () => {
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-[1560px]">
-        <div className="grid gap-5 lg:grid-cols-[1fr_0.78fr] lg:items-start">
+        <div className="grid gap-4 lg:grid-cols-[1fr_0.78fr] lg:items-start">
           <div>
-            <p className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.16em] text-[#1d6cff]">
+            <p className="flex flex-wrap items-center gap-3 text-xs font-bold uppercase tracking-[0.16em] text-blue-800">
               Our Development Process
-              <span className="h-px w-10 bg-[#9bbdff]" />
+              <span className="h-px w-10 bg-blue-200" />
             </p>
-            <h2 className="mt-2 max-w-[760px] text-[28px] font-bold leading-tight sm:text-[36px] lg:text-[42px]">
+            <h2 className="mt-2 max-w-[760px] text-[26px] font-bold leading-tight sm:text-[36px] lg:text-[42px]">
               How We Approach Custom Software Development
             </h2>
           </div>
@@ -142,7 +142,7 @@ const HowWeApproach = () => {
           </p>
         </div>
 
-        <div className="mt-7 grid gap-7 lg:grid-cols-[390px_1fr]">
+        <div className="mt-6 grid gap-6 lg:mt-7 lg:grid-cols-[390px_1fr] lg:gap-7">
           <div className="relative lg:pl-8">
             <div className="absolute bottom-5 left-[8px] top-5 hidden border-l-2 border-dashed border-[#b7c6e4] lg:block" />
             <div className="space-y-2.5">
@@ -156,9 +156,9 @@ const HowWeApproach = () => {
                     type="button"
                     key={item.title}
                     onClick={() => setCurrentSlide(index)}
-                    className={`relative flex w-full items-center gap-3 rounded-xl border bg-white p-3 text-left shadow-[0_10px_24px_rgba(14,32,64,0.05)] transition hover:-translate-y-0.5 ${
+                    className={`relative flex w-full items-center gap-3 rounded-xl border bg-white p-3 text-left shadow-[0_10px_24px_rgba(14,32,64,0.05)] transition hover:border-blue-200 ${
                       isActive
-                        ? `${colors.card} shadow-[0_14px_30px_rgba(29,108,255,0.1)]`
+                        ? `${colors.card} shadow-[0_14px_30px_rgba(30,64,175,0.1)]`
                         : "border-[#e8edf7]"
                     }`}
                   >
@@ -196,14 +196,14 @@ const HowWeApproach = () => {
               <img
                 src={activeStep.image}
                 alt={activeStep.title}
-                className="h-[280px] w-full object-cover sm:h-[360px] lg:h-[430px]"
+                className="h-[240px] w-full object-cover sm:h-[360px] lg:h-[430px]"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#0b1a35]/20 via-transparent to-[#1d6cff]/10" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0b1a35]/20 via-transparent to-blue-800/10" />
               <button
                 type="button"
                 onClick={prevSlide}
                 aria-label="Previous process step"
-                className="absolute left-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#071734] shadow-lg transition hover:bg-[#edf4ff]"
+                className="absolute left-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#071734] shadow-lg transition hover:bg-[#edf4ff] sm:left-4 sm:h-11 sm:w-11"
               >
                 <ArrowLeftIcon className="h-6 w-6" />
               </button>
@@ -211,7 +211,7 @@ const HowWeApproach = () => {
                 type="button"
                 onClick={nextSlide}
                 aria-label="Next process step"
-                className="absolute right-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#071734] shadow-lg transition hover:bg-[#edf4ff]"
+                className="absolute right-3 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#071734] shadow-lg transition hover:bg-[#edf4ff] sm:right-4 sm:h-11 sm:w-11"
               >
                 <ArrowRightIcon className="h-6 w-6" />
               </button>
@@ -225,14 +225,14 @@ const HowWeApproach = () => {
                   onClick={() => setCurrentSlide(index)}
                   aria-label={`Go to ${item.title}`}
                   className={`h-2 w-2 rounded-full transition ${
-                    currentSlide === index ? "bg-[#1d6cff]" : "bg-[#c9d6eb]"
+                    currentSlide === index ? "bg-blue-800" : "bg-[#c9d6eb]"
                   }`}
                 />
               ))}
             </div>
 
-            <div className="mt-4 grid gap-4 md:grid-cols-[52px_1fr]">
-              <span className="flex h-[52px] w-[52px] items-center justify-center rounded-xl bg-white text-[#1d6cff] shadow-[0_14px_30px_rgba(29,108,255,0.14)]">
+            <div className="mt-4 grid gap-3 sm:gap-4 md:grid-cols-[52px_1fr]">
+              <span className="flex h-[52px] w-[52px] items-center justify-center rounded-xl bg-white text-blue-800 shadow-[0_14px_30px_rgba(30,64,175,0.14)]">
                 <ActiveIcon className="h-7 w-7" />
               </span>
               <div>

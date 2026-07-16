@@ -4,9 +4,9 @@ import {
   CheckCircleIcon,
   SparklesIcon,
 } from "@heroicons/react/24/outline";
-import pm2 from "../../assets/Hire/pm2.png";
-import team from "../../assets/Hire/team.png";
-import growth from "../../assets/Hire/growth.png";
+import pm2 from "../../assets/Hire/pm2.webp";
+import team from "../../assets/Hire/team.webp";
+import growth from "../../assets/Hire/growth.webp";
 
 const supportSteps = [
   {
@@ -57,7 +57,7 @@ const Steps = () => {
           {supportSteps.map((item, index) => (
             <article
               key={item.title}
-              className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_16px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_22px_55px_rgba(30,64,175,0.12)]"
+              className="flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_16px_40px_rgba(15,23,42,0.08)]"
               data-aos="fade-up"
               data-aos-duration="900"
               data-aos-delay={index * 120}

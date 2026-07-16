@@ -14,19 +14,19 @@ const offices = [
   {
     country: "United Kingdom",
     flag: ukFlag,
-    address: "2 Westbourne Crescent, London, W2 3DB",
+    address: "113 Mellitus Street, London, England, W12 0AU",
     phone: "+44 7368937674",
     email: "contact@spiderotechnology.com",
     timezone: "GMT +0",
     theme: {
-      text: "text-blue-600",
+      text: "text-blue-800",
       bg: "bg-blue-50",
-      button: "bg-blue-600",
+      button: "bg-gradient-to-br from-blue-800 to-blue-800",
     },
     mapSrc:
-      "https://maps.google.com/maps?width=100%25&height=300&hl=en&q=2%20Westbourne%20Crescent,%20London,%20W2%203DB+(Spidero%20Technology)&t=&z=14&ie=UTF8&iwloc=B&output=embed",
+      "https://maps.google.com/maps?width=100%25&height=300&hl=en&q=113%20Mellitus%20Street,%20London,%20England,%20W12%200AU+(Spidero%20Technology)&t=&z=14&ie=UTF8&iwloc=B&output=embed",
     directions:
-      "https://www.google.com/maps/search/?api=1&query=2%20Westbourne%20Crescent%2C%20London%2C%20W2%203DB",
+      "https://www.google.com/maps/search/?api=1&query=113%20Mellitus%20Street%2C%20London%2C%20England%2C%20W12%200AU",
   },
   {
     country: "India",
@@ -36,9 +36,9 @@ const offices = [
     email: "contact@spiderotechnology.com",
     timezone: "GMT +5:30",
     theme: {
-      text: "text-emerald-600",
-      bg: "bg-emerald-50",
-      button: "bg-emerald-600",
+      text: "text-blue-800",
+      bg: "bg-blue-50",
+      button: "bg-gradient-to-br from-blue-800 to-blue-800",
     },
     mapSrc:
       "https://maps.google.com/maps?width=100%25&height=300&hl=en&q=Ennakkad%20Ulunthy%20Rd,%20Ennakkad%20Gramam,%20Kerala,%20689624+(Spidero%20Technology)&t=&z=14&ie=UTF8&iwloc=B&output=embed",
@@ -64,7 +64,7 @@ const Location = () => {
     <section className="bg-[#f7faff] px-5 py-16 font-sans sm:px-8 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="text-sm font-extrabold uppercase tracking-[0.22em] text-blue-600">
+          <p className="text-sm font-extrabold uppercase tracking-[0.22em] text-blue-800">
             Our Global Presence
           </p>
           <h2 className="mt-6 text-4xl font-extrabold leading-tight tracking-normal text-[#07122f] sm:text-5xl lg:text-6xl">
@@ -98,7 +98,7 @@ const Location = () => {
                     </h3>
                   </div>
                   <div className="mt-4 flex items-start gap-3 text-base font-medium leading-7 tracking-normal text-slate-600">
-                    <MapPinIcon className="mt-0.5 h-6 w-6 shrink-0 text-slate-500" />
+                    <MapPinIcon className="mt-0.5 h-6 w-6 shrink-0 text-slate-600" />
                     <span>{office.address}</span>
                   </div>
                 </div>

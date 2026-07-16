@@ -25,7 +25,7 @@ import {
 const fieldWrap =
   "flex h-[70px] items-center gap-3 rounded-xl border border-slate-200 bg-white px-5 shadow-[0_10px_30px_rgba(15,23,42,0.04)] transition focus-within:border-blue-400 focus-within:shadow-[0_0_0_4px_rgba(37,99,235,0.08)]";
 const inputClass =
-  "h-full w-full bg-transparent text-[15px] font-semibold tracking-normal text-[#07122f] outline-none placeholder:text-slate-500";
+  "h-full w-full bg-transparent text-[15px] font-semibold tracking-normal text-[#07122f] outline-none placeholder:text-slate-600";
 const errorClass = "mt-1 text-xs font-medium text-red-500";
 
 const testimonials = [
@@ -48,25 +48,25 @@ const benefits = [
     title: "Quick Response",
     text: "We typically reply within 24 hours.",
     icon: ClockIcon,
-    color: "text-blue-600 bg-blue-50",
+    color: "text-blue-800 bg-blue-50",
   },
   {
     title: "Privacy Guaranteed",
     text: "Your information is secure and never shared.",
     icon: ShieldCheckIcon,
-    color: "text-emerald-500 bg-emerald-50",
+    color: "text-blue-800 bg-blue-50",
   },
   {
     title: "Expert Support",
     text: "Talk to experienced professionals.",
     icon: ChatBubbleLeftRightIcon,
-    color: "text-violet-500 bg-violet-50",
+    color: "text-blue-800 bg-blue-50",
   },
   {
     title: "Flexible Meetings",
     text: "Schedule a call at your convenience.",
     icon: CalendarDaysIcon,
-    color: "text-orange-500 bg-orange-50",
+    color: "text-blue-800 bg-blue-50",
   },
 ];
 
@@ -135,8 +135,8 @@ const Formsection = () => {
             Awesomeness awaits!
           </h1>
           <div className="mt-6 flex items-center justify-center gap-2">
-            <span className="h-1.5 w-20 rounded-full bg-blue-600" />
-            <span className="h-1.5 w-2 rounded-full bg-blue-600" />
+            <span className="h-1.5 w-20 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
+            <span className="h-1.5 w-2 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
           </div>
           <p className="mt-6 text-lg font-medium leading-8 tracking-normal text-slate-600 sm:text-xl">
             Connect with our experts and let&apos;s build something extraordinary together.
@@ -146,7 +146,7 @@ const Formsection = () => {
         <div className="mt-9 grid gap-7 lg:grid-cols-[1.08fr_0.92fr]">
           <div className="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-[0_24px_80px_rgba(15,23,42,0.08)] sm:p-8">
             <div className="mb-7 flex items-center gap-5">
-              <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white shadow-[0_18px_38px_rgba(37,99,235,0.28)]">
+              <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-800 to-blue-800 text-white shadow-[0_18px_38px_rgba(30,64,175,0.28)]">
                 <PaperAirplaneIcon className="h-10 w-10" />
               </span>
               <div>
@@ -209,7 +209,7 @@ const Formsection = () => {
               <div className="grid gap-5 md:grid-cols-[0.95fr_1.45fr]">
                 <div>
                   <div className="rounded-xl border border-slate-200 bg-white px-5 py-4 shadow-[0_10px_30px_rgba(15,23,42,0.04)] transition focus-within:border-blue-400 focus-within:shadow-[0_0_0_4px_rgba(37,99,235,0.08)]">
-                    <span className="block text-[15px] font-semibold tracking-normal text-slate-500">
+                    <span className="block text-[15px] font-semibold tracking-normal text-slate-600">
                       Country Code <span className="text-red-500">*</span>
                     </span>
                     <PhoneInput
@@ -279,7 +279,7 @@ const Formsection = () => {
                     value={formik.values.message}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className="min-h-[130px] w-full resize-y bg-transparent text-[15px] font-semibold tracking-normal text-[#07122f] outline-none placeholder:text-slate-500"
+                    className="min-h-[130px] w-full resize-y bg-transparent text-[15px] font-semibold tracking-normal text-[#07122f] outline-none placeholder:text-slate-600"
                     placeholder="Type your message here *"
                   />
                   <PencilSquareIcon className="mt-auto h-6 w-6 shrink-0 text-slate-400" />
@@ -292,12 +292,12 @@ const Formsection = () => {
               <div className="flex flex-col gap-5 pt-2 sm:flex-row sm:items-center">
                 <button
                   type="submit"
-                  className="inline-flex h-16 items-center justify-center gap-3 rounded-lg bg-blue-600 px-9 text-base font-bold text-white shadow-[0_18px_38px_rgba(37,99,235,0.26)] transition hover:bg-blue-700"
+                  className="inline-flex h-16 items-center justify-center gap-3 rounded-lg bg-gradient-to-br from-blue-800 to-blue-800 px-9 text-base font-bold text-white shadow-[0_18px_38px_rgba(30,64,175,0.26)] transition hover:from-blue-900 hover:to-blue-900"
                 >
                   <PaperAirplaneIcon className="h-6 w-6" />
                   Send Message
                 </button>
-                <div className="flex items-center gap-3 text-sm font-semibold tracking-normal text-slate-500">
+                <div className="flex items-center gap-3 text-sm font-semibold tracking-normal text-slate-600">
                   <LockClosedIcon className="h-5 w-5 text-slate-400" />
                   We respect your privacy. Your information is safe with us.
                 </div>
@@ -312,7 +312,7 @@ const Formsection = () => {
               </h2>
               <div className="mt-5 space-y-4">
                 <a href="tel:+447368937674" className="flex items-center gap-4">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-50 text-blue-600">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-50 text-blue-800">
                     <PhoneIcon className="h-6 w-6" />
                   </span>
                   <img src={ukFlag} alt="United Kingdom" className="h-6 w-9 rounded-sm object-cover" />
@@ -321,7 +321,7 @@ const Formsection = () => {
                   </span>
                 </a>
                 <a href="tel:+918089650271" className="flex items-center gap-4">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-50 text-emerald-600">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-50 text-blue-800">
                     <PhoneIcon className="h-6 w-6" />
                   </span>
                   <img src={indiaFlag} alt="India" className="h-6 w-9 rounded-sm object-cover" />
@@ -330,7 +330,7 @@ const Formsection = () => {
                   </span>
                 </a>
                 <a href="mailto:contact@spiderotechnology.com" className="flex items-center gap-4">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-lg bg-violet-50 text-violet-600">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-50 text-blue-800">
                     <EnvelopeIcon className="h-6 w-6" />
                   </span>
                   <span className="text-base font-extrabold tracking-normal text-[#07122f]">
@@ -346,7 +346,7 @@ const Formsection = () => {
                 className="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-[0_18px_55px_rgba(15,23,42,0.06)]"
               >
                 <div className="flex gap-5">
-                  <span className="font-serif text-6xl font-bold leading-none text-blue-600">
+                  <span className="font-serif text-6xl font-bold leading-none text-blue-800">
                     “
                   </span>
                   <div>

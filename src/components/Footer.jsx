@@ -44,7 +44,7 @@ const socialLinks = [
 const SectionTitle = ({ children }) => (
   <div>
     <h3 className="text-lg font-bold text-[#071034]">{children}</h3>
-    <span className="mt-3 block h-[2px] w-8 rounded-full bg-[#1f63ff]" />
+    <span className="mt-3 block h-[2px] w-8 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
   </div>
 );
 
@@ -62,7 +62,7 @@ const Footer = () => {
               Like what you see?
               <br />
               Let&apos;s start a{" "}
-              <span className="text-[#2563ff]">conversation.</span>
+              <span className="text-blue-800">conversation.</span>
             </h2>
             <p className="mt-5 max-w-[330px] text-base leading-7 text-[#5b6685] sm:text-lg">
               We&apos;re here to help you build, grow and scale your digital
@@ -70,7 +70,7 @@ const Footer = () => {
             </p>
             <Link
               to="/contact"
-              className="mt-6 inline-flex h-[54px] items-center gap-4 rounded-lg bg-[#145dff] px-6 text-base font-semibold text-white shadow-[0_16px_30px_rgba(20,93,255,0.22)] transition hover:-translate-y-0.5 hover:bg-[#064bea]"
+              className="mt-6 inline-flex h-[54px] items-center gap-4 rounded-lg bg-gradient-to-br from-blue-800 to-blue-800 px-6 text-base font-semibold text-white shadow-[0_16px_30px_rgba(30,64,175,0.22)] transition hover:-translate-y-0.5 hover:from-blue-900 hover:to-blue-900"
             >
               <PaperAirplaneIcon className="h-6 w-6 -rotate-45" />
               Get In Touch
@@ -90,21 +90,21 @@ const Footer = () => {
       </section>
 
       <section className="border-t border-[#eef3fb] bg-[#f8fbff]">
-        <div className="mx-auto max-w-[1360px] px-6 py-16 md:px-12 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-[1.35fr_0.9fr_1.05fr_1.2fr_1.15fr] lg:gap-0">
-            <div className="lg:pr-12">
+        <div className="mx-auto max-w-[1360px] px-5 py-12 sm:px-6 md:px-10 md:py-14 lg:px-8 lg:py-16">
+          <div className="grid gap-8 md:grid-cols-2 md:gap-x-10 md:gap-y-12 lg:grid-cols-3 xl:grid-cols-[1.35fr_0.9fr_1.05fr_1.2fr_1.15fr] xl:gap-0">
+            <div className="md:col-span-2 lg:col-span-1 lg:pr-8 xl:pr-12">
               <Link to="/" aria-label="Spidero Technology home">
                 <img
                   src={logo}
                   alt="Spidero Technology"
-                  className="h-auto w-[238px] max-w-full"
+                  className="h-auto w-[210px] max-w-full sm:w-[238px]"
                 />
               </Link>
-              <p className="mt-8 max-w-[300px] text-base leading-8">
+              <p className="mt-6 max-w-[360px] text-base leading-8 md:max-w-[520px] lg:max-w-[300px]">
                 We build innovative digital solutions that help businesses grow,
                 scale and succeed in the digital world.
               </p>
-              <div className="mt-9 flex items-center gap-4">
+              <div className="mt-7 flex items-center gap-4 md:mt-8">
                 {socialLinks.map((item) => (
                   <a
                     key={item.label}
@@ -124,24 +124,24 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="border-[#e5ebf5] lg:border-l lg:px-12">
+            <div className="border-[#e5ebf5] border-t pt-8 md:border-t-0 md:pt-0 lg:border-l lg:pl-8 xl:px-12">
               <SectionTitle>Quick Links</SectionTitle>
               <ul className="mt-7 space-y-4">
                 {quickLinks.map((item) => (
                   <li key={item.label}>
                     <Link
                       to={item.href}
-                      className="group flex items-center justify-between gap-4 text-base transition hover:text-[#145dff]"
+                      className="group flex items-center justify-between gap-4 text-base transition hover:text-blue-800"
                     >
                       {item.label}
-                      <ChevronRightIcon className="h-4 w-4 text-[#8a94ad] transition group-hover:translate-x-1 group-hover:text-[#145dff]" />
+                      <ChevronRightIcon className="h-4 w-4 text-[#8a94ad] transition group-hover:translate-x-1 group-hover:text-blue-800" />
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="border-[#e5ebf5] lg:border-l lg:px-12">
+            <div className="border-[#e5ebf5] border-t pt-8 md:border-t-0 md:pt-0 lg:border-l lg:pl-8 xl:px-12">
               <SectionTitle>Services</SectionTitle>
               <ul className="mt-7 space-y-4">
                 {services.map((item) => (
@@ -152,55 +152,55 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="border-[#e5ebf5] lg:border-l lg:px-12">
+            <div className="border-[#e5ebf5] border-t pt-8 md:border-t md:pt-8 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0 xl:px-12">
               <SectionTitle>Contact Us</SectionTitle>
               <address className="mt-7 space-y-6 not-italic">
                 <div className="flex gap-4">
-                  <MapPinIcon className="mt-1 h-5 w-5 shrink-0 text-[#145dff]" />
-                  <p className="max-w-[260px] text-base leading-7">
-                    2 Westbourne Crescent, London, W2 3DB, UK
+                  <MapPinIcon className="mt-1 h-5 w-5 shrink-0 text-blue-800" />
+                  <p className="max-w-[300px] text-base leading-7">
+                    113 Mellitus Street, London, England, W12 0AU
                   </p>
                 </div>
                 <a
-                  href="tel:+447468333505"
-                  className="flex gap-4 text-base transition hover:text-[#145dff]"
+                  href="tel:+447368937674"
+                  className="flex gap-4 text-base transition hover:text-blue-800"
                 >
-                  <PhoneIcon className="h-5 w-5 shrink-0 text-[#145dff]" />
-                  +44 7468 333 505
+                  <PhoneIcon className="h-5 w-5 shrink-0 text-blue-800" />
+                  +44 7368 937 674
                 </a>
               </address>
             </div>
 
-            <div className="border-[#e5ebf5] lg:border-l lg:pl-12">
+            <div className="border-[#e5ebf5] border-t pt-8 md:border-t md:pt-8 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0 xl:pl-12">
               <SectionTitle>India Office</SectionTitle>
               <address className="mt-7 space-y-7 not-italic">
                 <div className="flex gap-4">
-                  <MapPinIcon className="mt-1 h-5 w-5 shrink-0 text-[#145dff]" />
-                  <p className="max-w-[270px] text-base leading-7">
+                  <MapPinIcon className="mt-1 h-5 w-5 shrink-0 text-blue-800" />
+                  <p className="max-w-[310px] text-base leading-7">
                     Ennakkad Ulunthy Rd, Ennakkad Gramam, Kerala, 689624, India
                   </p>
                 </div>
                 <a
-                  href="tel:+919496046046"
-                  className="flex gap-4 text-base transition hover:text-[#145dff]"
+                  href="tel:+918089650271"
+                  className="flex gap-4 text-base transition hover:text-blue-800"
                 >
-                  <PhoneIcon className="h-5 w-5 shrink-0 text-[#145dff]" />
-                  +91 9496 046 046
+                  <PhoneIcon className="h-5 w-5 shrink-0 text-blue-800" />
+                  +91 8089 650 271
                 </a>
               </address>
             </div>
           </div>
 
-          <div className="mt-12 flex flex-col gap-6 border-t border-[#dfe6f2] pt-10 text-sm text-[#3f4863] md:flex-row md:items-center md:justify-between">
+          <div className="mt-12 flex flex-col gap-6 border-t border-[#dfe6f2] pt-8 text-sm text-[#3f4863] md:flex-row md:items-center md:justify-between md:pt-10">
             <p>© 2024 Spidero Technology Inc. All rights reserved.</p>
             <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
-              <Link to="/privacy-policy" className="transition hover:text-[#145dff]">
+              <Link to="/privacy-policy" className="transition hover:text-blue-800">
                 Privacy Policy
               </Link>
               <span className="h-5 w-px bg-[#c6cedd]" />
               <Link
                 to="/terms-conditions"
-                className="transition hover:text-[#145dff]"
+                className="transition hover:text-blue-800"
               >
                 Terms & Conditions
               </Link>
@@ -209,7 +209,7 @@ const Footer = () => {
               type="button"
               onClick={scrollToTop}
               aria-label="Back to top"
-              className="flex h-12 w-12 items-center justify-center rounded-lg bg-white text-[#145dff] shadow-[0_8px_20px_rgba(20,33,61,0.12)] transition hover:-translate-y-0.5 hover:bg-[#145dff] hover:text-white md:ml-4"
+              className="flex h-12 w-12 items-center justify-center rounded-lg bg-white text-blue-800 shadow-[0_8px_20px_rgba(20,33,61,0.12)] transition hover:-translate-y-0.5 hover:bg-blue-800 hover:text-white md:ml-4"
             >
               <ArrowUpIcon className="h-6 w-6" />
             </button>

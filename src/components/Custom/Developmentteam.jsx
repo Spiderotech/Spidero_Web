@@ -116,12 +116,12 @@ const faqData = [
 ];
 
 const themeClasses = {
-  blue: "bg-[#eef4ff] text-[#1f63ff]",
-  violet: "bg-[#f1ebff] text-[#754cff]",
-  cyan: "bg-[#e8fbff] text-[#14b8d1]",
-  orange: "bg-[#fff2e5] text-[#ff861f]",
-  rose: "bg-[#ffeaf2] text-[#f04483]",
-  green: "bg-[#e9fbef] text-[#22c55e]",
+  blue: "bg-blue-50 text-blue-800",
+  violet: "bg-blue-50 text-blue-800",
+  cyan: "bg-blue-50 text-blue-800",
+  orange: "bg-blue-50 text-blue-800",
+  rose: "bg-blue-50 text-blue-800",
+  green: "bg-blue-50 text-blue-800",
 };
 
 const Developmentteam = () => {
@@ -135,27 +135,27 @@ const Developmentteam = () => {
     <section className="bg-white px-6 py-10 font-sans text-[#071734] lg:px-10">
       <div className="mx-auto grid max-w-[1500px] gap-10 lg:grid-cols-[0.72fr_1.15fr] lg:items-start">
         <div>
-          <span className="inline-flex items-center gap-2 rounded-full bg-[#eef4ff] px-3 py-1.5 text-xs font-bold uppercase tracking-wide text-[#1f63ff]">
+          <span className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1.5 text-xs font-bold uppercase tracking-wide text-blue-800">
             <UserGroupIcon className="h-4 w-4" />
             Build Your Team
           </span>
           <h2 className="mt-4 max-w-[560px] text-[30px] font-bold leading-tight sm:text-[38px] lg:text-[42px]">
             Build Your Custom Software{" "}
-            <span className="text-[#2f60ff]">Development Team</span>
+            <span className="text-blue-800">Development Team</span>
           </h2>
           <div className="mt-4 flex items-center gap-2">
-            <span className="h-1 w-12 rounded-full bg-[#2f60ff]" />
-            <span className="h-1.5 w-1.5 rounded-full bg-[#2f60ff]" />
+            <span className="h-1 w-12 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
+            <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
           </div>
 
           <div className="relative mt-6 space-y-3">
             <div className="absolute bottom-6 left-5 top-6 hidden border-l-2 border-dashed border-[#c8d6f3] sm:block" />
             {processSteps.map((step, index) => (
               <div key={step.title} className="relative grid gap-4 sm:grid-cols-[64px_56px_1fr] sm:items-center">
-                <span className="z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-[#c7d7ff] bg-white text-base font-bold text-[#2f60ff] shadow-sm">
+                <span className="z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-blue-200 bg-white text-base font-bold text-blue-800 shadow-sm">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <span className="hidden h-2.5 w-2.5 rounded-full bg-[#2f60ff] sm:block" />
+                <span className="hidden h-2.5 w-2.5 rounded-full bg-blue-800 sm:block" />
                 <div className="flex items-center gap-4">
                   <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#edf4ff] p-3 shadow-[0_12px_26px_rgba(14,32,64,0.07)]">
                     <img
@@ -208,7 +208,7 @@ const Developmentteam = () => {
                     <span className="flex-1 text-lg font-bold text-[#111827]">
                       {item.question}
                     </span>
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#eef3ff] text-[#1f63ff]">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-800">
                       {isExpanded ? (
                         <MinusIcon className="h-6 w-6" />
                       ) : (
@@ -222,14 +222,14 @@ const Developmentteam = () => {
                       <p className="max-w-[780px] text-base font-medium leading-7 text-[#405078]">
                         {item.answer}
                       </p>
-                      <h4 className="mt-4 text-sm font-bold text-black">
+                      <h4 className="mt-4 text-sm font-bold text-[#071734]">
                         Tools:
                       </h4>
                       <div className="mt-3 flex flex-wrap gap-3">
                         {item.toolsUsed.map((tool) => (
                           <span
                             key={tool}
-                            className="rounded-full bg-[#eef2f7] px-4 py-1.5 text-sm font-bold text-[#1f63ff]"
+                            className="rounded-full bg-blue-50 px-4 py-1.5 text-sm font-bold text-blue-800"
                           >
                             {tool}
                           </span>
@@ -244,7 +244,7 @@ const Developmentteam = () => {
 
           <div className="mt-6 flex flex-col gap-5 rounded-xl bg-[#eef4ff] p-6 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-5">
-              <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#e2ebff] text-[#1f63ff]">
+              <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-800">
                 <PaperAirplaneIcon className="h-9 w-9 -rotate-45" />
               </span>
               <div>
@@ -259,7 +259,7 @@ const Developmentteam = () => {
             </div>
             <Link
               to="/contact"
-              className="inline-flex h-12 shrink-0 items-center justify-center gap-4 rounded-lg bg-[#225cff] px-6 text-sm font-bold uppercase text-white shadow-[0_14px_28px_rgba(34,92,255,0.22)] transition hover:bg-[#174be0]"
+              className="inline-flex h-12 shrink-0 items-center justify-center gap-4 rounded-lg bg-gradient-to-br from-blue-800 to-blue-800 px-6 text-sm font-bold uppercase text-white shadow-[0_14px_28px_rgba(30,64,175,0.22)] transition hover:from-blue-900 hover:to-blue-900"
             >
               Share Project Requirement
               <ArrowRightIcon className="h-5 w-5" />

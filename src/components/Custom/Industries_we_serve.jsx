@@ -135,7 +135,7 @@ const Industries_we_serve = () => {
     <section className="overflow-hidden bg-[#020b18] px-6 py-10 font-sans text-white md:py-12 lg:px-10">
       <div className="mx-auto max-w-[1320px]">
         <div className="mx-auto max-w-[820px] text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#8f65ff]">
+          <p className="text-xs font-bold uppercase tracking-[0.28em] text-blue-300">
             Empowering businesses across diverse industries
           </p>
           <h2 className="mt-3 text-[30px] font-bold leading-tight sm:text-[40px] lg:text-[46px]">
@@ -160,7 +160,7 @@ const Industries_we_serve = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-[#020b18]/60 via-transparent to-transparent" />
             <div className="absolute bottom-5 left-5 rounded-full bg-black/45 px-4 py-2 text-base font-bold backdrop-blur-md">
               {String(currentIndex + 1).padStart(2, "0")}
-              <span className="text-[#8f65ff]">
+              <span className="text-blue-300">
                 {" "}
                 / {String(headingsData.length).padStart(2, "0")}
               </span>
@@ -178,7 +178,7 @@ const Industries_we_serve = () => {
                 type="button"
                 onClick={goToNext}
                 aria-label="Next industry"
-                className="flex h-11 w-11 items-center justify-center rounded-full bg-[#754cff] text-white shadow-[0_12px_30px_rgba(117,76,255,0.35)] transition hover:bg-[#8b65ff]"
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-blue-800 to-blue-800 text-white shadow-[0_12px_30px_rgba(30,64,175,0.35)] transition hover:from-blue-900 hover:to-blue-900"
               >
                 <ArrowRightIcon className="h-5 w-5" />
               </button>
@@ -200,14 +200,14 @@ const Industries_we_serve = () => {
                   onClick={() => selectIndustry(heading)}
                   className={`group flex w-full items-center gap-4 border-b border-white/10 px-3 py-2.5 text-left transition last:border-b-0 ${
                     isActive
-                      ? "rounded-xl border border-[#6d4aff]/45 bg-[#2f255a]/70 shadow-[0_16px_32px_rgba(117,76,255,0.16)]"
+                      ? "rounded-xl border border-blue-300/45 bg-blue-950/70 shadow-[0_16px_32px_rgba(30,64,175,0.16)]"
                       : "hover:bg-white/[0.04]"
                   }`}
                 >
                   <span
                     className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full border ${
                       isActive
-                        ? "border-[#8f65ff] bg-[#754cff] text-white"
+                        ? "border-blue-300 bg-blue-800 text-white"
                         : "border-white/15 bg-white/[0.04] text-white/85"
                     }`}
                   >
@@ -235,7 +235,7 @@ const Industries_we_serve = () => {
                 index > 0 ? "md:border-l md:border-white/12 md:pl-8" : ""
               }`}
             >
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#261b58] text-[#9f72ff]">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-950 text-blue-300">
                 <Icon className="h-6 w-6" />
               </span>
               <span>

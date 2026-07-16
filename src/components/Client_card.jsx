@@ -22,78 +22,78 @@ const clients = [
     name: "Meristem Creative",
     category: "Digital Agency",
     logo: client7,
-    accent: "from-[#0fb7b4] to-[#2ee5bb]",
-    dot: "bg-[#0fb7b4]",
+    accent: "from-blue-800 to-blue-800",
+    dot: "bg-blue-800",
   },
   {
     name: "Medoczen",
     category: "Healthcare",
     logo: client4,
-    accent: "from-[#1479ea] to-[#2d8cff]",
-    dot: "bg-[#1479ea]",
+    accent: "from-blue-800 to-blue-800",
+    dot: "bg-blue-800",
   },
   {
     name: "MDX Food",
     category: "Food & Beverages",
     logo: client6,
-    accent: "from-[#ff2121] to-[#ff4b3f]",
-    dot: "bg-[#ff2121]",
+    accent: "from-blue-800 to-blue-800",
+    dot: "bg-blue-800",
   },
   {
     name: "Leaf Kerala",
     category: "Spices & Masalas",
     logo: client3,
-    accent: "from-[#18b889] to-[#35e0a5]",
-    dot: "bg-[#18b889]",
+    accent: "from-blue-800 to-blue-800",
+    dot: "bg-blue-800",
   },
   {
     name: "Get My Room",
     category: "Real Estate",
     logo: client1,
-    accent: "from-[#7b3ff2] to-[#8e55ff]",
-    dot: "bg-[#7b3ff2]",
+    accent: "from-blue-800 to-blue-800",
+    dot: "bg-blue-800",
   },
   {
     name: "Hustel Max",
     category: "Transportation",
     logo: client2,
-    accent: "from-[#0f68d8] to-[#24a1ff]",
-    dot: "bg-[#0f68d8]",
+    accent: "from-blue-800 to-blue-800",
+    dot: "bg-blue-800",
   },
   {
     name: "Lumitainment",
     category: "Entertainment",
     logo: client5,
-    accent: "from-[#101b44] to-[#2664d8]",
-    dot: "bg-[#2664d8]",
+    accent: "from-blue-800 to-blue-800",
+    dot: "bg-blue-800",
   },
   {
     name: "Fizzbell",
     category: "Money Management",
     logo: client8,
-    accent: "from-[#f04f8b] to-[#ff8a3d]",
-    dot: "bg-[#f04f8b]",
+    accent: "from-blue-800 to-blue-800",
+    dot: "bg-blue-800",
   },
   {
     name: "Struwaa",
     category: "Marketplace App",
     logo: client9,
-    accent: "from-[#19a7ce] to-[#2dd4bf]",
-    dot: "bg-[#19a7ce]",
+    accent: "from-blue-800 to-blue-800",
+    dot: "bg-blue-800",
   },
   {
     name: "SafeGoer",
     category: "Scam Awareness",
     logo: client10,
-    accent: "from-[#22c55e] to-[#16a34a]",
-    dot: "bg-[#22c55e]",
+    accent: "from-blue-800 to-blue-800",
+    dot: "bg-blue-800",
   },
   {
     name: "Dora Drink",
     category: "Water Reminder App",
     logo: client11,
-    accent: "from-[#f59e0b] to-[#ef4444]",
-    dot: "bg-[#f59e0b]",
+    accent: "from-blue-800 to-blue-800",
+    dot: "bg-blue-800",
   },
 ];
 
@@ -114,14 +114,14 @@ const ClientCard = () => {
       />
       <div className="relative mx-auto flex w-full max-w-[1780px] flex-col items-center">
         <div className="flex flex-col items-center text-center">
-          <p className="relative text-[11px] font-bold uppercase tracking-[0.22em] text-[#1669ee] md:text-[14px]">
+          <p className="relative text-[11px] font-bold uppercase tracking-[0.22em] text-[#071435] md:text-[14px]">
             Trusted by businesses worldwide
             <span className="mx-auto mt-3 block h-px w-[220px] bg-gradient-to-r from-transparent via-[#dbe6fb] to-transparent" />
-            <span className="absolute left-1/2 top-[28px] h-2 w-2 -translate-x-1/2 rounded-full bg-[#1669ee] shadow-[0_0_0_6px_rgba(22,105,238,0.08)] md:top-[31px]" />
+            <span className="absolute left-1/2 top-[28px] h-2 w-2 -translate-x-1/2 rounded-full bg-blue-800 shadow-[0_0_0_6px_rgba(30,64,175,0.08)] md:top-[31px]" />
           </p>
           <h2 className="mt-7 text-[36px] font-bold leading-none text-[#071435] md:text-[56px] lg:text-[68px]">
             Our{" "}
-            <span className="bg-gradient-to-r from-[#0765f5] to-[#4c4df2] bg-clip-text text-transparent">
+            <span className="text-[#071435] ">
               Clients
             </span>
           </h2>
@@ -135,14 +135,14 @@ const ClientCard = () => {
           <button
             type="button"
             aria-label="Previous client"
-            className="client-card-prev absolute left-0 top-1/2 z-10 hidden h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#0966f4] shadow-[0_14px_30px_rgba(15,23,42,0.12)] transition hover:-translate-x-1 hover:shadow-[0_18px_38px_rgba(15,23,42,0.16)] md:flex"
+            className="client-card-prev absolute left-0 top-1/2 z-10 hidden h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full bg-white text-blue-800 shadow-[0_14px_30px_rgba(15,23,42,0.12)] transition hover:-translate-x-1 hover:shadow-[0_18px_38px_rgba(15,23,42,0.16)] md:flex"
           >
             <ArrowLeftIcon className="h-6 w-6" />
           </button>
           <button
             type="button"
             aria-label="Next client"
-            className="client-card-next absolute right-0 top-1/2 z-10 hidden h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[#0966f4] shadow-[0_14px_30px_rgba(15,23,42,0.12)] transition hover:translate-x-1 hover:shadow-[0_18px_38px_rgba(15,23,42,0.16)] md:flex"
+            className="client-card-next absolute right-0 top-1/2 z-10 hidden h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full bg-white text-blue-800 shadow-[0_14px_30px_rgba(15,23,42,0.12)] transition hover:translate-x-1 hover:shadow-[0_18px_38px_rgba(15,23,42,0.16)] md:flex"
           >
             <ArrowRightIcon className="h-6 w-6" />
           </button>

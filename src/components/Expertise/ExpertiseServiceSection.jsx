@@ -6,17 +6,17 @@ const ExpertiseServiceSection = ({ intro, services, className = "" }) => {
       <div className="mx-auto max-w-7xl">
         {intro && (
           <div className="mb-9 max-w-5xl">
-            <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-blue-600">
+            <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-blue-800">
               {intro.eyebrow}
             </p>
             <div className="mt-4 flex items-center gap-3">
-              <span className="h-1.5 w-20 rounded-full bg-blue-600" />
-              <span className="h-1.5 w-2 rounded-full bg-blue-600" />
+              <span className="h-1.5 w-20 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
+              <span className="h-1.5 w-2 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
             </div>
             <h1 className="mt-7 max-w-4xl text-3xl font-extrabold leading-tight tracking-normal text-[#07122f] sm:text-4xl lg:text-5xl">
               {intro.title}
             </h1>
-            <p className="mt-6 text-lg font-medium leading-8 tracking-normal text-slate-500 sm:text-xl">
+            <p className="mt-6 text-lg font-medium leading-8 tracking-normal text-slate-600 sm:text-xl">
               {intro.subtitle}
             </p>
           </div>
@@ -39,14 +39,14 @@ const ExpertiseServiceSection = ({ intro, services, className = "" }) => {
                 >
                   <div className="rounded-[1.4rem] bg-[#f5f8fe] p-6 sm:p-8">
                     <div className="flex items-start gap-5">
-                      <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 shadow-inner">
+                      <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-blue-50 text-blue-800 shadow-inner">
                         <Icon className="h-11 w-11" />
                       </div>
                       <div>
                         {service.href ? (
                           <a
                             href={service.href}
-                            className="text-3xl font-extrabold leading-tight tracking-normal text-[#07122f] transition hover:text-blue-600 sm:text-4xl"
+                            className="text-3xl font-extrabold leading-tight tracking-normal text-[#07122f] transition hover:text-blue-800 sm:text-4xl"
                           >
                             {service.title}
                           </a>
@@ -56,8 +56,8 @@ const ExpertiseServiceSection = ({ intro, services, className = "" }) => {
                           </h2>
                         )}
                         <div className="mt-4 flex items-center gap-3">
-                          <span className="h-1.5 w-16 rounded-full bg-blue-600" />
-                          <span className="h-1.5 w-2 rounded-full bg-blue-600" />
+                          <span className="h-1.5 w-16 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
+                          <span className="h-1.5 w-2 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
                         </div>
                       </div>
                     </div>
@@ -78,7 +78,7 @@ const ExpertiseServiceSection = ({ intro, services, className = "" }) => {
                                 featureIndex % 2 === 0 ? "sm:border-r sm:pr-5" : "sm:pl-5"
                               } ${featureIndex < 2 ? "border-b" : ""}`}
                             >
-                              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600">
+                              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-800">
                                 <FeatureIcon className="h-7 w-7" />
                               </span>
                               <span className="text-lg font-extrabold leading-6 tracking-normal text-[#07122f]">

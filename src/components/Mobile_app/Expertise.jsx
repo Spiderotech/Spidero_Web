@@ -35,56 +35,56 @@ const industries = [
     text: "Immersive app experiences for interactive training, product demos, entertainment, and next-generation digital engagement.",
     image: arvr,
     icon: SparklesIcon,
-    accent: "violet",
+    accent: "blue",
   },
   {
     title: "Media & Entertainment",
     text: "Be it music or video streaming, we create award-winning apps for next-generation users in media and entertainment.",
     image: media,
     icon: PlayIcon,
-    accent: "violet",
+    accent: "blue",
   },
   {
     title: "Blockchain & IoT",
     text: "Futuristic solutions like Blockchain and IoT are our expertise, from dApps to connected product ecosystems.",
     image: blockchain,
     icon: CubeTransparentIcon,
-    accent: "sky",
+    accent: "blue",
   },
   {
     title: "AI/ML",
     text: "Taking the big leap in artificial intelligence and machine learning with apps built for smarter business workflows.",
     image: ai,
     icon: CpuChipIcon,
-    accent: "violet",
+    accent: "blue",
   },
   {
     title: "Health & Fitness Apps",
     text: "High-end health and fitness apps that improve clinics, wellness brands, and personal health management.",
     image: fitness,
     icon: HeartIcon,
-    accent: "lime",
+    accent: "blue",
   },
   {
     title: "Banking & Finance",
     text: "Customer-centric finance platforms that help businesses and users move faster with secure digital services.",
     image: finance,
     icon: ShieldCheckIcon,
-    accent: "emerald",
+    accent: "blue",
   },
   {
     title: "Shopping & eCommerce",
     text: "Modern eCommerce apps that increase customer reach, brand exposure, and measurable return on investment.",
     image: ecommerce,
     icon: BeakerIcon,
-    accent: "pink",
+    accent: "blue",
   },
   {
     title: "Education & eLearning",
     text: "Learning platforms designed for engaging content, progress tracking, and accessible education experiences.",
     image: education,
     icon: LightBulbIcon,
-    accent: "cyan",
+    accent: "blue",
   },
 ];
 
@@ -93,58 +93,33 @@ const strengths = [
     title: "Industry Expertise",
     text: "Deep knowledge across multiple domains.",
     icon: TrophyIcon,
-    accent: "bg-teal-500/20 text-teal-300",
+    accent: "border border-cyan-300/25 bg-cyan-300/10 text-cyan-300",
   },
   {
     title: "Innovative Solutions",
     text: "Cutting-edge technology for modern businesses.",
     icon: LightBulbIcon,
-    accent: "bg-sky-500/20 text-sky-300",
+    accent: "border border-cyan-300/25 bg-cyan-300/10 text-cyan-300",
   },
   {
     title: "User-Centric Approach",
     text: "Solutions designed for real user needs.",
     icon: UsersIcon,
-    accent: "bg-violet-500/20 text-violet-300",
+    accent: "border border-cyan-300/25 bg-cyan-300/10 text-cyan-300",
   },
   {
     title: "Proven Success",
     text: "Delivering measurable results that drive growth.",
     icon: ShieldCheckIcon,
-    accent: "bg-lime-500/20 text-lime-300",
+    accent: "border border-cyan-300/25 bg-cyan-300/10 text-cyan-300",
   },
 ];
 
 const accentStyles = {
-  violet: {
-    icon: "bg-violet-600 text-white",
-    line: "bg-violet-500",
-    arrow: "border-violet-500 text-violet-400",
-  },
-  sky: {
-    icon: "bg-sky-600 text-white",
-    line: "bg-sky-500",
-    arrow: "border-sky-500 text-sky-400",
-  },
-  lime: {
-    icon: "bg-lime-700 text-white",
-    line: "bg-lime-500",
-    arrow: "border-lime-500 text-lime-400",
-  },
-  emerald: {
-    icon: "bg-emerald-700 text-white",
-    line: "bg-emerald-500",
-    arrow: "border-emerald-500 text-emerald-400",
-  },
-  pink: {
-    icon: "bg-pink-600 text-white",
-    line: "bg-pink-500",
-    arrow: "border-pink-500 text-pink-400",
-  },
-  cyan: {
-    icon: "bg-cyan-600 text-white",
-    line: "bg-cyan-500",
-    arrow: "border-cyan-500 text-cyan-400",
+  blue: {
+    icon: "bg-gradient-to-br from-blue-800 to-blue-800 text-white",
+    line: "bg-gradient-to-br from-blue-800 to-blue-800",
+    arrow: "border-cyan-300/65 text-cyan-300",
   },
 };
 
@@ -156,10 +131,10 @@ const Expertise = () => {
 
       <div className="relative mx-auto max-w-[1500px]">
         <div className="text-center">
-          <div className="inline-flex items-center gap-5 text-sm font-extrabold uppercase tracking-[0.34em] text-teal-300">
-            <span className="h-px w-14 bg-teal-400" />
+          <div className="inline-flex items-center gap-5 text-sm font-extrabold uppercase tracking-[0.34em] text-cyan-300">
+            <span className="h-px w-14 bg-cyan-300" />
             Industries We Excel In And More
-            <span className="h-px w-14 bg-teal-400" />
+            <span className="h-px w-14 bg-cyan-300" />
           </div>
 
           <h2 className="mt-5 text-4xl font-extrabold leading-tight tracking-normal text-white sm:text-5xl lg:text-[58px]">
@@ -176,7 +151,7 @@ const Expertise = () => {
           <button
             type="button"
             aria-label="Previous industry"
-            className="mobile-expertise-prev absolute left-0 top-1/2 z-20 hidden h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full border border-white/35 bg-black/75 text-white shadow-[0_18px_50px_rgba(0,0,0,0.45)] transition hover:border-teal-300 hover:text-teal-300 lg:flex"
+            className="mobile-expertise-prev absolute left-0 top-1/2 z-20 hidden h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full border border-cyan-300/35 bg-black/75 text-cyan-300 shadow-[0_18px_50px_rgba(0,0,0,0.45)] transition hover:border-cyan-300 hover:text-white lg:flex"
           >
             <ChevronLeftIcon className="h-8 w-8" />
           </button>
@@ -211,12 +186,12 @@ const Expertise = () => {
 
               return (
                 <SwiperSlide key={title}>
-                  <article className="group h-[430px] overflow-hidden rounded-2xl border border-white/16 bg-white/[0.045] shadow-[0_24px_70px_rgba(0,0,0,0.32)] backdrop-blur transition hover:-translate-y-1 hover:border-teal-300/40">
-                    <div className="relative h-[190px] overflow-hidden">
+                  <article className="h-auto min-h-[400px] overflow-hidden rounded-2xl border border-white/16 bg-white/[0.045] shadow-[0_24px_70px_rgba(0,0,0,0.32)] backdrop-blur sm:h-[430px]">
+                    <div className="relative h-[170px] overflow-hidden sm:h-[190px]">
                       <img
                         src={image}
                         alt={title}
-                        className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                        className="h-full w-full object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#03070c] via-transparent to-transparent" />
                       <span
@@ -252,7 +227,7 @@ const Expertise = () => {
           <button
             type="button"
             aria-label="Next industry"
-            className="mobile-expertise-next absolute right-0 top-1/2 z-20 hidden h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full border border-white/35 bg-black/75 text-white shadow-[0_18px_50px_rgba(0,0,0,0.45)] transition hover:border-teal-300 hover:text-teal-300 lg:flex"
+            className="mobile-expertise-next absolute right-0 top-1/2 z-20 hidden h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full border border-cyan-300/35 bg-black/75 text-cyan-300 shadow-[0_18px_50px_rgba(0,0,0,0.45)] transition hover:border-cyan-300 hover:text-white lg:flex"
           >
             <ChevronRightIcon className="h-8 w-8" />
           </button>

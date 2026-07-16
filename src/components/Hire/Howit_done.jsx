@@ -4,13 +4,13 @@ import {
   CheckCircleIcon,
   RocketLaunchIcon,
 } from "@heroicons/react/24/solid";
-import call from "../../assets/Hire/discovery-call.png";
-import agile from "../../assets/Hire/agile.png";
-import dev from "../../assets/Hire/dev.png";
-import testing from "../../assets/Hire/testing.png";
-import invoice from "../../assets/Hire/invoice.png";
-import communication from "../../assets/Hire/communication.png";
-import escalation from "../../assets/Hire/escalatiom.png";
+import call from "../../assets/Hire/discovery-call.webp";
+import agile from "../../assets/Hire/agile.webp";
+import dev from "../../assets/Hire/dev.webp";
+import testing from "../../assets/Hire/testing.webp";
+import invoice from "../../assets/Hire/invoice.webp";
+import communication from "../../assets/Hire/communication.webp";
+import escalation from "../../assets/Hire/escalatiom.webp";
 
 const processSteps = [
   {
@@ -97,7 +97,7 @@ const CheckItem = ({ children }) => (
 
 const ProcessCard = ({ step, index }) => (
   <article
-    className="relative rounded-2xl border border-slate-100 bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(15,23,42,0.12)]"
+    className="relative rounded-2xl border border-slate-100 bg-white p-6 shadow-[0_18px_45px_rgba(15,23,42,0.08)]"
     data-aos="fade-up"
     data-aos-duration="900"
     data-aos-delay={(index % 2) * 120}

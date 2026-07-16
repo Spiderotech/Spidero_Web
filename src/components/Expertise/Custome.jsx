@@ -5,7 +5,7 @@ import {
   CubeIcon,
   PuzzlePieceIcon,
 } from "@heroicons/react/24/outline";
-import img from "../../assets/expertise/ecomm.jpg";
+import img from "../../assets/expertise/ecomm.webp";
 import ExpertiseServiceSection from "./ExpertiseServiceSection";
 
 const Custome = () => {

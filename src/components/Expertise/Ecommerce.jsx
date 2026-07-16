@@ -7,8 +7,8 @@ import {
   ShoppingBagIcon,
   SparklesIcon,
 } from "@heroicons/react/24/outline";
-import blockchainImg from "../../assets/expertise/Bc.jpg";
-import ecommerceImg from "../../assets/expertise/cyber-monday-shopping-sales.jpg";
+import blockchainImg from "../../assets/expertise/Bc.webp";
+import ecommerceImg from "../../assets/expertise/cyber-monday-shopping-sales.webp";
 import ExpertiseServiceSection from "./ExpertiseServiceSection";
 
 const Ecommerce = () => {

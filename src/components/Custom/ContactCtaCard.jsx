@@ -16,47 +16,47 @@ const benefits = [
 const themes = {
   violet: {
     panel: "bg-[#fbfcff]",
-    accent: "text-[#623cff]",
-    soft: "bg-[#f0eaff]",
-    orb: "bg-[#f2d9ff]/55",
-    orb2: "bg-[#efd6ff]/70",
-    line: "via-[#d4b7ff]",
-    dot: "bg-[#dbc6ff]",
-    button: "bg-[#020b1d] hover:bg-[#101b32]",
-    shadow: "shadow-[0_16px_32px_rgba(98,60,255,0.18)]",
+    accent: "text-blue-800",
+    soft: "bg-blue-50",
+    orb: "bg-blue-100/55",
+    orb2: "bg-blue-100/70",
+    line: "via-blue-200",
+    dot: "bg-blue-200",
+    button: "bg-gradient-to-br from-blue-800 to-blue-800 hover:from-blue-900 hover:to-blue-900",
+    shadow: "shadow-[0_16px_32px_rgba(30,64,175,0.18)]",
   },
   blue: {
     panel: "bg-[#f8fbff]",
-    accent: "text-[#1266ff]",
-    soft: "bg-[#eaf2ff]",
-    orb: "bg-[#dceaff]/70",
-    orb2: "bg-[#d8f0ff]/70",
-    line: "via-[#acd0ff]",
-    dot: "bg-[#a9cfff]",
-    button: "bg-[#0b2f75] hover:bg-[#123f91]",
-    shadow: "shadow-[0_16px_32px_rgba(18,102,255,0.16)]",
+    accent: "text-blue-800",
+    soft: "bg-blue-50",
+    orb: "bg-blue-100/70",
+    orb2: "bg-blue-100/70",
+    line: "via-blue-200",
+    dot: "bg-blue-200",
+    button: "bg-gradient-to-br from-blue-800 to-blue-800 hover:from-blue-900 hover:to-blue-900",
+    shadow: "shadow-[0_16px_32px_rgba(30,64,175,0.16)]",
   },
   emerald: {
     panel: "bg-[#fbfffd]",
-    accent: "text-[#0f9f6e]",
-    soft: "bg-[#e9fbf3]",
-    orb: "bg-[#d8f8ea]/70",
-    orb2: "bg-[#d5f6ef]/70",
-    line: "via-[#9fdec7]",
-    dot: "bg-[#9fdec7]",
-    button: "bg-[#06382b] hover:bg-[#0b4f3e]",
-    shadow: "shadow-[0_16px_32px_rgba(15,159,110,0.16)]",
+    accent: "text-blue-800",
+    soft: "bg-blue-50",
+    orb: "bg-blue-100/70",
+    orb2: "bg-blue-100/70",
+    line: "via-blue-200",
+    dot: "bg-blue-200",
+    button: "bg-gradient-to-br from-blue-800 to-blue-800 hover:from-blue-900 hover:to-blue-900",
+    shadow: "shadow-[0_16px_32px_rgba(30,64,175,0.16)]",
   },
   rose: {
     panel: "bg-[#fffafb]",
-    accent: "text-[#e33d7d]",
-    soft: "bg-[#ffeaf2]",
-    orb: "bg-[#ffd7e7]/70",
-    orb2: "bg-[#ffe1ed]/75",
-    line: "via-[#ffadc9]",
-    dot: "bg-[#ffadc9]",
-    button: "bg-[#4a1027] hover:bg-[#681737]",
-    shadow: "shadow-[0_16px_32px_rgba(227,61,125,0.16)]",
+    accent: "text-blue-800",
+    soft: "bg-blue-50",
+    orb: "bg-blue-100/70",
+    orb2: "bg-blue-100/75",
+    line: "via-blue-200",
+    dot: "bg-blue-200",
+    button: "bg-gradient-to-br from-blue-800 to-blue-800 hover:from-blue-900 hover:to-blue-900",
+    shadow: "shadow-[0_16px_32px_rgba(30,64,175,0.16)]",
   },
 };
 
@@ -104,7 +104,7 @@ const ContactCtaCard = ({
 
         <div className="relative z-10 grid items-center gap-7 lg:grid-cols-[1fr_250px]">
           <div className="flex flex-col gap-6 md:flex-row md:items-start">
-            <div className="flex h-[96px] w-[96px] shrink-0 items-center justify-center rounded-full bg-white shadow-[0_12px_30px_rgba(74,44,255,0.1)]">
+            <div className="flex h-[96px] w-[96px] shrink-0 items-center justify-center rounded-full bg-white shadow-[0_12px_30px_rgba(30,64,175,0.1)]">
               {icon ? (
                 <img
                   src={icon}
@@ -149,7 +149,7 @@ const ContactCtaCard = ({
             to="/contact"
             className={`inline-flex h-14 w-full items-center justify-center gap-4 rounded-md ${colors.button} text-base font-bold uppercase text-white ${colors.shadow} transition hover:-translate-y-0.5 sm:w-[220px] lg:justify-self-end`}
           >
-            <ArrowRightIcon className={`h-6 w-6 ${colors.accent}`} />
+            <ArrowRightIcon className="h-6 w-6 text-white" />
             Contact Us
           </Link>
         </div>

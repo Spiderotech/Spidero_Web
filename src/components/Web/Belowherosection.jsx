@@ -52,17 +52,17 @@ const Belowherosection = () => {
 
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.05fr_1fr] lg:items-center">
         <div>
-          <div className="inline-flex items-center gap-3 text-sm font-extrabold uppercase tracking-[0.16em] text-blue-600">
+          <div className="inline-flex items-center gap-3 text-sm font-extrabold uppercase tracking-[0.16em] text-blue-800">
             <span className="h-2.5 w-2.5 rounded-full bg-blue-500 shadow-[0_0_0_5px_rgba(37,99,235,0.12)]" />
             Our Commitment
           </div>
 
           <h2 className="mt-8 max-w-3xl text-3xl font-extrabold leading-tight tracking-normal text-[#07122f] sm:text-4xl lg:text-5xl">
             Your Development Partner. Committed to{" "}
-            <span className="text-blue-600">Excellence!</span>
+            <span className="text-blue-800">Excellence!</span>
           </h2>
 
-          <div className="mt-7 h-1 w-20 rounded-full bg-blue-600" />
+          <div className="mt-7 h-1 w-20 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
 
           <div className="mt-8 max-w-3xl space-y-7 text-base font-medium leading-8 tracking-normal text-slate-600 sm:text-lg">
             <p>
@@ -91,7 +91,7 @@ const Belowherosection = () => {
                   index > 0 ? "sm:border-l sm:border-slate-200 sm:pl-8" : ""
                 }`}
               >
-                <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+                <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-800">
                   <Icon className="h-8 w-8" />
                 </span>
                 <div>
@@ -116,11 +116,11 @@ const Belowherosection = () => {
               }`}
             >
               <div className={`flex ${size === "wide" ? "items-center gap-8" : "flex-col items-center text-center"}`}>
-                <span className="flex h-28 w-28 shrink-0 items-center justify-center rounded-full border-4 border-blue-50 bg-blue-50/70 text-blue-600 shadow-inner">
+                <span className="flex h-28 w-28 shrink-0 items-center justify-center rounded-full border-4 border-blue-50 bg-blue-50/70 text-blue-800 shadow-inner">
                   <Icon className="h-14 w-14" />
                 </span>
                 <div className={size === "wide" ? "text-left" : "mt-8"}>
-                  <div className="text-5xl font-extrabold tracking-normal text-blue-600 sm:text-6xl">
+                  <div className="text-5xl font-extrabold tracking-normal text-blue-800 sm:text-6xl">
                     {value}
                   </div>
                   <h3 className="mt-4 text-xl font-extrabold tracking-normal text-[#07122f]">
@@ -129,7 +129,7 @@ const Belowherosection = () => {
                   <p className="mt-2 text-base font-medium tracking-normal text-slate-600">
                     {text}
                   </p>
-                  <div className="mt-8 h-1 w-12 rounded-full bg-blue-600" />
+                  <div className="mt-8 h-1 w-12 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
                 </div>
               </div>
 

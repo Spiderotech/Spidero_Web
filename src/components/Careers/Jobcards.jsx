@@ -32,7 +32,7 @@ const Jobcards = () => {
     <section id="open-positions" className="bg-white px-5 pb-16 pt-12 font-sans sm:px-8 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <div className="mb-10 flex items-center gap-6">
-          <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600">
+          <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-800">
             <UserGroupIcon className="h-10 w-10" />
           </span>
           <div>
@@ -49,17 +49,17 @@ const Jobcards = () => {
           {jobs.map(({ title, location, vacancies, icon: Icon }) => (
             <article
               key={title}
-              className="relative rounded-2xl border border-slate-200/80 bg-white p-8 text-center shadow-[0_18px_60px_rgba(15,23,42,0.07)] transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_26px_80px_rgba(37,99,235,0.13)]"
+              className="relative rounded-2xl border border-slate-200/80 bg-white p-6 text-center shadow-[0_18px_50px_rgba(15,23,42,0.065)] sm:p-8"
             >
-              <span className="absolute left-6 top-6 rounded-md bg-blue-50 px-4 py-2 text-sm font-extrabold tracking-normal text-blue-600">
+              <span className="absolute left-6 top-6 rounded-md bg-blue-50 px-4 py-2 text-sm font-extrabold tracking-normal text-blue-800">
                 {location}
               </span>
 
-              <span className="mx-auto mt-10 flex h-20 w-20 items-center justify-center rounded-full bg-blue-50 text-blue-600">
+              <span className="mx-auto mt-10 flex h-20 w-20 items-center justify-center rounded-full bg-blue-50 text-blue-800">
                 <Icon className="h-10 w-10" />
               </span>
 
-              <h3 className="mt-8 text-2xl font-extrabold tracking-normal text-black">
+              <h3 className="mt-8 text-2xl font-extrabold tracking-normal text-[#07122f]">
                 {title}
               </h3>
 
@@ -72,7 +72,7 @@ const Jobcards = () => {
 
               <a
                 href="/contact"
-                className="mt-8 inline-flex items-center justify-center gap-3 text-base font-extrabold tracking-normal text-blue-600 transition hover:text-blue-700"
+                className="mt-8 inline-flex items-center justify-center gap-3 text-base font-extrabold tracking-normal text-blue-800 transition hover:text-blue-700"
               >
                 View Details
                 <ArrowRightIcon className="h-5 w-5" />
@@ -84,7 +84,7 @@ const Jobcards = () => {
         <div className="mt-12 flex justify-center">
           <a
             href="mailto:contact@spiderotechnology.com"
-            className="inline-flex h-14 items-center justify-center gap-4 rounded-lg border border-blue-600 bg-white px-8 text-base font-extrabold tracking-normal text-blue-600 transition hover:bg-blue-50"
+            className="inline-flex h-14 items-center justify-center gap-4 rounded-lg border border-blue-800 bg-white px-8 text-base font-extrabold tracking-normal text-blue-800 transition hover:bg-blue-50"
           >
             Can’t find the right role? Send us your CV
             <ArrowRightIcon className="h-5 w-5" />

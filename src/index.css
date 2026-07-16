@@ -11,10 +11,37 @@
     
   }
 
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 480px) {
+  a[class*="min-w-"],
+  button[class*="min-w-"] {
+    width: 100%;
+    min-width: 0 !important;
+  }
+}
+
 
   /* *,
 *:before,
 *:after {
   @apply cursor-pointer;
 } */
-

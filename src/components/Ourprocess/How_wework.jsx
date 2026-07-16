@@ -229,8 +229,8 @@ const steps = [
 const BulletList = ({ items }) => (
   <ul className="mt-4 space-y-3">
     {items.map((item) => (
-      <li key={item} className="flex gap-3 text-sm font-medium leading-7 tracking-normal text-[#07122f] sm:text-[15px]">
-        <CheckCircleIcon className="mt-1 h-4 w-4 shrink-0text-blue-600" />
+      <li key={item} className="flex gap-3 text-sm font-medium leading-7 tracking-normal text-slate-700 sm:text-[15px]">
+        <CheckCircleIcon className="mt-1 h-4 w-4 shrink-0 text-blue-800" />
         <span>{item}</span>
       </li>
     ))}
@@ -282,25 +282,25 @@ const How_wework = () => {
   return (
     <section className="relative overflow-hidden bg-white px-5 py-44 font-sans sm:px-8 lg:px-12">
       <div className="pointer-events-none absolute right-0 top-20 h-80 w-80 rounded-full bg-blue-100/50 blur-3xl" />
-      <div className="pointer-events-none absolute -left-20 bottom-1/3 h-72 w-72 rounded-full bg-indigo-100/50 blur-3xl" />
+      <div className="pointer-events-none absolute -left-20 bottom-1/3 h-72 w-72 rounded-full bg-blue-100/50 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl">
         <div className="max-w-5xl">
-          <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-blue-600">
+          <p className="text-sm font-extrabold uppercase tracking-[0.18em] text-blue-800">
             HOW WE WORK
           </p>
           <div className="mt-4 flex items-center gap-3">
-            <span className="h-1.5 w-20 rounded-full bg-blue-600" />
-            <span className="h-1.5 w-2 rounded-full bg-blue-600" />
+            <span className="h-1.5 w-20 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
+            <span className="h-1.5 w-2 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
           </div>
           <h1 className="mt-6 text-3xl font-extrabold leading-tight tracking-normal text-[#07122f] sm:text-4xl lg:text-5xl">
             The process is defined as a sequence of steps. When followed, it helps to achieve a goal. We consider it -{" "}
-            <span className="text-blue-600">the art of thinking through.</span>
+            <span className="text-blue-800">the art of thinking through.</span>
           </h1>
         </div>
 
         <div className="mt-12 flex items-center gap-5">
-          <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-blue-50text-blue-600">
+          <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-800">
             <ChatBubbleLeftRightIcon className="h-8 w-8" />
           </span>
           <h2 className="text-2xl font-extrabold tracking-normal text-[#07122f] sm:text-3xl">
@@ -316,13 +316,13 @@ const How_wework = () => {
               <article key={step.number} className="relative">
                 <div className="overflow-hidden rounded-[1.7rem] border border-slate-200/80 bg-white shadow-[0_22px_70px_rgba(15,23,42,0.08)]">
                   <div className="grid lg:grid-cols-2">
-                    <div className="relative border-l-4 border-blue-600 bg-[#f7faff] p-6 sm:p-8 lg:p-10">
+                    <div className="relative border-l-4 border-blue-800 bg-[#f7faff] p-6 sm:p-8 lg:p-10">
                       <div className="flex items-center gap-5">
-                        <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-2xl font-extrabold text-white shadow-[0_16px_32px_rgba(37,99,235,0.26)]">
+                        <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-800 to-blue-800 text-2xl font-extrabold text-white shadow-[0_16px_32px_rgba(37,99,235,0.26)]">
                           {step.number}
                         </span>
                         <div>
-                          <div className="flex items-center gap-3text-blue-600">
+                          <div className="flex items-center gap-3 text-blue-800">
                             <StepIcon className="h-6 w-6" />
                             <span className="text-xs font-extrabold uppercase tracking-[0.16em]">
                               Step {step.number}
@@ -332,13 +332,13 @@ const How_wework = () => {
                             {step.title}
                           </h3>
                           <div className="mt-3 flex items-center gap-3">
-                            <span className="h-1.5 w-14 rounded-full bg-blue-600" />
-                            <span className="h-1.5 w-2 rounded-full bg-blue-600" />
+                            <span className="h-1.5 w-14 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
+                            <span className="h-1.5 w-2 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
                           </div>
                         </div>
                       </div>
 
-                      <h4 className="mt-8 text-sm font-extrabold uppercase tracking-[0.08em]text-blue-600">
+                      <h4 className="mt-8 text-sm font-extrabold uppercase tracking-[0.08em] text-blue-800">
                         Objective
                       </h4>
                       <BulletList items={step.objective} />
@@ -364,7 +364,7 @@ const How_wework = () => {
                         className="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-[0_18px_50px_rgba(15,23,42,0.07)]"
                       >
                         <div className="flex items-center gap-4">
-                          <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-blue-50text-blue-600">
+                          <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-800">
                             <DetailIcon className="h-7 w-7" />
                           </span>
                           <div>
@@ -372,8 +372,8 @@ const How_wework = () => {
                               {detail.title}
                             </h4>
                             <div className="mt-2 flex items-center gap-2">
-                              <span className="h-1 w-12 rounded-full bg-blue-600" />
-                              <span className="h-1 w-2 rounded-full bg-blue-600" />
+                              <span className="h-1 w-12 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
+                              <span className="h-1 w-2 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
                             </div>
                           </div>
                         </div>

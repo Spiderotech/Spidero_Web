@@ -9,20 +9,20 @@ const Clientsays = () => {
 
       <div className="relative mx-auto max-w-7xl">
         <div className="text-center">
-          <div className="inline-flex items-center gap-3 rounded-full bg-blue-50 px-5 py-2 text-sm font-bold uppercase tracking-[0.12em] text-blue-600">
-            <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-blue-600 text-white shadow-[0_8px_18px_rgba(37,99,235,0.28)]">
+          <div className="inline-flex items-center gap-3 rounded-full bg-blue-50 px-5 py-2 text-sm font-bold uppercase tracking-[0.12em] text-blue-800">
+            <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-blue-800 text-white shadow-[0_8px_18px_rgba(30,64,175,0.28)]">
               <ChatBubbleLeftRightIcon className="h-4 w-4" />
             </span>
             Testimonial
           </div>
 
           <h2 className="mt-6 text-3xl font-extrabold leading-tight tracking-normal text-[#07122f] sm:text-4xl lg:text-5xl">
-            What Our <span className="text-blue-600">Client</span> Says...
+            What Our <span className="text-blue-800">Client</span> Says...
           </h2>
 
           <div className="mt-6 flex items-center justify-center gap-3">
-            <span className="h-1.5 w-24 rounded-full bg-blue-600" />
-            <span className="h-1.5 w-4 rounded-full bg-blue-600" />
+            <span className="h-1.5 w-24 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
+            <span className="h-1.5 w-4 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
           </div>
         </div>
 
@@ -36,7 +36,7 @@ const Clientsays = () => {
 
           <div className="relative grid items-center gap-8 lg:grid-cols-[230px_1fr_310px]">
             <div className="flex justify-center lg:justify-start">
-              <div className="flex h-32 w-32 items-center justify-center rounded-3xl bg-gradient-to-br from-blue-50 to-indigo-100 text-blue-600 shadow-[0_18px_45px_rgba(37,99,235,0.12)] sm:h-36 sm:w-36">
+              <div className="flex h-32 w-32 items-center justify-center rounded-3xl bg-gradient-to-br from-blue-50 to-blue-100 text-blue-800 shadow-[0_18px_45px_rgba(30,64,175,0.12)] sm:h-36 sm:w-36">
                 <span className="font-serif text-8xl font-bold leading-none">“</span>
               </div>
             </div>
@@ -55,7 +55,7 @@ const Clientsays = () => {
               />
               <div className="mt-6">
                 <h3 className="text-2xl font-extrabold tracking-normal text-[#07122f]">Alvin</h3>
-                <p className="mt-2 max-w-[220px] text-base font-semibold leading-7 tracking-normal text-slate-500">
+                <p className="mt-2 max-w-[220px] text-base font-semibold leading-7 tracking-normal text-slate-600">
                   Head of Development, GetMyRoom
                 </p>
               </div>
@@ -65,7 +65,7 @@ const Clientsays = () => {
 
         <div className="mt-9 flex justify-center gap-5">
           <span className="h-3.5 w-3.5 rounded-full bg-blue-100" />
-          <span className="h-3.5 w-3.5 rounded-full bg-blue-600" />
+          <span className="h-3.5 w-3.5 rounded-full bg-blue-800" />
           <span className="h-3.5 w-3.5 rounded-full bg-blue-100" />
         </div>
       </div>

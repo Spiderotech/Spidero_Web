@@ -76,44 +76,44 @@ const Contactform1 = () => {
   });
 
   return (
-    <section className="relative mt-8 overflow-hidden bg-[#f6f9fe] px-5 py-6 font-sans sm:px-8 lg:px-10">
+    <section className="relative mt-8 overflow-hidden bg-[#f6f9fe] px-4 py-10 font-sans sm:px-6 lg:px-10">
       <div className="pointer-events-none absolute left-12 top-12 hidden h-20 w-20 opacity-50 md:block">
         <div className="h-full w-full bg-[radial-gradient(circle,_#cfe0f8_1.8px,_transparent_1.8px)] [background-size:16px_16px]" />
       </div>
       <div className="pointer-events-none absolute -left-24 bottom-[-120px] h-72 w-72 rounded-full border border-blue-100/70" />
 
-      <div className="relative mx-auto grid max-w-[1420px] gap-6 lg:grid-cols-[0.76fr_1.14fr]">
-        <div className="relative flex min-h-[430px] items-center justify-center py-8">
+      <div className="relative mx-auto grid max-w-[1420px] min-w-0 gap-6 lg:grid-cols-[0.76fr_1.14fr]">
+        <div className="relative flex min-h-[360px] min-w-0 items-center justify-center py-6 sm:min-h-[430px] sm:py-8">
           <Swiper
             modules={[Pagination]}
-            spaceBetween={40}
+            spaceBetween={16}
             slidesPerView={1}
             pagination={{ clickable: true }}
-            className="contact-testimonial-swiper w-full max-w-[500px] !pb-10"
+            className="contact-testimonial-swiper w-full max-w-full min-w-0 !overflow-visible !pb-10 sm:max-w-[500px]"
           >
-            <SwiperSlide>
-              <article className="relative mx-auto mt-10 rounded-xl bg-white px-7 pb-9 pt-20 text-center shadow-[0_20px_55px_rgba(15,23,42,0.12)] sm:px-11">
+            <SwiperSlide className="!overflow-visible">
+              <article className="relative mx-auto mt-12 w-full max-w-full overflow-visible rounded-xl bg-white px-5 pb-8 pt-16 text-center shadow-[0_16px_42px_rgba(15,23,42,0.10)] sm:mt-14 sm:px-9 sm:pb-9 sm:pt-20 sm:shadow-[0_20px_55px_rgba(15,23,42,0.12)]">
                 <img
                   src={web7}
                   alt="Akshay Madhusudhanan"
-                  className="absolute left-1/2 top-0 h-24 w-24 -translate-x-1/2 -translate-y-1/2 rounded-full border-[6px] border-white object-cover shadow-[0_16px_30px_rgba(15,23,42,0.15)]"
+                  className="absolute left-1/2 top-0 h-20 w-20 -translate-x-1/2 -translate-y-1/2 rounded-full border-[5px] border-white object-cover shadow-[0_16px_30px_rgba(15,23,42,0.15)] sm:h-24 sm:w-24 sm:border-[6px]"
                 />
-                <span className="absolute left-8 top-11 text-[60px] font-bold leading-none text-[#1374f6]">
+                <span className="absolute left-5 top-10 text-[46px] font-bold leading-none text-blue-800 sm:left-8 sm:top-11 sm:text-[60px]">
                   “
                 </span>
-                <div className="pointer-events-none absolute right-7 top-8 h-12 w-12 opacity-70">
+                <div className="pointer-events-none absolute right-4 top-8 h-10 w-10 opacity-60 sm:right-7 sm:h-12 sm:w-12 sm:opacity-70">
                   <div className="h-full w-full bg-[radial-gradient(circle,_#cbd8e8_2px,_transparent_2px)] [background-size:16px_16px]" />
                 </div>
-                <p className="mx-auto max-w-[390px] text-[17px] leading-8 text-black sm:text-[20px] sm:leading-9">
+                <p className="mx-auto max-w-full break-words px-1 text-[16px] leading-7 text-black [overflow-wrap:anywhere] sm:max-w-[390px] sm:px-0 sm:text-[20px] sm:leading-9">
                   Spidero Technology served as an invaluable collaborator,
                   delivering an exceptional software solution that significantly
                   improved our customer experience.
                 </p>
-                <span className="mx-auto mt-6 block h-1 w-14 rounded-full bg-[#1178ff]" />
-                <h3 className="mt-5 text-[19px] font-bold text-black">
+                <span className="mx-auto mt-6 block h-1 w-14 rounded-full bg-gradient-to-br from-blue-800 to-blue-800" />
+                <h3 className="mt-5 text-[18px] font-bold leading-tight text-black sm:text-[19px]">
                   Akshay Madhusudhanan
                 </h3>
-                <p className="mt-1.5 text-[15px] font-medium text-[#5d6778]">
+                <p className="mt-1.5 text-[14px] font-medium leading-6 text-[#5d6778] sm:text-[15px]">
                   CEO & Founder, Spidero Technology
                 </p>
               </article>
@@ -121,16 +121,16 @@ const Contactform1 = () => {
           </Swiper>
         </div>
 
-        <div className="rounded-[22px] bg-white p-5 shadow-[0_22px_65px_rgba(15,23,42,0.10)] sm:p-6 lg:p-8">
-          <div className="mb-6 flex items-center gap-5">
-            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-[#eef5ff] text-[#0877ff]">
-              <EnvelopeIcon className="h-8 w-8" />
+        <div className="min-w-0 rounded-[18px] bg-white p-4 shadow-[0_18px_48px_rgba(15,23,42,0.09)] sm:rounded-[22px] sm:p-6 lg:p-8 lg:shadow-[0_22px_65px_rgba(15,23,42,0.10)]">
+          <div className="mb-6 flex items-start gap-4 sm:items-center sm:gap-5">
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-800 sm:h-16 sm:w-16">
+              <EnvelopeIcon className="h-7 w-7 sm:h-8 sm:w-8" />
             </div>
-            <div>
-              <h3 className="text-[28px] font-bold leading-tight text-[#071435] md:text-[34px]">
+            <div className="min-w-0">
+              <h3 className="text-[26px] font-bold leading-tight text-[#071435] md:text-[34px]">
                 Let&apos;s Connect
               </h3>
-              <p className="mt-1.5 text-[15px] font-medium text-[#6a7183] md:text-[17px]">
+              <p className="mt-1.5 text-[14px] font-medium leading-6 text-[#6a7183] md:text-[17px]">
                 We&apos;d love to hear about your project.
               </p>
             </div>
@@ -142,8 +142,8 @@ const Contactform1 = () => {
                 <label htmlFor="fullName" className="sr-only">
                   Full Name
                 </label>
-                <div className="flex h-[60px] items-center gap-3 rounded-lg border border-[#d8dee8] bg-white px-5">
-                  <UserIcon className="h-6 w-6 shrink-0 text-[#697386]" />
+                <div className="flex h-14 items-center gap-3 rounded-lg border border-[#d8dee8] bg-white px-4 sm:h-[60px] sm:px-5">
+                  <UserIcon className="h-5 w-5 shrink-0 text-[#697386] sm:h-6 sm:w-6" />
                   <input
                     type="text"
                     id="fullName"
@@ -151,7 +151,7 @@ const Contactform1 = () => {
                     value={formik.values.fullName}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className="h-full w-full bg-transparent text-[16px] font-medium text-[#152033] outline-none placeholder:text-[#2d3546]"
+                    className="h-full min-w-0 w-full bg-transparent text-[15px] font-medium text-[#152033] outline-none placeholder:text-[#2d3546] sm:text-[16px]"
                     placeholder="Full Name *"
                   />
                 </div>
@@ -166,8 +166,8 @@ const Contactform1 = () => {
                 <label htmlFor="email" className="sr-only">
                   Email
                 </label>
-                <div className="flex h-[60px] items-center gap-3 rounded-lg border border-[#d8dee8] bg-white px-5">
-                  <EnvelopeIcon className="h-6 w-6 shrink-0 text-[#697386]" />
+                <div className="flex h-14 items-center gap-3 rounded-lg border border-[#d8dee8] bg-white px-4 sm:h-[60px] sm:px-5">
+                  <EnvelopeIcon className="h-5 w-5 shrink-0 text-[#697386] sm:h-6 sm:w-6" />
                   <input
                     type="email"
                     id="email"
@@ -175,7 +175,7 @@ const Contactform1 = () => {
                     value={formik.values.email}
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    className="h-full w-full bg-transparent text-[16px] font-medium text-[#152033] outline-none placeholder:text-[#2d3546]"
+                    className="h-full min-w-0 w-full bg-transparent text-[15px] font-medium text-[#152033] outline-none placeholder:text-[#2d3546] sm:text-[16px]"
                     placeholder="Email *"
                   />
                 </div>
@@ -187,11 +187,11 @@ const Contactform1 = () => {
               </div>
             </div>
 
-            <div className="grid overflow-hidden rounded-lg border border-[#d8dee8] bg-white md:grid-cols-[0.48fr_0.52fr]">
-              <div className="flex min-h-[60px] items-center gap-3 border-b border-[#d8dee8] px-5 md:border-b-0 md:border-r">
-                <GlobeAltIcon className="h-6 w-6 shrink-0 text-[#697386]" />
+            <div className="grid min-w-0 overflow-visible rounded-lg border border-[#d8dee8] bg-white md:grid-cols-[0.48fr_0.52fr]">
+              <div className="flex min-h-[64px] min-w-0 items-center gap-3 border-b border-[#d8dee8] px-4 sm:min-h-[60px] sm:px-5 md:border-b-0 md:border-r">
+                <GlobeAltIcon className="h-5 w-5 shrink-0 text-[#697386] sm:h-6 sm:w-6" />
                 <div className="min-w-0 flex-1">
-                  <span className="mb-0.5 block text-[16px] font-medium text-[#2d3546]">
+                  <span className="mb-0.5 block text-[15px] font-medium text-[#2d3546] sm:text-[16px]">
                     Country Code <span className="text-red-500">*</span>
                   </span>
                   <PhoneInput
@@ -207,7 +207,7 @@ const Contactform1 = () => {
                       height: "24px",
                       border: "0",
                       paddingLeft: "48px",
-                      fontSize: "15px",
+                      fontSize: "14px",
                       fontWeight: "600",
                       color: "#152033",
                       background: "transparent",
@@ -222,7 +222,7 @@ const Contactform1 = () => {
                   />
                 </div>
               </div>
-              <div className="flex min-h-[60px] items-center px-5">
+              <div className="flex min-h-[56px] min-w-0 items-center px-4 sm:min-h-[60px] sm:px-5">
                 <input
                   id="phone"
                   name="phone"
@@ -230,7 +230,7 @@ const Contactform1 = () => {
                   value={formik.values.phone}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className="h-full w-full bg-transparent text-[16px] font-medium text-[#152033] outline-none placeholder:text-[#2d3546]"
+                  className="h-full min-w-0 w-full bg-transparent text-[15px] font-medium text-[#152033] outline-none placeholder:text-[#2d3546] sm:text-[16px]"
                   placeholder="Phone *"
                 />
               </div>
@@ -246,8 +246,8 @@ const Contactform1 = () => {
               <label htmlFor="message" className="sr-only">
                 Type your message here
               </label>
-              <div className="flex min-h-[130px] items-start gap-3 rounded-lg border border-[#d8dee8] bg-white px-5 py-5">
-                <PencilSquareIcon className="mt-1 h-6 w-6 shrink-0 text-[#697386]" />
+              <div className="flex min-h-[120px] items-start gap-3 rounded-lg border border-[#d8dee8] bg-white px-4 py-4 sm:min-h-[130px] sm:px-5 sm:py-5">
+                <PencilSquareIcon className="mt-1 h-5 w-5 shrink-0 text-[#697386] sm:h-6 sm:w-6" />
                 <textarea
                   id="message"
                   name="message"
@@ -255,7 +255,7 @@ const Contactform1 = () => {
                   value={formik.values.message}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
-                  className="min-h-[90px] w-full resize-y bg-transparent text-[16px] font-medium text-[#152033] outline-none placeholder:text-[#2d3546]"
+                  className="min-h-[82px] min-w-0 w-full resize-y bg-transparent text-[15px] font-medium text-[#152033] outline-none placeholder:text-[#2d3546] sm:min-h-[90px] sm:text-[16px]"
                   placeholder="Type your message here *"
                 />
               </div>
@@ -266,24 +266,24 @@ const Contactform1 = () => {
               )}
             </div>
 
-            <div className="grid gap-4 pt-1 md:grid-cols-[0.82fr_0.94fr]">
+            <div className="grid min-w-0 gap-3 pt-1 sm:gap-4 md:grid-cols-[0.82fr_0.94fr]">
               <button
                 type="submit"
-                className="flex h-[62px] items-center justify-center gap-3 rounded-lg bg-[#e96f3f] px-6 text-[17px] font-bold text-white shadow-[0_16px_34px_rgba(8,119,255,0.28)] transition hover:bg-[#0068e5]"
+                className="flex min-h-14 items-center justify-center gap-3 rounded-lg bg-gradient-to-br from-blue-800 to-blue-800 px-5 py-3 text-[16px] font-bold text-white shadow-[0_16px_34px_rgba(30,64,175,0.28)] transition hover:from-blue-900 hover:to-blue-900 hover:shadow-[0_20px_40px_rgba(30,64,175,0.32)] sm:h-[62px] sm:px-6 sm:py-0 sm:text-[17px]"
               >
                 <PaperAirplaneIcon className="h-6 w-6" />
                 Send Message
               </button>
               <a
                 href="/contact"
-                className="flex h-[62px] items-center justify-center gap-3 rounded-lg bg-[#f3f7fc] px-5 text-[15px] font-bold text-[#071435] transition hover:bg-[#eaf2fb]"
+                className="flex min-h-14 items-center justify-center gap-3 rounded-lg bg-[#f3f7fc] px-4 py-3 text-[14px] font-bold text-[#071435] transition hover:bg-[#eaf2fb] sm:h-[62px] sm:px-5 sm:py-0 sm:text-[15px]"
               >
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#0877ff]">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-blue-800">
                   <ChatBubbleLeftRightIcon className="h-6 w-6" />
                 </span>
                 <span className="text-left">
                   <span className="block">Need a quick answer?</span>
-                  <span className="flex items-center gap-2 text-[#0877ff]">
+                  <span className="flex items-center gap-2 text-blue-800">
                     Get Pricing <ArrowRightIcon className="h-4 w-4" />
                   </span>
                 </span>
